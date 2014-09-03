@@ -12,13 +12,14 @@
 .captcha-input.field {
   width: 300px;
 }
+.textarea {
+  margin-bottom: 1px;
+  margin-top: 1px;
+}
 #qr:not(.has-captcha) textarea {
   min-height: 115px!important;
 }
 :root.qr-controls #qr > .move {
-  display: none;
-}
-body > form:nth-child(13) {
   display: none;
 }
 :root.vertical-qr #qr.autohide:not(:hover):not(.has-focus) {
@@ -26,11 +27,29 @@ body > form:nth-child(13) {
 }
 #qr > .move {
   min-width: 260px !important;
+  padding: 2px 2px !important;
 }
 #qr .riceCheck, #qr input[type=checkbox] {
   float: left;
 }
+:root.expand-inputs #qr > form > div:nth-child(1) {
+  display: flex;
+}
+:root.expand-inputs #qr > form > div:nth-child(1) .field {
+  flex: 1;
+  width: 0;
+}
+:root.expand-inputs #qr > form > div:nth-child(1) .field:hover,
+:root.expand-inputs #qr > form > div:nth-child(1) .field:focus {
+  flex: 3;
+}
 /* Misc */
+#togglePostFormLink {
+  text-align: center;
+}
+:root.hide-button form[name=post] > h1 {
+  display: none;
+}
 .boardList {
   display: block;
   text-align: center;
@@ -49,13 +68,15 @@ body > form:nth-child(13) {
   margin-bottom: 10px;
 }
 .postInfo {
-  padding: 4px 6px 2px;
+  padding: 0px 6px 2px;
 }
 #boardNavDesktop {
+  color: " + $SS.theme.headerColor.hex + " !important;
   margin-bottom: 15px;
   text-align: center;
 }
 #boardNavDesktopFoot {
+  color: " + $SS.theme.headerColor.hex + " !important;
   margin-bottom: 10px;
 }
 .riceCheck {
@@ -91,12 +112,49 @@ body > form:nth-child(13) {
 table.flashListing {
   margin-bottom: 20px;
 }
+.button {
+  color: " + $SS.theme.linkColor.hex + " !important;
+}
+.button:hover {
+  color: " + $SS.theme.linkHColor.hex + " !important;
+}
 /* Thread Watcher */
+:root.fixed-watcher #watcher {
+  position: fixed !important;
+}
 #watcher {
   z-index: 20;
-  position: fixed;
 }
 #watcher > .move {
   text-align: center;
   padding-bottom: 5px;
+}
+.favicon {
+  height: 0!important;
+  background-color: transparent!important;
+  background-position: center!important;
+  background-repeat: no-repeat;
+  display: inline-block;
+  padding-top: 16px!important;
+  vertical-align: bottom;
+  width: 16px!important;
+}
+.favicon[src$='ico'] {
+  background-image: url(\"data:image/svg+xml," + $SS.theme.icons.star + "\") !important;
+}
+.favicon[src^='data'] {
+  opacity: 0.3;
+  background-image: url(\"data:image/svg+xml," + $SS.theme.icons.startwo + "\") !important;
+}
+/* Menu */
+.menu_button {
+  opacity: 0.6;
+  background-color: rgba(0, 0, 0, 0);
+  background-position: 50% 50%;
+  text-indent: -50px;
+  transform: rotate(90deg);
+  background-image: url(\"data:image/svg+xml," + $SS.theme.icons.menuButton + "\")!important;
+}
+.menu_button:hover {
+  opacity: 1;
 }
