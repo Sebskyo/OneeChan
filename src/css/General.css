@@ -220,7 +220,7 @@ input[type=checkbox]:checked+.riceCheck::before {
 .globalMessage, h2, h3 {
   margin: auto;
 }
-#thread-watcher {
+:root.fixed-watcher #thread-watcher {
   position: fixed !important;
 }
 /* QR link */
@@ -278,7 +278,8 @@ input[type=checkbox]:checked+.riceCheck::before {
   border: none;
 }
 :root.qr-controls #qr label,
-:root.qr-controls #qr .close {
+:root.qr-controls #qr .close,
+:root.qr-controls #qr select[data-name="thread"] {
   display: none;
 }
 :root.qr-opacity #qr {
