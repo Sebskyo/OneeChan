@@ -1,3 +1,29 @@
+### v5.3.11
+*2014-08-30*
+
+- Change class .thread -> .thread-view (issue #29)
+- OneeChan disables drop-down navigation in the catalog
+- Minor catalog margin fix
+- Change Sticky and Closed icons in catalog to match thread icons
+- QR -> `Hide Controls` will also hide thread selection list
+- Bring back fixed TW option
+
+
+**loadletter:**
+
+- Style menu button
+- Style Thread Watcher favicon
+- Fix Catalog links and brackets color
+- Fix `Expanding Form Inputs` not working
+- Fix `Show Blotter`
+- Fix `Show Reply To Thread Button`
+- Small CSS fixes
+
+**MayhemYDG:**
+
+- Workaround for broken menu when `Fit Replies` enabled
+- MayhemYDG forks are now considered partially compatible
+
 ### v5.3.10
 *2014-08-25*
 
