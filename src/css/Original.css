@@ -13,28 +13,35 @@ div.post div.file .fileThumb {
   display: block;
 }
 /* Padding according to header position */
-.fixed.bottom-header.thread body{
+.fixed.bottom-header.thread-view body {
   padding-bottom: 0em;
-  padding-top: 0.1em;
+  padding-top: 0.5em;
 }
 .fixed.bottom-header.index body {
   padding-bottom: 4.5em;
-  padding-top: 0.1em;
+  padding-top: 0.5em;
+}
+.fixed.bottom-header.catalog body {
+  padding-bottom: 3em;
+  padding-top: 0.5em;
+}
+.fixed.bottom-header body {
+  padding-top: 0.5em;
+}
+body.hasDropDownNav { /* Temporary? */
+  margin-top: 0px !important;
 }
 .fixed.top-header.index body {
   padding-bottom: 2.5em;
   padding-top: 2.2em;
 }
-.fixed.top-header.thread body {
+.fixed.top-header.thread-view body {
   padding-bottom: 0em; 
   padding-top: 2.2em;
 }
 .fixed.top-header.catalog body {
-  padding-top: 2.2em;
   padding-bottom: 0.5em;
-}
-.fixed.bottom-header.catalog body {
-  padding-bottom: 3em;
+  padding-top: 2.2em;
 }
 div.post {
   margin: 4px 0;
@@ -121,16 +128,21 @@ table {
     width: 120px;
 }
 /* Bottom Controls */
-.bottomCtrl.desktop{
+.bottomCtrl.desktop {
   float: right;
 }
 .fixed.bottom-header.index .bottomCtrl.desktop,
-.fixed.bottom-header.thread .bottomCtrl.desktop{
+.fixed.bottom-header.thread-view .bottomCtrl.desktop {
   float: right;
   margin-bottom: 35px;
 }
-.fixed.top-header.thread .bottomCtrl.desktop,
+.fixed.top-header.thread-view .bottomCtrl.desktop,
 .fixed.top-header.index .bottomCtrl.desktop {
   float: right;
   margin-bottom: 8px;
+}
+/* Other */
+#navlinks {
+  top: 135px;
+  right: 10px;
 }
