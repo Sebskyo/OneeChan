@@ -19,7 +19,7 @@
   right: 1px;
 }
 :root.fixed:not(.autohide):not(.bottom) .boardBanner {
-  margin-top: auto;
+  margin-top: -6px;
 }
 #qr {
   min-width: 297px !important;
