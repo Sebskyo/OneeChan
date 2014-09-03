@@ -43,13 +43,10 @@
   right: 6px;
 }
 /* Menu */
+/* Breaks with Fit Replies */
 :root.reply-fit-width .post .menu-button {
   position: absolute;
   left: inherit;
-  right: 6px;
-}
-:root.info-on-hover .post .menu-button {
-  margin-top: -16px;
 }
  /* Quick Reply */
  #qr > div {
