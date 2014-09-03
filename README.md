@@ -1,4 +1,4 @@
-OneeChan // DISCONTINUED
+OneeChan // DISCONTINUED 
 ====
 
 Maximum rice for 4chan X. Originally developed by [seaweedchan](https://github.com/seaweedchan), this fork adds compability with various forks and more custom options.
@@ -18,9 +18,9 @@ Maximum rice for 4chan X. Originally developed by [seaweedchan](https://github.c
 (Updated 2014-06-10)
 
 - [ccd0](https://github.com/ccd0/4chan-x) /// `Compatible` (Recommended)
-- [MayhemYDG](https://github.com/MayhemYDG/4chan-x) /// `Compatible`
-- [ihavenoface](https://github.com/ihavenoface/4chan-x) /// `Compatible`
 - [loadletter](https://github.com/loadletter/4chan-x) /// `Compatible`
+- [MayhemYDG](https://github.com/MayhemYDG/4chan-x) /// `Partial`
+- [ihavenoface](https://github.com/ihavenoface/4chan-x) /// `Partial`
 - [inline](https://boards.4chan.org/) /// `No`
 
 Make sure you select your fork version in `Compatibility`. Enabling Quick Reply and Persistent QR is recommended for maximum compatibility. I can't promise everything will work with every fork.
@@ -42,8 +42,34 @@ Make sure you select your fork version in `Compatibility`. Enabling Quick Reply 
 - OneeChan's settings icon sometimes doesn't render on Chrome
 
 
-#### See also:
+#### Development & Contribution
 
-- [Contributing to OneeChan](https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md#development--contribution)
+#### Get started
+
+- Install [node.js](http://nodejs.org/).
+- Install [Grunt's CLI](http://gruntjs.com/) with `npm install -g grunt-cli`.
+- Clone OneeChan.
+- `cd` into it.
+- Install/Update OneeChan dependencies with `npm install`.
+
+#### Build
+
+- Build with `grunt`.
+
+#### Release
+
+- Update the version with `grunt patch`, `grunt minor` or `grunt major`.
+- Release with `grunt release`.
+
+Note: this is only used to release new OneeChan versions, and is **not** needed or wanted in pull requests.
+
+#### Contribute
+
+- Edit the sources.
+- Open a pull request  to merge branch.
+
+
+##### See also:
+
 - [Windows 7 Ricing Reference](http://nanami-tan.info/)
 - [Ruri Gokou Homepage](https://github.com/gokoururi/homepage)
