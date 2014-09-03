@@ -256,3 +256,16 @@ textarea:focus,
 .qphl {
   outline: 2px solid rgba(" + $SS.theme.linkColor.rgb + ",0.5) !important;
 }
+/* Shadows */
+#navlinks a {
+  text-shadow:" + $SS.theme.mainColor.hex + " -1px -1px, 
+  " + $SS.theme.mainColor.hex + " 1px -1px,
+  " + $SS.theme.mainColor.hex + " -1px 1px, 
+  " + $SS.theme.mainColor.hex + " 1px 1px,
+  " + $SS.theme.mainColor.hex + " -1px 0, 
+  " + $SS.theme.mainColor.hex + " 1px 0,
+  " + $SS.theme.mainColor.hex + " 0 -1px, 
+  " + $SS.theme.mainColor.hex + " 0 1px,
+  rgba(0,0,0,.6) 0 2px 4px, 
+  rgba(0,0,0,.6) 0 0 2px;
+}
