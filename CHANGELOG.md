@@ -1,3 +1,18 @@
+### v5.3.12
+*2014-09-04*
+
+- Hide banner on /f/ when `Show Banner` disabled
+
+**loadletter:**
+
+- Fix menu button when threads are hidden
+- Fix `Show File Info`
+- Fix `Allow Wrapping Around OP`
+
+**MayhemYDG:**
+
+- Style Thread Watcher icon
+
 ### v5.3.11
 *2014-08-30*
 

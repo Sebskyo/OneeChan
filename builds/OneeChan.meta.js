@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         OneeChan
-// @version      5.3.11
+// @version      5.3.12
 // @namespace    OneeChan
 // @description  Customizable rice and themes for 4chan X.
 // @license      GPLv3; https://github.com/Nebukazar/OneeChan/blob/master/LICENSE 
