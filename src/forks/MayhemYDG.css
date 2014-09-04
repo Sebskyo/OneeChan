@@ -44,10 +44,7 @@
 }
 /* Menu */
 /* Breaks with Fit Replies */
-:root.reply-fit-width .post .menu-button {
-  position: absolute;
-  left: inherit;
-}
+
  /* Quick Reply */
  #qr > div {
   min-width: 240px !important;
@@ -124,4 +121,22 @@
 /* Thread Pinned */
 .stickyIcon {
   background-image:url(\"data:image/svg+xml," + $SS.theme.icons.threadPinned + "\")!important;
+}
+/* Thread Watcher */
+.watcher-toggler.fa.fa-bookmark-o {
+  opacity: 0.3;
+  padding-top: 16px!important;
+  vertical-align: bottom;
+  width: 16px!important;
+  background-image: url(\"data:image/svg+xml," + $SS.theme.icons.star + "\") !important;
+}
+.watcher-toggler.fa.fa-bookmark {
+  opacity: 1;
+  padding-top: 16px!important;
+  vertical-align: bottom;
+  width: 16px!important;
+  background-image: url(\"data:image/svg+xml," + $SS.theme.icons.star + "\") !important;
+}
+.watcher-toggler::before {
+  display: none;
 }
