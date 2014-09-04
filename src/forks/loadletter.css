@@ -130,12 +130,15 @@ table.flashListing {
 div.post {
   overflow: inherit;
 }
+div.post div.file .fileThumb {
+  margin-top: 3px;
+}
+.is_index div.op div.file .fileThumb {
+  margin-left: -19px;
+}
 /* Thread Watcher */
 :root.fixed-watcher #watcher {
   position: fixed !important;
-}
-#watcher {
-  z-index: 20;
 }
 #watcher > .move {
   text-align: center;
