@@ -3,11 +3,13 @@
 // @version      <%= version %>
 // @namespace    <%= name %>
 // @description  <%= description %>
+// @minGMVer     <%= meta.min.greasemonkey %>
+// @minFFVer     <%= meta.min.firefox %>
 // @license      <%= license %>; <%= meta.repo %>blob/<%= meta.mainBranch %>/LICENSE 
 <%=
-  meta.matches.map(function(match) {
-    return '// @match        ' + match;
-  }).join('\n')
+meta.matches.map(function(match) {
+return '// @match ' + match;
+}).join('\n')
 %>
 // @grant        GM_getValue
 // @grant        GM_setValue

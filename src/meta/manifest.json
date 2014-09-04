@@ -18,6 +18,8 @@
   "update_url": "<%= meta.downloads %>updates.xml",
   "minimum_chrome_version": "<%= meta.min.chrome %>",
   "permissions": [
-    "storage"
+    "storage",
+    "http://*/",
+    "https://*/"
   ]
 }

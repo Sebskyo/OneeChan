@@ -1,5 +1,3 @@
-'use strict'
-
 module.exports = (grunt) ->
   pkg = grunt.file.readJSON 'package.json'
   concatOptions =
@@ -24,7 +22,6 @@ module.exports = (grunt) ->
         files:
           'builds/<%= pkg.name %>.meta.js': 'src/meta/metadata.js'
           'builds/<%= pkg.name %>.user.js': [
-            'src/meta/botproc.js'
             'src/meta/metadata.js'
             'src/script.js'
           ]
@@ -72,12 +69,12 @@ module.exports = (grunt) ->
       tmp:        'tmp/'
 
   grunt.loadNpmTasks 'grunt-bump'
-  # grunt.loadNpmTasks 'grunt-concurrent'
+   # grunt.loadNpmTasks 'grunt-concurrent'
   grunt.loadNpmTasks 'grunt-contrib-clean'
-  # grunt.loadNpmTasks 'grunt-contrib-coffee'
+   # grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-compress'
   grunt.loadNpmTasks 'grunt-contrib-concat'
-  # grunt.loadNpmTasks 'grunt-contrib-copy'
+  grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-shell'
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
 

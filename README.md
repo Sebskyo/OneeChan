@@ -1,4 +1,4 @@
-OneeChan // DISCONTINUED 
+OneeChan
 ====
 
 Maximum rice for 4chan X. Originally developed by [seaweedchan](https://github.com/seaweedchan), this fork adds compability with various forks and more custom options.
@@ -44,6 +44,8 @@ Make sure you select your fork version in `Compatibility`. Enabling Quick Reply 
 
 
 #### Development & Contribution
+
+[![devDependency Status](https://david-dm.org/Nebukazar/OneeChan/dev-status.svg)](https://david-dm.org/Nebukazar/OneeChan#info=devDependencies)
 
 #### Get started
 
