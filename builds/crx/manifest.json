@@ -1,6 +1,6 @@
 {
   "name": "OneeChan",
-  "version": "5.3.12",
+  "version": "5.4.0",
   "manifest_version": 2,
   "description": "Customizable rice and themes for 4chan X.",
   "icons": {
@@ -16,8 +16,10 @@
   }],
   "homepage_url": "https://github.com/Nebukazar/OneeChan/",
   "update_url": "https://nebukazar.github.io/OneeChan/builds/updates.xml",
-  "minimum_chrome_version": "30",
+  "minimum_chrome_version": "31",
   "permissions": [
-    "storage"
+    "storage",
+    "http://*/",
+    "https://*/"
   ]
 }

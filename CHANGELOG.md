@@ -1,3 +1,19 @@
+### v5.4.0
+*2014-09-26*
+
+- Drop support for MayhemYDG, now supporting [ihavenoface](https://github.com/ihavenoface/4chan-x).
+- Style Archived favicon
+
+**New:**
+- `Style Thread Stats`
+
+Mostly for MayhemYDG/ihavenoface forks. Disable `Updater and Stats in Header` for seaweed/ccd0.
+
+**loadletter:**
+
+- Post menu now floats right with fit replies enabled
+
+
 ### v5.3.12
 *2014-09-04*
 
