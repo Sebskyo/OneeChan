@@ -133,9 +133,6 @@ div.post {
 div.post div.file .fileThumb {
   margin-top: 3px;
 }
-.is_index div.op div.file .fileThumb {
-  margin-left: -19px;
-}
 /* Thread Watcher */
 :root.fixed-watcher #watcher {
   position: fixed !important;
@@ -174,4 +171,21 @@ div.post div.file .fileThumb {
 }
 .menu_button:hover {
   opacity: 1;
+}
+:root.reply-fit-width .menu_button {
+  float: right;
+}
+:root.reply-fit-width .post .menu_button {
+  opacity: 0;
+}
+:root.reply-fit-width .post:not(:hover) .menu_button {
+  transition: opacity .3s ease-out 0s !important;
+}
+:root.reply-fit-width .post:hover .menu_button {
+  opacity: 1;
+  transition: opacity .3s ease-in .1s !important;
+}
+:root.reply-fit-width div.hide_reply_button.stub > a.menu_button,
+:root.reply-fit-width div.hide_thread_button.hidden_thread > a.menu_button {
+  float: none !important;
 }
