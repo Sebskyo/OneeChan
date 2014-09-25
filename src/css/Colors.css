@@ -197,7 +197,9 @@ hr {
 }
 :root.rounded-corners .reply,
 :root.rounded-corners .dialog:not(#header-bar),
-:root.rounded-corners .inline {
+:root.rounded-corners .inline,
+:root.rounded-corners #thread-stats
+:root.rounded-corners #updater {
   border-radius: 3px;
 }
 :root.post-info.rounded-corners .reply>.postInfo,
@@ -268,4 +270,17 @@ textarea:focus,
   " + $SS.theme.mainColor.hex + " 0 1px,
   rgba(0,0,0,.6) 0 2px 4px, 
   rgba(0,0,0,.6) 0 0 2px;
+}
+/* Thread Stats */
+:root.style-stats #thread-stats,
+:root.style-stats #updater,
+:root.style-stats #stats {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+  padding: 3px 6px !important;
+  border: 1px solid;
+}
+:root.style-stats #thread-stats > .move,
+:root.style-stats #updater > .move,
+:root.style-stats #stats > .move {
+  cursor: default;
 }
