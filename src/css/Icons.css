@@ -51,7 +51,8 @@
 /* From 4chanSS */
 /* https://github.com/ahodesuka/4chan-Style-Script/blob/master/LICENSE */
 img[title=Closed],
-img[title=Sticky] {
+img[title=Sticky],
+img[title=Archived] {
   color:transparent!important;
   font-size:0!important;
   background-color:transparent!important;
@@ -71,6 +72,10 @@ img[title=Sticky] {
 /* Thread Pinned */
 .stickyIcon {
   background-image:url(\"data:image/svg+xml," + $SS.theme.icons.threadPinned + "\")!important;
+}
+/* Thread Archived */
+.archivedIcon {
+  background-image:url(\"data:image/svg+xml," + $SS.theme.icons.threadArchived + "\")!important;
 }
 /* ExLinks Icon */
 .exlinksOptionsLink.entry {
