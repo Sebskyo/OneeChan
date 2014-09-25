@@ -1,8 +1,9 @@
-/* MayhemYDG 4chan X v3*/
-/* Compatibility fixes for different 4chan X forks */
+/* MayhemYDG/ihavenoface 4chan X v3*/
+/* Some functionality of OneeChan might not work with this fork */
 /* Header */
 #header-bar {
   padding: 3px 4px 3px !important;
+  z-index: 32;
 }
 #header-bar a:not(.entry) {
   padding: 2px;
@@ -22,6 +23,9 @@
 :root.bottom-header:not(.autohide) #mascot img,
 :root.bottom-header:not(.autohide) #mascotprev img {
   padding-bottom: 26px !important;
+}
+:root.bottom-header body {
+  margin-top: 0.5em;
 }
 /* Navigation */
 #navlinks {
@@ -44,7 +48,11 @@
 }
 /* Menu */
 /* Breaks with Fit Replies */
-
+/*
+:root.reply-fit-width .post.reply {
+  overflow: visible !important;
+} 
+*/
  /* Quick Reply */
  #qr > div {
   min-width: 240px !important;
@@ -61,11 +69,13 @@
 #qr:not(.has-captcha) textarea {
   min-height: 115px;
 }
-#qr .riceCheck, #qr input[type=checkbox] {
-  margin: 0px 4px 0;
+#qr .riceCheck, 
+#qr input[type=checkbox] {
+  margin: 0 4px;
+  top: 0;
 }
 :root.top-header .boardBanner {
-  top: 26px;
+  top: 22px;
 }
 #qr-filename {
   background: none !important;
@@ -77,6 +87,9 @@
 }
  .captcha-input.field {
   width:300px;
+}
+#url-button {
+  padding-right: 3px;
 }
 /* Bottom Controls */
 .bottom-header .bottomCtrl.desktop {
