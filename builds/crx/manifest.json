@@ -19,7 +19,7 @@
   "minimum_chrome_version": "31",
   "permissions": [
     "storage",
-    "http://*/",
-    "https://*/"
+    "*://boards.4chan.org/*",
+    "*://www.4chan.org/*"
   ]
 }
