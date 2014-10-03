@@ -44,7 +44,8 @@
             0, "Custom width of border or outline of highlighted posts (pixels).", "Right Margin", 999, true
         ],
         "Fixed Thread Watcher": [true, "The thread watcher will scroll with the page."],
-        "Style Thread Stats": [false, "Makes the thread stats stand out more. Disable Updater and Stats in Header if using ccd0."],
+        "Style Thread Stats": [false, "Makes the thread stats stand out more. Disable Updater and Stats in Header if using ccd0."],        
+        "Rounded Corners": [false, "Styles replies, menus and the QR to have subtly rounded corners."],
         "Underline All Links": [false, "Underlines all the links."],
         "Show Banner": [true, "Toggle visibility of the banner.", null, true],
         "Reduce Banner Opacity": [false, "Reduce the opacity of the banner for easier viewing.", "Show Banner", true, true],
@@ -89,7 +90,6 @@
         "Underline QuoteLinks": [false, "Underlines quotelinks only."],
         "Indent OP": [false, "Indents the OP instead of touching the screen."],
         "Allow Wrapping Around OP": [false, "Allow for replies to wrap around the OP instead of being forced onto their own line."],
-        "Rounded Corners": [false, "Styles replies to have subtly rounded corners."],
         "Recolor Even Replies": [false, "Makes every other post a darker color. Not compatible with Quote Threading."],
         "Reduce Thumbnail Opacity": [false, "Reduces opacity of the thumbnails."],
         "Backlink Icons": [true, "Use icons for backlinks instead of text."],
