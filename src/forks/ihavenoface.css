@@ -3,7 +3,7 @@
 /* Header */
 #header-bar {
   padding: 3px 4px 3px !important;
-  z-index: 32;
+  z-index: 33;
 }
 #header-bar a:not(.entry) {
   padding: 2px;
@@ -145,7 +145,7 @@
 }
 .watcher-toggler.fa.fa-bookmark {
   opacity: 1;
-  padding-top: 16px!important;
+  padding-top: 18px!important;
   vertical-align: bottom;
   width: 16px!important;
   background-image: url(\"data:image/svg+xml," + $SS.theme.icons.star + "\") !important;

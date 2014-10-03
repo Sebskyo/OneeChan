@@ -29,7 +29,8 @@
   min-width: 260px !important;
   padding: 2px 2px !important;
 }
-#qr .riceCheck, #qr input[type=checkbox] {
+#qr .riceCheck, 
+#qr input[type=checkbox] {
   float: left;
 }
 :root.expand-inputs #qr > form > div:nth-child(1) {
