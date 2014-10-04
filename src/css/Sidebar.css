@@ -23,6 +23,7 @@
 }
 #qr {
   min-width: 297px !important;
+  box-shadow: none !important;
 }
 :root.left-sidebar #qr {
   left: 0 !important;

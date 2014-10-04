@@ -164,10 +164,6 @@ input[type=checkbox],
 .riceCheck {
   background: rgb\(" + $SS.theme.inputColor.shiftRGB(25) + ") !important;
 }
-input[type=checkbox]:checked, 
-input[type=checkbox]:checked + .riceCheck {
-  box-shadow: inset rgba(0,0,0,.2) 0 1px 2px;
-}
 input:not(.jsColor):hover,
 .riceCheck:hover,
 #qr-filename-container:hover,
@@ -283,6 +279,10 @@ textarea:focus,
 }
 .thumb {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+#qr,
+#thread-watcher {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1) !important;
 }
 /* Thread Stats */
 :root.style-stats #thread-stats,

@@ -148,10 +148,10 @@ input[type=submit],
 input[type=checkbox],
 .riceCheck {
   display: inline-block;
-  height: 11px !important;
+  height: 10px !important;
   position: relative;
-  width: 11px!important;
-  border-radius: 2px!important;
+  width: 10px !important;
+  border-radius: 2px !important;
   -webkit-appearance: none;
   margin: 1px;
 }
@@ -172,9 +172,9 @@ input[type=checkbox]:checked::before,
 input[type=checkbox]:checked+.riceCheck::before {
   content: '';
   display: block;
-  height: 10px;
-  margin: 1.4px;
-  width: 10px;
+  height: 8px;
+  margin: 1px;
+  width: 8px;
 }
 input[type=checkbox]:checked::before,
 input[type=checkbox]:checked+.riceCheck::before {
