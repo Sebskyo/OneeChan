@@ -1,7 +1,7 @@
 OneeChan
 ====
 
-Maximum rice for 4chan X. Originally developed by [seaweedchan](https://github.com/seaweedchan), this fork adds compability with various 4chan X forks and more custom options.
+Maximum rice for 4chan X. Originally developed by [seaweedchan](https://github.com/seaweedchan), this fork adds compability with various 4chan X versions and more custom options.
 
 
 ##[Install](https://nebukazar.github.io/OneeChan/builds/OneeChan.user.js)
@@ -17,12 +17,14 @@ Maximum rice for 4chan X. Originally developed by [seaweedchan](https://github.c
 #### Compatibility with 4chan X forks and others:
 (Updated 2014-09-25)
 
-- [ccd0](https://github.com/ccd0/4chan-x) /// `Compatible`
+- [ccd0](https://github.com/ccd0/4chan-x) /// `Compatible` (Recommended)
 - [ihavenoface](https://github.com/ihavenoface/4chan-x) /// `Compatible`
 - [loadletter](https://github.com/loadletter/4chan-x) /// `Compatible`
 - [inline](https://boards.4chan.org/) /// `No`
 
-Make sure you select your fork version under `Compatibility` in OneeChan options. Enabling Quick Reply and Persistent QR is recommended for maximum compatibility. I can't promise everything will work with every fork.
+Make sure you select your fork version under `Compatibility` in OneeChan options. Enabling Quick Reply and Persistent QR in 4chan X is recommended for maximum compatibility. 
+
+I can't promise everything will work with every fork.
 
 
 #### Troubleshooting

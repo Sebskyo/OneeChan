@@ -1,3 +1,11 @@
+### v5.4.1
+*2014-09-29*
+
+- Fix margins for smaller font sizes
+- Move `Rounded Corners` to Main Rice, rounded corners will now apply to QR, posts, menus, TW and image thumbnails
+- Yotsuba, Yotsuba B, Dark Flat, Photons + Odin themes now have their backgrounds
+- Small CSS changes
+
 ### v5.4.0
 *2014-09-26*
 
