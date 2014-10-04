@@ -91,7 +91,7 @@ s:hover .quote,
 /* Board Title */
 .boardTitle {
   color: " + $SS.theme.boardColor.hex + " !important;
-  text-shadow:1px 1px 1px rgba\(" + $SS.theme.boardColor.shiftRGB(-100) + ", 0.6) !important;
+  text-shadow: none !important;
 }
 /* Backlinks */
 .backlink {
