@@ -321,6 +321,7 @@ select[name='Font Family']>option {
 /* Overlays */
 #overlay {
   z-index: 99 !important;
+  background-color:rgba(0,0,0,.3);
 }
 #overlay2 {
   background:rgba(0,0,0,.3);
@@ -330,7 +331,7 @@ select[name='Font Family']>option {
   height:100%;
   width:100%;
   text-align:center;
-  z-index:999!important;
+  z-index:125!important;
 }
 #overlay2::before {
   content:'';

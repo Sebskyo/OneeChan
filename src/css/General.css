@@ -72,6 +72,9 @@ div.post {
 .threadContainer .hide-reply-button {
   margin-left: -12px !important;
 }
+.stub {
+  padding: 2px;
+}
 :root.reply-hide .thread>.expanded-image>.reply,
 :root.reply-hide .thread>.hasInline>.reply {
    margin-left: 12px !important;
@@ -355,7 +358,7 @@ hr {
 }
 /* Board Title */
 .boardBanner .boardTitle {
-  cursor: default;
+  cursor:default;
   letter-spacing:-2px;
 }
 /* Banner */
