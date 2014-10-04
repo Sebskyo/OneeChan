@@ -164,6 +164,10 @@ input[type=checkbox],
 .riceCheck {
   background: rgb\(" + $SS.theme.inputColor.shiftRGB(25) + ") !important;
 }
+input[type=checkbox]:checked, 
+input[type=checkbox]:checked + .riceCheck {
+  box-shadow: inset rgba(0,0,0,.2) 0 1px 2px;
+}
 input:not(.jsColor):hover,
 .riceCheck:hover,
 #qr-filename-container:hover,
@@ -205,7 +209,7 @@ hr {
 :root.rounded-corners #updater,
 :root.rounded-corners #menu,
 :root.rounded-corners .thumb,
-:root.rounded-corners .fileThumb img {
+:root.rounded-corners .fileThumb img:not(.full-image) {
   border-radius: 3px !important;
 }
 :root.post-info.rounded-corners .reply>.postInfo,
