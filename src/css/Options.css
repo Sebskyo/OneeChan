@@ -7,17 +7,22 @@
   margin: auto;
 }
 #oneechan-options {
-  width: 720px;
+  width: 690px;
   text-align:left!important;
   height: 532px;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  box-shadow: rgba(0,0,0,.6) 0 0 10px !important;
+  padding: 5px;
 }
 .options-close,
-.options-container {
-  padding:5px;
+#options-container {
+  padding: 3px;
+}
+#options-container {
+  box-shadow: inset rgba(0,0,0,.3) 0 0 5px;
 }
 .options-close {
   text-align: right !important;
@@ -318,7 +323,7 @@ select[name='Font Family']>option {
   z-index: 99 !important;
 }
 #overlay2 {
-  background:rgba(0,0,0,.5);
+  background:rgba(0,0,0,.3);
   position:fixed;
   top:0;
   left:0;
