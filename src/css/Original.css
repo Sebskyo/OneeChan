@@ -33,15 +33,15 @@ body.hasDropDownNav { /* Temporary? */
 }
 .fixed.top-header.index body {
   padding-bottom: 2.5em;
-  padding-top: 2.2em;
+  padding-top: " + (($SS.conf["Font Size"] <= 11) ? 3.2 : 2.3) + "em;
 }
 .fixed.top-header.thread-view body {
   padding-bottom: 0em; 
-  padding-top: 2.2em;
+  padding-top: " + (($SS.conf["Font Size"] <= 11) ? 3.2 : 2.3) + "em;
 }
 .fixed.top-header.catalog body {
   padding-bottom: 0.5em;
-  padding-top: 2.2em;
+  padding-top: " + (($SS.conf["Font Size"] <= 11) ? 3.2 : 2.3) + "em;
 }
 div.post {
   margin: 4px 0;

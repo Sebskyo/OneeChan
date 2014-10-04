@@ -237,7 +237,7 @@
                 value: "Helvetica"
             }]
         ],
-        "Font Size": [13, "Set the general size of text (Pixels)."],
+        "Font Size": [13, "Set the general size of text (Pixels). Min: 10px, Max: 18px"],
         "Bitmap Font": [false, "Check this if you are using a bitmap font."],
         ":: Compatibility": ["header", ""],
         "Show Fail-safe": [true, "Shows a OneeChan settings button towards the end of the page when the header settings button fails to render."],
@@ -2853,7 +2853,7 @@
                 $("html").addClass("oneechan");
                 $("html").optionClass("Fixed Thread Watcher", true, "fixed-watcher");
                 $("html").optionClass("Underline QuoteLinks", true, "underline-quotes");
-                $("html").optionClass("Underline All Links", false, "underline-disabled");                
+                $("html").optionClass("Underline All Links", false, "underline-disabled");
                 $("html").optionClass("Style Thread Stats", true, "style-stats");
                 $("html").optionClass("Rounded Corners", true, "rounded-corners");
                 $("html").optionClass("Show Checkboxes", false, "hide-checkboxes");
@@ -2879,7 +2879,7 @@
                 $("html").optionClass("Autohide Style", 3, "fade-qr");
                 $("html").optionClass("Transparent QR", true, "qr-opacity");
                 $("html").optionClass("Remove Background", true, "qr-background");
-                $("html").optionClass("Remove Controls", true, "qr-controls");             
+                $("html").optionClass("Remove Controls", true, "qr-controls");
                 $("html").optionClass("SS-like Sidebar", true, "ss-sidebar");
                 $("html").optionClass("Indent OP", false, "force-indent");
                 $("html").optionClass("Allow Wrapping Around OP", false, "force-wrapping");
