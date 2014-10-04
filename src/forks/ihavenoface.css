@@ -48,11 +48,7 @@
 }
 /* Menu */
 /* Breaks with Fit Replies */
-/*
-:root.reply-fit-width .post.reply {
-  overflow: visible !important;
-} 
-*/
+
  /* Quick Reply */
  #qr > div {
   min-width: 240px !important;

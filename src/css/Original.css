@@ -3,7 +3,7 @@ div.post div.file .fileThumb {
   float: left;
   margin-left: 13px;
   margin-right: 20px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 .fileText {
   margin-left: 13px !important;
