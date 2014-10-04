@@ -29,7 +29,6 @@ body {
 }
 div.post {
   margin: 4px 0;
-  overflow: hidden !important;
 }
 :root.force-indent .op {
   margin-left: -12px;
@@ -77,7 +76,6 @@ div.post {
 :root.reply-hide .thread>.hasInline>.reply {
    margin-left: 12px !important;
 }
-
 /* Quote Threading */
 .threadContainer {
   margin-left: 0 !important;
