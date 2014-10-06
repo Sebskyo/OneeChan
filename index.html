@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Oneechan by Nebukazar</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Oneechan</h1>
+        <p>Maximum rice for 4chan X.</p>
+
+        <p class="view"><a href="https://github.com/Nebukazar/OneeChan">View the Project on GitHub <small>Nebukazar/OneeChan</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/Nebukazar/OneeChan/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Nebukazar/OneeChan/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Nebukazar/OneeChan">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="oneechan" class="anchor" href="#oneechan"><span class="octicon octicon-link"></span></a>OneeChan</h1>
+
+<p>Maximum rice for 4chan X. Originally developed by <a href="https://github.com/seaweedchan">seaweedchan</a>, this fork adds compability with various 4chan X versions and more custom options.</p>
+
+<h2>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a><a href="https://nebukazar.github.io/OneeChan/builds/OneeChan.user.js">Install</a>
+</h2>
+
+<h4>
+<a name="install-instructions" class="anchor" href="#install-instructions"><span class="octicon octicon-link"></span></a>Install instructions</h4>
+
+<ul>
+<li><p>Firefox: Requires the Greasemonkey addon. Click the Install link above.</p></li>
+<li><p>Chrome: Requires the Tampermonkey extension. Click the Install link above. Alternatively you can download a <a href="https://nebukazar.github.io/OneeChan/builds/OneeChan.crx">.crx here</a> if you're using Chromium or are not using Windows. Drag&amp;drop into the extensions page to install.</p></li>
+</ul><h4>
+<a name="compatibility-with-4chan-x-forks-and-others" class="anchor" href="#compatibility-with-4chan-x-forks-and-others"><span class="octicon octicon-link"></span></a>Compatibility with 4chan X forks and others:</h4>
+
+<p>(Updated 2014-09-25)</p>
+
+<ul>
+<li>
+<a href="https://github.com/ccd0/4chan-x">ccd0</a> /// <code>Compatible</code> (Recommended)</li>
+<li>
+<a href="https://github.com/ihavenoface/4chan-x">ihavenoface</a> /// <code>Compatible</code>
+</li>
+<li>
+<a href="https://github.com/loadletter/4chan-x">loadletter</a> /// <code>Compatible</code>
+</li>
+<li>
+<a href="https://boards.4chan.org/">inline</a> /// <code>No</code>
+</li>
+</ul><p>Make sure you select your fork version under <code>Compatibility</code> in OneeChan options. Enabling Quick Reply and Persistent QR in 4chan X is recommended for maximum compatibility. </p>
+
+<p>I can't promise everything will work with every fork.</p>
+
+<h4>
+<a name="troubleshooting" class="anchor" href="#troubleshooting"><span class="octicon octicon-link"></span></a>Troubleshooting</h4>
+
+<ul>
+<li><p>If you have any problems, try first resetting your 4chan X and OneeChan settings and restarting your browser</p></li>
+<li><p>Check if it's not a 4chan X issue first, OneeChan mostly deals with stylesheets not site functionality</p></li>
+<li><p>Something doesn't work let me know in the <a href="https://github.com/Nebukazar/OneeChan/issues">Issues</a> page</p></li>
+<li><p>Please refer to the <a href="https://github.com/Nebukazar/OneeChan/wiki">Wiki</a>.</p></li>
+</ul><h4>
+<a name="known-issues" class="anchor" href="#known-issues"><span class="octicon octicon-link"></span></a>Known Issues</h4>
+
+<ul>
+<li>OneeChan's settings icon sometimes doesn't render on Chrome</li>
+<li>Post menu breaks with fit replies enabled in MayhemYDG forks</li>
+</ul><h4>
+<a name="development--contribution" class="anchor" href="#development--contribution"><span class="octicon octicon-link"></span></a>Development &amp; Contribution</h4>
+
+<p><a href="https://david-dm.org/Nebukazar/OneeChan#info=devDependencies"><img src="https://david-dm.org/Nebukazar/OneeChan/dev-status.svg" alt="devDependency Status"></a></p>
+
+<h4>
+<a name="get-started" class="anchor" href="#get-started"><span class="octicon octicon-link"></span></a>Get started</h4>
+
+<ul>
+<li>Install <a href="http://nodejs.org/">node.js</a>.</li>
+<li>Install <a href="http://gruntjs.com/">Grunt's CLI</a> with <code>npm install -g grunt-cli</code>.</li>
+<li>Clone OneeChan.</li>
+<li>
+<code>cd</code> into it.</li>
+<li>Install/Update OneeChan dependencies with <code>npm install</code>.</li>
+</ul><h4>
+<a name="build" class="anchor" href="#build"><span class="octicon octicon-link"></span></a>Build</h4>
+
+<ul>
+<li>Build with <code>grunt</code>.</li>
+</ul><h4>
+<a name="release" class="anchor" href="#release"><span class="octicon octicon-link"></span></a>Release</h4>
+
+<ul>
+<li>Update the version with <code>grunt patch</code>, <code>grunt minor</code> or <code>grunt major</code>.</li>
+<li>Release with <code>grunt release</code>.</li>
+</ul><p>Note: this is only used to release new OneeChan versions, and is <strong>not</strong> needed or wanted in pull requests.</p>
+
+<h4>
+<a name="contribute" class="anchor" href="#contribute"><span class="octicon octicon-link"></span></a>Contribute</h4>
+
+<ul>
+<li>Edit the sources.</li>
+<li>Open a pull request  to merge branch.</li>
+</ul><h4>
+<a name="see-also" class="anchor" href="#see-also"><span class="octicon octicon-link"></span></a>See also:</h4>
+
+<ul>
+<li><a href="http://nanami-tan.info/">Windows 7 Ricing Reference</a></li>
+<li><a href="https://github.com/gokoururi/homepage">Ruri Gokou Homepage</a></li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/Nebukazar">Nebukazar</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
