@@ -8,7 +8,7 @@
 // @license      <%= license %>; <%= meta.repo %>blob/<%= meta.mainBranch %>/LICENSE 
 <%=
 meta.matches.map(function(match) {
-return '// @match ' + match;
+return '// @match        ' + match;
 }).join('\n')
 %>
 // @grant        GM_getValue
