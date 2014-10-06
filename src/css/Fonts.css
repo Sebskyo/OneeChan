@@ -115,3 +115,10 @@ a.current {
   margin-left: 5px;
   margin-right: 5px;
 }
+.subject,
+.comment {
+  text-align: justify
+}
+.catalog-thread {
+  margin: 0px 11px 5px;
+}
