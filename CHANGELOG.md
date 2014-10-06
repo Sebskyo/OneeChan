@@ -1,3 +1,15 @@
+### v5.4.2
+*2014-10-06*
+
+- Update permissions
+- Minor QR margin fix
+- Captcha borders
+- Add 3 symbols to the Mascots
+
+As in v5.4.1:
+
+- Catalog thumbnails have a background shadow
+
 ### v5.4.1
 *2014-09-29*
 

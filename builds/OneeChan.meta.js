@@ -1,13 +1,12 @@
 // ==UserScript==
 // @name         OneeChan
-// @version      5.4.1
+// @version      5.4.2
 // @namespace    OneeChan
 // @description  Customizable rice and themes for 4chan X.
 // @minGMVer     1.15
 // @minFFVer     26
 // @license      GPLv3; https://github.com/Nebukazar/OneeChan/blob/master/LICENSE 
-// @match *://www.4chan.org/
-// @match *://boards.4chan.org/*
+// @match        *://boards.4chan.org/*
 // @grant        GM_getValue
 // @grant        GM_setValue
 // @grant        GM_deleteValue

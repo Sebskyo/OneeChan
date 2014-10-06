@@ -1,6 +1,6 @@
 {
   "name": "OneeChan",
-  "version": "5.4.1",
+  "version": "5.4.2",
   "description": "Customizable rice and themes for 4chan X.",
   "meta": {
     "name": "OneeChan",
@@ -11,7 +11,6 @@
     "buildsPath": "builds/",
     "mainBranch": "master",
     "matches": [
-      "*://www.4chan.org/",
       "*://boards.4chan.org/*"
     ],
     "files": {
