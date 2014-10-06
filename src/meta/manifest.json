@@ -19,7 +19,6 @@
   "minimum_chrome_version": "<%= meta.min.chrome %>",
   "permissions": [
     "storage",
-    "*://boards.4chan.org/*",
-    "*://www.4chan.org/*"
+    "*://boards.4chan.org/*"
   ]
 }
