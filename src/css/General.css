@@ -256,8 +256,9 @@ input[type=checkbox]:checked+.riceCheck::before {
   right: 0 !important;
   left: auto !important;
 }
-.persona .field {
-  margin: 0px 0px 0px 1px;
+#qr > form > div.persona > input:nth-child(2),
+#qr > form > div.persona > input:nth-child(3) {
+  margin-left: 1px;
 }
 :root.expand-inputs .persona {
   display: flex;
