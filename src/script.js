@@ -2820,6 +2820,18 @@
                 "default": true,
                 name: "Yuzuki Yukari",
                 hoffset: "10"
+            }, {
+                img: "https://i.minus.com/ifJwTdQVya4fj.png",
+                "default": true,
+                name: "Symbol 01"
+            }, {
+                img: "https://i.minus.com/i4UOxKBPxYga4.png",
+                "default": true,
+                name: "Symbol 02"
+            }, {
+                img: "https://i.minus.com/ibs1e3aRlXlifA.png",
+                "default": true,
+                name: "Symbol 03"
             }],
 
             init: function() {
