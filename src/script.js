@@ -188,7 +188,7 @@
         ],
         ":: Quick Reply": ["header", ""],
         "Autohide Style": [
-            3, "Changes the style of the quick reply hiding.", [{
+            3, "Changes the style of the quick reply hiding. Enable Autohide QR in 4chan X.", [{
                 name: "Normal",
                 value: 1
             }, {

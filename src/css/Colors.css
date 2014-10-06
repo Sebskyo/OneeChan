@@ -226,7 +226,8 @@ textarea,
 .riceCheck,
 #qr-filename-container,
 #search-box,
-#index-search {
+#index-search,
+.captcha-img {
   border: 1px solid " + $SS.theme.inputbColor.hex + " !important;
 }
 .options-button,
@@ -246,7 +247,8 @@ textarea:focus,
   border: 1px solid " + $SS.theme.linkColor.hex + " !important;
 }
 #search-box:hover,
-#index-search:hover {
+#index-search:hover,
+.captcha-img:hover {
   border-color: " + $SS.theme.linkColor.hex + " !important;
 }
 #header-bar {
