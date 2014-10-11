@@ -805,7 +805,7 @@
                 $SS.options.init();
                 $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler);
             if (!$SS.browser.webkit)
-                $(document).bind("OpenSettings", $SS.NodeInsertionHandler).bind("AddMenuEntry", $SS.AddMenuHandler).bind("ThreadUpdate", $SS.NodeInsertionHandler);
+                $(document).bind("OpenSettings", $SS.NodeInsertionHandler).bind("ThreadUpdate", $SS.NodeInsertionHandler);
 
                 var MutationObserver = window.MutationObserver;
                 var observer = new MutationObserver(function(mutations) {
@@ -950,11 +950,6 @@
             var settings = e.target;
             $("input[type=checkbox]", settings).riceCheck();
         },
-        AddMenuHandler: function(e) {
-            /* When AddMenuEntry is called by scripts like ExLinks it messes with riceCheck until we open and close the menu */
-            $("#header-bar .menu-button").click();
-            $("#header-bar .menu-button").click();
-        },
         /* CONFIG */
         Config: {
             hasGM: typeof GM_deleteValue !== "undefined",
@@ -1037,8 +1032,8 @@
                             "<li class='tab-item'><label class='tab-label' for=mascots-select>Mascots</label></li>" +
                             "</ul><div id=options-container><input type=radio class=tab-select name=tab-select id=main-select hidden checked><div id='main-section' class='options-section'>" +
                             "<p class='buttons-container'>" +
-                            "<a class='options-button' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a><a class='options-button' name=resetSettings>Reset</a>" +
-                            "<span id=oneechan-version><span title='Thanks to ahodesuka, seaweedchan, Spittie and everyone else involved in this project!'>OneeChan</span> v" + VERSION + "<span class=link-delim> | </span>" +
+                            "<a class='options-button' title='Export your settings as JSON.' name=Export>Export</a><a class='options-button' title='Import your settings as JSON.' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a><a class='options-button' title='Reset OneeChan's settings.' name=resetSettings>Reset</a>" +
+                            "<span id=oneechan-version><span>OneeChan</span> v" + VERSION + "<span class=link-delim> | </span>" +
                             "<a href='" + ("https://github.com/Nebukazar/OneeChan/releases") + "' id=update-link target='_blank' title='OneeChan updates automatically.'>Update</a><span class=link-delim> | </span>" +
                             "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank' title='Read the changelog.'>Changelog</a><span class=link-delim> | </span>" +
                             "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md#reporting-bugs-and-suggestions' id=issues-link target='_blank' title='Report an issue.'>Issues</a></p>",
