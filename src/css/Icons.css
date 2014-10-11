@@ -49,21 +49,20 @@
   opacity: 1 !important;
 }
 /* From 4chanSS */
-/* https://github.com/ahodesuka/4chan-Style-Script/blob/master/LICENSE */
 img[title=Closed],
 img[title=Sticky],
 img[title=Archived] {
-  color:transparent!important;
-  font-size:0!important;
-  background-color:transparent!important;
-  background-position:center!important;
-  background-repeat:no-repeat;
-  display:inline-block;
-  height:0!important;
-  padding-top:16px!important;
-  text-indent:-9999px!important;
-  vertical-align:bottom;
-  width:16px!important;
+  color: transparent !important;
+  font-size: 0 !important;
+  background-color: transparent !important;
+  background-position: center !important;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 0 !important;
+  padding-top: 16px !important;
+  text-indent: -9999px !important;
+  vertical-align: bottom;
+  width: 16px !important;
 }
 /* Thread Closed */
 .closedIcon {

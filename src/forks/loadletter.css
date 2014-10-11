@@ -45,6 +45,9 @@
   flex: 3;
 }
 /* Misc */
+.hide_reply_button:not([hidden]) {
+  display: inherit !important;
+}
 #togglePostFormLink {
   text-align: center;
 }
@@ -69,7 +72,7 @@
   margin-bottom: 10px;
 }
 .postInfo {
-  padding: 0px 6px 2px;
+  padding: 0 6px 2px;
 }
 #boardNavDesktop {
   color: " + $SS.theme.headerColor.hex + " !important;
@@ -108,7 +111,7 @@
 }
 .inline,
 #qp {
-  padding: 0px;
+  padding: 0;
 }
 table.flashListing {
   margin-bottom: 20px;
@@ -179,12 +182,9 @@ div.post div.file .fileThumb {
 :root.reply-fit-width .post .menu_button {
   opacity: 0;
 }
-:root.reply-fit-width .post:not(:hover) .menu_button {
-  transition: opacity .3s ease-out 0s !important;
-}
 :root.reply-fit-width .post:hover .menu_button {
   opacity: 1;
-  transition: opacity .3s ease-in .1s !important;
+  transition: opacity .1s ease-in .28s !important;
 }
 :root.reply-fit-width div.hide_reply_button.stub > a.menu_button,
 :root.reply-fit-width div.hide_thread_button.hidden_thread > a.menu_button {
