@@ -26,6 +26,9 @@
 :root.bottom-header body {
   margin-top: 0.5em;
 }
+#header {
+  background: linear-gradient(rgb\(" + $SS.theme.headerBGColor.shiftRGB(15) + "),rgba(" + $SS.theme.headerBGColor.rgb + "," + $SS.theme.navOp + ")) !important;
+}
 /* Navigation */
 #navlinks {
   top: 135px;
