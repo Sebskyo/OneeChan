@@ -196,7 +196,7 @@ hr {
   border: none;
 }
 #menu {
-  border-radius: 0px !important;
+  border-radius: 0 !important;
 }
 :root.rounded-corners .reply,
 :root.rounded-corners .dialog:not(#header-bar),
@@ -280,7 +280,7 @@ textarea:focus,
   rgba(0,0,0,.6) 0 0 2px;
 }
 .thumb {
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
 #qr,
 #thread-watcher {
@@ -293,9 +293,4 @@ textarea:focus,
   box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
   padding: 3px 6px !important;
   border: 1px solid;
-}
-:root.style-stats #thread-stats > .move,
-:root.style-stats #updater > .move,
-:root.style-stats #stats > .move {
-  cursor: default;
 }

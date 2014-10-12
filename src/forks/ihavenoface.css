@@ -3,7 +3,6 @@
 /* Header */
 #header-bar {
   padding: 3px 4px 3px !important;
-  z-index: 33;
 }
 #header-bar a:not(.entry) {
   padding: 2px;

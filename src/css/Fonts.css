@@ -110,15 +110,9 @@ a.current {
   font-style:" + ($SS.conf["Bitmap Font"] ? 'none' : 'italic') + ";
 }
 /* Catalog */
-.extended-small .teaser, .extended-large .teaser {
-  text-align: justify;
-  margin-left: 5px;
-  margin-right: 5px;
-}
+.extended-small .teaser, 
+.extended-large .teaser,
 .subject,
 .comment {
-  text-align: justify
-}
-.catalog-thread {
-  margin: 0px 11px 5px;
+  text-align: justify;
 }

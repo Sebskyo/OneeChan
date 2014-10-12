@@ -28,9 +28,6 @@ div.post div.file .fileThumb {
 .fixed.bottom-header body {
   padding-top: 0.5em;
 }
-body.hasDropDownNav { /* Temporary? */
-  margin-top: 0px !important;
-}
 .fixed.top-header.index body {
   padding-bottom: 2.5em;
   padding-top: " + (($SS.conf["Font Size"] <= 11) ? 3.2 : 2.4) + "em;
