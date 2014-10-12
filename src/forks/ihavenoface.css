@@ -86,6 +86,9 @@
 #url-button {
   padding-right: 3px;
 }
+:root.vertical-qr #qr.autohide:not(.focus):not(:hover) select {
+  max-width: 132px!important;
+}
 /* Bottom Controls */
 .bottom-header .bottomCtrl.desktop {
   float: right;
