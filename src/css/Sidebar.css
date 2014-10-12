@@ -4,10 +4,10 @@
   z-index: 10;
 }
 :root.left-sidebar body {
-  padding-left: 303px !important;
+  padding-left: 303px;
 }
 :root.right-sidebar body {
-  padding-right: 303px !important;
+  padding-right: 303px;
 }
 .boardBanner {
   position: fixed;
@@ -55,4 +55,36 @@
   border-left: none !important;
   left: 0;
   right: auto !important;
+}
+/* Minimal Sidebar */
+:root.mini-sidebar:root.left-sidebar body {
+  padding-left: 30px !important;
+}
+:root.mini-sidebar:root.right-sidebar body {
+  padding-right: 30px !important;
+}
+:root.mini-sidebar #bannerCnt,
+:root.mini-sidebar .boardSubtitle {
+  display: none !important;
+}
+:root.mini-sidebar:root.ss-sidebar body::before {
+  width: 29px !important;
+}
+:root.mini-sidebar .boardBanner {
+  top: 75px !important;
+  width: inherit !important;
+}
+:root.mini-sidebar:root.right-sidebar .boardBanner {
+  right: 30px;
+  -webkit-transform-origin: top right;
+  transform-origin: top right;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg); 
+}
+:root.mini-sidebar:root.left-sidebar .boardBanner {
+  left: 30px;
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg); 
 }
