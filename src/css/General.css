@@ -182,9 +182,6 @@ input[type=checkbox]:checked+.riceCheck::before {
 #header-bar {
   padding: 4px 4px 5px !important;
 }
-:root.header-shadow #header-bar {
-  box-shadow: none !important;
-}
 /* Reposition things based on Header position */
 :root:not(.fixed) #header-bar {
   top: 0;

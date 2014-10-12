@@ -136,6 +136,12 @@ body {
 :root.header-gradient #header-bar {
   background: linear-gradient(rgb\(" + $SS.theme.headerBGColor.shiftRGB(15) + "),rgba(" + $SS.theme.headerBGColor.rgb + "," + $SS.theme.navOp + ")) !important;
 }
+:root.header-shadow #header-bar {
+  box-shadow: none !important;
+}
+:root:not(.fixed) #header-bar {
+  background: none !important;
+}
 .options-button,
 .qr-link,
 .pages.cataloglink,
