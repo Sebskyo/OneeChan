@@ -925,10 +925,8 @@
             $SS.bHideSidebar = $SS.location.sub !== "boards" ||
                 $SS.location.board === "f";
             css = "<%= grunt.file.read('tmp/style.min.css').replace(/\\(^\")/g, '') %>";
-            if ($("#ch4SS").exists())
-                $("#ch4SS").text(css);
-            else
-                $(document.head).append($("<style type='text/css' id=ch4SS>").text(css));
+
+            $(document.head).append($("<style type='text/css' id='oneeCSS'>").text(css));
         },
         insertMascot: function() {
             var createMascot;
