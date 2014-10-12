@@ -40,6 +40,9 @@ div.post div.file .fileThumb {
   padding-bottom: 0.5em;
   padding-top: " + (($SS.conf["Font Size"] <= 11) ? 3.2 : 2.4) + "em;
 }
+.fixed.top-header.autohide body {
+  padding-top: 2em !important;
+}
 div.post {
   margin: 4px 0;
   overflow: hidden;
