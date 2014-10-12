@@ -2,6 +2,9 @@
 /* Compatibility fixes for different 4chan X forks */
 /* Some functionality of OneeChan might not work with this fork */
 /* Quick Reply */
+#qr {
+  max-width: 299px;
+}
 #qr input[type=submit] {
   height: 24px !important;
   width: 28%;
@@ -43,6 +46,9 @@
 :root.expand-inputs #qr > form > div:nth-child(1) .field:hover,
 :root.expand-inputs #qr > form > div:nth-child(1) .field:focus {
   flex: 3;
+}
+:root.vertical-qr.left-sidebar #qr.autohide:not(:hover):not(.focus) {
+  left: -262px !important;
 }
 /* Misc */
 .hide_reply_button:not([hidden]) {
