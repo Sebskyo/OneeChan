@@ -1032,7 +1032,7 @@
                             "<li class='tab-item'><label class='tab-label' for=mascots-select>Mascots</label></li>" +
                             "</ul><div id=options-container><input type=radio class=tab-select name=tab-select id=main-select hidden checked><div id='main-section' class='options-section'>" +
                             "<p class='buttons-container'>" +
-                            "<a class='options-button' title='Export your settings as JSON.' name=Export>Export</a><a class='options-button' title='Import your settings as JSON.' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a><a class='options-button' title='Reset OneeChan's settings.' name=resetSettings>Reset</a>" +
+                            "<a class='options-button' title='Export your settings as JSON.' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a><a class='options-button' title='Reset OneeChan's settings.' name=resetSettings>Reset</a>" +
                             "<span id=oneechan-version><span>OneeChan</span> v" + VERSION + "<span class=link-delim> | </span>" +
                             "<a href='" + ("https://github.com/Nebukazar/OneeChan/releases") + "' id=update-link target='_blank' title='OneeChan updates automatically.'>Update</a><span class=link-delim> | </span>" +
                             "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank' title='Read the changelog.'>Changelog</a><span class=link-delim> | </span>" +
@@ -3566,9 +3566,7 @@
 
             this.index = index;
             this.hidden = $SS.conf["Hidden Mascots"].indexOf(index) !== -1;
-            this.
-            default = mascot.
-            default;
+            this.default = mascot.default;
             this.flip = mascot.flip ? "scaleX(-1); -webkit-transform: scaleX(-1)" : "";
             this.img = new $SS.Image(mascot.img);
             this.offset = mascot.offset !== undefined ? mascot.offset : 0;

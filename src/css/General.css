@@ -444,6 +444,14 @@ hr {
 .pagelist span {
   opacity: 0.2;
 }
+/* Catalog */
+.catalog-thread {
+  margin: 0 11px 5px;
+}
+.extended-small .teaser, .extended-large .teaser {
+  margin-left: 5px;
+  margin-right: 5px;
+}
 /* Catalog Link */
 .pages.cataloglink {
   margin-left: 12px;
