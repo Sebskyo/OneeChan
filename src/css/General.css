@@ -14,9 +14,6 @@ body {
   padding: 4px 13px 2px;
   display: block !important;
 }
-.closed {
-  text-align: center;
-}
 .useremail::before {
   margin-bottom: -20px;
   display: inline-block;
@@ -110,13 +107,7 @@ div.post {
 :root.reply-fit-width .reply .container {
   padding-right: 5px;
 }
-.container,
-.reply>.postInfo>.menu-button + .container:not(:empty) {
-  margin-left: -2px !important;
-}
-.menu-button + .container:not(:empty) {
-  margin-left: 0 !important;
-}
+.menu-button + .container:not(:empty),
 :root:not(.reply-fit-width) .container {
   margin-left: 0 !important;
 }
@@ -586,10 +577,4 @@ table.flashListing .highlightPost {
   height: auto;
   transition: opacity .3s ease-in 0s;
   pointer-events: auto;
-}
-:root.info-on-hover .postNum {
-  font-size: 0 !important;
-}
-:root.info-on-hover .postContainer:hover .postNum {
-  font-size:" + $SS.conf["Font Size"] + "px !important;
 }

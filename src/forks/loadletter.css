@@ -51,15 +51,14 @@
 #togglePostFormLink {
   text-align: center;
 }
-:root.hide-button form[name=post] > h1 {
-  display: none;
-}
 .boardList {
   display: block;
   text-align: center;
 }
 #navbotright,
-#boardNavDesktopFoot > .toggleCatalog {
+:root.hide-button form[name=post] > h1,
+#boardNavDesktopFoot > .toggleCatalog,
+:root.show-file-info .fileText {
   display: none;
 }
 #navtopright {
@@ -90,20 +89,16 @@
   top: 135px !important;
 }
 #overlay {
-  z-index: 900;
+  z-index: 99;
 }
-#ihover {
-  z-index: 5;
-}
-#qp {
+#ihover,
+#qp,
+#menu {
   z-index: 5;
 }
 #updater,
 #stats {
   z-index: 11;
-}
-#menu {
-  z-index: 5;
 }
 :root.mascot-overlap #mascot img,
 #mascotprev img {
@@ -127,9 +122,6 @@ table.flashListing {
 }
 :root:not(.reply-fit-width) .container {
   margin-right: 10px;
-}
-:root.show-file-info .fileText {
-  display: none;
 }
 div.post {
   overflow: inherit;

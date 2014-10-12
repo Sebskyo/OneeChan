@@ -38,7 +38,6 @@
   min-width: 100% !important;
   height: 56px !important;
 }
-
 /* SS-like Sidebar */
 :root.ss-sidebar body::before {
   background:rgba\(" + $SS.theme.mainColor.shiftRGB(-18) + ",." + ($SS.theme.mainColor.isDark ? 9 : 2) + ");
