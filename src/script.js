@@ -79,8 +79,9 @@
             }], true
         ],
         "SS-like Sidebar": [true, "Darkens the Sidebar and adds a border like 4chan Style Script."],
+        "Minimal Sidebar": [false, "Shrinks the sidebar and disables the banner. Best used with Vertical Quick Reply."],
         ":: Mascots": ["header", ""],
-        "Hide Mascot in Catalog": [false, "Hides the mascot when viewing the catalog."],
+        "Hide Mascots in Catalog": [false, "Hides the mascot when viewing the catalog."],
         "Reduce Mascot Opacity": [false, "Reduces the opacity of the mascots until hover. Warning: Overrides pointer events."],
         ":: Replies": ["header", ""],
         "Fit Width": [true, "Replies stretch to the width of the entire page."],
@@ -2883,6 +2884,7 @@
                 $("html").optionClass("Decoration Style", 3, "hl-border-down");
                 $("html").optionClass("Sidebar Position", 1, "right-sidebar");
                 $("html").optionClass("Sidebar Position", 2, "left-sidebar");
+                $("html").optionClass("Minimal Sidebar", true, "mini-sidebar");
                 $("html").optionClass("Recolor Even Replies", true, "recolor-even");
                 $("html").optionClass("Backlink Icons", true, "backlink-icon");
                 $("html").optionClass("Backlinks on Bottom", true, "backlink-bottom");
