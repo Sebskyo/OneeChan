@@ -2,6 +2,9 @@
 /* Compatibility fixes for different 4chan X forks */
 /* Some functionality of OneeChan might not work with this fork */
 /* Quick Reply */
+#qr {
+  max-width: 299px;
+}
 #qr input[type=submit] {
   height: 24px !important;
   width: 28%;
@@ -44,6 +47,9 @@
 :root.expand-inputs #qr > form > div:nth-child(1) .field:focus {
   flex: 3;
 }
+:root.vertical-qr.left-sidebar #qr.autohide:not(:hover):not(.focus) {
+  left: -262px !important;
+}
 /* Misc */
 .hide_reply_button:not([hidden]) {
   display: inherit !important;
@@ -51,15 +57,14 @@
 #togglePostFormLink {
   text-align: center;
 }
-:root.hide-button form[name=post] > h1 {
-  display: none;
-}
 .boardList {
   display: block;
   text-align: center;
 }
 #navbotright,
-#boardNavDesktopFoot > .toggleCatalog {
+:root.hide-button form[name=post] > h1,
+#boardNavDesktopFoot > .toggleCatalog,
+:root.show-file-info .fileText {
   display: none;
 }
 #navtopright {
@@ -90,20 +95,16 @@
   top: 135px !important;
 }
 #overlay {
-  z-index: 900;
+  z-index: 99;
 }
-#ihover {
-  z-index: 5;
-}
-#qp {
+#ihover,
+#qp,
+#menu {
   z-index: 5;
 }
 #updater,
 #stats {
   z-index: 11;
-}
-#menu {
-  z-index: 5;
 }
 :root.mascot-overlap #mascot img,
 #mascotprev img {
@@ -127,9 +128,6 @@ table.flashListing {
 }
 :root:not(.reply-fit-width) .container {
   margin-right: 10px;
-}
-:root.show-file-info .fileText {
-  display: none;
 }
 div.post {
   overflow: inherit;

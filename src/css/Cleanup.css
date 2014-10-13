@@ -38,7 +38,8 @@ hr:not(#unread-line),
 :root.hide-navlinks body > .desktop:not(.pagelist),
 .ad-plea,
 #mascot img[src=''],
-.exif:not([style]) {
+.exif:not([style]),
+[hidden] {
   display: none;
 }
 /* Get rid of Chrome input outlines, and link outlines */

@@ -72,6 +72,15 @@ body,
   font-family:" + $SS.formatFont($SS.conf["Font Family"]) + " !important;
   font-size:" + $SS.conf["Font Size"] + "px !important;
 }
+.backlink {
+  font-size: x-small;
+}
+:root.info-on-hover .postNum {
+  font-size: 0 !important;
+}
+:root.info-on-hover .postContainer:hover .postNum {
+  font-size:" + $SS.conf["Font Size"] + "px !important;
+}
 /* Text decoration */
 :root.underline-disabled a {
   text-decoration: none !important;
@@ -82,9 +91,6 @@ body,
 .deadlink.quotelink {
   text-decoration: none !important;
 }
-.backlink {
-  font-size: x-small;
-}
 :root.underline-quotes .deadlink.quotelink,
 :root.underline-quotes .quotelink,
 :root.underline-quotes .deadlink.backlink,
@@ -94,6 +100,9 @@ body,
 a.options-button,
 #oneechan-version a {
   text-decoration: none !important;
+}
+.closed {
+  text-align: center;
 }
 /* Font weight */
 .name,

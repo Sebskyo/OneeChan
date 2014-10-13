@@ -26,6 +26,9 @@
 :root.bottom-header body {
   margin-top: 0.5em;
 }
+#header {
+  background: linear-gradient(rgb\(" + $SS.theme.headerBGColor.shiftRGB(15) + "),rgba(" + $SS.theme.headerBGColor.rgb + "," + $SS.theme.navOp + ")) !important;
+}
 /* Navigation */
 #navlinks {
   top: 135px;
@@ -47,8 +50,23 @@
 }
 /* Menu */
 /* Breaks with Fit Replies */
-
+.postContainer .menu-button {
+  position: absolute !important;
+  left: inherit !important;
+  right: inherit !important;
+  padding: 1px;
+  opacity: 1 !important;
+}
+.postContainer .backlink-container {
+  margin-left: 15px;
+}
  /* Quick Reply */
+ #qr > div > select {
+  color: " + $SS.theme.textColor.hex + " !important;
+ }
+#qr form > .riceCheck  {
+  display: none;
+}
  #qr > div {
   min-width: 240px !important;
 }
@@ -85,6 +103,9 @@
 }
 #url-button {
   padding-right: 3px;
+}
+:root.vertical-qr #qr.autohide:not(.focus):not(:hover) select {
+  max-width: 132px!important;
 }
 /* Bottom Controls */
 .bottom-header .bottomCtrl.desktop {
