@@ -222,6 +222,9 @@ input[type=checkbox]:checked+.riceCheck::before {
 :root.fixed-watcher #thread-watcher {
   position: fixed !important;
 }
+#custom-board-list, #full-board-list, .shortcut {
+  vertical-align: baseline !important;
+}
 /* QR link */
 .qr-link {
   border-radius: 3px;
