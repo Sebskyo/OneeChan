@@ -1,3 +1,22 @@
+### v5.4.3
+*2014-10-08*
+
+**New Option:**
+- `Minimal Sidebar`
+
+This option is incompatible with Vertical Tabbed QR.
+
+**loadletter:**
+
+- Fix reply hiding buttons when `Fit Width` is enabled
+- Small QR CSS fixes
+
+**ihavenoface:**
+
+- Fix `Vertical Tabbed QR` placement
+- Fix menus breaking when `Fit Width` is enabled
+- Small QR CSS fixes
+
 ### v5.4.2
 *2014-10-06*
 
@@ -24,7 +43,7 @@ As in v5.4.1:
 - Drop support for MayhemYDG, now supporting [ihavenoface](https://github.com/ihavenoface/4chan-x).
 - Style Archived favicon
 
-**New:**
+**New Option:**
 - `Style Thread Stats`
 
 Mostly for MayhemYDG/ihavenoface forks. Disable `Updater and Stats in Header` for seaweed/ccd0.
@@ -131,7 +150,7 @@ Change:
 
 - Small fixes
 
-**New:**
+**New Option:**
 - `Show Post Info On Hover`
 
 ### v5.3.2
