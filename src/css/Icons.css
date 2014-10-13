@@ -1,3 +1,6 @@
+.closeIcon {
+  background-image: none !important;
+}
 /* Fail-safe */
 #OneeChanCont {
   font-size: 0 !important;

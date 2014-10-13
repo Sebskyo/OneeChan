@@ -35,13 +35,12 @@ I can't promise everything will work with every fork.
 
 - Something doesn't work let me know in the [Issues](https://github.com/Nebukazar/OneeChan/issues) page
 
-- Please refer to the [Wiki](https://github.com/Nebukazar/OneeChan/wiki).
+- Please refer to the [Wiki](https://github.com/Nebukazar/OneeChan/wiki)
 
 
 #### Known Issues
 
-- OneeChan's settings icon sometimes doesn't render on Chrome
-- Post menu breaks with fit replies enabled in MayhemYDG forks
+- OneeChan's settings icon sometimes doesn't appear in the header
 
 
 #### Development & Contribution

@@ -156,7 +156,8 @@ body {
 .focused.entry {
   background:rgb\(" + $SS.theme.mainColor.shiftRGB(10) + ") !important;
 }
-.qr-link:hover {
+.qr-link:hover,
+:root.mini-sidebar #qr .move {
   background:rgb\(" + $SS.theme.mainColor.rgb + ");
 }
 input:not(.jsColor),
@@ -224,7 +225,8 @@ hr {
 .inline,
 fieldset,
 #post-preview,
-.flashListing td:not(:last-of-type):not(.postblock) {
+.flashListing td:not(:last-of-type):not(.postblock),
+:root.mini-sidebar #qr .move {
   border-color: " + $SS.theme.brderColor.hex + " !important;
 }
 input,
@@ -233,7 +235,8 @@ textarea,
 #qr-filename-container,
 #search-box,
 #index-search,
-.captcha-img {
+.captcha-img,
+:root.mini-sidebar #qr .move {
   border: 1px solid " + $SS.theme.inputbColor.hex + " !important;
 }
 .options-button,

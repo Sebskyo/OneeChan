@@ -50,8 +50,23 @@
 }
 /* Menu */
 /* Breaks with Fit Replies */
-
+.postContainer .menu-button {
+  position: absolute !important;
+  left: inherit !important;
+  right: inherit !important;
+  padding: 1px;
+  opacity: 1 !important;
+}
+.postContainer .backlink-container {
+  margin-left: 15px;
+}
  /* Quick Reply */
+ #qr > div > select {
+  color: " + $SS.theme.textColor.hex + " !important;
+ }
+#qr form > .riceCheck  {
+  display: none;
+}
  #qr > div {
   min-width: 240px !important;
 }

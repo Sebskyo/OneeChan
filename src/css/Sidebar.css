@@ -22,7 +22,7 @@
   margin-top: -6px;
 }
 #qr {
-  min-width: 295px !important;
+  min-width: 297px !important;
   box-shadow: none !important;
 }
 :root.left-sidebar #qr {
@@ -74,6 +74,9 @@
   top: 72px !important;
   width: inherit !important;
 }
+:root.mini-sidebar .boardBanner .boardTitle {
+  letter-spacing: -1px;
+}
 :root.mini-sidebar:root.right-sidebar .boardBanner {
   right: 32px;
   -webkit-transform-origin: top right;
@@ -87,4 +90,60 @@
   transform-origin: top left;
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg); 
+}
+:root.mini-sidebar #qr {
+  min-width: 248px !important;
+  top: auto !important;
+  position: fixed;
+}
+:root.mini-sidebar #qr .move {
+  position: absolute;
+  width: 120px;
+  cursor: default;
+  padding: 2px 0 2px 2px;
+  text-align: center;
+}
+:root.mini-sidebar:root.left-sidebar #qr .move {
+  top: 125px;
+}
+:root.mini-sidebar:root.right-sidebar #qr .move {
+  top: 74px;
+}
+:root.mini-sidebar.bottom-header #qr {
+  bottom: 24px !important;
+}
+:root.mini-sidebar.top-header #qr {
+  bottom: 0 !important;
+}
+:root.mini-sidebar .captcha-img, 
+:root.mini-sidebar .captcha-img img {
+  max-width: 247px;
+}
+:root.mini-sidebar #qr form {
+  display: block !important;
+}
+:root.mini-sidebar .move #autohide,
+:root.mini-sidebar #qr > div > select {
+  display: none;
+}
+:root.mini-sidebar:root.left-sidebar #qr {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out 0.5s;
+}
+:root.mini-sidebar #qr:hover,
+:root.mini-sidebar #qr.focus {
+  transform: translateX(0%) !important;
+}
+:root.mini-sidebar:root.right-sidebar #qr {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out 0.5s;
+}
+:root.mini-sidebar:root.left-sidebar #qr .move {
+  transform: rotate(90deg);
+  transform-origin: bottom right;
+  left: 50.6%;
+}
+:root.mini-sidebar:root.right-sidebar #qr .move {
+  transform: rotate(-90deg);
+  right: 80.6%;
 }

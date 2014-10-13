@@ -163,9 +163,6 @@ input[type=checkbox],
   position: relative;
   top: 1px;
 }
-#qr label {
-  vertical-align: middle;
-}
 input[type=checkbox]:checked::before,
 input[type=checkbox]:checked+.riceCheck::before {
   content: '';
@@ -219,7 +216,9 @@ input[type=checkbox]:checked+.riceCheck::before {
 :root.fixed-watcher #thread-watcher {
   position: fixed !important;
 }
-#custom-board-list, #full-board-list, .shortcut {
+#custom-board-list, 
+#full-board-list, 
+.shortcut {
   vertical-align: baseline !important;
 }
 /* QR link */
@@ -227,111 +226,6 @@ input[type=checkbox]:checked+.riceCheck::before {
   border-radius: 3px;
   vertical-align: middle;
   padding: 7px 12px 6px;
-}
-/* Quick Reply */
-#qr {
-  box-shadow: none !important;
-  border-radius: 0 !important;
-}
-#qr .close {
-  padding: 2px 3px 2px 4px !important;
-}
-#qr input[type='submit'] {
-  height: 22px !important;
-  margin-top: 1px;
-}
-:root.left-sidebar #qr {
-  left: 0 !important;
-  right: auto !important;
-}
-:root.right-sidebar #qr {
-  right: 0 !important;
-  left: auto !important;
-}
-#qr > form > div.persona > input:nth-child(2),
-#qr > form > div.persona > input:nth-child(3) {
-  margin-left: 1px;
-}
-:root.expand-inputs .persona {
-  display: flex;
-}
-:root.expand-inputs .persona .field {
-  flex: 1;
-  width: 0;
-}
-:root.expand-inputs .persona .field:hover,
-:root.expand-inputs .persona .field:focus {
-  flex: 3;
-}
-#qr:not(.has-captcha) textarea {
-  min-height: 190px !important;
-}
-:root.webkit #qr:not(.has-captcha) textarea {
-  min-height: 185px !important;
-}
-:root.webkit #qr.has-captcha textarea.field {
-  height: 8.6em;
-  min-height: 0.6em !important;
-}
-:root.qr-background #qr {
-  background: transparent !important;
-  border: none;
-}
-:root.qr-opacity #qr {
-  opacity: 0.9;
-}
-.textarea {
-  margin-top: 1px;
-  -webkit-margin-after: -2px;
-}
-@-moz-document url-prefix() {
-  .textarea {
-    margin-bottom: 1px;
-  }
-}
-.captcha-img {
-  min-height: 58px !important;
-  margin-bottom: 1px;
-}
-/* Vertical QR */
-:root.vertical-qr #qr {
-  position: fixed !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  left: auto !important;
-  top: auto !important;
-}
-:root.vertical-qr .bottom #qr {
-  bottom: 26px !important;
-}
-:root.vertical-qr #qr.autohide:not(.focus):not(:hover) {
-  position: fixed !important;
-  transform: rotate(-90deg);
-  transform-origin: bottom right;
-  -webkit-transform: rotate(-90deg);
-  -webkit-transform-origin: bottom right;
-  right: 0 !important;
-  bottom: 300px !important;
-  min-width: 240px !important;
-  width: 240px !important;
-}
-:root.vertical-qr #qr.autohide:not(.focus):not(:hover) select {
-  max-width: 120px !important;
-}
-:root.vertical-qr.left-sidebar #qr.autohide:not(:hover):not(.focus) {
-  transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  left: -244px !important;
-  bottom: 50px !important;
-  right: auto !important;
-}
-/* Fade QR */
-:root.fade-qr #qr form {
-  display: block !important;
-}
-:root.fade-qr #qr.autohide:not(.focus):not(:hover) {
-  opacity: 0.2 !important;
-  transition: opacity .2s ease-in-out 1s;
 }
 /* Delete form */
 div[style='float: right;'] {
