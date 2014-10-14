@@ -803,11 +803,10 @@
             var div;
             if (reload !== true) {
                 $SS.options.init();
-                $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler);
-            if (!$SS.browser.webkit)
-                $(document).bind("OpenSettings", $SS.NodeInsertionHandler).bind("ThreadUpdate", $SS.NodeInsertionHandler);
 
-                var MutationObserver = window.MutationObserver;
+                $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler).bind("OpenSettings", $SS.NodeInsertionHandler).bind("ThreadUpdate", $SS.NodeInsertionHandler);
+
+                var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
                 var observer = new MutationObserver(function(mutations) {
                     var i, j, MAX, _MAX, nodes;
 
@@ -922,7 +921,7 @@
             var css;
 
             $SS.bHideSidebar = $SS.location.sub !== "boards" ||
-                $SS.location.board === "f";
+                               $SS.location.board === "f";
             css = "<%= grunt.file.read('tmp/style.min.css').replace(/\\(^\")/g, '') %>";
             if ($("#ch4SS").exists())
                 $("#ch4SS").text(css);
@@ -1504,7 +1503,7 @@
                     "</label><label>" +
                     "<span class='option-title'>Author Tripcode:</span><input type=text name=authorTrip value='" + (bEdit ? (tEdit.authorTrip !== undefined ? tEdit.authorTrip : "") : "") + "'>" +
                     "</label><label>" +
-                    "<span class='option-title'>BG Image:</span><input type=text name=bgImg value='" + (bEdit ? ($SS.validImageURL(tEdit.bgImg) ? tEdit.bgImg + "" : "") : "") + "'></label><label>" +
+                    "<span class='option-title'>BG Image:</span><input type=text name=bgImg value=" + (bEdit ? ($SS.validImageURL(tEdit.bgImg) ? tEdit.bgImg + "" : ($SS.validBase64(tEdit.bgImg) ? tEdit.bgImg : "")) : "") + "></label><label>" +
                     "<span class='option-title'>BG Repeat:</span><select name=bgR>" +
                     "<option" + (bEdit && themeR === "no-repeat" ? " selected" : "") + ">no-repeat</option>" +
                     "<option" + (bEdit && themeR === "repeat" ? " selected" : "") + ">repeat</option>" +
@@ -1572,14 +1571,14 @@
             },
             addTheme: function(tIndex, exp) {
                 var overlay = $("#overlay2"),
-                    tTheme = {},
+                    tTheme  = {},
                     makeRPA = function() {
                         var RPA = [];
 
-                        RPA.push($("select[name=bgR]", overlay).val());
+                        RPA.push($("select[name=bgR]",  overlay).val());
                         RPA.push($("select[name=bgPY]", overlay).val());
                         RPA.push($("select[name=bgPX]", overlay).val());
-                        RPA.push($("select[name=bgA]", overlay).val());
+                        RPA.push($("select[name=bgA]",  overlay).val());
 
                         return RPA.join(" ");
                     },
@@ -1596,12 +1595,14 @@
 
                     if (this.name === "bgImg") {
                         var b64 = $("input[name=customIMGB64]", overlay);
-                        val = b64.exists() ? decodeURIComponent(b64.val()) : this.value;
+                        val     = b64.exists() ? decodeURIComponent(b64.val()) : this.value;
 
-                        if (val !== "" && !$SS.validImageURL(val)) {
+                        if (val !== "" && !$SS.validImageURL(val) && !$SS.validBase64(val)) {
                             error = true;
-                            return alert("Not a valid image URL!");
+                            return alert("Not a valid image URL/base64!");
                         }
+
+                        val = $SS.cleanBase64(val);
 
                     } else if (this.name === "name") {
                         val = this.value;
@@ -1642,11 +1643,11 @@
                 return overlay.remove();
             },
             deleteTheme: function(tIndex) {
-                if ($SS.conf["Themes"][tIndex].default && $SS.conf["Hidden Themes"].push(tIndex) === 1)
+                if ($SS.conf["Themes"][tIndex].default && 
+                    $SS.conf["Hidden Themes"].push(tIndex) === 1)
                     $("#themes-section a[name=restoreThemes]").show();
 
-                return $SS.conf["Themes"][tIndex].
-                default ?
+                return $SS.conf["Themes"][tIndex].default ?
                     $("#theme" + tIndex).removeClass("selected").hide() : $("#theme" + tIndex).remove();
             },
             showMascot: function(mIndex) {
@@ -1654,7 +1655,8 @@
 
                 if (typeof mIndex === "number")
                     var bEdit = true,
-                mEdit = $SS.conf["Mascots"][mIndex];
+                        mEdit = $SS.conf["Mascots"][mIndex];
+
                 if (bEdit && $SS.validImageURL(mEdit.img)) {
                     preview = $("<div id=mascotprev>").html((bEdit && ($SS.validImageURL(mEdit.img)) ? "<img src='" + mEdit.img + "' " +
                         "style='width: " + (mEdit.width !== undefined ? mEdit.width : "auto") + " !important; height: " + (mEdit.height !== undefined ? mEdit.height : "auto") + " !important; margin-bottom: " + (mEdit.offset !== undefined ? mEdit.offset : 0) + "px !important; margin-" + ($SS.conf["Sidebar Position"] === 2 ? "left" : "right") + ": " + (mEdit.hoffset !== undefined ? mEdit.hoffset : 0) + "px !important;" + (bEdit && (mEdit.flip && mEdit.flip !== undefined) ? "transform: scaleX(-1); -webkit-transform: scaleX(-1);" : "") + "'>" : ""));
@@ -1713,20 +1715,20 @@
                     preview = $("#mascotprev"),
                     bSetPos, cIMG, cOffset, cHOffset, cName, cWidth, cHeight, cFlip, tMascot, bDefault;
 
-                cIMG = decodeURIComponent($("input[name=customIMG]", mascotAdd).val());
-                cOffset = parseInt($("input[name=mOffset]", mascotAdd).val());
+                cIMG     = decodeURIComponent($("input[name=customIMGB64]", mascotAdd).val() || $("input[name=customIMG]", mascotAdd).val());
+                cOffset  = parseInt($("input[name=mOffset]", mascotAdd).val());
                 cHOffset = parseInt($("input[name=mHOffset]", mascotAdd).val());
-                cName = $("input[name=mName]", mascotAdd).val();
-                cFlip = $("input[name=mFlip]", mascotAdd).val();
-                cWidth = $("input[name=mWidth]", mascotAdd).val();
-                cHeight = $("input[name=mHeight]", mascotAdd).val();
-                cBoards = $("input[name=mBoards]", mascotAdd).val();
+                cName    = $("input[name=mName]", mascotAdd).val();
+                cFlip    = $("input[name=mFlip]", mascotAdd).val();
+                cWidth   = $("input[name=mWidth]", mascotAdd).val();
+                cHeight  = $("input[name=mHeight]", mascotAdd).val();
+                cBoards  = $("input[name=mBoards]", mascotAdd).val();
 
-                if (!$SS.validImageURL(cIMG))
-                    return alert("Not a valid image URL!");
+                if (!$SS.validImageURL(cIMG) && !$SS.validBase64(cIMG))
+                    return alert("Not a valid image URL/base64!");
 
-                bDefault = $SS.conf["Mascots"][mIndex] != undefined && $SS.conf["Mascots"][mIndex].
-                default;
+                cIMG     = $SS.cleanBase64(cIMG);
+                bDefault = $SS.conf["Mascots"][mIndex] != undefined && $SS.conf["Mascots"][mIndex].default;
 
                 if (typeof mIndex === "number" && !bDefault) {
                     $SS.conf["Mascots"][mIndex].img = cIMG;
@@ -2391,7 +2393,8 @@
                 headerLHColor: "eeeeee",
                 headerBGColor: "333333",
                 boardColor: "ffffff",
-                highlightColor: "a7dce7"
+                highlightColor: "a7dce7",
+                customCSS:  "#delform{background:rgba(22,22,22,.8)!important;border:0!important;padding:1px!important;box-shadow:rgba(0,0,0,.8) 0 0 10px;}.thread:not(.stub){background:0!important}a:not([href='javascript:;']){text-shadow:#0f0f0f 0 1px;}"
             }, {
                 name: "AppChan", // Originally by Zixaphir @ http://userstyles.org/styles/54149/appchan
                 authorName: "Zixaphir",
@@ -3546,7 +3549,7 @@
             this.get = function() {
                 if (!this.img) return "none ";
 
-                var ret = "";
+                var ret = "url('";
                 if ($SS.validBase64(this.img))
                     ret = "data:image/" + $SS.typeofBase64(this.img) + ";base64," + this.img;
                 else
@@ -3784,7 +3787,7 @@
         typeofBase64: function(b64) {
             switch (b64.substr(0, 8)) {
                 case "PD94bWwg":
-                    return "image/svg+xml";
+                    return "svg+xml";
                 case "R0lGODlh":
                     return "gif";
                 case "/9j/4AAQ":

@@ -1,3 +1,9 @@
+### v5.4.4
+*2014-10-14*
+
+- Fix data URIs not being recognized for BG Images and Mascots (#33)
+- 4chan Dark Upgrade theme custom css
+
 ### v5.4.3
 *2014-10-08*
 
