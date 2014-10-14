@@ -803,11 +803,10 @@
             var div;
             if (reload !== true) {
                 $SS.options.init();
-                $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler);
-            if (!$SS.browser.webkit)
-                $(document).bind("OpenSettings", $SS.NodeInsertionHandler).bind("ThreadUpdate", $SS.NodeInsertionHandler);
 
-                var MutationObserver = window.MutationObserver;
+                $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler).bind("OpenSettings", $SS.NodeInsertionHandler).bind("ThreadUpdate", $SS.NodeInsertionHandler);
+
+                var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
                 var observer = new MutationObserver(function(mutations) {
                     var i, j, MAX, _MAX, nodes;
 
@@ -922,7 +921,7 @@
             var css;
 
             $SS.bHideSidebar = $SS.location.sub !== "boards" ||
-                $SS.location.board === "f";
+                               $SS.location.board === "f";
             css = "<%= grunt.file.read('tmp/style.min.css').replace(/\\(^\")/g, '') %>";
             if ($("#ch4SS").exists())
                 $("#ch4SS").text(css);
@@ -2394,7 +2393,8 @@
                 headerLHColor: "eeeeee",
                 headerBGColor: "333333",
                 boardColor: "ffffff",
-                highlightColor: "a7dce7"
+                highlightColor: "a7dce7",
+                customCSS:  "#delform{background:rgba(22,22,22,.8)!important;border:0!important;padding:1px!important;box-shadow:rgba(0,0,0,.8) 0 0 10px;}.thread:not(.stub){background:0!important}a:not([href='javascript:;']){text-shadow:#0f0f0f 0 1px;}"
             }, {
                 name: "AppChan", // Originally by Zixaphir @ http://userstyles.org/styles/54149/appchan
                 authorName: "Zixaphir",
