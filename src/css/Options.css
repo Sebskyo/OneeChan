@@ -199,7 +199,7 @@ select[name='Font Family']>option {
 :root.catalog blockquote {
   margin: 12px 40px !important;
 }
-/* Add Theme */
+/* Add THeme */
 #add-theme {
   text-align:left!important;
   width:800px!important;
@@ -213,7 +213,7 @@ select[name='Font Family']>option {
   width:100%;
 }
 #add-theme>label#customCSS>textarea {
-  height: 9.5em;
+  height: 8em;
   resize: vertical;
   width: 99%;
   max-height: 25em;
@@ -269,6 +269,7 @@ select[name='Font Family']>option {
   bottom: 10px;
 }
 /* Add Mascot */
+
 #mascot-buttons-container {
   padding: 1px;
 }

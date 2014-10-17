@@ -20,7 +20,7 @@
             }], true
         ],
         "Custom Left Margin": [
-            0, "Left margin custom width (pixels).", "Left Margin", 999, true
+            0, "Left margin custom width (pixels)", "Left Margin", 999, true
         ],
         "Right Margin": [
             5, "Change the size of the right margin.", [{
@@ -67,7 +67,7 @@
         "Highlight Current Board": [true, "Gives the current board link a bottom highlight border."],
         ":: Sidebar": ["header", ""],
         "Sidebar Position": [
-            1, "Change the position of the sidebar.", [{
+            1, "Change the position of the sidebar", [{
                 name: "Right",
                 value: 1
             }, {
@@ -258,7 +258,7 @@
         "Hidden Themes": [],
         "Selected Theme": 4,
         "NSFW Theme": 4,
-        "Selected Mascots": [37,41],
+        "Selected Mascots": 1,
         "Mascots": [],
         "Hidden Mascots": []
     },
@@ -743,6 +743,7 @@
                 this.scrollIntoView(alignWithTop);
             });
         },
+
         /* HELPER METHODS */
         delay: function(func, time) {
             return this.each(function() {
@@ -802,7 +803,8 @@
             var div;
             if (reload !== true) {
                 $SS.options.init();
-                $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler).bind("OpenSettings", $SS.NodeInsertionHandler).bind("AddMenuEntry", $SS.AddMenuHandler).bind("ThreadUpdate", $SS.NodeInsertionHandler);
+
+                $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler).bind("OpenSettings", $SS.NodeInsertionHandler).bind("ThreadUpdate", $SS.NodeInsertionHandler);
 
                 var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
                 var observer = new MutationObserver(function(mutations) {
@@ -946,11 +948,6 @@
             var settings = e.target;
             $("input[type=checkbox]", settings).riceCheck();
         },
-        AddMenuHandler: function(e) {
-        /* When AddMenuEntry is called by scripts like ExLinks it messes with riceCheck until we open and close the menu */
-            $("#header-bar .menu-button").click();
-            $("#header-bar .menu-button").click();
-        },
         /* CONFIG */
         Config: {
             hasGM: typeof GM_deleteValue !== "undefined",
@@ -1014,11 +1011,9 @@
         options: {
             saveAndClose: false,
             init: function() {
-                $(document).bind("keydown", $SS.options.keydown);
-
                 var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'>OneeChan</a></span>").bind("click", $SS.options.show); /* seaweedchan */
-                    b = $("<span><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'></a> / </span>").bind("click", $SS.options.show); /* MayhemYDG */
-                    c = $("<span id='OneeChanLink'> [<a title='OneeChan Settings' href='javascript:;'>OneeChan</a>]&nbsp;</span>").bind("click", $SS.options.show); /* loadletter */
+                var b = $("<span><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'></a> / </span>").bind("click", $SS.options.show); /* MayhemYDG */
+                var c = $("<span id='OneeChanLink'> [<a title='OneeChan Settings' href='javascript:;'>OneeChan</a>]&nbsp;</span>").bind("click", $SS.options.show); /* loadletter */
                 return $(".fourchan-x").exists() ? $(".shortcut.brackets-wrap:last-of-type").before(a) && $("#shortcuts.brackets-wrap").append(b) : $("#boardNavDesktop").append(c);
             },
             show: function() {
@@ -1035,7 +1030,7 @@
                             "<li class='tab-item'><label class='tab-label' for=mascots-select>Mascots</label></li>" +
                             "</ul><div id=options-container><input type=radio class=tab-select name=tab-select id=main-select hidden checked><div id='main-section' class='options-section'>" +
                             "<p class='buttons-container'>" +
-                            "<a class='options-button' title='Export your settings as JSON.' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a><a class='options-button' title='Reset OneeChan settings.' name=resetSettings>Reset</a>" +
+                            "<a class='options-button' title='Export your settings as JSON.' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a><a class='options-button' title='Reset OneeChan's settings.' name=resetSettings>Reset</a>" +
                             "<span id=oneechan-version><span>OneeChan</span> v" + VERSION + "<span class=link-delim> | </span>" +
                             "<a href='" + ("https://github.com/Nebukazar/OneeChan/releases") + "' id=update-link target='_blank' title='OneeChan updates automatically.'>Update</a><span class=link-delim> | </span>" +
                             "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank' title='Read the changelog.'>Changelog</a><span class=link-delim> | </span>" +
@@ -1231,9 +1226,9 @@
                 var themes = $("#themes-section", tOptions).html(""),
                     p = $("<p class='buttons-container'>");
 
-                p.append($("<a class='options-button' name=addTheme title='Create a new theme.'>Create", tOptions).bind("click", $SS.options.showTheme));
-                p.append($("<a class='options-button' href='https://github.com/Nebukazar/OneeChan/wiki/Custom-Themes' title='Learn more about custom themes and download new ones.' target='_blank'>Custom Themes"));
-                p.append($("<div id='import-link' title='Import a new theme (.json) file.'>").append($("<input type=file class='import-input' riced=true>")
+                p.append($("<a class='options-button' name=addTheme>Create", tOptions).bind("click", $SS.options.showTheme));
+                p.append($("<a class='options-button' href='https://github.com/Nebukazar/OneeChan/wiki/Custom-Themes' target='_blank'>Custom Themes"));
+                p.append($("<div id='import-link'>").append($("<input type=file class='import-input' riced=true>")
                     .bind("change", function() {
                         var file = this.files[0],
                             reader = new FileReader(),
@@ -1340,8 +1335,8 @@
                 var mascots = $("#mascot-section", tOptions).html(""),
                     p = $("<p class='buttons-container'>");
 
-                p.append($("<a class='options-button' name=addMascot title='Add a new mascot.'>Add", tOptions).bind("click", $SS.options.showMascot));
-                p.append($("<a class='options-button' href='http://appchan.booru.org/' title='Get more mascots. Possibly NSFW.' target='_blank'>More Mascots"));
+                p.append($("<a class='options-button' name=addMascot>Add", tOptions).bind("click", $SS.options.showMascot));
+                p.append($("<a class='options-button' href='http://appchan.booru.org/' target='_blank'>More Mascots"));
                 p.append($("<a class='options-button' name=restoreMascots title='Restore hidden default mascots'>Restore", tOptions)
                     .bind("click", function() {
                         $SS.conf["Hidden Mascots"] = [];
@@ -1376,7 +1371,7 @@
                 return $("#overlay").remove();
             },
             keydown: function(e) {
-                if (e.ctrlKey && e.keyCode === 79) {
+                if (e.ctrlKey && e.keyCode === 97) {
                     e.preventDefault();
                     e.stopPropagation();
                     $SS.options.show();
@@ -1796,8 +1791,8 @@
                 cHeight = $("input[name=mHeight]", mascotAdd).val();
                 cBoards = $("input[name=mBoards]", mascotAdd).val();
 
-                if (!$SS.validImageURL(cIMG) && !$SS.validBase64(cIMG))
-                    return alert("Not a valid image URL/base64!");
+                if (!$SS.validImageURL(cIMG))
+                    return alert("Not a valid image URL!");
 
                 bDefault = $SS.conf["Mascots"][mIndex] != undefined && $SS.conf["Mascots"][mIndex];
 

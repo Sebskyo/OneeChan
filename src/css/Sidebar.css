@@ -92,9 +92,6 @@
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg); 
 }
-:root.mini-sidebar #qr textarea {
-  resize: vertical !important;
-}
 :root.mini-sidebar #qr {
   min-width: 248px !important;
   top: auto !important;
