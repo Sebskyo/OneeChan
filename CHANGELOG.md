@@ -1,3 +1,9 @@
+### v5.4.5
+*2014-10-15*
+
+- OneeChan settings can be opened at any time with <kbd>CTRL</kbd> + <kbd>O</kbd>
+- Small fixes
+
 ### v5.4.4
 *2014-10-14*
 

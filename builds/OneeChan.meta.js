@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         OneeChan
-// @version      5.4.4
+// @version      5.4.5
 // @namespace    OneeChan
 // @description  Customizable rice and themes for 4chan X.
 // @minGMVer     1.15
