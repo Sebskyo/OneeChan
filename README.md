@@ -1,17 +1,17 @@
 OneeChan
 ====
 
-Maximum rice for 4chan X. Originally developed by [seaweedchan](https://github.com/seaweedchan), this fork adds compability with various 4chan X versions and more custom options.
+OneeChan is a userscript that functions on top of 4chan X. Originally developed by [seaweedchan](https://github.com/seaweedchan), this fork adds compability with various 4chan X versions and more custom options.
 
 
-##[Install](https://nebukazar.github.io/OneeChan/builds/OneeChan.user.js)
+##[Click to Install](https://nebukazar.github.io/OneeChan/builds/OneeChan.user.js)
 
 
 #### Install instructions
 
 - Firefox: Requires the Greasemonkey addon. Click the Install link above.
 
-- Chrome: Requires the Tampermonkey extension. Click the Install link above. Alternatively you can download a [.crx here](https://nebukazar.github.io/OneeChan/builds/OneeChan.crx) if you're using Chromium or are not using Windows. Drag&drop into the extensions page to install.
+- Chrome: Requires the Tampermonkey extension. Click the Install link above. Alternatively you can download a [.crx here](https://nebukazar.github.io/OneeChan/builds/OneeChan.crx) if you are using Chromium or are not using Windows. Drag&drop into the extensions page to install.
 
 
 #### Compatibility with 4chan X forks and others:
@@ -22,7 +22,7 @@ Maximum rice for 4chan X. Originally developed by [seaweedchan](https://github.c
 - [loadletter](https://github.com/loadletter/4chan-x) /// `Compatible`
 - [inline](https://boards.4chan.org/) /// `No`
 
-Make sure you select your fork version under `Compatibility` in OneeChan options. Enabling Quick Reply and Persistent QR in 4chan X is recommended for maximum compatibility. 
+ccd0's 4chan X is the recommended 4chan X version and the one OneeChan is primarily developed for. If you use another 4chan X version, please make sure you select your fork version under `Compatibility` in OneeChan options. Enabling Quick Reply and Persistent QR in 4chan X is recommended for maximum compatibility. 
 
 I can't promise everything will work with every fork.
 
@@ -35,7 +35,7 @@ I can't promise everything will work with every fork.
 
 - Something doesn't work let me know in the [Issues](https://github.com/Nebukazar/OneeChan/issues) page
 
-- Please refer to the [Wiki](https://github.com/Nebukazar/OneeChan/wiki)
+- Please refer to the [Wiki](https://github.com/Nebukazar/OneeChan/wiki) for instructions
 
 
 #### Known Issues
