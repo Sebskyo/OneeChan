@@ -2257,7 +2257,7 @@
                 headerLHColor: "dd0000",
                 headerBGColor: "d6daf0",
                 boardColor: "af0a0f",
-                highlightColor: "228854"
+                highlightColor: "dd0000"
             }, {
                 name: "Yotsuba Purple",
                 authorName: "Seaweed",
@@ -2285,7 +2285,7 @@
                 headerLHColor: "b22caa",
                 headerBGColor: "eeddff",
                 boardColor: "591177",
-                highlightColor: "b22caa"
+                highlightColor: "dd0000"
             }, {
                 name: "安心院なじみ",
                 authorName: "ahodesuka",
@@ -2400,6 +2400,34 @@
                 boardColor: "ffffff",
                 highlightColor: "a7dce7",
                 customCSS:  "#delform{background:rgba(22,22,22,.8)!important;border:0!important;padding:1px!important;box-shadow:rgba(0,0,0,.8) 0 0 10px;}.thread:not(.stub){background:0!important}a:not([href='javascript:;']){text-shadow:#0f0f0f 0 1px;}"
+            }, {
+                name: "Yasashii",
+                authorName: "Nebukazar",
+                authorTrip: "!/Am.NeBUqQ",
+                "default": true,
+                bgImg: false,
+                replyOp: "1.0",
+                navOp: "0.9",
+                mainColor: "f8f8f8",
+                brderColor: "f8f8f8",
+                inputColor: "f8f8f8",
+                inputbColor: "be7375",
+                headerBGColor: "a6586f",
+                headerColor: "f8f8f8",
+                boardColor: "a6586f",
+                bgColor: "ebebeb",
+                textColor: "5b5c5c",
+                blinkColor: "656599",
+                headerLColor: "ebebeb",
+                headerLHColor: "656599",
+                linkColor: "b78087",
+                linkHColor: "c8ab78",
+                nameColor: "be7375",
+                tripColor: "656599",
+                titleColor: "b87d6e",
+                quoteColor: "7eba6c",
+                unreadColor: "f8f8f8",
+                highlightColor: "9875a3"
             }, {
                 name: "AppChan", // Originally by Zixaphir @ http://userstyles.org/styles/54149/appchan
                 authorName: "Zixaphir",
