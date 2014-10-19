@@ -43,35 +43,6 @@ I can't promise everything will work with every fork.
 - OneeChan's settings icon sometimes doesn't appear in the header
 
 
-#### Development & Contribution
-
-[![devDependency Status](https://david-dm.org/Nebukazar/OneeChan/dev-status.svg)](https://david-dm.org/Nebukazar/OneeChan#info=devDependencies)
-
-#### Get started
-
-- Install [node.js](http://nodejs.org/).
-- Install [Grunt's CLI](http://gruntjs.com/) with `npm install -g grunt-cli`.
-- Clone OneeChan.
-- `cd` into it.
-- Install/Update OneeChan dependencies with `npm install`.
-
-#### Build
-
-- Build with `grunt`.
-
-#### Release
-
-- Update the version with `grunt patch`, `grunt minor` or `grunt major`.
-- Release with `grunt release`.
-
-Note: this is only used to release new OneeChan versions, and is **not** needed or wanted in pull requests.
-
-#### Contribute
-
-- Edit the sources.
-- Open a pull request  to merge branch.
-
-
 #### See also:
 
 - [Windows 7 Ricing Reference](http://nanami-tan.info/)
