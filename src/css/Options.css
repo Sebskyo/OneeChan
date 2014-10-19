@@ -320,10 +320,10 @@ select[name='Font Family']>option {
 /* Overlays */
 #overlay {
   z-index: 99 !important;
-  background-color:rgba(0,0,0,.3);
+  background-color:rgba(0,0,0,.2);
 }
 #overlay2 {
-  background:rgba(0,0,0,.3);
+  background:rgba(0,0,0,.2);
   position:fixed;
   top:0;
   left:0;
