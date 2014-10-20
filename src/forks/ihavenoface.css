@@ -115,6 +115,18 @@
 :root.vertical-qr #qr.autohide:not(.focus):not(:hover) select {
   max-width: 132px!important;
 }
+/* Minimal Sidebar */
+:root.mini-sidebar #qr > div {
+  display: none !important;
+}
+:root.mini-sidebar:root.left-sidebar #qr {
+  transform: translateX(-92%);
+  transition: transform 0.3s ease-in-out 0.5s;
+}
+:root.mini-sidebar:root.right-sidebar #qr {
+  transform: translateX(92%);
+  transition: transform 0.3s ease-in-out 0.5s;
+}
 /* Bottom Controls */
 .bottom-header .bottomCtrl.desktop {
   float: right;

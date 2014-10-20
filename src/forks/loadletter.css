@@ -44,7 +44,7 @@
   width: 260px !important;
 }
 #qr .move:not(span) {
-  min-width: 260px !important;
+  min-width: 260px;
   padding: 2px 2px !important;
   height: 22px!important;
   line-height: 19px!important;
@@ -92,6 +92,21 @@
 }
 .captchainput > .field {
   min-width: 99.2%;
+}
+:root.mini-sidebar:root.right-sidebar #qr .move {
+  right: 68.6% !important;
+}
+:root.mini-sidebar:root.left-sidebar #qr .move {
+  left: 29.5% !important;
+}
+:root.mini-sidebar:root.right-sidebar #qr .move {
+  top: 123px !important;
+}
+:root.mini-sidebar:root.left-sidebar #qr .move {
+  top: 213px;
+}
+:root.mini-sidebar #qr .move:not(span) {
+  min-width: 212px!important;
 }
 /* Misc */
 .hide_reply_button:not([hidden]) {
