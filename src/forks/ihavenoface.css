@@ -60,6 +60,9 @@
 .postContainer .backlink-container {
   margin-left: 15px;
 }
+:root.reply-fit-width .post .menu-button {
+  margin-left: 2px;
+}
  /* Quick Reply */
  #qr > div > select {
   color: " + $SS.theme.textColor.hex + " !important;

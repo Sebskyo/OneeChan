@@ -107,9 +107,8 @@ div.post {
 :root.reply-fit-width .reply .container {
   padding-right: 5px;
 }
-.menu-button + .container:not(:empty),
-:root:not(.reply-fit-width) .container {
-  margin-left: 0 !important;
+.menu-button + .container:not(:empty) {
+  margin-left: -2px !important;
 }
 :root.reply-fit-width .post .menu-button {
   float: right;

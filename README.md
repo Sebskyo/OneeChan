@@ -38,9 +38,12 @@ I can't promise everything will work with every fork.
 - Please refer to the [Wiki](https://github.com/Nebukazar/OneeChan/wiki) for instructions
 
 
-#### Known Issues
+#### Development & Contribution
 
-- OneeChan's settings icon sometimes doesn't appear in the header
+[![devDependency Status](https://david-dm.org/Nebukazar/OneeChan/dev-status.svg)](https://david-dm.org/Nebukazar/OneeChan#info=devDependencies)
+
+- [Source Code](https://github.com/Nebukazar/OneeChan)
+- [Reporting Bugs and Contributing](https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md)
 
 
 #### See also:
