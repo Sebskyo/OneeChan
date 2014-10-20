@@ -5,6 +5,9 @@ div.post div.file .fileThumb {
   margin-right: 20px;
   margin-bottom: 10px;
 }
+div.op.post div.file .fileThumb {
+  margin-bottom: 0;
+}
 .fileText {
   margin-left: 13px !important;
   margin-bottom: 2px !important;

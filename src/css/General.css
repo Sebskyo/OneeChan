@@ -278,8 +278,9 @@ hr {
   opacity: 0.7 !important;
   transition: opacity .3s ease-in 0s;
 }
-.pagelist.desktop {
+.pagelist {
   margin-left: 18px;
+  margin-bottom: " + (($SS.conf["Font Size"] < 12) ? 30 : 2) + "px;
 }
 :root.reply-fit-width .pagelist {
   margin-left: 0;
@@ -426,7 +427,6 @@ table.flashListing .highlightPost {
   margin-top: auto;
 }
 .navLinks.navLinksBot.desktop {
-  margin-top: 10px;
   margin-bottom: 5px;
 }
 #hoverUI {

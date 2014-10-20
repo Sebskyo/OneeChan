@@ -115,6 +115,9 @@
 #togglePostFormLink {
   text-align: center;
 }
+div.navLinks.desktop {
+  margin-bottom: 4px;
+}
 .boardList {
   display: block;
   text-align: center;

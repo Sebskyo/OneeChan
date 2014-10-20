@@ -157,6 +157,12 @@
 select#index-mode,
 select#index-sort,
 select#index-size {
+  font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";
+  font-size:" + $SS.conf["Font Size"] + "px;
+}
+select#index-mode,
+select#index-sort,
+select#index-size {
   -moz-appearance: none;
   -webkit-appearance: none;
 }

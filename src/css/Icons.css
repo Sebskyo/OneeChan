@@ -1,20 +1,6 @@
 .closeIcon {
   background-image: none !important;
 }
-/* Fail-safe */
-#OneeChanCont {
-  font-size: 0 !important;
-  padding: 6px !important;
-  margin-right: 0 !important;
-  opacity: 0.6 !important;
-  position: relative;
-  bottom: 5px;
-  float: right;
-  background-image: url(\"data:image/svg+xml," + $SS.theme.icons.OneeChan + "\") !important;
-}
-#OneeChanCont:hover {
-  opacity: 1 !important;
-}
 /* Thread watcher favicon */
 .watch-thread-link {
   margin-bottom: -7px;
@@ -27,7 +13,7 @@
 :root.backlink-icon .backlink {
   background-image: url(\"data:image/svg+xml," + $SS.theme.icons.backlink + "\") !important;
   font-size: 0 !important;
-  padding: 6px !important;
+  padding: " + (($SS.conf["Font Size"] < 13) ? 5 : 6) + "px !important;
   margin-right: 0 !important;
   opacity: 0.6 !important;
   position: relative;
@@ -37,7 +23,7 @@
 :root.backlink-icon .backlink.inlined {
   background-image: url(\"data:image/svg+xml," + $SS.theme.icons.downArrow + "\") !important;
   font-size: 0 !important;
-  padding: 6px !important;
+  padding: " + (($SS.conf["Font Size"] < 13) ? 5 : 6) + "px !important;
   margin-right: 0 !important;
   opacity: 0.6 !important;
   position: relative;
@@ -45,7 +31,7 @@
   left: 3px;
 }
 :root.backlink-icon .reply .backlink {
-  bottom: 6px !important;
+  bottom: " + (($SS.conf["Font Size"] < 13) ? 5 : 6) + "px !important;
 }
 :root.backlink-icon .backlink:hover,
 :root.backlink-icon .backlink.inlined:hover {

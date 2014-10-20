@@ -30,7 +30,7 @@
 /* Board Title */
 .boardBanner .boardTitle {
   font-weight: 400 !important;
-  font-size: 26px !important;
+  font-size: " + (($SS.conf["Font Size"] < 13) ? 22 : 26) + "px !important;
 }
 /* Code Tags */
 .prettyprint span {
@@ -38,13 +38,15 @@
   font-size:medium!important;
 }
 /* Full board list */
-#full-board-list {
-  font-size: 0 !important;
-}
-#full-board-list a,
+#full-board-list,
 body>#header-bar,
 #full-board-list .fourchanx-link {
-  font-size: " + (($SS.conf["Font Size"] < 13) ? 12 : ($SS.conf["Font Size"] - 1)) + "px !important;
+  font-size: " + (($SS.conf["Font Size"] < 1) ? 12 : ($SS.conf["Font Size"] - 1)) + "px !important;
+}
+@media (min-width: 1280px) and (max-width: 1920px) {
+  #board-list  {
+    word-spacing: " + (($SS.conf["Font Size"] < 14) ? -1 : -2) + "px;
+  }
 }
 /* Everything else */
 body,
@@ -57,10 +59,27 @@ body,
 #qr textarea.field,
 #qr span.field,
 #qr input[type=submit],
+#qr select[data-name="thread"],
 #menu .entry,
-.boardTitle {
+#boardList,
+#shortcuts,
+#index-search,
+select#index-sort,
+select#order-ctrl,
+select#size-ctrl,
+select#teaser-ctrl,
+input#search-box,
+input#index-search,
+div.next,
+form.pageSwitcherForm > input[type="submit"] {
   font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";
   font-size:" + $SS.conf["Font Size"] + "px;
+}
+#full-board-list a,
+#custom-board-list,
+a.qr-link {
+  font-family:" + $SS.formatFont($SS.conf["Font Family"]) + " !important;
+  font-size:" + $SS.conf["Font Size"] + "px !important;
 }
 #qr .field::-moz-placeholder,
 ::-moz-placeholder {
