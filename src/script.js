@@ -241,7 +241,6 @@
         "Font Size": [13, "Set the general size of text (Pixels). Min: 10px, Max: 18px"],
         "Bitmap Font": [false, "Check this if you are using a bitmap font."],
         ":: Compatibility": ["header", ""],
-        "Show Fail-safe": [true, "Shows a OneeChan settings button towards the end of the page when the header settings button fails to render."],
         "Version Fix": [
             1, "Applies CSS fixes for different forks. Default is for seaweed/ccd0 forks. Make sure you enable QR and Persistent QR for maximum compatibility.", [{
                 name: "Default",
@@ -849,7 +848,6 @@
 
             $SS.insertMascot();
             $SS.hideMascot.init();
-            $SS.oneeFailsafe.init();
             $SS.pages.init();
             $SS.riceInputs.init();
 
@@ -2958,19 +2956,6 @@
             init: function() {
                 if ($SS.Config.get("Hide Mascot in Catalog") == true && $(".catalog").exists() || $(".catalog-mode").exists()) {
                     $("#mascot").attr("style", "display: none");
-                }
-            }
-        },
-        oneeFailsafe: {
-            hasInit: false,
-            init: function() {
-                var onee = $("<a id='OneeChanCont' title='OneeChan Settings' href='javascript:;'></a>").bind("click", $SS.options.show);
-
-                if ($("#OneeChanCont").exists() || $("#OneeChanLink").exists()) {
-                    return;
-                } 
-                else if ($SS.Config.get("Show Fail-safe") == true && $(".fourchan-x").exists()) {
-                    return $("#delform").after(onee);
                 }
             }
         },
