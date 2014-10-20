@@ -149,3 +149,6 @@ table {
   top: 135px;
   right: 10px;
 }
+.centered-links:root #shortcuts {
+  width: 250px;
+}

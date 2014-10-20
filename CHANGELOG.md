@@ -1,10 +1,15 @@
+### v5.4.7
+*2014-10-20*
+
+- Oneechan will now better respond to smaller font size changes: backlink icons, header, board title and selection lists will change size accordingly
+- Bring back full board list separators
+
 ### v5.4.6
 *2014-10-20*
 
 **ccd0:**
 
 - Don't insert settings button until header is ready (#18)
-
 
 **Nebukazar:**
 
