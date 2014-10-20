@@ -81,11 +81,17 @@ body,
 :root.info-on-hover .postContainer:hover .postNum {
   font-size:" + $SS.conf["Font Size"] + "px !important;
 }
-#qr input[type=submit] {
+#qr input[type=submit],
+#qr label {
   font-size: 10px !important;
 }
-#qr input[type="submit"] {
+#qr input[type="submit"],
+#qr label {
   text-transform: uppercase;
+}
+#qr label:not(.riceCheck) {
+  overflow: hidden;
+  padding-bottom: 2px;
 }
 /* Text decoration */
 :root.underline-disabled a {

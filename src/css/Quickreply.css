@@ -6,6 +6,13 @@
 #qr .close {
   padding: 2px 3px 2px 4px !important;
 }
+#qr .riceCheck,
+#qr input[type=checkbox] {
+  margin: 0px 4px 1px!important;
+  vertical-align: baseline;
+  position: relative;
+  top: 3px;
+}
 #qr input[type='submit'] {
   height: 22px !important;
   margin-top: 1px;
@@ -15,7 +22,8 @@
   max-width: 133px;
 }
 #qr > form > div.persona > input:nth-child(2),
-#qr > form > div.persona > input:nth-child(3) {
+#qr > form > div.persona > input:nth-child(3),
+#qr > form > div.persona > input:nth-child(4) {
   margin-left: 1px;
 }
 :root.expand-inputs .persona {

@@ -155,13 +155,6 @@ input[type=checkbox],
 .riceCheck {
   margin: 0 2px -1px 0;
 }
-#qr .riceCheck,
-#qr input[type=checkbox] {
-  margin: 3px 4px 1px !important;
-  vertical-align: baseline;
-  position: relative;
-  top: 1px;
-}
 input[type=checkbox]:checked::before,
 input[type=checkbox]:checked+.riceCheck::before {
   content: '';

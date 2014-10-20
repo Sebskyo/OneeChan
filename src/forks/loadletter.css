@@ -43,11 +43,13 @@
 :root.vertical-qr #qr.autohide:not(:hover):not(.has-focus) {
   width: 260px !important;
 }
-#qr > .move {
+#qr .move:not(span) {
   min-width: 260px !important;
   padding: 2px 2px !important;
   height: 22px!important;
   line-height: 19px!important;
+  text-transform: uppercase;
+  font-size: 10px;
 }
 #qr > form #spoilerLabel {
   bottom: 4px;
