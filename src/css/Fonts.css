@@ -81,6 +81,12 @@ body,
 :root.info-on-hover .postContainer:hover .postNum {
   font-size:" + $SS.conf["Font Size"] + "px !important;
 }
+#qr input[type=submit] {
+  font-size: 10px !important;
+}
+#qr input[type="submit"] {
+  text-transform: uppercase;
+}
 /* Text decoration */
 :root.underline-disabled a {
   text-decoration: none !important;

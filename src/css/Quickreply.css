@@ -11,7 +11,8 @@
   margin-top: 1px;
 }
 #qr select[data-name="thread"] {
-  margin: 2px 0 2px 0;
+  margin: 1px 0 1px 0;
+  max-width: 133px;
 }
 #qr > form > div.persona > input:nth-child(2),
 #qr > form > div.persona > input:nth-child(3) {
@@ -57,9 +58,6 @@
 .captcha-img {
   min-height: 58px !important;
   margin-bottom: 1px;
-}
-#qr label {
-  vertical-align: middle;
 }
 /* Vertical QR */
 :root.vertical-qr #qr {

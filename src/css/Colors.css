@@ -13,7 +13,12 @@ textarea,
 #qr-filename-container,
 #post-preview,
 .post-last,
-.pln {
+.pln,
+#qr select,
+select#index-sort,
+select#order-ctrl,
+select#size-ctrl,
+select#teaser-ctrl {
   color: " + $SS.theme.textColor.hex + " !important;
 }
 /* Names */
@@ -163,7 +168,12 @@ body {
 input:not(.jsColor),
 textarea,
 .riceCheck,
-#qr-filename-container {
+#qr-filename-container,
+#qr select,
+select#index-sort,
+select#order-ctrl,
+select#size-ctrl,
+select#teaser-ctrl {
   background: " + $SS.theme.inputColor.hex + " !important;
   transition: background .2s;
 }
@@ -174,7 +184,12 @@ input[type=checkbox],
 input:not(.jsColor):hover,
 .riceCheck:hover,
 #qr-filename-container:hover,
-textarea:hover {
+textarea:hover,
+#qr select:hover,
+select#index-sort:hover,
+select#order-ctrl:hover,
+select#size-ctrl:hover,
+select#teaser-ctrl:hover {
   background: rgb(" + $SS.theme.inputColor.hover + ") !important;
   transition: background .2s;
 }
@@ -202,7 +217,8 @@ hr {
 :root.borders-none .reply {
   border: none;
 }
-#menu {
+#menu,
+.catalog-thumb {
   border-radius: 0 !important;
 }
 :root.rounded-corners .reply,
@@ -212,7 +228,8 @@ hr {
 :root.rounded-corners #updater,
 :root.rounded-corners #menu,
 :root.rounded-corners .thumb,
-:root.rounded-corners .fileThumb img:not(.full-image) {
+:root.rounded-corners .fileThumb img:not(.full-image),
+:root.rounded-corners .catalog-thumb {
   border-radius: 3px !important;
 }
 :root.post-info.rounded-corners .reply>.postInfo,
@@ -226,7 +243,12 @@ hr {
 fieldset,
 #post-preview,
 .flashListing td:not(:last-of-type):not(.postblock),
-:root.mini-sidebar #qr .move {
+:root.mini-sidebar #qr .move,
+#qr select,
+select#index-sort,
+select#order-ctrl,
+select#size-ctrl,
+select#teaser-ctrl {
   border-color: " + $SS.theme.brderColor.hex + " !important;
 }
 input,
@@ -236,7 +258,12 @@ textarea,
 #search-box,
 #index-search,
 .captcha-img,
-:root.mini-sidebar #qr .move {
+:root.mini-sidebar #qr .move,
+#qr select,
+select#index-sort,
+select#order-ctrl,
+select#size-ctrl,
+select#teaser-ctrl {
   border: 1px solid " + $SS.theme.inputbColor.hex + " !important;
 }
 .options-button,
@@ -252,7 +279,12 @@ a.quotelink.forwardlink, a.backlink.forwardlink {
 }
 input:focus,
 textarea:focus,
-#qr-filename-container:focus {
+#qr-filename-container:focus,
+#qr select:focus,
+select#index-sort:focus,
+select#order-ctrl:focus,
+select#size-ctrl:focus,
+select#teaser-ctrl:focus {
   border: 1px solid " + $SS.theme.linkColor.hex + " !important;
 }
 #search-box:hover,

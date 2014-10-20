@@ -5,12 +5,24 @@
 #qr {
   max-width: 299px;
 }
+#qr > form > div:first-child > .field:not(#dump) {
+  width: 29.54% !important;
+}
+#qr textarea.field {
+  min-width: 99.5% !important;
+}
 #qr input[type=submit] {
   height: 24px !important;
   width: 28%;
+  margin-left: 1px;
 }
 #qr input[type=file] {
   margin: 1px 1px;
+}
+#qr>form #spoilerLabel {
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 19px;
 }
 .captcha-input.field {
   width: 300px;
@@ -25,12 +37,27 @@
 :root.qr-controls #qr > .move {
   display: none;
 }
+:root.qr-controls #spoilerLabel {
+  display: block !important;
+}
 :root.vertical-qr #qr.autohide:not(:hover):not(.has-focus) {
   width: 260px !important;
 }
 #qr > .move {
   min-width: 260px !important;
   padding: 2px 2px !important;
+  height: 22px!important;
+  line-height: 19px!important;
+}
+#qr > form #spoilerLabel {
+  bottom: 4px;
+  position: absolute;
+  right: 8px;
+  z-index: 2;
+}
+#qr>form input[type=file] {
+  float: right;
+  width: 98.6%;
 }
 #qr .riceCheck, 
 #qr input[type=checkbox] {
@@ -49,6 +76,20 @@
 }
 :root.vertical-qr.left-sidebar #qr.autohide:not(:hover):not(.focus) {
   left: -262px !important;
+}
+#qr > form > div > .field {
+  margin-left: 1px;
+}
+.captchaimg {
+  margin-left: 2px;
+  width: 99.2%;
+}
+.captchaimg > img {
+  height: 50px;
+  width: 99.5%;
+}
+.captchainput > .field {
+  min-width: 99.2%;
 }
 /* Misc */
 .hide_reply_button:not([hidden]) {
@@ -134,6 +175,32 @@ div.post {
 }
 div.post div.file .fileThumb {
   margin-top: 3px;
+}
+#search-box {
+  margin-bottom: 1px;
+}
+/* Selection Lists */
+select#imageType {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+select#imageType {
+  color: " + $SS.theme.textColor.hex + " !important;
+}
+select#imageType {
+  border-color: " + $SS.theme.brderColor.hex + " !important;
+  border: 1px solid " + $SS.theme.inputbColor.hex + " !important;
+}
+select#imageType:focus {
+  border: 1px solid " + $SS.theme.linkColor.hex + " !important;
+}
+select#imageType {
+  background: " + $SS.theme.inputColor.hex + " !important;
+  transition: background .2s;
+}
+select#imageType:hover {
+  background: rgb(" + $SS.theme.inputColor.hover + ") !important;
+  transition: background .2s;
 }
 /* Thread Watcher */
 :root.fixed-watcher #watcher {

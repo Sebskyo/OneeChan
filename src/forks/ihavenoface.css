@@ -72,6 +72,7 @@
 }
  #qr > div {
   min-width: 240px !important;
+  margin: 2px 0 2px 0;
 }
 #qr [type=submit] {
   width: 19%;
@@ -82,12 +83,16 @@
 #qr input[type=submit] {
   height: 24px !important;
 }
+#qr select[data-name=thread] {
+  margin: -1px 0;
+  max-width: 140px;
+}
 #qr:not(.has-captcha) textarea {
   min-height: 115px;
 }
 #qr .riceCheck, 
 #qr input[type=checkbox] {
-  margin: 0 4px;
+  margin: 1px 4px 2px!important;
   top: 0;
 }
 :root.top-header .boardBanner {
@@ -130,6 +135,50 @@
 }
 #nav-links {
   margin-bottom: 12px;
+}
+.thumb {
+  border-radius: 0 !important;
+}
+:root.rounded-corners .catalog-thumb {
+  border-radius: 3px !important;
+}
+select#index-mode,
+select#index-sort,
+select#index-size {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+select#index-mode,
+select#index-sort,
+select#index-size {
+  color: " + $SS.theme.textColor.hex + " !important;
+}
+select#index-mode,
+select#index-sort,
+select#index-size {
+  border-color: " + $SS.theme.brderColor.hex + " !important;
+  border: 1px solid " + $SS.theme.inputbColor.hex + " !important;
+}
+select#index-mode:focus,
+select#index-sort:focus,
+select#index-size:focus {
+  border: 1px solid " + $SS.theme.linkColor.hex + " !important;
+}
+select#index-mode,
+select#index-sort,
+select#index-size {
+  background: " + $SS.theme.inputColor.hex + " !important;
+  transition: background .2s;
+}
+select#index-mode:hover,
+select#index-sort:hover,
+select#index-size:hover {
+  background: rgb(" + $SS.theme.inputColor.hover + ") !important;
+  transition: background .2s;
+}
+.thumb > .menu-button,
+:root.yotsuba-b .thumb > .menu-button > i {
+  background: " + $SS.theme.inputColor.hex + " !important;
 }
 /* Icons */
 .closedIcon,
