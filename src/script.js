@@ -2259,7 +2259,7 @@
                 headerLHColor: "dd0000",
                 headerBGColor: "d6daf0",
                 boardColor: "af0a0f",
-                highlightColor: "dd0000"
+                highlightColor: "228854"
             }, {
                 name: "Yotsuba Purple",
                 authorName: "Seaweed",
@@ -2287,7 +2287,7 @@
                 headerLHColor: "b22caa",
                 headerBGColor: "eeddff",
                 boardColor: "591177",
-                highlightColor: "dd0000"
+                highlightColor: "b22caa"
             }, {
                 name: "安心院なじみ",
                 authorName: "ahodesuka",
