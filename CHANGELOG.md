@@ -1,3 +1,18 @@
+### v5.4.6
+*2014-10-20*
+
+**ccd0:**
+
+- Don't insert settings button until header is ready (#18)
+
+
+**Nebukazar:**
+
+- Add Yasashii theme
+- Remove fail-safe
+- Selection lists styling
+- QR styling
+
 ### v5.4.5
 *2014-10-15*
 
