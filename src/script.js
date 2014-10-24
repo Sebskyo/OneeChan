@@ -83,10 +83,11 @@
         ":: Mascots": ["header", ""],
         "Hide Mascots in Catalog": [false, "Hides the mascot when viewing the catalog."],
         "Reduce Mascot Opacity": [false, "Reduces the opacity of the mascots until hover. Warning: Overrides pointer events."],
+        "Grayscale Mascots": [false, "Desaturates mascots."],
         ":: Replies": ["header", ""],
         "Fit Width": [true, "Replies stretch to the width of the entire page."],
+        "Show Reply Header": [true, "Shows replies header background and line border."],
         "Show Post Info On Hover": [false, "Shows post number and file info on hover only."],
-        "Show Reply Header": [true, "Shows reply\'s header background and line border."],
         "Show File Info": [true, "Hides the filename, dimensions and size info."],
         "Underline QuoteLinks": [false, "Underlines quotelinks only."],
         "Indent OP": [false, "Indents the OP instead of touching the screen."],
@@ -1164,17 +1165,17 @@
                     $("a[name=resetSettings]", tOptions).bind("click", function() {
                         var confirmReset = confirm('Your current OneeChan settings will be wiped, are you sure?');
                         if (confirmReset) {
-                            if ($SS.browser.webkit) {
+                            if (typeof GM_deleteValue !== "undefined") {
+                                var keys = GM_listValues();
+                                for (var i=0, key=null; key=keys[i]; i++) {
+                                GM_deleteValue(key);
+                            }}
+                            else if ($SS.browser.webkit) {
                             Object.keys(localStorage).forEach(function(key) {
                             if (/^(?:OneeChan)/.test(key)) {
                                     localStorage.removeItem(key);
                                 }
                             })}
-                            else if ($SS.browser.gecko) {
-                                var keys = GM_listValues();
-                                for (var i=0, key=null; key=keys[i]; i++) {
-                                GM_deleteValue(key);
-                            }}
                             alert('Your OneeChan settings have been reset. Reloading.');
                             return window.location.reload();
                         } else return;
@@ -1602,7 +1603,7 @@
 
                     if (this.name === "bgImg") {
                         var b64 = $("input[name=customIMGB64]", overlay);
-                        val     = b64.exists() ? decodeURIComponent(b64.val()) : this.value;
+                            val = b64.exists() ? decodeURIComponent(b64.val()) : this.value;
 
                         if (val !== "" && !$SS.validImageURL(val) && !$SS.validBase64(val)) {
                             error = true;
@@ -1664,7 +1665,7 @@
                     var bEdit = true,
                         mEdit = $SS.conf["Mascots"][mIndex];
 
-                if (bEdit && $SS.validImageURL(mEdit.img)) {
+                if (bEdit && $SS.validImageURL(mEdit.img) || $SS.validBase64(mEdit.img)) {
                     preview = $("<div id=mascotprev>").html((bEdit && ($SS.validImageURL(mEdit.img)) ? "<img src='" + mEdit.img + "' " +
                         "style='width: " + (mEdit.width !== undefined ? mEdit.width : "auto") + " !important; height: " + (mEdit.height !== undefined ? mEdit.height : "auto") + " !important; margin-bottom: " + (mEdit.offset !== undefined ? mEdit.offset : 0) + "px !important; margin-" + ($SS.conf["Sidebar Position"] === 2 ? "left" : "right") + ": " + (mEdit.hoffset !== undefined ? mEdit.hoffset : 0) + "px !important;" + (bEdit && (mEdit.flip && mEdit.flip !== undefined) ? "transform: scaleX(-1); -webkit-transform: scaleX(-1);" : "") + "'>" : ""));
                 };
@@ -1672,7 +1673,7 @@
                 div = $("<div id='add-mascot' class='dialog'>").html("<label class='add-mascot-label' title='Set the name of the mascot'><span class='option-title'>Mascot Name:</span>" +
                     "<input class='mascot-input mascot-name' type=text name=mName value='" + (bEdit && mEdit.name !== undefined ? mEdit.name : "Chinese Girl Cartoon") + "'></label>" +
                     "<label class='add-mascot-label'><span class='option-title' title='URL of the mascot. HTTPS links are recommended.'>Image URL:</span><input class='mascot-input image' type=text name=customIMG value='" +
-                    (bEdit ? ($SS.validImageURL(mEdit.img) ? mEdit.img + "'" : "'") : "'") +
+                    (bEdit ? ($SS.validImageURL(mEdit.img) || $SS.validBase64(mEdit.img) ? mEdit.img + "'" : "'") : "'") +
                     "></label>" +
                     "<label class='add-mascot-label' title='Set the height. Use auto for the full size.'><span class='option-title'>Height:</span>" +
                     "<input class='mascot-input height' type=text name=mHeight value='" + (bEdit && mEdit.height !== undefined ? mEdit.height : "auto") + "'></label>" +
@@ -1789,14 +1790,14 @@
                     preview = $("#mascotprev"),
                     bSetPos, cIMG, cOffset, cHOffset, cName, cWidth, cHeight, cFlip, tMascot, bDefault;
 
-                cIMG = decodeURIComponent($("input[name=customIMG]", mascotAdd).val());
-                cOffset = parseInt($("input[name=mOffset]", mascotAdd).val());
+                cIMG     = decodeURIComponent($("input[name=customIMGB64]", mascotAdd).val() || $("input[name=customIMG]", mascotAdd).val());
+                cOffset  = parseInt($("input[name=mOffset]", mascotAdd).val());
                 cHOffset = parseInt($("input[name=mHOffset]", mascotAdd).val());
-                cName = $("input[name=mName]", mascotAdd).val();
-                cFlip = $("input[name=mFlip]", mascotAdd).val();
-                cWidth = $("input[name=mWidth]", mascotAdd).val();
-                cHeight = $("input[name=mHeight]", mascotAdd).val();
-                cBoards = $("input[name=mBoards]", mascotAdd).val();
+                cName    = $("input[name=mName]", mascotAdd).val();
+                cFlip    = $("input[name=mFlip]", mascotAdd).val();
+                cWidth   = $("input[name=mWidth]", mascotAdd).val();
+                cHeight  = $("input[name=mHeight]", mascotAdd).val();
+                cBoards  = $("input[name=mBoards]", mascotAdd).val();
 
                 if (!$SS.validImageURL(cIMG) && !$SS.validBase64(cIMG))
                     return alert("Not a valid image URL/base64!");
@@ -1849,13 +1850,11 @@
                 return $SS.options.showMascot($SS.conf["Mascots"].length - 1);
             },
             deleteMascot: function(mIndex) {
-                if ($SS.conf["Mascots"][mIndex].
-                    default &&
+                if ($SS.conf["Mascots"][mIndex].default &&
                     $SS.conf["Hidden Mascots"].push(mIndex) === 1)
                     $("#mascot-section a[name=restoreMascots]").show();
 
-                return $SS.conf["Mascots"][mIndex].
-                default ?
+                return $SS.conf["Mascots"][mIndex].default ?
                     $("#mascot" + mIndex).removeClass("selected").hide() : $("#mascot" + mIndex).remove();
             }
         },
@@ -2702,7 +2701,8 @@
             }, {
                 img: "https://i.minus.com/ibjWUbaN1zNYpS.png",
                 "default": true,
-                name: "Kisaragi Chihaya"
+                name: "Kisaragi Chihaya",
+                width: "306px"
             }, {
                 img: "https://i2.minus.com/ikPgsoC0DBeuP.png",
                 "default": true,
@@ -2855,7 +2855,8 @@
             }, {
                 img: "https://i.minus.com/ifJwTdQVya4fj.png",
                 "default": true,
-                name: "Symbol 01"
+                name: "Symbol 01",
+                offset: "-20"
             }, {
                 img: "https://i.minus.com/i4UOxKBPxYga4.png",
                 "default": true,
@@ -2946,6 +2947,7 @@
                 $("html").optionClass("Show Previous/Next buttons", false, "hide-prevnext");
                 $("html").optionClass("Reduce Ad Opacity", true, "ad-opacity");
                 $("html").optionClass("Reduce Mascot Opacity", true, "mascot-opacity");
+                $("html").optionClass("Grayscale Mascots", true, "mascot-grayscale");
                 $("html").optionClass("Reduce Thumbnail Opacity", true, "thumb-opacity");
                 $("html").optionClass("Show Fail-safe", true, "settings-button-fail");
             }
@@ -2954,7 +2956,7 @@
         hideMascot: {
             hasInit: false,
             init: function() {
-                if ($SS.Config.get("Hide Mascot in Catalog") == true && $(".catalog").exists() || $(".catalog-mode").exists()) {
+                if ($SS.Config.get("Hide Mascots in Catalog") == true && $(".catalog").exists() || $(".catalog-mode").exists()) {
                     $("#mascot").attr("style", "display: none");
                 }
             }

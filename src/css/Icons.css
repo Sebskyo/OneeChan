@@ -13,7 +13,7 @@
 :root.backlink-icon .backlink {
   background-image: url(\"data:image/svg+xml," + $SS.theme.icons.backlink + "\") !important;
   font-size: 0 !important;
-  padding: " + (($SS.conf["Font Size"] < 13) ? 5 : 6) + "px !important;
+  padding: " + (($SS.conf["Font Size"] < 12) ? 5 : 6) + "px !important;
   margin-right: 0 !important;
   opacity: 0.6 !important;
   position: relative;
@@ -23,7 +23,7 @@
 :root.backlink-icon .backlink.inlined {
   background-image: url(\"data:image/svg+xml," + $SS.theme.icons.downArrow + "\") !important;
   font-size: 0 !important;
-  padding: " + (($SS.conf["Font Size"] < 13) ? 5 : 6) + "px !important;
+  padding: 6px !important;
   margin-right: 0 !important;
   opacity: 0.6 !important;
   position: relative;
@@ -31,7 +31,7 @@
   left: 3px;
 }
 :root.backlink-icon .reply .backlink {
-  bottom: " + (($SS.conf["Font Size"] < 13) ? 5 : 6) + "px !important;
+  bottom: " + (($SS.conf["Font Size"] < 12) ? 5 : 6) + "px !important;
 }
 :root.backlink-icon .backlink:hover,
 :root.backlink-icon .backlink.inlined:hover {

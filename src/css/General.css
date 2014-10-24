@@ -11,7 +11,7 @@ body {
 }
 /* Replies */
 .postInfo {
-  padding: 4px 13px 2px;
+  padding: 2px 13px 2px;
   display: block !important;
 }
 .useremail::before {
