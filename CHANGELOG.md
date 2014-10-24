@@ -1,3 +1,13 @@
+### v5.4.8
+*2014-10-24*
+
+- Fix reset settings on Tampermonkey
+- Fix `Hide Mascots in Catalog`
+- Backlink icons will only change size for font sizes lower than 12px instead of 13px
+
+**New Option:**
+- `Grayscale Mascots`
+
 ### v5.4.7
 *2014-10-20*
 
