@@ -102,7 +102,7 @@ a.qr-link {
 }
 #qr input[type=submit],
 #qr label {
-  font-size: 10px !important;
+  font-size: " + (($SS.conf["Font Size"] < 11) ? 8 : 10) + "px !important;
 }
 #qr input[type="submit"],
 #qr label {
