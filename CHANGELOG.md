@@ -1,6 +1,9 @@
 ### v5.4.9
 *2014-10-25*
 
+- `Add Mascot` bugfix
+- Reduce overlays opacity
+
 ### v5.4.8
 *2014-10-24*
 
