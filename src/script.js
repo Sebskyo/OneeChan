@@ -2959,7 +2959,7 @@
         hideMascot: {
             hasInit: false,
             init: function() {
-                if ($SS.Config.get("Hide Mascots in Catalog") == true && $(".catalog").exists() || $(".catalog-mode").exists()) {
+                if ($SS.Config.get("Hide Mascots in Catalog") == true && $(".catalog, .catalog-mode").exists()) {
                     $("#mascot").attr("style", "display: none");
                 }
             }
