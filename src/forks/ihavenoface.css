@@ -48,6 +48,9 @@
   bottom: 2px;
   right: 6px;
 }
+.stub {
+  padding: 2px 0px 2px 0 !important;
+}
 /* Menu */
 /* Breaks with Fit Replies */
 .postContainer .menu-button {
@@ -231,7 +234,7 @@ select#index-size:hover {
 }
 .watcher-toggler.fa.fa-bookmark {
   opacity: 1;
-  padding-top: 18px!important;
+  padding-top: 16px!important;
   vertical-align: bottom;
   width: 16px!important;
   background-image: url(\"data:image/svg+xml," + $SS.theme.icons.star + "\") !important;
