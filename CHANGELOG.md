@@ -1,5 +1,13 @@
+### v5.4.10
+*2014-10-29*
+
+- Fix mascot not appearing in the catalog with 4chan X catalog mode enabled
+
 ### v5.4.9
 *2014-10-25*
+
+- `Add Mascot` bugfix
+- Reduce overlays opacity
 
 ### v5.4.8
 *2014-10-24*
