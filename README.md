@@ -42,6 +42,7 @@ I can't promise everything will work with every fork.
 
 [![devDependency Status](https://david-dm.org/Nebukazar/OneeChan/dev-status.svg)](https://david-dm.org/Nebukazar/OneeChan#info=devDependencies)
 
+- [Changelog](https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md)
 - [Source Code](https://github.com/Nebukazar/OneeChan)
 - [Reporting Bugs and Contributing](https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md)
 

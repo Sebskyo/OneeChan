@@ -1,3 +1,9 @@
+### v5.4.11
+*2014-10-31*
+
+- Allow for bot or top navigation links to be disabled
+- Minimal sidebar fixes
+
 ### v5.4.10
 *2014-10-29*
 
