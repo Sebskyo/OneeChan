@@ -324,7 +324,7 @@ hr {
 }
 /* Catalog */
 .catalog-thread {
-  margin: 0 11px 5px;
+  margin: 5px !important;
 }
 .extended-small .teaser, .extended-large .teaser {
   margin-left: 5px;
@@ -422,7 +422,7 @@ table.flashListing .highlightPost {
 }
 /* Navlinks */
 :root.index div.navLinks {
-  padding: 5px;
+  padding: 5px 0;
   margin-left: auto;
   margin-top: auto;
 }

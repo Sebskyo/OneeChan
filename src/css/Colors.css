@@ -233,7 +233,8 @@ hr {
   border-radius: 3px !important;
 }
 :root.post-info.rounded-corners .reply>.postInfo,
-:root.rounded-corners #qr {
+:root.rounded-corners #qr,
+:root.rounded-corners:root.mini-sidebar #qr > .move {
   border-radius: 3px 3px 0 0 !important;
 }
 .reply,
