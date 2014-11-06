@@ -59,7 +59,8 @@
         "Show Bottom Ad": [true, "Show the bottom 4chan banner ad.", "Show 4chan Ads", true, true],
         "Reduce Ad Opacity": [false, "Reduce the opacity of Ads until hover for easier viewing.", "Show 4chan Ads", true, true],
         "Show Navigation Links": [true, "Toggle visibility of the navigation links at the top and bottom of the threads.", null, true],
-        "Show bottom Navigation Link": [true, "Toggle visibility of the bottom navigation link.", "Show Navigation Links", true, true],
+        "Show Top Links": [true, "Toggle visibility of the top navigation links.", "Show Navigation Links", true, true],
+        "Show Bottom Links": [true, "Toggle visibility of the bottom navigation links.", "Show Navigation Links", true, true],
         "Show Previous/Next buttons": [false, "Shows the Previous / Next buttons in page navigation mode."],
         ":: Header": ["header", ""],
         "Show Header Background Gradient": [true, "Gives the header bar a gradient background."],
@@ -2946,13 +2947,13 @@
                 $("html").optionClass("Show Middle Ad", false, "hide-middle");
                 $("html").optionClass("Show Bottom Ad", false, "hide-bottom");
                 $("html").optionClass("Show Navigation Links", false, "hide-navlinks");
-                $("html").optionClass("Show bottom Navigation Link", false, "hide-navlinkbot");
+                $("html").optionClass("Show Top Links", false, "hide-navlinktop");
+                $("html").optionClass("Show Bottom Links", false, "hide-navlinkbot");
                 $("html").optionClass("Show Previous/Next buttons", false, "hide-prevnext");
                 $("html").optionClass("Reduce Ad Opacity", true, "ad-opacity");
                 $("html").optionClass("Reduce Mascot Opacity", true, "mascot-opacity");
                 $("html").optionClass("Grayscale Mascots", true, "mascot-grayscale");
                 $("html").optionClass("Reduce Thumbnail Opacity", true, "thumb-opacity");
-                $("html").optionClass("Show Fail-safe", true, "settings-button-fail");
             }
         },
 
