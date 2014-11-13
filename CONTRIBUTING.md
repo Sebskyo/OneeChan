@@ -7,7 +7,6 @@
   1. Precise steps to reproduce the problem, with the expected and actual results.
   2. Console errors, if any.
   3. Browser version.
-  4. Your exported settings.
 
 Open your console with:
 - `Ctrl + Shift + J` on Chrome.
@@ -37,4 +36,4 @@ Note: this is only used to release new OneeChan versions, and is **not** needed 
 ### Contribute
 
 - Edit the sources.
-- Open a pull request  to merge branch.
+- Open a pull request to merge branch.

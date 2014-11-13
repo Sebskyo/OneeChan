@@ -1,3 +1,9 @@
+### v5.4.12
+*2014-11-08*
+
+- Inlined posts alignment
+- 4chan X catalog fixes
+
 ### v5.4.11
 *2014-10-31*
 
