@@ -70,6 +70,7 @@ select#size-ctrl,
 select#teaser-ctrl,
 input#search-box,
 input#index-search,
+select#index-size,
 div.next,
 form.pageSwitcherForm > input[type="submit"] {
   font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";

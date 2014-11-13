@@ -18,7 +18,8 @@ textarea,
 select#index-sort,
 select#order-ctrl,
 select#size-ctrl,
-select#teaser-ctrl {
+select#teaser-ctrl,
+select#index-size {
   color: " + $SS.theme.textColor.hex + " !important;
 }
 /* Names */
@@ -78,7 +79,8 @@ a:hover,
 s:hover .quote,
 .str, 
 .atv,
-.new {
+.new,
+.catalog-thread > .comment > .quote {
   color: " + $SS.theme.quoteColor.hex + " !important;
 }
 /* Subject and Option labels */
@@ -173,7 +175,8 @@ textarea,
 select#index-sort,
 select#order-ctrl,
 select#size-ctrl,
-select#teaser-ctrl {
+select#teaser-ctrl,
+select#index-size {
   background: " + $SS.theme.inputColor.hex + " !important;
   transition: background .2s;
 }
@@ -189,7 +192,8 @@ textarea:hover,
 select#index-sort:hover,
 select#order-ctrl:hover,
 select#size-ctrl:hover,
-select#teaser-ctrl:hover {
+select#teaser-ctrl:hover,
+select#index-size:hover {
   background: rgb(" + $SS.theme.inputColor.hover + ") !important;
   transition: background .2s;
 }
@@ -249,7 +253,8 @@ fieldset,
 select#index-sort,
 select#order-ctrl,
 select#size-ctrl,
-select#teaser-ctrl {
+select#teaser-ctrl,
+select#index-size {
   border-color: " + $SS.theme.brderColor.hex + " !important;
 }
 input,
@@ -264,7 +269,8 @@ textarea,
 select#index-sort,
 select#order-ctrl,
 select#size-ctrl,
-select#teaser-ctrl {
+select#teaser-ctrl,
+select#index-size {
   border: 1px solid " + $SS.theme.inputbColor.hex + " !important;
 }
 .options-button,
@@ -285,7 +291,8 @@ textarea:focus,
 select#index-sort:focus,
 select#order-ctrl:focus,
 select#size-ctrl:focus,
-select#teaser-ctrl:focus {
+select#teaser-ctrl:focus,
+select#index-size:focus {
   border: 1px solid " + $SS.theme.linkColor.hex + " !important;
 }
 #search-box:hover,
