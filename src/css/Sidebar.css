@@ -66,7 +66,7 @@
 :root.mini-sidebar #bannerCnt,
 :root.mini-sidebar .boardSubtitle,
 :root.mini-sidebar #qr label .riceCheck {
-  display: none !important;
+  display: none;
 }
 :root.mini-sidebar:root.ss-sidebar body::before {
   width: 31px !important;
@@ -108,7 +108,7 @@
   text-align: center;
 }
 :root.mini-sidebar:root.left-sidebar #qr .move {
-  top: 125px;
+  top: 118px;
 }
 :root.mini-sidebar:root.right-sidebar #qr .move {
   top: 74px;
@@ -145,9 +145,9 @@
 :root.mini-sidebar:root.left-sidebar #qr .move {
   transform: rotate(90deg);
   transform-origin: bottom right;
-  left: 51.6%;
+  left: 52.5%;
 }
 :root.mini-sidebar:root.right-sidebar #qr .move {
   transform: rotate(-90deg);
-  right: 80.5%;
+  right: 81.5%;
 }

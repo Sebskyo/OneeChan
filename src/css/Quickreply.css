@@ -20,6 +20,7 @@
 #qr select[data-name="thread"] {
   margin: 1px 0 1px 0;
   max-width: 133px;
+  min-width: 80px;
 }
 #qr > form > div.persona > input:nth-child(2),
 #qr > form > div.persona > input:nth-child(3),
