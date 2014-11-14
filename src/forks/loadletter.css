@@ -199,29 +199,6 @@ div.post div.file .fileThumb {
 #search-box {
   margin-bottom: 1px;
 }
-/* Selection Lists */
-select#imageType {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-}
-select#imageType {
-  color: " + $SS.theme.textColor.hex + " !important;
-}
-select#imageType {
-  border-color: " + $SS.theme.brderColor.hex + " !important;
-  border: 1px solid " + $SS.theme.inputbColor.hex + " !important;
-}
-select#imageType:focus {
-  border: 1px solid " + $SS.theme.linkColor.hex + " !important;
-}
-select#imageType {
-  background: " + $SS.theme.inputColor.hex + " !important;
-  transition: background .2s;
-}
-select#imageType:hover {
-  background: rgb(" + $SS.theme.inputColor.hover + ") !important;
-  transition: background .2s;
-}
 /* Thread Watcher */
 :root.fixed-watcher #watcher {
   position: fixed !important;

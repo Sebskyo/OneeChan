@@ -14,12 +14,7 @@ textarea,
 #post-preview,
 .post-last,
 .pln,
-#qr select,
-select#index-sort,
-select#order-ctrl,
-select#size-ctrl,
-select#teaser-ctrl,
-select#index-size {
+select {
   color: " + $SS.theme.textColor.hex + " !important;
 }
 /* Names */
@@ -171,12 +166,7 @@ input:not(.jsColor),
 textarea,
 .riceCheck,
 #qr-filename-container,
-#qr select,
-select#index-sort,
-select#order-ctrl,
-select#size-ctrl,
-select#teaser-ctrl,
-select#index-size {
+select {
   background: " + $SS.theme.inputColor.hex + " !important;
   transition: background .2s;
 }
@@ -188,12 +178,7 @@ input:not(.jsColor):hover,
 .riceCheck:hover,
 #qr-filename-container:hover,
 textarea:hover,
-#qr select:hover,
-select#index-sort:hover,
-select#order-ctrl:hover,
-select#size-ctrl:hover,
-select#teaser-ctrl:hover,
-select#index-size:hover {
+select:hover {
   background: rgb(" + $SS.theme.inputColor.hover + ") !important;
   transition: background .2s;
 }
@@ -250,11 +235,7 @@ fieldset,
 .flashListing td:not(:last-of-type):not(.postblock),
 :root.mini-sidebar #qr .move,
 #qr select,
-select#index-sort,
-select#order-ctrl,
-select#size-ctrl,
-select#teaser-ctrl,
-select#index-size {
+select {
   border-color: " + $SS.theme.brderColor.hex + " !important;
 }
 input,
@@ -266,11 +247,7 @@ textarea,
 .captcha-img,
 :root.mini-sidebar #qr .move,
 #qr select,
-select#index-sort,
-select#order-ctrl,
-select#size-ctrl,
-select#teaser-ctrl,
-select#index-size {
+select {
   border: 1px solid " + $SS.theme.inputbColor.hex + " !important;
 }
 .options-button,
@@ -287,12 +264,7 @@ a.quotelink.forwardlink, a.backlink.forwardlink {
 input:focus,
 textarea:focus,
 #qr-filename-container:focus,
-#qr select:focus,
-select#index-sort:focus,
-select#order-ctrl:focus,
-select#size-ctrl:focus,
-select#teaser-ctrl:focus,
-select#index-size:focus {
+select:focus {
   border: 1px solid " + $SS.theme.linkColor.hex + " !important;
 }
 #search-box:hover,

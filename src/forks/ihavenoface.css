@@ -157,46 +157,6 @@
 :root.rounded-corners .catalog-thumb {
   border-radius: 3px !important;
 }
-select#index-mode,
-select#index-sort,
-select#index-size {
-  font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";
-  font-size:" + $SS.conf["Font Size"] + "px;
-}
-select#index-mode,
-select#index-sort,
-select#index-size {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-}
-select#index-mode,
-select#index-sort,
-select#index-size {
-  color: " + $SS.theme.textColor.hex + " !important;
-}
-select#index-mode,
-select#index-sort,
-select#index-size {
-  border-color: " + $SS.theme.brderColor.hex + " !important;
-  border: 1px solid " + $SS.theme.inputbColor.hex + " !important;
-}
-select#index-mode:focus,
-select#index-sort:focus,
-select#index-size:focus {
-  border: 1px solid " + $SS.theme.linkColor.hex + " !important;
-}
-select#index-mode,
-select#index-sort,
-select#index-size {
-  background: " + $SS.theme.inputColor.hex + " !important;
-  transition: background .2s;
-}
-select#index-mode:hover,
-select#index-sort:hover,
-select#index-size:hover {
-  background: rgb(" + $SS.theme.inputColor.hover + ") !important;
-  transition: background .2s;
-}
 .thumb > .menu-button,
 :root.yotsuba-b .thumb > .menu-button > i {
   background: " + $SS.theme.inputColor.hex + " !important;

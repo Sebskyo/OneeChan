@@ -468,12 +468,7 @@ table.flashListing .highlightPost {
   pointer-events: auto;
 }
 /* Selection Lists */
-#qr select,
-select#index-sort,
-select#order-ctrl,
-select#size-ctrl,
-select#teaser-ctrl,
-select#index-size {
+select {
   -moz-appearance: none;
   -webkit-appearance: none;
 }
