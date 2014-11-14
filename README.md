@@ -1,7 +1,7 @@
 OneeChan
 ====
 
-OneeChan is a userscript that functions on top of 4chan X. Originally developed by [seaweedchan](https://github.com/seaweedchan), this fork adds compability with various 4chan X versions and more custom options.
+OneeChan is a userscript that functions on top of 4chan X and allows you to customize the site with various functions, themes and mascots. Originally developed by [seaweedchan](https://github.com/seaweedchan), this fork adds compability with various 4chan X versions and more custom options.
 
 
 ##[Click to Install](https://nebukazar.github.io/OneeChan/builds/OneeChan.user.js)
