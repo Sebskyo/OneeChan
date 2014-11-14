@@ -106,7 +106,10 @@
   top: 213px;
 }
 :root.mini-sidebar #qr .move:not(span) {
-  min-width: 212px!important;
+  min-width: 212px !important;
+}
+:root.mini-sidebar #qr label .riceCheck {
+  display: block !important;
 }
 /* Misc */
 .hide_reply_button:not([hidden]) {
@@ -198,6 +201,9 @@ div.post div.file .fileThumb {
 }
 #search-box {
   margin-bottom: 1px;
+}
+#imageType {
+  margin-right: 3px;
 }
 /* Thread Watcher */
 :root.fixed-watcher #watcher {

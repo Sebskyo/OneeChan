@@ -69,7 +69,7 @@ input,
 div.next,
 form.pageSwitcherForm > input[type="submit"] {
   font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";
-  font-size:" + $SS.conf["Font Size"] + "px;
+  font-size:" + $SS.conf["Font Size"] + "px !important;
 }
 #full-board-list a,
 #custom-board-list,
@@ -148,7 +148,9 @@ a.current {
 /* Catalog */
 .extended-small .teaser, 
 .extended-large .teaser,
-.subject,
-.comment {
+.subject {
   text-align: justify;
+}
+.comment {
+  text-align: justify !important;
 }
