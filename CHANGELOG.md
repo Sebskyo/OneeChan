@@ -1,3 +1,9 @@
+### v5.5.1
+*2014-11-16*
+
+- OneeChan applies to www.4chan.org again (change options with <kbd>CTRL</kbd> + <kbd>O</kbd>)
+- Mini-sidebar spoiler checkbox not appearing
+
 ## v5.5.0
 *2014-11-14*
 
