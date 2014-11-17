@@ -65,7 +65,7 @@
 }
 :root.mini-sidebar #bannerCnt,
 :root.mini-sidebar .boardSubtitle,
-:root.mini-sidebar #qr label .riceCheck {
+:root.mini-sidebar #qr > .move > label > .riceCheck {
   display: none;
 }
 :root.mini-sidebar:root.ss-sidebar body::before {

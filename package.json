@@ -1,6 +1,6 @@
 {
   "name": "OneeChan",
-  "version": "5.5.0",
+  "version": "5.5.1",
   "description": "Customizable rice and themes for 4chan X.",
   "meta": {
     "name": "OneeChan",
@@ -11,6 +11,7 @@
     "buildsPath": "builds/",
     "mainBranch": "master",
     "matches": [
+      "*://www.4chan.org/*",
       "*://boards.4chan.org/*"
     ],
     "files": {
@@ -30,7 +31,7 @@
     "grunt-contrib-concat": "~0.5.0",
     "grunt-contrib-compress": "~0.12.0",
     "grunt-contrib-cssmin": "~0.6.0",
-    "grunt-contrib-copy": "~0.6.0",
+    "grunt-contrib-copy": "~0.7.0",
     "grunt-shell": "~1.1.1"
   },
   "repository": {
