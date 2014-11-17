@@ -18,10 +18,10 @@
   padding: 5px;
 }
 .options-close,
-#options-container {
+#options-container:not(.yui-skin-sam) {
   padding: 3px;
 }
-#options-container {
+#options-container:not(.yui-skin-sam) {
   box-shadow: inset rgba(0,0,0,.3) 0 0 5px;
 }
 .options-close {
@@ -68,10 +68,10 @@
   line-height:22px;
 }
 /* Main */
-#options-container {
+#options-container:not(.yui-skin-sam) {
   border-radius:5px;
 }
-#options-container,
+#options-container:not(.yui-skin-sam),
 .options-section {
   height:500px;
 }
