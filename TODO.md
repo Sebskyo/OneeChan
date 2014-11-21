@@ -6,4 +6,3 @@
 - Show watched threads on (eye) icon hover for both top and bottom header
 - Allow user upload by converting mascots into base 64 on the fly
 - Custom scrollbars (will require Firefox fixing their stuff first, don't like the JS solution)
--
