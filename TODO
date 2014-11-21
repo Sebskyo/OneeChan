@@ -1,0 +1,5 @@
+- Wiki files
+- Notice the user after OneeChan updates, like 4chan X
+- Batch export/import of mascots as JSON
+- Option to select between different icon sets for Thread Watcher Icon/Backlink Icons
+- User can set a custom size for the sidebar (will require a lot of rewrite, and headaches with the different forks support) 
