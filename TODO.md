@@ -2,7 +2,7 @@
 - Notify the user after OneeChan updates, like 4chan X
 - Batch export/import of mascots as JSON
 - Option to select between different icon sets for Thread Watcher Icon/Backlink Icons
-- User can set a custom size for the sidebar (will require a lot of rewrite, and headaches with the different forks support) 
+- User can set a custom width for the sidebar (will require a lot of rewrite, and headaches with the different forks support) 
 - Show watched threads on (eye) icon hover for both top and bottom header
 - Allow user upload by converting mascots into base 64 on the fly
 - Custom scrollbars (will require Firefox fixing their stuff first, don't like the JS solution)
