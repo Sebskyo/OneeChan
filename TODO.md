@@ -3,5 +3,7 @@
 - Batch export/import of mascots as JSON
 - Option to select between different icon sets for Thread Watcher Icon/Backlink Icons
 - User can set a custom size for the sidebar (will require a lot of rewrite, and headaches with the different forks support) 
-- Thread Watcher on (eye) icon hover for both top and bottom header
+- Show watched threads on (eye) icon hover for both top and bottom header
 - Allow user upload by converting mascots into base 64 on the fly
+- Custom scrollbars (will require Firefox fixing their stuff first, don't like the JS solution)
+-
