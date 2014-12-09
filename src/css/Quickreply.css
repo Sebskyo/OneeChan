@@ -68,6 +68,12 @@
   min-height: 58px !important;
   margin-bottom: 1px;
 }
+#qr > form > div.captcha-root > div.captcha-container > div > div > iframe {
+  width: 237px !important;
+}
+#qr > form > div.captcha-root > div.captcha-container > div > div {
+  width: 246px !important;
+}
 /* Vertical QR */
 :root.vertical-qr #qr {
   position: fixed !important;

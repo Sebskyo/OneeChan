@@ -97,11 +97,13 @@ a.qr-link {
   font-size:" + $SS.conf["Font Size"] + "px !important;
 }
 #qr input[type=submit],
-#qr label {
+#qr label,
+.captcha-counter {
   font-size: " + (($SS.conf["Font Size"] < 11) ? 8 : 10) + "px !important;
 }
 #qr input[type="submit"],
-#qr label {
+#qr label,
+.captcha-counter {
   text-transform: uppercase;
 }
 #qr label:not(.riceCheck) {
