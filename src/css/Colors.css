@@ -14,7 +14,8 @@ textarea,
 #post-preview,
 .post-last,
 .pln,
-select {
+select,
+.captcha-root {
   color: " + $SS.theme.textColor.hex + " !important;
 }
 /* Names */
@@ -166,7 +167,8 @@ input:not(.jsColor),
 textarea,
 .riceCheck,
 #qr-filename-container,
-select {
+select,
+.captcha-root {
   background: " + $SS.theme.inputColor.hex + " !important;
   transition: background .2s;
 }
@@ -178,7 +180,8 @@ input:not(.jsColor):hover,
 .riceCheck:hover,
 #qr-filename-container:hover,
 textarea:hover,
-select:hover {
+select:hover,
+.captcha-root:hover {
   background: rgb(" + $SS.theme.inputColor.hover + ") !important;
   transition: background .2s;
 }
@@ -247,7 +250,8 @@ textarea,
 .captcha-img,
 :root.mini-sidebar #qr .move,
 #qr select,
-select {
+select,
+.captcha-root {
   border: 1px solid " + $SS.theme.inputbColor.hex + " !important;
 }
 .options-button,
@@ -264,7 +268,8 @@ a.quotelink.forwardlink, a.backlink.forwardlink {
 input:focus,
 textarea:focus,
 #qr-filename-container:focus,
-select:focus {
+select:focus,
+.captcha-root:focus {
   border: 1px solid " + $SS.theme.linkColor.hex + " !important;
 }
 #search-box:hover,
