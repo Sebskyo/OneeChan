@@ -64,8 +64,7 @@
   padding-right: 32px !important;
 }
 :root.mini-sidebar #bannerCnt,
-:root.mini-sidebar .boardSubtitle,
-:root.mini-sidebar #qr > .move > label > .riceCheck {
+:root.mini-sidebar .boardSubtitle {
   display: none;
 }
 :root.mini-sidebar:root.ss-sidebar body::before {
