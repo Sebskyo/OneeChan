@@ -160,7 +160,7 @@ body {
   background:rgb\(" + $SS.theme.mainColor.shiftRGB(10) + ") !important;
 }
 .qr-link:hover,
-:root.mini-sidebar #qr .move {
+:root.vertical-qr #qr .move {
   background:rgb\(" + $SS.theme.mainColor.rgb + ");
 }
 input:not(.jsColor),
@@ -226,7 +226,7 @@ hr {
 }
 :root.post-info.rounded-corners .reply>.postInfo,
 :root.rounded-corners #qr,
-:root.rounded-corners:root.mini-sidebar #qr > .move {
+:root.rounded-corners:root.vertical-qr #qr > .move {
   border-radius: 3px 3px 0 0 !important;
 }
 .reply,
@@ -236,7 +236,7 @@ hr {
 fieldset,
 #post-preview,
 .flashListing td:not(:last-of-type):not(.postblock),
-:root.mini-sidebar #qr .move,
+:root.vertical-qr #qr .move,
 #qr select,
 select {
   border-color: " + $SS.theme.brderColor.hex + " !important;
@@ -248,7 +248,7 @@ textarea,
 #search-box,
 #index-search,
 .captcha-img,
-:root.mini-sidebar #qr .move,
+:root.vertical-qr #qr .move,
 #qr select,
 select,
 .captcha-root {
