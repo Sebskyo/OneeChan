@@ -1,3 +1,10 @@
+### v5.5.3
+*2014-12-09*
+
+- Minimal Sidebar now only shrinks the sidebar instead of also changing the QR
+- New Vertical Tabbed QR
+- Captcha size
+
 ### v5.5.2
 *2014-12-09*
 

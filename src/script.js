@@ -80,7 +80,7 @@
             }], true
         ],
         "SS-like Sidebar": [true, "Darkens the Sidebar and adds a border like 4chan Style Script."],
-        "Minimal Sidebar": [false, "Shrinks the sidebar and disables the banner. Warning: Breaks with Vertical Tabbed QR!"],
+        "Minimal Sidebar": [false, "Shrinks the sidebar and disables the banner."],
         ":: Mascots": ["header", ""],
         "Hide Mascots in Catalog": [false, "Hides the mascot when viewing the catalog."],
         "Reduce Mascot Opacity": [false, "Reduces the opacity of the mascots until hover. Warning: Overrides pointer events."],
