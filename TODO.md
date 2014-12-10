@@ -1,4 +1,3 @@
-- Wiki files
 - Notify the user after OneeChan updates, like 4chan X
 - Batch export/import of mascots as JSON
 - Option to select between different icon sets for Thread Watcher Icon/Backlink Icons
