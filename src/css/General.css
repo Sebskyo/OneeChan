@@ -414,6 +414,9 @@ table.flashListing .highlightPost {
   opacity: 1.0 !important;
   transition: opacity .3s ease-in 0s;
 }
+:root.mascot-overlap #mascot img {
+  z-index: -1;
+}
 /* Ads */
 :root.ad-opacity .center img {
   opacity: 0.5;
