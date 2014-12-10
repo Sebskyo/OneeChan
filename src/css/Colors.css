@@ -118,7 +118,6 @@ s:hover .quote,
 }
 
 /* Backgrounds */
-html, 
 body {
   background: " + $SS.theme.bgImg.get() + $SS.theme.bgColor.hex + " !important;
 }

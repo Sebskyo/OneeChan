@@ -76,6 +76,9 @@
   height: 77px !important;
 }
 /* Vertical QR */
+:root.vertical-qr #qr > div > label > div {
+  display: none;
+}
 :root.vertical-qr #qr textarea {
   resize: vertical !important;
 }
@@ -83,19 +86,16 @@
   min-width: 297px !important;
   top: auto !important;
   position: fixed;
+  right: 0 !important;
+  left: auto !important;
 }
 :root.vertical-qr #qr .move {
   position: absolute;
-  width: 115px;
+  width: 105px;
   cursor: default;
   padding: 2px 0 2px 2px;
   text-align: center;
-}
-:root.vertical-qr:root.left-sidebar #qr .move {
-  top: 118px;
-}
-:root.vertical-qr:root.right-sidebar #qr .move {
-  top: 74px;
+  bottom: 88px;
 }
 :root.vertical-qr.bottom-header #qr {
   bottom: 28px !important;
@@ -114,13 +114,17 @@
 :root.vertical-qr #qr > div > select {
   display: none;
 }
+:root.vertical-qr #qr:hover,
+:root.vertical-qr #qr.focus {
+  transform: translateX(0%) !important;
+}
 :root.vertical-qr:root.left-sidebar #qr {
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out 0.5s;
 }
-:root.vertical-qr #qr:hover,
-:root.vertical-qr #qr.focus {
-  transform: translateX(0%) !important;
+:root.vertical-qr #qr {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out 0.5s;
 }
 :root.vertical-qr:root.right-sidebar #qr {
   transform: translateX(100%);
@@ -129,11 +133,16 @@
 :root.vertical-qr:root.left-sidebar #qr .move {
   transform: rotate(90deg);
   transform-origin: bottom right;
-  left: 60.5%;
+  left: 63.5%;
+  bottom: 46px;
+}
+:root.vertical-qr #qr .move {
+  transform: rotate(-90deg);
+  right: 86%;
 }
 :root.vertical-qr:root.right-sidebar #qr .move {
   transform: rotate(-90deg);
-  right: 84.5%;
+  right: 86%;
 }
 /* Fade QR */
 :root.fade-qr #qr form {
