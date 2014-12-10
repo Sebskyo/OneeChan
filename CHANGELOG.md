@@ -1,3 +1,12 @@
+### v5.5.4
+*2014-12-10*
+
+- Fix Vertical Tabbed QR when Sidebar is disabled (issue #38)
+
+**New Option:**
+
+- `Mascots Overlap Posts`
+
 ### v5.5.3
 *2014-12-09*
 
