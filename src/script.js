@@ -1287,6 +1287,7 @@
                                     theme.authorTrip = theme["Author Tripcode"];
                                     theme.replyOp = "1.0";
                                     theme.navOp = "0.9";
+                                    theme.bgImg = theme["Background Image"];
                                     theme.mainColor = $SS.colorToHex(theme["Reply Background"]);
                                     theme.textColor = $SS.colorToHex(theme["Text"]);
                                     theme.linkColor = $SS.colorToHex(theme["Links"]);
@@ -2600,6 +2601,33 @@
                 quoteColor: "83bf57",
                 unreadColor: "6699cc",
                 highlightColor: "476b8f"
+            }, {
+                name: "Midnight Caek",
+                authorName: "Zixaphir",
+                authorTrip: "!M.........",
+                "default": true,
+                replyOp: "1.0",
+                navOp: "0.9",
+                mainColor: "1c1c1c",
+                brderColor: "1c1c1c",
+                inputColor: "1c1c1c",
+                inputbColor: "1c1c1c",
+                headerBGColor: "101010",
+                headerColor: "909090",
+                boardColor: "909090",
+                bgColor: "101010",
+                textColor: "909090",
+                blinkColor: "424247",
+                headerLColor: "909090",
+                headerLHColor: "47475b",
+                linkColor: "57577b",
+                linkHColor: "47475b",
+                nameColor: "7c2d2d",
+                tripColor: "3e7157",
+                titleColor: "aaaaaa",
+                quoteColor: "71793e",
+                unreadColor: "57577b",
+                highlightColor: "ffffff"
             }],
 
             init: function() {
