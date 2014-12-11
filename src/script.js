@@ -67,6 +67,7 @@
         "Show Header Shadow": [true, "Gives the header a drop shadow."],
         "Highlight Current Board": [true, "Gives the current board link a bottom highlight border."],
         ":: Sidebar": ["header", ""],
+        "\'Tis the season\!": [true, "Happy Holidays\!"],
         "Sidebar Position": [
             1, "Change the position of the sidebar.", [{
                 name: "Right",
@@ -100,7 +101,7 @@
         "Backlinks on Bottom": [false, "Move backlinks to the bottom right of the replies."],
         "Borders": [
             2, "Changes which sides of replies have borders.", [{
-                name: "Normal",
+                name: "Normal (4chan default)",
                 value: 1
             }, {
                 name: "On all sides",
@@ -1287,6 +1288,7 @@
                                     theme.authorTrip = theme["Author Tripcode"];
                                     theme.replyOp = "1.0";
                                     theme.navOp = "0.9";
+                                    theme.bgImg = theme["Background Image"];
                                     theme.mainColor = $SS.colorToHex(theme["Reply Background"]);
                                     theme.textColor = $SS.colorToHex(theme["Text"]);
                                     theme.linkColor = $SS.colorToHex(theme["Links"]);
@@ -1306,6 +1308,7 @@
                                     theme.tripColor = $SS.colorToHex(theme["Tripcodes"]);
                                     theme.titleColor = $SS.colorToHex(theme["Subjects"]);
                                     theme.quoteColor = $SS.colorToHex(theme["Greentext"]);
+                                    theme.customCSS = theme["Custom CSS"];
                                 }
 
                                 /* Can't be exported from the main scripts, so toss an error */
@@ -1324,7 +1327,7 @@
 
                         reader.readAsText(file);
                     })).append($("<span class='options-button'>Import")));
-                p.append($("<a class='options-button' name=restoreThemes title='Restore hidden default themes'>restore", tOptions)
+                p.append($("<a class='options-button' name=restoreThemes title='Restore hidden default themes'>Restore", tOptions)
                     .bind("click", function() {
                         $SS.conf["Hidden Themes"] = [];
                         $("#themes-section>div[hidden]").show();
@@ -2599,6 +2602,33 @@
                 quoteColor: "83bf57",
                 unreadColor: "6699cc",
                 highlightColor: "476b8f"
+            }, {
+                name: "Midnight Caek",
+                authorName: "Zixaphir",
+                authorTrip: "!M.........",
+                "default": true,
+                replyOp: "1.0",
+                navOp: "0.9",
+                mainColor: "1c1c1c",
+                brderColor: "1c1c1c",
+                inputColor: "1c1c1c",
+                inputbColor: "1c1c1c",
+                headerBGColor: "101010",
+                headerColor: "909090",
+                boardColor: "909090",
+                bgColor: "101010",
+                textColor: "909090",
+                blinkColor: "424247",
+                headerLColor: "909090",
+                headerLHColor: "47475b",
+                linkColor: "57577b",
+                linkHColor: "47475b",
+                nameColor: "7c2d2d",
+                tripColor: "3e7157",
+                titleColor: "aaaaaa",
+                quoteColor: "71793e",
+                unreadColor: "57577b",
+                highlightColor: "ffffff"
             }],
 
             init: function() {
@@ -2956,6 +2986,7 @@
                 $("html").optionClass("Reduce Mascot Opacity", true, "mascot-opacity");
                 $("html").optionClass("Grayscale Mascots", true, "mascot-grayscale");
                 $("html").optionClass("Reduce Thumbnail Opacity", true, "thumb-opacity");
+                $("html").optionClass("\'Tis the season\!", true, "snowing");
             }
         },
 
@@ -3848,7 +3879,7 @@
             return {
                 sub: obj.hostname.split(".")[0],
                 board: pathname[0],
-                nsfw: /^(b|d|e|f|gif|h|hr|r|s|t|u|wg|i|ic|r9k|hm|y|hc|pol|soc)$/.test(pathname[0]),
+                nsfw: /^(b|d|e|f|gif|h|hr|r|s|t|u|wg|i|ic|r9k|hm|y|hc|pol|soc|lgbt)$/.test(pathname[0]),
                 reply: pathname[1] === "res"
             };
         }

@@ -1,3 +1,11 @@
+### v5.5.5
+*2014-12-11*
+
+- Oneechan's sidebar is feeling festive! (Enable SS-like Sidebar, check options to disable)
+- Imported Appchan X themes will now import Custom CSS as well as Background Image
+- Added Midnight Caek theme
+- Minor fixes
+
 ### v5.5.4
 *2014-12-10*
 
