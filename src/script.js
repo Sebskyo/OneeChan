@@ -100,7 +100,7 @@
         "Backlinks on Bottom": [false, "Move backlinks to the bottom right of the replies."],
         "Borders": [
             2, "Changes which sides of replies have borders.", [{
-                name: "Normal",
+                name: "Normal (4chan default)",
                 value: 1
             }, {
                 name: "On all sides",
@@ -1306,6 +1306,7 @@
                                     theme.tripColor = $SS.colorToHex(theme["Tripcodes"]);
                                     theme.titleColor = $SS.colorToHex(theme["Subjects"]);
                                     theme.quoteColor = $SS.colorToHex(theme["Greentext"]);
+                                    theme.customCSS = theme["Custom CSS"];
                                 }
 
                                 /* Can't be exported from the main scripts, so toss an error */
@@ -1324,7 +1325,7 @@
 
                         reader.readAsText(file);
                     })).append($("<span class='options-button'>Import")));
-                p.append($("<a class='options-button' name=restoreThemes title='Restore hidden default themes'>restore", tOptions)
+                p.append($("<a class='options-button' name=restoreThemes title='Restore hidden default themes'>Restore", tOptions)
                     .bind("click", function() {
                         $SS.conf["Hidden Themes"] = [];
                         $("#themes-section>div[hidden]").show();
@@ -3848,7 +3849,7 @@
             return {
                 sub: obj.hostname.split(".")[0],
                 board: pathname[0],
-                nsfw: /^(b|d|e|f|gif|h|hr|r|s|t|u|wg|i|ic|r9k|hm|y|hc|pol|soc)$/.test(pathname[0]),
+                nsfw: /^(b|d|e|f|gif|h|hr|r|s|t|u|wg|i|ic|r9k|hm|y|hc|pol|soc|lgbt)$/.test(pathname[0]),
                 reply: pathname[1] === "res"
             };
         }
