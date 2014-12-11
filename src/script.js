@@ -67,7 +67,7 @@
         "Show Header Shadow": [true, "Gives the header a drop shadow."],
         "Highlight Current Board": [true, "Gives the current board link a bottom highlight border."],
         ":: Sidebar": ["header", ""],
-        "\'Tis the season\!": [true, "Happy Holidays\!"],
+        "Snow Time": [true, "Happy Holidays\!"],
         "Sidebar Position": [
             1, "Change the position of the sidebar.", [{
                 name: "Right",
@@ -2986,7 +2986,7 @@
                 $("html").optionClass("Reduce Mascot Opacity", true, "mascot-opacity");
                 $("html").optionClass("Grayscale Mascots", true, "mascot-grayscale");
                 $("html").optionClass("Reduce Thumbnail Opacity", true, "thumb-opacity");
-                $("html").optionClass("\'Tis the season\!", true, "snowing");
+                $("html").optionClass("Snow Time", true, "snowing");
             }
         },
 
