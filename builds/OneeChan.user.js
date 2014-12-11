@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         OneeChan
-// @version      5.5.5
+// @version      5.5.6
 // @namespace    OneeChan
 // @description  Customizable rice and themes for 4chan X.
 // @minGMVer     1.15
@@ -87,7 +87,7 @@
         "Show Header Shadow": [true, "Gives the header a drop shadow."],
         "Highlight Current Board": [true, "Gives the current board link a bottom highlight border."],
         ":: Sidebar": ["header", ""],
-        "\'Tis the season\!": [true, "Happy Holidays\!"],
+        "Snow Time": [true, "Happy Holidays\!"],
         "Sidebar Position": [
             1, "Change the position of the sidebar.", [{
                 name: "Right",
@@ -288,7 +288,7 @@
         MAX_FONT_SIZE = 18,
         MIN_FONT_SIZE = 10,
         NAMESPACE = "OneeChan.",
-        VERSION = "5.5.5",
+        VERSION = "5.5.6",
         inputImages = "iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAP9JREFUOMvV0CFLQ2EYxfHfrtdiURgbmCxOmFPBJgZZ0CQD0Q+goFkwabWIyWIWFgwmy7Qp7DPI3GD7ACZlYLNcy31ljG0aDHrSy3N43nOef6ZULBiifczEQ8wV7OAtGmBO4wgfOI2whsXUnMAJ8rhCJ8IxDpHDHpZwixqM5XPZBBtYxioauEgjRLjBI2bRxTneQ6EYCS4xiTu89DbONJrtP88hwnV64hm28YRqyPsFDkmSGKUYFubnsqignM7rqDWa7dcAqoLdnsXwrgZQ5QG/l8MVIxX1ZPar/lUyUOsv+aMzv+0Qw3OrM4VNrKfzB9yXioVu6LDVx+EA4/+Gwycw/Uz36O07WwAAAABJRU5ErkJggg==",
         fontListSWF = "https://ahodesuka.github.com/FontList.swf",
         themeInputs =
@@ -3006,7 +3006,7 @@
                 $("html").optionClass("Reduce Mascot Opacity", true, "mascot-opacity");
                 $("html").optionClass("Grayscale Mascots", true, "mascot-grayscale");
                 $("html").optionClass("Reduce Thumbnail Opacity", true, "thumb-opacity");
-                $("html").optionClass("\'Tis the season\!", true, "snowing");
+                $("html").optionClass("Snow Time", true, "snowing");
             }
         },
 
