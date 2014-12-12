@@ -1,5 +1,13 @@
+### v5.5.7
+*2014-12-12*
+
+- Add GIF option to `Snow Time`
+- Update 4chan Dark Upgrade theme
+
 ### v5.5.6
 *2014-12-11*
+
+- Fix `Snow Time` not disabling
 
 ### v5.5.5
 *2014-12-11*
