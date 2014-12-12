@@ -67,7 +67,8 @@
         "Show Header Shadow": [true, "Gives the header a drop shadow."],
         "Highlight Current Board": [true, "Gives the current board link a bottom highlight border."],
         ":: Sidebar": ["header", ""],
-        "Snow Time": [true, "Happy Holidays\!"],
+        "Snow Time": [true, "Happy Holidays\!", null, true],
+        "Use GIF Version": [false, "Less CPU intensive.", "Snow Time", true, true],
         "Sidebar Position": [
             1, "Change the position of the sidebar.", [{
                 name: "Right",
@@ -267,8 +268,10 @@
     },
         MAX_FONT_SIZE = 18,
         MIN_FONT_SIZE = 10,
+        NAME = "OneeChan",
         NAMESPACE = "OneeChan.",
         VERSION = "<%= version %>",
+        CHANGELOG = "https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md",
         inputImages = "iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAP9JREFUOMvV0CFLQ2EYxfHfrtdiURgbmCxOmFPBJgZZ0CQD0Q+goFkwabWIyWIWFgwmy7Qp7DPI3GD7ACZlYLNcy31ljG0aDHrSy3N43nOef6ZULBiifczEQ8wV7OAtGmBO4wgfOI2whsXUnMAJ8rhCJ8IxDpHDHpZwixqM5XPZBBtYxioauEgjRLjBI2bRxTneQ6EYCS4xiTu89DbONJrtP88hwnV64hm28YRqyPsFDkmSGKUYFubnsqignM7rqDWa7dcAqoLdnsXwrgZQ5QG/l8MVIxX1ZPar/lUyUOsv+aMzv+0Qw3OrM4VNrKfzB9yXioVu6LDVx+EA4/+Gwycw/Uz36O07WwAAAABJRU5ErkJggg==",
         fontListSWF = "https://ahodesuka.github.com/FontList.swf",
         themeInputs =
@@ -805,7 +808,7 @@
             var div;
             if (reload !== true) {
                 $SS.options.init();
-                $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler).bind("OpenSettings", $SS.NodeInsertionHandler).bind("AddMenuEntry", $SS.AddMenuHandler).bind("ThreadUpdate", $SS.NodeInsertionHandler);
+                $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler).bind("OpenSettings", $SS.NodeInsertionHandler).bind("ThreadUpdate", $SS.NodeInsertionHandler);
 
                 var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
                 var observer = new MutationObserver(function(mutations) {
@@ -866,7 +869,7 @@
                 $SS.browser.gecko = /Gecko\//.test(navigator.userAgent);
                 $SS.location = $SS.getLocation();
 
-                // correct selected theme/mascot after updating
+                // Correct selected theme/mascot after updating
                 // and the number defaults has changed.
                 if ((m_VERSION = $SS.Config.get("VERSION")) !== VERSION) {
                     var ntMascots = $SS.Mascots.defaults.length, // new total
@@ -947,11 +950,6 @@
         NodeInsertionHandler: function(e) {
             var settings = e.target;
             $("input[type=checkbox]", settings).riceCheck();
-        },
-        AddMenuHandler: function(e) {
-        /* When AddMenuEntry is called by scripts like ExLinks it messes with riceCheck until we open and close the menu */
-            $("#header-bar .menu-button").click();
-            $("#header-bar .menu-button").click();
         },
         /* CONFIG */
         Config: {
@@ -1161,7 +1159,7 @@
                     $("a[name=Export]", tOptions).bind("click", function() {
                         if ($("a[download]", tOptions).exists())
                             return;
-                        var exportalert = $("<a class='options-button'download='OneeChan Settings.json' href='data:application/json," + encodeURIComponent(JSON.stringify($SS.exportOptions)) + "'>Save me!").bind("click", $SS.options.close);
+                        var exportalert = $("<a class='options-button'download='OneeChan v" + VERSION + " Settings.json' href='data:application/json," + encodeURIComponent(JSON.stringify($SS.exportOptions, null, 2)) + "'>Save me!").bind("click", $SS.options.close);
                         return $(this).replace(exportalert);
                     });
                     // Reset settings
@@ -2384,7 +2382,7 @@
                 authorName: "ahodesuka",
                 authorTrip: "!.pC/AHOKAg",
                 "default": true,
-                bgImg: false,
+                bgImg: "https://i.minus.com/iNkJoDJkLU0co.png",
                 bgRPA: "repeat top left fixed",
                 replyOp: "1.0",
                 navOp: "0.9",
@@ -2408,7 +2406,7 @@
                 headerBGColor: "333333",
                 boardColor: "ffffff",
                 highlightColor: "a7dce7",
-                customCSS:  "#delform{background:rgba(22,22,22,.8)!important;border:0!important;padding:1px!important;box-shadow:rgba(0,0,0,.8) 0 0 10px;}.thread:not(.stub){background:0!important}a:not([href='javascript:;']){text-shadow:#0f0f0f 0 1px;}"
+                customCSS:  "#delform{background:rgba(22,22,22,.8)!important;border:0!important;padding:1px!important;box-shadow:rgba(0,0,0,.8) 0 0 10px;}div.reply.post {background-image: url('data:image/gif;base64,R0lGODdhCQAJAIgAADMzMysrKywAAAAACQAJAAACDwxgeMrZF5Jckz1UXaYQFgA7') !important;border-bottom: #1f1f1f !important;}.thread:not(.stub){background:0!important}a:not([href='javascript:;']){text-shadow:#0f0f0f 0 1px;}"
             }, {
                 name: "Yasashii",
                 authorName: "Nebukazar",
@@ -2987,13 +2985,14 @@
                 $("html").optionClass("Grayscale Mascots", true, "mascot-grayscale");
                 $("html").optionClass("Reduce Thumbnail Opacity", true, "thumb-opacity");
                 $("html").optionClass("Snow Time", true, "snowing");
+                $("html").optionClass("Use GIF Version", true, "snowing-gif");
             }
         },
 
         hideMascot: {
             hasInit: false,
             init: function() {
-                if ($SS.Config.get("Hide Mascots in Catalog") == true && $(".catalog, .catalog-mode").exists()) {
+                if ($SS.Config.get("Hide Mascots in Catalog") && $(".catalog, .catalog-mode").exists()) {
                     $("#mascot").attr("style", "display: none");
                 }
             }
