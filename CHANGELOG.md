@@ -1,3 +1,14 @@
+### v5.5.8
+*2014-12-13*
+
+- OneeChan will now signal when it has updated (ccd0 only)
+
+**New Option:**
+
+- `Disable In Catalog View`
+
+Disables the Sidebar when viewing the catalog
+
 ### v5.5.7
 *2014-12-12*
 

@@ -86,6 +86,7 @@ module.exports = (grunt) ->
     'concat:style'
     'cssmin:minify'
     'concat:crx'
+    'compress:crx'
     'concat:userscript'
     'clean:tmp'
   ]
