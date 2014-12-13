@@ -81,6 +81,7 @@
                 value: 3
             }], true
         ],
+        "Disable In Catalog View": [false, "Disables the Sidebar when viewing the catalog."],
         "SS-like Sidebar": [true, "Darkens the Sidebar and adds a border like 4chan Style Script."],
         "Minimal Sidebar": [false, "Shrinks the sidebar and disables the banner."],
         ":: Mascots": ["header", ""],
@@ -773,7 +774,6 @@
         hasSingleEl: function() {
             return this.elems.length === 1;
         },
-
         riceCheck: function() {
             return this.each(function() {
                 var click = function(e) {
@@ -790,7 +790,6 @@
                 return this.isRiced = true;
             });
         },
-
         jsColor: function() {
             return this.each(function() {
                 this.color = new $SS.jscolor.color(this);
@@ -854,7 +853,6 @@
             }
 
             $SS.insertMascot();
-            $SS.hideMascot.init();
             $SS.pages.init();
             $SS.riceInputs.init();
 
@@ -869,9 +867,25 @@
                 $SS.browser.gecko = /Gecko\//.test(navigator.userAgent);
                 $SS.location = $SS.getLocation();
 
-                // Correct selected theme/mascot after updating
-                // and the number defaults has changed.
                 if ((m_VERSION = $SS.Config.get("VERSION")) !== VERSION) {
+                // Signal that OneeChan has updated
+                        var detail = {
+                            type: 'info',
+                            content: NAME + ' has been updated to version ' + VERSION + '.'
+                        };
+                        if (typeof cloneInto === 'function') {
+                            detail = cloneInto(detail, document.defaultView);
+                        }
+                        var event = new CustomEvent('CreateNotification', {
+                            bubbles: true,
+                            detail: detail
+                        });
+                        setTimeout(function() {
+                            document.dispatchEvent(event)
+                        }, 25);
+
+                // Correct selected theme/mascot after updating
+                // and the number defaults has changed.                    
                     var ntMascots = $SS.Mascots.defaults.length, // new total
                         ntThemes = $SS.Themes.defaults.length,
                         otMascots = $SS.Config.get("Total Mascots"), // old total
@@ -921,24 +935,36 @@
 
         /* STYLING & DOM */
         insertCSS: function() {
-            var css;
+            var css,
+                reload = $("#ch4SS").exists();
+
+            if (reload || $("link[rel=stylesheet]", document.head).exists())
+                $(document).unbind("DOMNodeInserted", $SS.insertCSS);
+            else return;
 
             $SS.bHideSidebar = $SS.location.sub !== "boards" ||
-                               $SS.location.board === "f";
+                               $SS.location.catalog ||
+                               $SS.location.sub === "sys";
+
             css = "<%= grunt.file.read('tmp/style.min.css').replace(/\\(^\")/g, '') %>";
-            if ($("#ch4SS").exists())
+
+            if (reload)
                 $("#ch4SS").text(css);
             else
                 $(document.head).append($("<style type='text/css' id=ch4SS>").text(css));
         },
         insertMascot: function() {
-            var createMascot;
+            if ($SS.conf["Hide Mascots in Catalog"] && $SS.location.catalog) {
+                return;
+            }
 
-            createMascot = $("<div id=mascot><img src=" + ($SS.mascot.img.get() !== "none " ? $SS.mascot.img.get() : "") + ">");
-            if ((div = $("#mascot")).exists())
+            var createMascot = $("<div id=mascot><img src=" + ($SS.mascot.img.get() !== "none " ? $SS.mascot.img.get() : "") + ">");
+
+            if ((div = $("#mascot")).exists()) {
                 div.replace(createMascot);
-            else
+            } else {
                 $(document.body).append(createMascot);
+            }
         },
         QRDialogCreationHandler: function(e) {
             var qr = e.target;
@@ -1197,8 +1223,7 @@
                                 $(this).show();
                             });
                         else
-                            $("[class*='" + this.name.replace(/\s/g, "_") + "']")
-                                .each(function() {
+                            $("[class*='" + this.name.replace(/\s/g, "_") + "']").each(function() {
                                     $(this).hide();
                                 });
                     });
@@ -2989,14 +3014,6 @@
             }
         },
 
-        hideMascot: {
-            hasInit: false,
-            init: function() {
-                if ($SS.Config.get("Hide Mascots in Catalog") && $(".catalog, .catalog-mode").exists()) {
-                    $("#mascot").attr("style", "display: none");
-                }
-            }
-        },
         pages: {
             hasInit: false,
             init: function() {
@@ -3619,8 +3636,8 @@
             };
         },
         Mascot: function(index) {
-            if (index == -1) // no mascot
-            {
+            // no mascot
+            if (index == -1) { 
                 this.img = new $SS.Image(null);
                 this.hidden = true;
                 return;
@@ -3711,13 +3728,11 @@
                     "<path fill='rgb(" + this.headerColor.rgb + ")' d='M25.545,23.328,17.918,15.623,25.534,8.007,27.391,9.864,29.649,1.436,21.222,3.694,23.058,5.53,15.455,13.134,7.942,5.543,9.809,3.696,1.393,1.394,3.608,9.833,5.456,8.005,12.98,15.608,5.465,23.123,3.609,21.268,1.351,29.695,9.779,27.438,7.941,25.6,15.443,18.098,23.057,25.791,21.19,27.638,29.606,29.939,27.393,21.5z'/></svg>",
                 imgContract: "<svg viewBox='0 0 30 30' preserveAspectRatio='true' height='16' width='16' xmlns='http://www.w3.org/2000/svg'>" +
                     "<path fill='rgb(" + this.headerColor.rgb + ")' d='M25.083,18.895l-8.428-2.259l2.258,8.428l1.838-1.837l7.053,7.053l2.476-2.476l-7.053-7.053L25.083,18.895zM5.542,11.731l8.428,2.258l-2.258-8.428L9.874,7.398L3.196,0.72L0.72,3.196l6.678,6.678L5.542,11.731zM7.589,20.935l-6.87,6.869l2.476,2.476l6.869-6.869l1.858,1.857l2.258-8.428l-8.428,2.258L7.589,20.935zM23.412,10.064l6.867-6.87l-2.476-2.476l-6.868,6.869l-1.856-1.856l-2.258,8.428l8.428-2.259L23.412,10.064z'/></svg>",
-                OneeChan: "<svg viewBox='7 7 20 20' preserveAspectRatio='true' height='14' width='14' xmlns='http://www.w3.org/2000/svg'>" +
+                menuIcon: "<svg viewBox='7 7 20 20' preserveAspectRatio='true' height='14' width='14' xmlns='http://www.w3.org/2000/svg'>" +
                     "<path fill='rgb(" + this.headerLColor.rgb + ")' d='M4.083,14H14V4.083H4.083V14zM17,4.083V14h9.917V4.083H17zM17,26.917h9.917v-9.918H17V26.917zM4.083,26.917H14v-9.918H4.083V26.917z'/></svg>",
                 heart: "<svg viewBox='0 0 26 26' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'>" +
                     "<path fill='rgb(" + this.textColor.rgb + ")' d='M24.132,7.971c-2.203-2.205-5.916-2.098-8.25,0.235L15.5,8.588l-0.382-0.382c-2.334-2.333-6.047-2.44-8.25-0.235c-2.204,2.203-2.098,5.916,0.235,8.249l8.396,8.396l8.396-8.396C26.229,13.887,26.336,10.174,24.132,7.971z'/></svg>",
                 star: "<svg viewBox='0 0 30 30' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'>" +
-                    "<path fill='rgb(" + this.textColor.rgb + ")' d='M14.615,4.928c0.487-0.986,1.284-0.986,1.771,0l2.249,4.554c0.486,0.986,1.775,1.923,2.864,2.081l5.024,0.73c1.089,0.158,1.335,0.916,0.547,1.684l-3.636,3.544c-0.788,0.769-1.28,2.283-1.095,3.368l0.859,5.004c0.186,1.085-0.459,1.553-1.433,1.041l-4.495-2.363c-0.974-0.512-2.567-0.512-3.541,0l-4.495,2.363c-0.974,0.512-1.618,0.044-1.432-1.041l0.858-5.004c0.186-1.085-0.307-2.6-1.094-3.368L3.93,13.977c-0.788-0.768-0.542-1.525,0.547-1.684l5.026-0.73c1.088-0.158,2.377-1.095,2.864-2.081L14.615,4.928z'/></svg>",
-                startwo: "<svg viewBox='0 0 30 30' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'>" +
                     "<path fill='rgb(" + this.textColor.rgb + ")' d='M14.615,4.928c0.487-0.986,1.284-0.986,1.771,0l2.249,4.554c0.486,0.986,1.775,1.923,2.864,2.081l5.024,0.73c1.089,0.158,1.335,0.916,0.547,1.684l-3.636,3.544c-0.788,0.769-1.28,2.283-1.095,3.368l0.859,5.004c0.186,1.085-0.459,1.553-1.433,1.041l-4.495-2.363c-0.974-0.512-2.567-0.512-3.541,0l-4.495,2.363c-0.974,0.512-1.618,0.044-1.432-1.041l0.858-5.004c0.186-1.085-0.307-2.6-1.094-3.368L3.93,13.977c-0.788-0.768-0.542-1.525,0.547-1.684l5.026-0.73c1.088-0.158,2.377-1.095,2.864-2.081L14.615,4.928z'/></svg>",
                 backlink: "<svg viewBox='0 0 30 30' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'>" +
                     "<path fill='rgb(" + this.blinkColor.rgb + ")' d='M12.981,9.073V6.817l-12.106,6.99l12.106,6.99v-2.422c3.285-0.002,9.052,0.28,9.052,2.269c0,2.78-6.023,4.263-6.023,4.263v2.132c0,0,13.53,0.463,13.53-9.823C29.54,9.134,17.952,8.831,12.981,9.073z'/></svg>",
@@ -3879,7 +3894,8 @@
                 sub: obj.hostname.split(".")[0],
                 board: pathname[0],
                 nsfw: /^(b|d|e|f|gif|h|hr|r|s|t|u|wg|i|ic|r9k|hm|y|hc|pol|soc|lgbt)$/.test(pathname[0]),
-                reply: pathname[1] === "res"
+                reply: pathname[1] === "res",
+                catalog: pathname[1] === "catalog"
             };
         }
     };
