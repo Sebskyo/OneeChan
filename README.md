@@ -1,7 +1,7 @@
 OneeChan
 ====
 
-OneeChan is a userscript that functions on top of 4chan X and allows you to customize the site with various functions, themes and mascots. Originally developed by [seaweedchan](https://github.com/seaweedchan), this fork adds compability with various 4chan X versions and more custom options.
+OneeChan is a userscript that functions on top of 4chan X and allows you to customize the site with various functions, themes and mascots. Mascots are not obligatory and can be changed or disabled altogether. Originally developed by [seaweedchan](https://github.com/seaweedchan), this fork adds compability with various 4chan X versions and more custom options. See [screenshots](#screenshots).
 
 
 ##[Click to Install](https://nebukazar.github.io/OneeChan/builds/OneeChan.user.js)
@@ -45,6 +45,10 @@ I can't promise everything will work with every fork.
 - [Changelog](https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md)
 - [Source Code](https://github.com/Nebukazar/OneeChan)
 - [Reporting Bugs and Contributing](https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md)
+
+#### Screenshots
+
+![http://i.imgur.com/usLsE72s.png](http://i.imgur.com/usLsE72.png) ![http://i.imgur.com/ytX3qgys.png](http://i.imgur.com/ytX3qgy.png) ![http://i.imgur.com/m5iVBo9s.png](http://i.imgur.com/m5iVBo9.png)
 
 
 #### See also:
