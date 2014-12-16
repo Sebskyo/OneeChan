@@ -48,7 +48,7 @@ I can't promise everything will work with every fork.
 
 #### Screenshots
 
-![http://i.imgur.com/usLsE72.png](http://i.imgur.com/usLsE72s.png) ![http://i.imgur.com/ytX3qgy.png](http://i.imgur.com/ytX3qgys.png) ![http://i.imgur.com/m5iVBo9.png](http://i.imgur.com/m5iVBo9s.png)
+![![http://i.imgur.com/usLsE72s.png](http://i.imgur.com/usLsE72.png) ![![http://i.imgur.com/ytX3qgys.png](http://i.imgur.com/ytX3qgy.png) ![![http://i.imgur.com/m5iVBo9s.png](http://i.imgur.com/m5iVBo9.png)
 
 
 #### See also:
