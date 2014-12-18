@@ -21,3 +21,8 @@
 .highlight {
   outline: 2px solid rgba(" + $SS.theme.highlightColor.rgb + ",1.0) !important;
 }
+/* Highlighted Threads */
+.catalog-thread.watched .catalog-thumb,
+.filter-highlight .catalog-thumb {
+border: 2px solid rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
+}
