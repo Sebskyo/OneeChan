@@ -881,7 +881,7 @@
                             detail: detail
                         });
                         setTimeout(function() {
-                            document.dispatchEvent(event)
+                            document.dispatchEvent(event);
                         }, 25);
 
                 // Correct selected theme/mascot after updating
@@ -1067,7 +1067,7 @@
                             "<p class='buttons-container'>" +
                             "<a class='options-button' title='Export your settings as JSON.' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a><a class='options-button' title='Reset OneeChan settings.' name=resetSettings>Reset</a>" +
                             "<span id=oneechan-version><span>OneeChan</span> v" + VERSION + "<span class=link-delim> | </span>" +
-                            "<a href='" + ("https://github.com/Nebukazar/OneeChan/releases") + "' id=update-link target='_blank' title='OneeChan updates automatically.'>Update</a><span class=link-delim> | </span>" +
+                            "<a href='https://github.com/Nebukazar/OneeChan/wiki' id=changelog-link target='_blank' title='Learn about OneeChan.'>Wiki</a><span class=link-delim> | </span>" +
                             "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank' title='Read the changelog.'>Changelog</a><span class=link-delim> | </span>" +
                             "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md#reporting-bugs-and-suggestions' id=issues-link target='_blank' title='Report an issue.'>Issues</a></p>",
                         key, val, des;
