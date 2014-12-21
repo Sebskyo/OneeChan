@@ -174,3 +174,7 @@ span.hide-announcement {
   top: 135px;
   right: 10px;
 }
+/* Accommodate Oneechan icon in header */
+.centered-links:root #shortcuts {
+  width: 310px !important;
+}
