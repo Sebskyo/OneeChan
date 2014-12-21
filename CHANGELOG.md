@@ -1,3 +1,9 @@
+### v5.5.9
+*2014-12-21*
+
+- Fix 4chan X header shortcuts in archived threads
+- Link highlighted/watched threads to highlight color in 4chan X catalog
+
 ### v5.5.8
 *2014-12-13*
 
