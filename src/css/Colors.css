@@ -27,6 +27,10 @@ select,
 .nameBlock.capcodeMod {
   color: #800080 !important;
 }
+.id_admin,
+.nameBlock.capcodeAdmin span.name {
+  color: #F00 !important;
+}
 /* Tripcodes */
 .nameBlock>.postertrip,
 .post-tripcode,
