@@ -871,7 +871,8 @@
                 // Signal that OneeChan has updated
                         var detail = {
                             type: 'info',
-                            content: NAME + ' has been updated to version ' + VERSION + '.'
+                            content: NAME + ' has been updated to version ' + VERSION + '.',
+                            lifetime: 15
                         };
                         if (typeof cloneInto === 'function') {
                             detail = cloneInto(detail, document.defaultView);

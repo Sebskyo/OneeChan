@@ -1,3 +1,9 @@
+### v5.5.10
+*2014-12-24*
+
+- Give moot's name its original red color
+- Style 4chan X menu suboptions
+
 ### v5.5.9
 *2014-12-21*
 
