@@ -130,7 +130,8 @@ body {
 .dialog,
 .tab-label,
 #post-preview,
-.flashListing tr:nth-of-type(2n+1) {
+.flashListing tr:nth-of-type(2n+1),
+.suboption-list > div:last-of-type { /* 4chan X Menu */
   background: rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important;
 }
 :root.recolor-even .thread>.replyContainer:nth-of-type(even):not(.hidden) .post {
@@ -241,7 +242,9 @@ fieldset,
 .flashListing td:not(:last-of-type):not(.postblock),
 :root.vertical-qr #qr .move,
 #qr select,
-select {
+select,
+.suboption-list > div::before,
+.suboption-list::before {
   border-color: " + $SS.theme.brderColor.hex + " !important;
 }
 input,
