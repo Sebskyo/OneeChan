@@ -943,10 +943,6 @@
                 $(document).unbind("DOMNodeInserted", $SS.insertCSS);
             else return;
 
-            $SS.bHideSidebar = $SS.location.sub !== "boards" ||
-                               $SS.location.catalog ||
-                               $SS.location.sub === "sys";
-
             css = "<%= grunt.file.read('tmp/style.min.css').replace(/\\(^\")/g, '') %>";
 
             if (reload)
