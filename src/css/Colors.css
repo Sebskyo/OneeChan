@@ -105,7 +105,8 @@ s:hover .quote,
   color: " + $SS.theme.blinkColor.hex + " !important;
 }
 /* Code Tags */
-.prettyprint {
+.prettyprint,
+.catalog-code {
   background: none repeat scroll 0 0 rgba(" + $SS.theme.codeBackground + ") !important;
   border: 1px solid rgba(" + $SS.theme.codeBorder + ") !important;
 }
@@ -120,7 +121,6 @@ s:hover .quote,
 #qr-no-file {
   color: rgba(" + $SS.theme.textColor.rgb + ",.4) !important;
 }
-
 /* Backgrounds */
 body {
   background: " + $SS.theme.bgImg.get() + $SS.theme.bgColor.hex + " !important;
