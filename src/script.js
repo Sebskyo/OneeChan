@@ -43,7 +43,7 @@
         "Custom Right Margin": [
             0, "Custom width of border or outline of highlighted posts (pixels).", "Right Margin", 999, true
         ],
-        "Fixed Thread Watcher": [true, "The thread watcher will scroll with the page."],
+        "Fixed Thread Watcher": [true, "The thread watcher will not scroll with the page."],
         "Style Thread Stats": [false, "Makes the thread stats stand out more. Disable Updater and Stats in Header if using ccd0."],        
         "Rounded Corners": [false, "Styles replies, menus and the QR to have subtly rounded corners."],
         "Underline All Links": [false, "Underlines all the links."],
@@ -67,8 +67,6 @@
         "Show Header Shadow": [true, "Gives the header a drop shadow."],
         "Highlight Current Board": [true, "Gives the current board link a bottom highlight border."],
         ":: Sidebar": ["header", ""],
-        "Snow Time": [true, "Happy Holidays\!", null, true],
-        "Use GIF Version": [false, "Less CPU intensive.", "Snow Time", true, true],
         "Sidebar Position": [
             1, "Change the position of the sidebar.", [{
                 name: "Right",
@@ -3006,8 +3004,6 @@
                 $("html").optionClass("Reduce Mascot Opacity", true, "mascot-opacity");
                 $("html").optionClass("Grayscale Mascots", true, "mascot-grayscale");
                 $("html").optionClass("Reduce Thumbnail Opacity", true, "thumb-opacity");
-                $("html").optionClass("Snow Time", true, "snowing");
-                $("html").optionClass("Use GIF Version", true, "snowing-gif");
             }
         },
 
