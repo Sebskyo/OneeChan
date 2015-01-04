@@ -1,3 +1,9 @@
+### v5.5.11
+*2015-01-04*
+
+- Fix [code] colors in 4chan X catalog
+- Remove Snow
+
 ### v5.5.10
 *2014-12-24*
 

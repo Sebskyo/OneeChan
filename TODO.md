@@ -1,5 +1,0 @@
-- [x] Notify the user after OneeChan updates, like 4chan X
-- [ ] Batch export/import of mascots as JSON
-- [ ] Allow user upload by converting mascots into base 64 on the fly
-- [ ] Custom scrollbars (will require Firefox fixing their stuff first, don't like the JS solution)
-- [ ] Click to toggle mascots
