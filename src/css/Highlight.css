@@ -1,4 +1,4 @@
-/* Highlighting posts */
+/* Highlighting all posts */
 :root.hl-border .post.reply {
   border-left: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.highlightColor.rgb + ",1.0) !important;
 }
@@ -8,6 +8,7 @@
 :root.hl-outline .post.reply {
   outline: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.highlightColor.rgb + ",1.0);
 }
+/* Your Posts/Posts Quoting You */
 :root.highlight-you .quotesYou > .reply {
   border-left: " + $SS.conf["Width Decoration"] + "px solid rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
 }
@@ -24,5 +25,12 @@
 /* Highlighted Threads */
 .catalog-thread.watched .catalog-thumb,
 .filter-highlight .catalog-thumb {
-border: 2px solid rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
+  border: 2px solid rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
+}
+/* Thread Watcher */
+.replies-quoting-you > .watcher-link {
+  color: rgba(" + $SS.theme.highlightColor.rgb + ",1.0) !important;
+}
+.replies-quoting-you > .watcher-link:hover {
+  color: " + $SS.theme.linkHColor.hex + " !important;
 }
