@@ -31,7 +31,7 @@
 }
 /* Thread Watcher */
 .replies-quoting-you > .watcher-link {
-  color: rgba(" + $SS.theme.postHLColor.rgb + ",1.0) !important;
+  color: rgba(" + $SS.theme.quotesYouHLColor.rgb + ",1.0) !important;
 }
 .replies-quoting-you > .watcher-link:hover {
   color: " + $SS.theme.linkHColor.hex + " !important;
