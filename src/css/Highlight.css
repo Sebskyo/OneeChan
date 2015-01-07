@@ -1,35 +1,37 @@
-/* Highlighting all posts */
+/* Highlight all posts */
 :root.hl-border .post.reply {
-  border-left: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.highlightColor.rgb + ",1.0) !important;
+  border-left: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.postHLColor.rgb + ",1.0) !important;
 }
 :root.hl-border-down .post.reply {
-  border-bottom: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.highlightColor.rgb + ",1.0) !important;
+  border-bottom: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.postHLColor.rgb + ",1.0) !important;
 }
 :root.hl-outline .post.reply {
-  outline: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.highlightColor.rgb + ",1.0);
+  outline: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.postHLColor.rgb + ",1.0);
 }
-/* Your Posts/Posts Quoting You */
+/* Posts Quoting You */
 :root.highlight-you .quotesYou > .reply {
-  border-left: " + $SS.conf["Width Decoration"] + "px solid rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
+  border-left: " + $SS.conf["Width Decoration"] + "px solid rgba(" + $SS.theme.quotesYouHLColor.rgb + ",1.0) !important;
 }
+/* Your Posts */
 :root.highlight-own .yourPost > .reply {
-  border-left: " + $SS.conf["Width Decoration"] + "px dashed rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
+  border-left: " + $SS.conf["Width Decoration"] + "px dashed rgba(" + $SS.theme.ownPostHLColor.rgb + ",1.0) !important;
 }
-/* Targeted replies */
+/* Highlighted Reply BG */
 .reply:target {
-  background: rgba(" + $SS.theme.nameColor.rgb + ",0.3) !important;
+  background: rgba(" + $SS.theme.replybgHLColor.rgb + ",0.8) !important;
 }
+/* Reply Selection (default keybind J/K) */
 .highlight {
-  outline: 2px solid rgba(" + $SS.theme.highlightColor.rgb + ",1.0) !important;
+  outline: 2px solid rgba(" + $SS.theme.replyslctColor.rgb + ",1.0) !important;
 }
 /* Highlighted Threads */
 .catalog-thread.watched .catalog-thumb,
 .filter-highlight .catalog-thumb {
-  border: 2px solid rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
+  border: 2px solid rgba(" + $SS.theme.threadHLColor.rgb + ",.5) !important;
 }
 /* Thread Watcher */
 .replies-quoting-you > .watcher-link {
-  color: rgba(" + $SS.theme.highlightColor.rgb + ",1.0) !important;
+  color: rgba(" + $SS.theme.postHLColor.rgb + ",1.0) !important;
 }
 .replies-quoting-you > .watcher-link:hover {
   color: " + $SS.theme.linkHColor.hex + " !important;
