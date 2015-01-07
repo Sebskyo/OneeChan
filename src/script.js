@@ -331,6 +331,10 @@
             name: "linkHColor",
             property: "color"
         }, {
+            dName: "Quotelinks",
+            name: "qlColor",
+            property: "color"
+        }, {
             dName: "Name",
             name: "nameColor",
             property: "color"
@@ -352,8 +356,28 @@
             property: "color"
         }, {
             dName: "Highlighting",
-            name: "highlightColor",
+            name: "postHLColor",
             property: "color"
+        }, {
+            dName: "Posts Quoting You",
+            name: "quotesYouHLColor",
+            property: "color"
+        }, {
+            dName: "Own Posts",
+            name: "ownPostHLColor",
+            property: "color"
+        }, {
+            dName: "Highlighted Threads",
+            name: "threadHLColor",
+            property: "color"
+        }, {
+            dName: "Highlighted Reply BG",
+            name: "replybgHLColor",
+            property: "background"
+        }, {
+            dName: "Reply Selection",
+            name: "replyslctColor",
+            property: "outline"
         }],
         $lib, $SS;
     if (!Array.isArray)
@@ -995,7 +1019,10 @@
                 };
 
                 $SS.conf = [];
-                $SS.exportOptions = {};
+                $SS.exportOptions = {
+                    version: VERSION,
+                    date: Date.now()
+                };
 
                 for (var key in defaultConfig) {
                     $SS.conf[key] = parseVal(key, this.get(key));
@@ -1326,6 +1353,9 @@
                                     theme.tripColor = $SS.colorToHex(theme["Tripcodes"]);
                                     theme.titleColor = $SS.colorToHex(theme["Subjects"]);
                                     theme.quoteColor = $SS.colorToHex(theme["Greentext"]);
+                                    theme.qlColor = $SS.colorToHex(theme["Quotelinks"]);
+                                    theme.replybgHLColor = $SS.colorToHex(theme["Highlighted Reply Background"]);
+                                    theme.replyslctColor = $SS.colorToHex(theme["Highlighted Reply Background"]);
                                     theme.customCSS = theme["Custom CSS"];
                                 }
 
@@ -1581,14 +1611,19 @@
                     return $(this).replace(exportalert);
                 });
 
-                if (bEdit)
+                if (bEdit) {
                     $("a[name=edit]", div).bind("click", function() {
                         $SS.options.addTheme(tIndex);
+                        $("#overlay").removeClass("previewing");
                     });
-                else
+                    $("#overlay").addClass("previewing");
+                } else {
                     $("a[name=add]", div).bind("click", $SS.options.addTheme);
+                    $("#overlay").addClass("previewing");
+                }
 
                 $("a[name=cancel]", div).bind("click", function() {
+                    $("#overlay").removeClass("previewing");
                     $("#overlay2").remove();
                 });
 
@@ -1671,6 +1706,7 @@
 
                 div.fire("click").scrollIntoView(true);
 
+                $("#overlay").removeClass("previewing");
                 return overlay.remove();
             },
             deleteTheme: function(tIndex) {
@@ -1904,6 +1940,7 @@
                 unreadColor: "4270b2",
                 linkColor: "53bdb1",
                 linkHColor: "3090b5",
+                qlColor: "53bdb1",
                 nameColor: "d63e34",
                 quoteColor: "96c83b",
                 textColor: "f8f8f8",
@@ -1914,7 +1951,12 @@
                 headerLHColor: "3090b5",
                 headerBGColor: "0d1114",
                 boardColor: "f8f8f8",
-                highlightColor: "d4b63c"
+                postHLColor: "d4b63c",
+                quotesYouHLColor: "d4b63c",
+                ownPostHLColor: "d4b63c",
+                threadHLColor: "b88cd1",
+                replybgHLColor: "090d10",
+                replyslctColor: "d4b63c"
             }, {
                 name: "Muted",
                 authorName: "Seaweed",
@@ -1932,6 +1974,7 @@
                 unreadColor: "bc312a",
                 linkColor: "bc312a",
                 linkHColor: "8e2220",
+                qlColor: "bc312a",
                 nameColor: "2c64a0",
                 quoteColor: "789922",
                 textColor: "393735",
@@ -1942,7 +1985,12 @@
                 headerLHColor: "8e2220",
                 headerBGColor: "f5f2e9",
                 boardColor: "bc312a",
-                highlightColor: "cc6563"
+                postHLColor: "cc6563",
+                quotesYouHLColor: "cc6563",
+                ownPostHLColor: "cc6563",
+                threadHLColor: "111111",
+                replybgHLColor: "d9d6cd",
+                replyslctColor: "cc6563"
             }, {
                 name: "Surf", //Inspired by Blue Tone
                 authorName: "Nebukazar",
@@ -1954,23 +2002,29 @@
                 mainColor: "242424",
                 brderColor: "242424",
                 inputColor: "1b1b1b",
-                inputbColor: "242424",
+                inputbColor: "252525",
                 headerBGColor: "242424",
                 headerColor: "ffffff",
                 boardColor: "ffffff",
                 bgColor: "1b1b1b",
                 textColor: "ffffff",
-                blinkColor: "3296c8",
-                headerLColor: "3296c8",
+                blinkColor: "20548f",
+                headerLColor: "20548f",
                 headerLHColor: "ffffff",
                 linkColor: "808080",
                 linkHColor: "ffffff",
-                nameColor: "3296c8",
+                qlColor: "808080",
+                nameColor: "20548f",
                 tripColor: "808080",
                 titleColor: "808080",
                 quoteColor: "07992d",
                 unreadColor: "ffffff",
-                highlightColor: "ffffff"
+                postHLColor: "ffffff",
+                quotesYouHLColor: "ffffff",
+                ownPostHLColor: "ffffff",
+                threadHLColor: "808080",
+                replybgHLColor: "121212",
+                replyslctColor: "ffffff"
             }, {
                 name: "Stilig",
                 authorName: "Myson",
@@ -1994,11 +2048,17 @@
                 headerLHColor: "999999",
                 linkColor: "999999",
                 linkHColor: "5f5f65",
+                qlColor: "999999",
                 nameColor: "49637d",
                 tripColor: "5f5f65",
                 titleColor: "7a7f88",
                 quoteColor: "009933",
-                highlightColor: "5f5f65",
+                postHLColor: "5f5f65",
+                quotesYouHLColor: "5f5f65",
+                ownPostHLColor: "5f5f65",
+                threadHLColor: "7a7f88",
+                replybgHLColor: "e6e6e6",
+                replyslctColor: "5f5f65",
                 customCSS: ".reply { box-shadow: -1px 1px 1px rgba(0,0,0,.08); }"
             }, {
                 name: "Minimalistic Mayhem",
@@ -2017,6 +2077,7 @@
                 unreadColor: "897399",
                 linkColor: "897399",
                 linkHColor: "c617e6",
+                qlColor: "897399",
                 nameColor: "a34443",
                 quoteColor: "8ba446",
                 textColor: "bbbbbb",
@@ -2027,7 +2088,12 @@
                 headerLHColor: "c617e6",
                 headerBGColor: "222222",
                 boardColor: "bbbbbb",
-                highlightColor: "96562c"
+                postHLColor: "96562c",
+                quotesYouHLColor: "96562c",
+                ownPostHLColor: "96562c",
+                threadHLColor: "987d3e",
+                replybgHLColor: "141414",
+                replyslctColor: "96562c"
             }, {
                 name: "Blackboard",
                 authorName: "Seaweed",
@@ -2045,6 +2111,7 @@
                 unreadColor: "8da6ce",
                 linkColor: "fbde2d",
                 linkHColor: "4b65cc",
+                qlColor: "fbde2d",
                 nameColor: "8da6ce",
                 quoteColor: "9acf08",
                 textColor: "f8f8f8",
@@ -2055,7 +2122,12 @@
                 headerLHColor: "4b65cc",
                 headerBGColor: "0c1021",
                 boardColor: "f8f8f8",
-                highlightColor: "ff6400"
+                postHLColor: "ff6400",
+                quotesYouHLColor: "ff6400",
+                ownPostHLColor: "ff6400",
+                threadHLColor: "ff6400",
+                replybgHLColor: "080c1d",
+                replyslctColor: "ff6400"
             }, {
                 name: "Dark Flat",
                 authorName: "ahodesuka",
@@ -2075,6 +2147,7 @@
                 unreadColor: "ac9bb0",
                 linkColor: "ac9bb0",
                 linkHColor: "6f99b4",
+                qlColor: "ac9bb0",
                 nameColor: "a8c6d9",
                 quoteColor: "b3c45e",
                 textColor: "dddddd",
@@ -2085,7 +2158,12 @@
                 headerLHColor: "6f99b4",
                 headerBGColor: "232425",
                 boardColor: "dddddd",
-                highlightColor: "d4c095"
+                postHLColor: "d4c095",
+                quotesYouHLColor: "d4c095",
+                ownPostHLColor: "d4c095",
+                threadHLColor: "9390c9",
+                replybgHLColor: "171919",
+                replyslctColor: "d4c095"
             }, {
                 name: "Yukimura",
                 authorName: "the real",
@@ -2108,12 +2186,18 @@
                 headerLHColor: "e96a81",
                 linkColor: "e96a81",
                 linkHColor: "e96a81",
+                qlColor: "e96a81",
                 nameColor: "e96a81",
                 tripColor: "5c433c",
                 titleColor: "5c433c",
                 quoteColor: "b3c45e",
                 unreadColor: "5c433c",
-                highlightColor: "5c433c"
+                postHLColor: "5c433c",
+                quotesYouHLColor: "5c433c",
+                ownPostHLColor: "5c433c",
+                threadHLColor: "5c433c",
+                replybgHLColor: "0d0d0d",
+                replyslctColor: "5c433c"
             }, {
                 name: "Photons + Odin",
                 authorName: "John",
@@ -2137,12 +2221,18 @@
                 headerLHColor: "4f585d",
                 linkColor: "737f88",
                 linkHColor: "4f585d",
+                qlColor: "737f88",
                 nameColor: "0099bc",
                 tripColor: "ff0085",
                 titleColor: "ffa600",
                 quoteColor: "85c600",
                 unreadColor: "446a6d",
-                highlightColor: "ff0085"
+                postHLColor: "ff0085",
+                quotesYouHLColor: "ff0085",
+                ownPostHLColor: "ff0085",
+                threadHLColor: "ffa600",
+                replybgHLColor: "0d0d0d",
+                replyslctColor: "ff0085"
             }, {
                 name: "Photon",
                 authorName: "Seaweed",
@@ -2160,6 +2250,7 @@
                 unreadColor: "ff6600",
                 linkColor: "ff6600",
                 linkHColor: "ff3300",
+                qlColor: "ff6600",
                 nameColor: "004a99",
                 quoteColor: "789922",
                 textColor: "333333",
@@ -2170,7 +2261,12 @@
                 headerLHColor: "ff3300",
                 headerBGColor: "dddddd",
                 boardColor: "004a99",
-                highlightColor: "ff3300"
+                postHLColor: "ff3300",
+                quotesYouHLColor: "ff3300",
+                ownPostHLColor: "ff3300",
+                threadHLColor: "002244",
+                replybgHLColor: "c4c4c4",
+                replyslctColor: "ff3300"
             }, {
                 name: "Original Minimalistic Mayhem",
                 authorName: "Mayhem",
@@ -2188,6 +2284,7 @@
                 unreadColor: "559c7a",
                 linkColor: "559c7a",
                 linkHColor: "c7de1a",
+                qlColor: "559c7a",
                 nameColor: "2e88a6",
                 quoteColor: "8ba446",
                 textColor: "dddddd",
@@ -2198,7 +2295,12 @@
                 headerLHColor: "c7de1a",
                 headerBGColor: "333333",
                 boardColor: "dddddd",
-                highlightColor: "8c5d2a"
+                postHLColor: "8c5d2a",
+                quotesYouHLColor: "8c5d2a",
+                ownPostHLColor: "8c5d2a",
+                threadHLColor: "486273",
+                replybgHLColor: "25262a",
+                replyslctColor: "8c5d2a"
             }, {
                 name: "Tomorrow",
                 authorName: "Seaweed",
@@ -2216,6 +2318,7 @@
                 unreadColor: "81a2be",
                 linkColor: "81a2be",
                 linkHColor: "cc6666",
+                qlColor: "81a2be",
                 nameColor: "81a2be",
                 quoteColor: "b5bd68",
                 textColor: "c5c8c6",
@@ -2226,7 +2329,12 @@
                 headerLHColor: "cc6666",
                 headerBGColor: "282a2e",
                 boardColor: "c5c8c6",
-                highlightColor: "8abeb7"
+                postHLColor: "8abeb7",
+                quotesYouHLColor: "8abeb7",
+                ownPostHLColor: "8abeb7",
+                threadHLColor: "b294bb",
+                replybgHLColor: "24262a",
+                replyslctColor: "8abeb7"
             }, {
                 name: "Yotsuba",
                 authorName: "moot",
@@ -2245,6 +2353,7 @@
                 unreadColor: "000080",
                 linkColor: "000080",
                 linkHColor: "dd0000",
+                qlColor: "dd0000",
                 nameColor: "117743",
                 quoteColor: "789922",
                 textColor: "800000",
@@ -2255,7 +2364,12 @@
                 headerLHColor: "dd0000",
                 headerBGColor: "f0e0d6",
                 boardColor: "800000",
-                highlightColor: "228854"
+                postHLColor: "228854",
+                quotesYouHLColor: "228854",
+                ownPostHLColor: "228854",
+                threadHLColor: "dd0000",
+                replybgHLColor: "d6bad0",
+                replyslctColor: "228854"
             }, {
                 name: "Yotsuba B",
                 authorName: "moot",
@@ -2270,10 +2384,11 @@
                 brderColor: "b7c5d9",
                 inputColor: "ffffff",
                 inputbColor: "aaaaaa",
-                blinkColor: "66182d",
+                blinkColor: "34345c",
                 unreadColor: "34345C",
                 linkColor: "34345c",
                 linkHColor: "dd0000",
+                qlColor: "dd0000",
                 nameColor: "117743",
                 quoteColor: "789922",
                 textColor: "000000",
@@ -2284,7 +2399,12 @@
                 headerLHColor: "dd0000",
                 headerBGColor: "d6daf0",
                 boardColor: "af0a0f",
-                highlightColor: "228854"
+                postHLColor: "228854",
+                quotesYouHLColor: "228854",
+                ownPostHLColor: "228854",
+                threadHLColor: "dd0000",
+                replybgHLColor: "d6bad0",
+                replyslctColor: "228854"
             }, {
                 name: "Yotsuba Purple",
                 authorName: "Seaweed",
@@ -2302,6 +2422,7 @@
                 unreadColor: "962594",
                 linkColor: "962594",
                 linkHColor: "b22caa",
+                qlColor: "b22caa",
                 nameColor: "591177",
                 quoteColor: "789922",
                 textColor: "000000",
@@ -2312,7 +2433,12 @@
                 headerLHColor: "b22caa",
                 headerBGColor: "eeddff",
                 boardColor: "591177",
-                highlightColor: "b22caa"
+                postHLColor: "b22caa",
+                quotesYouHLColor: "b22caa",
+                ownPostHLColor: "b22caa",
+                threadHLColor: "0f0c5d",
+                replybgHLColor: "b7aac4",
+                replyslctColor: "b22caa"
             }, {
                 name: "安心院なじみ",
                 authorName: "ahodesuka",
@@ -2330,6 +2456,7 @@
                 unreadColor: "bf8040",
                 linkColor: "bf8040",
                 linkHColor: "bf8040",
+                qlColor: "bf8040",
                 nameColor: "2b80c2",
                 quoteColor: "718c00",
                 textColor: "4d4d4c",
@@ -2340,7 +2467,12 @@
                 headerLHColor: "bf8040",
                 headerBGColor: "efefef",
                 boardColor: "4d4d4c",
-                highlightColor: "3e999f"
+                postHLColor: "3e999f",
+                quotesYouHLColor: "3e999f",
+                ownPostHLColor: "3e999f",
+                threadHLColor: "4d4d4d",
+                replybgHLColor: "c7c7c7",
+                replyslctColor: "3e999f"
             }, {
                 name: "Solarized Dark", // http://ethanschoonover.com/solarized
                 authorName: "ubuntufriend",
@@ -2358,6 +2490,7 @@
                 unreadColor: "696fc0",
                 linkColor: "696bba",
                 linkHColor: "d33682",
+                qlColor: "696bba",
                 nameColor: "586e75",
                 quoteColor: "859900",
                 textColor: "93a1a1",
@@ -2368,35 +2501,12 @@
                 headerLHColor: "d33682",
                 headerBGColor: "032b36",
                 boardColor: "93a1a1",
-                highlightColor: "2aa198"
-            }, {
-                name: "4chan Rewired Modded", // Originally by !K.WeEabo0o, modded by ahoka
-                authorName: "ahodesuka",
-                authorTrip: "!.pC/AHOKAg",
-                "default": true,
-                bgImg: false,
-                replyOp: "1.0",
-                navOp: "0.9",
-                bgColor: "f4f4f4",
-                mainColor: "efefef",
-                brderColor: "d4d4d4",
-                inputColor: "e4e4e4",
-                inputbColor: "cccccc",
-                blinkColor: "bf7f3f",
-                unreadColor: "bf7f3f",
-                linkColor: "bf7f3f",
-                linkHColor: "d33682",
-                nameColor: "4c4c4c",
-                quoteColor: "6b7a1e",
-                textColor: "4c4c4c",
-                tripColor: "bf7f3f",
-                titleColor: "4c4c4c",
-                headerColor: "4c4c4c",
-                headerLColor: "bf7f3f",
-                headerLHColor: "d33682",
-                headerBGColor: "efefef",
-                boardColor: "4c4c4c",
-                highlightColor: "bf7f3f"
+                postHLColor: "2aa198",
+                quotesYouHLColor: "2aa198",
+                ownPostHLColor: "2aa198",
+                threadHLColor: "bec2c4",
+                replybgHLColor: "073642",
+                replyslctColor: "2aa198"
             }, {
                 name: "4chan Dark Upgrade",
                 authorName: "ahodesuka",
@@ -2415,6 +2525,7 @@
                 unreadColor: "cccccc",
                 linkColor: "dddddd",
                 linkHColor: "eeeeee",
+                qlColor: "dddddd",
                 nameColor: "ffffff",
                 quoteColor: "63995b",
                 textColor: "ffffff",
@@ -2425,7 +2536,12 @@
                 headerLHColor: "eeeeee",
                 headerBGColor: "333333",
                 boardColor: "ffffff",
-                highlightColor: "a7dce7",
+                postHLColor: "a7dce7",
+                quotesYouHLColor: "a7dce7",
+                ownPostHLColor: "a7dce7",
+                threadHLColor: "999999",
+                replybgHLColor: "999999",
+                replyslctColor: "a7dce7",
                 customCSS:  "#delform{background:rgba(22,22,22,.8)!important;border:0!important;padding:1px!important;box-shadow:rgba(0,0,0,.8) 0 0 10px;}div.reply.post {background-image: url('data:image/gif;base64,R0lGODdhCQAJAIgAADMzMysrKywAAAAACQAJAAACDwxgeMrZF5Jckz1UXaYQFgA7') !important;border-bottom: #1f1f1f !important;}.thread:not(.stub){background:0!important}a:not([href='javascript:;']){text-shadow:#0f0f0f 0 1px;}"
             }, {
                 name: "Yasashii",
@@ -2449,12 +2565,18 @@
                 headerLHColor: "656599",
                 linkColor: "b78087",
                 linkHColor: "c8ab78",
+                qlColor: "b78087",
                 nameColor: "be7375",
                 tripColor: "656599",
                 titleColor: "b87d6e",
                 quoteColor: "7eba6c",
                 unreadColor: "f8f8f8",
-                highlightColor: "9875a3"
+                postHLColor: "9875a3",
+                quotesYouHLColor: "9875a3",
+                ownPostHLColor: "9875a3",
+                threadHLColor: "b87d6e",
+                replybgHLColor: "eaeaea",
+                replyslctColor: "9875a3"
             }, {
                 name: "AppChan", // Originally by Zixaphir @ http://userstyles.org/styles/54149/appchan
                 authorName: "Zixaphir",
@@ -2472,6 +2594,7 @@
                 unreadColor: "6688aa",
                 linkColor: "6688aa",
                 linkHColor: "6688aa",
+                qlColor: "6688aa",
                 nameColor: "aaaaaa",
                 quoteColor: "789922",
                 textColor: "aaaaaa",
@@ -2482,7 +2605,12 @@
                 headerLHColor: "6688aa",
                 headerBGColor: "333333",
                 boardColor: "aaaaaa",
-                highlightColor: "aaaaaa"
+                postHLColor: "aaaaaa",
+                quotesYouHLColor: "aaaaaa",
+                ownPostHLColor: "aaaaaa",
+                threadHLColor: "aaaaaa",
+                replybgHLColor: "282828",
+                replyslctColor: "aaaaaa"
             }, {
                 name: "Zenburned",
                 authorName: "lazy",
@@ -2500,6 +2628,7 @@
                 unreadColor: "93b3a3",
                 linkColor: "efdcbc",
                 linkHColor: "f8f893",
+                qlColor: "efdcbc",
                 nameColor: "c0bed1",
                 quoteColor: "7f9f7f",
                 textColor: "dcdccc",
@@ -2510,7 +2639,12 @@
                 headerLHColor: "f8f893",
                 headerBGColor: "575757",
                 boardColor: "dcdccc",
-                highlightColor: "8cd0d3"
+                postHLColor: "8cd0d3",
+                quotesYouHLColor: "8cd0d3",
+                ownPostHLColor: "8cd0d3",
+                threadHLColor: "aaaaaa",
+                replybgHLColor: "494949",
+                replyslctColor: "8cd0d3"
             }, {
                 name: "Monokai",
                 authorName: "Seaweed",
@@ -2527,6 +2661,7 @@
                 unreadColor: "e2db74",
                 linkColor: "e2db74",
                 linkHColor: "ae81ff",
+                qlColor: "e2db74",
                 nameColor: "5ac0cc",
                 quoteColor: "a2cc28",
                 textColor: "f8f8f2",
@@ -2537,7 +2672,12 @@
                 headerLHColor: "ae81ff",
                 headerBGColor: "272822",
                 boardColor: "f8f8f2",
-                highlightColor: "fa8220"
+                postHLColor: "fa8220",
+                quotesYouHLColor: "fa8220",
+                ownPostHLColor: "fa8220",
+                threadHLColor: "ae81ff",
+                replybgHLColor: "23241e",
+                replyslctColor: "fa8220"
             }, {
                 name: "Ao ni sarasu", // based on jaygeegeegee's http://userstyles.org/styles/75602/last-fm-kind-of-blue
                 authorName: "Seaweed",
@@ -2554,6 +2694,7 @@
                 unreadColor: "477085",
                 linkColor: "477085",
                 linkHColor: "5d6678",
+                qlColor: "477085",
                 nameColor: "4c4c4c",
                 quoteColor: "6b7a1e",
                 textColor: "4c4c4c",
@@ -2564,7 +2705,12 @@
                 headerLHColor: "5d6678",
                 headerBGColor: "e3e7e8",
                 boardColor: "477085",
-                highlightColor: "5d6678"
+                postHLColor: "5d6678",
+                quotesYouHLColor: "5d6678",
+                ownPostHLColor: "5d6678",
+                threadHLColor: "617d6f",
+                replybgHLColor: "d5dada",
+                replyslctColor: "5d6678"
             }, {
                 name:"Blue Tone",
                 authorName: "Leagle",
@@ -2586,13 +2732,19 @@
                 headerLHColor: "dddddd",
                 linkColor: "a0a0a0",
                 linkHColor: "dddddd",
+                qlColor: "a0a0a0",
                 nameColor: "dddddd",
                 tripColor: "dddddd",
                 titleColor: "a0a0a0",
                 quoteColor: "009933",
                 unreadColor: "3296c8",
-                highlightColor: "ffffff",
-                customCSS: ":root.post-info .reply>.postInfo {box-shadow: none;}:root.post-info .reply>.postInfo {border-bottom: none;}:root.post-info .reply>.postInfo {background: none;}.header-gradient:root #header-bar {background:rgba(27,27,27,1)!important;} .fixed:root #header-bar {box-shadow: none !important;} #custom-board-list .current, #custom-board-list a.current {border-bottom: 0px rgba(27, 27, 27, 1) !important;}.highlight-you:root .quotesYou > .post.reply {border-left: 3px solid #3296c8 !important;}.highlight-own:root .yourPost > .reply {border-left: 1px dashed #3296c8 !important;}body {background: rgba(19,19,19,1);}.boardBanner .boardTitle {text-shadow: 0 0 3px #a0a0a0 !important; letter-spacing: 0px !important; padding-top: 30px !important;}a.quotelink, a.linkify {color: rgb(50, 150, 200) !important;} a.quotelink:hover, a.linkify:hover {color: rgb(221, 221, 221) !important;}"
+                postHLColor: "ffffff",
+                quotesYouHLColor: "ffffff",
+                ownPostHLColor: "ffffff",
+                threadHLColor: "a0a0a0",
+                replybgHLColor: "141414",
+                replyslctColor: "ffffff",
+                customCSS: "body {background: rgba(19,19,19,1);}.boardBanner .boardTitle {text-shadow: 0 0 3px #a0a0a0 !important; letter-spacing: 0px !important; padding-top: 30px !important;}a.quotelink, a.linkify {color: rgb(50, 150, 200) !important;} a.quotelink:hover, a.linkify:hover {color: rgb(221, 221, 221) !important;}"
             }, {
                 name: "Cold Snap",
                 authorName: "Kori",
@@ -2614,12 +2766,18 @@
                 headerLHColor: "6699cc",
                 linkColor: "6699cc",
                 linkHColor: "6699cc",
+                qlColor: "6699cc",
                 nameColor: "aaaaaa",
                 tripColor: "476b8f",
                 titleColor: "909090",
                 quoteColor: "83bf57",
                 unreadColor: "6699cc",
-                highlightColor: "476b8f"
+                postHLColor: "476b8f",
+                quotesYouHLColor: "476b8f",
+                ownPostHLColor: "476b8f",
+                threadHLColor: "909090",
+                replybgHLColor: "eeeeee",
+                replyslctColor: "476b8f"
             }, {
                 name: "Midnight Caek",
                 authorName: "Zixaphir",
@@ -2641,12 +2799,18 @@
                 headerLHColor: "47475b",
                 linkColor: "57577b",
                 linkHColor: "47475b",
+                qlColor: "57577b",
                 nameColor: "7c2d2d",
                 tripColor: "3e7157",
                 titleColor: "aaaaaa",
                 quoteColor: "71793e",
                 unreadColor: "57577b",
-                highlightColor: "ffffff"
+                postHLColor: "ffffff",
+                quotesYouHLColor: "ffffff",
+                ownPostHLColor: "ffffff",
+                threadHLColor: "aaaaaa",
+                replybgHLColor: "0e0e0e",
+                replyslctColor: "ffffff"
             }],
 
             init: function() {
@@ -3699,6 +3863,7 @@
             this.unreadColor = new $SS.Color(theme.unreadColor);
             this.linkColor = new $SS.Color(theme.linkColor);
             this.linkHColor = new $SS.Color(theme.linkHColor);
+            this.qlColor = new $SS.Color(theme.qlColor);
             this.nameColor = new $SS.Color(theme.nameColor);
             this.quoteColor = new $SS.Color(theme.quoteColor);
             this.textColor = new $SS.Color(theme.textColor);
@@ -3710,7 +3875,12 @@
             this.headerLHColor = new $SS.Color(theme.headerLHColor);
             this.headerBGColor = new $SS.Color(theme.headerBGColor);
             this.headerbColor = new $SS.Color(theme.headerbColor);
-            this.highlightColor = new $SS.Color(theme.highlightColor);
+            this.postHLColor = new $SS.Color(theme.postHLColor);
+            this.quotesYouHLColor = new $SS.Color(theme.quotesYouHLColor);
+            this.ownPostHLColor = new $SS.Color(theme.ownPostHLColor);
+            this.threadHLColor = new $SS.Color(theme.threadHLColor);
+            this.replybgHLColor = new $SS.Color(theme.replybgHLColor);
+            this.replyslctColor = new $SS.Color(theme.replyslctColor);
             this.checkMark = new $SS.Image(inputImages, "no-repeat center " + (this.inputColor.isLight ? 0 : -8) + "px");
             this.radioCheck = new $SS.Image(inputImages, "no-repeat center " + (this.inputColor.isLight ? -16 : -24) + "px");
             this.codeBackground = (this.bgColor.isLight ? "255, 255, 255, 0.2" : "0, 0, 0, 0.2");
