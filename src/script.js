@@ -1998,7 +1998,7 @@
                 "default": true,
                 bgImg: false,
                 replyOp: "1.0",
-                navOp: "0.9",
+                navOp: "1.0",
                 mainColor: "242424",
                 brderColor: "242424",
                 inputColor: "1b1b1b",
