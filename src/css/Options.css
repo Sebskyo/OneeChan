@@ -46,13 +46,12 @@
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.3) !important;
 }
 #add-theme {
-  text-align:right!important;
   padding: 20px 20px 20px 20px !important;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 400px;
+  height: 445px;
 }
 :root.webkit #add-theme {
   height: 403px !important;
@@ -342,7 +341,7 @@ select[name='Font Family']>option {
   display: none;
 }
 #overlay.previewing ~ #overlay2 {
-  background-color: rgba(0, 0, 0, 0.15) !important;
+  background-color: rgba(0, 0, 0, 0.12) !important;
 }
 #add-mascot + #overlay2 {
   z-index: 800 !important;
