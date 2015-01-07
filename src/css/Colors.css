@@ -104,6 +104,9 @@ s:hover .quote,
 .backlink {
   color: " + $SS.theme.blinkColor.hex + " !important;
 }
+.quotelink {
+  color: " + $SS.theme.qlColor.hex + " !important;
+}
 /* Code Tags */
 .prettyprint,
 .catalog-code {
