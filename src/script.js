@@ -1019,14 +1019,11 @@
                 };
 
                 $SS.conf = [];
-                $SS.exportOptions = {
-                    version: VERSION,
-                    date: Date.now()
-                };
+                $SS.exportOptions = {};
 
                 for (var key in defaultConfig) {
                     $SS.conf[key] = parseVal(key, this.get(key));
-                    if (!(/^(Hidden|Themes|Selected Mascots|--)/.test(key))) {
+                    if (!(/^(Hidden|Themes|Selected Mascots|::)/.test(key))) {
                         $SS.exportOptions[key] = $SS.conf[key];
                     };
                 };
