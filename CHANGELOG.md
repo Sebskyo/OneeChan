@@ -1,3 +1,13 @@
+### v5.5.12
+*2015-01-06*
+
+Your custom OneeChan themes will need to be updated to match the new options.
+
+- Added color options for Posts Quoting You, Own Posts, Highlighted Threads in the Catalog, Highlighted Reply Background and Reply Selection (default keybind <kbd>J</kbd> or <kbd>K</kbd> in 4chan X)
+- Removed redundant CSS from `Blue Tone` theme for options that are available in OneeChan settings
+- Changed `Surf` theme
+- Slightly improved theme editing for visibility
+
 ### v5.5.11
 *2015-01-04*
 
