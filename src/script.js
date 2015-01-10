@@ -4088,7 +4088,8 @@
                 board: pathname[0],
                 nsfw: /^(b|d|e|f|gif|h|hr|r|s|t|u|wg|i|ic|r9k|hm|y|hc|pol|soc|lgbt)$/.test(pathname[0]),
                 reply: pathname[1] === "res",
-                catalog: pathname[1] === "catalog"
+                catalog: pathname[1] === "catalog",
+                archive: pathname[1] === "archive"
             };
         }
     };
