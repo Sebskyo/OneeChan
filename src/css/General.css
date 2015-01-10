@@ -350,6 +350,7 @@ hr {
 /* /f/ */
 table.flashListing {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 table.flashListing .highlightPost {
   background: rgb\(" + $SS.theme.mainColor.shiftRGB(-25) + ") !important;
