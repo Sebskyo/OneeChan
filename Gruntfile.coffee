@@ -22,6 +22,7 @@ module.exports = (grunt) ->
         files:
           'builds/<%= pkg.name %>.meta.js': 'src/meta/metadata.js'
           'builds/<%= pkg.name %>.user.js': [
+            'src/meta/botproc.js'
             'src/meta/metadata.js'
             'src/script.js'
           ]
