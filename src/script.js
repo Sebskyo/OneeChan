@@ -2321,7 +2321,7 @@
                 brderColor: "373b41",
                 inputColor: "282a2e",
                 inputbColor: "1d1f21",
-                blinkColor: "cc6666",
+                blinkColor: "5f89ac",
                 unreadColor: "81a2be",
                 linkColor: "81a2be",
                 linkHColor: "cc6666",
@@ -2341,7 +2341,8 @@
                 ownPostHLColor: "8abeb7",
                 threadHLColor: "b294bb",
                 replybgHLColor: "24262a",
-                replyslctColor: "8abeb7"
+                replyslctColor: "8abeb7",
+                customCSS: "span.postNum.desktop > a {\ncolor: #c5c8c6 !important\n}\nspan.postNum.desktop > a:hover {\ncolor: #81a2be !important\n}"
             }, {
                 name: "Yotsuba",
                 authorName: "moot",
