@@ -1,3 +1,13 @@
+### v5.5.14
+*2015-01-11*
+
+### v5.5.13
+*2015-01-11*
+
+- Fix Yotsuba themes not showing `BG Image` source when editing (#44)
+- Yotsuba themes should now be identical to their originals color-wise
+- Fix `Blue Tone` theme
+
 ### v5.5.12
 *2015-01-06*
 
