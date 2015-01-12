@@ -36,3 +36,13 @@
 .replies-quoting-you > .watcher-link:hover {
   color: " + $SS.theme.linkHColor.hex + " !important;
 }
+#watched-threads > .replies-quoting-you > a {
+  color: rgba(" + $SS.theme.quotesYouHLColor.rgb + ",1.0) !important;
+}
+#shortcuts > .shortcut > #watcher-link.disabled.replies-quoting-you {
+  color: rgba(" + $SS.theme.quotesYouHLColor.rgb + ",.45) !important;
+}
+#watched-threads > .replies-quoting-you > a:hover,
+#shortcuts > .shortcut > #watcher-link.disabled.replies-quoting-you:hover {
+  color: " + $SS.theme.linkHColor.hex + " !important;
+}
