@@ -1,3 +1,9 @@
+### v5.5.14
+*2015-01-12*
+
+- Add Thread Watcher icon highlighting #43
+- Adjust some themes' `Posts Quoting You` color where it wasn't so clear that you were being quoted
+
 ### v5.5.13
 *2015-01-11*
 
