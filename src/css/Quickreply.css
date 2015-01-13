@@ -118,29 +118,11 @@
 :root.vertical-qr #qr.focus {
   transform: translateX(0%) !important;
 }
-:root.vertical-qr:root.left-sidebar #qr {
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out 0.5s;
-}
 :root.vertical-qr #qr {
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out 0.5s;
 }
-:root.vertical-qr:root.right-sidebar #qr {
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out 0.5s;
-}
-:root.vertical-qr:root.left-sidebar #qr .move {
-  transform: rotate(90deg);
-  transform-origin: bottom right;
-  left: 63.5%;
-  bottom: 46px;
-}
 :root.vertical-qr #qr .move {
-  transform: rotate(-90deg);
-  right: 86%;
-}
-:root.vertical-qr:root.right-sidebar #qr .move {
   transform: rotate(-90deg);
   right: 86%;
 }
