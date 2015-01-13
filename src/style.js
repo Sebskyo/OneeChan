@@ -8,6 +8,5 @@
 <%= grunt.file.read('src/css/Icons.css') %>
 <%= grunt.file.read('src/css/Highlight.css') %>
 <%= grunt.file.read('src/css/Options.css') %>
-" + ($SS.conf["Version Fix"] == 2 ? "<%= grunt.file.read('src/forks/ihavenoface.css') %>" : "") + "
-" + ($SS.conf["Version Fix"] == 3 ? "<%= grunt.file.read('src/forks/loadletter.css') %>" : "") + "
+" + (setTimeout($('fourchan_x').exists(), 0) ? "<%= grunt.file.read('src/forks/loadletter.css') %>" : "") + "
 " + $SS.theme.customCSS + "

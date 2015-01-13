@@ -244,19 +244,6 @@
         ],
         "Font Size": [13, "Set the general size of text (Pixels). Min: 10px, Max: 18px"],
         "Bitmap Font": [false, "Check this if you are using a bitmap font."],
-        ":: Compatibility": ["header", ""],
-        "Version Fix": [
-            1, "Applies CSS fixes for different forks. Default is for seaweed/ccd0 forks. Make sure you enable QR and Persistent QR for maximum compatibility.", [{
-                name: "Default",
-                value: 1
-            }, {
-                name: "ihavenoface",
-                value: 2
-            }, {
-                name: "loadletter",
-                value: 3
-            }], true
-        ],
         "Themes": [],
         "Hidden Themes": [],
         "Selected Theme": 4,
@@ -916,7 +903,7 @@
                     });
                     setTimeout(function() {
                         document.dispatchEvent(event);
-                    }, 25);
+                    }, 0);
                 // Correct selected theme/mascot after updating
                 // and the number defaults has changed.                    
                     var ntMascots = $SS.Mascots.defaults.length, // new total
