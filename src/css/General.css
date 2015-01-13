@@ -352,9 +352,6 @@ table.flashListing {
 table.flashListing .highlightPost {
   background: rgb\(" + $SS.theme.mainColor.shiftRGB(-25) + ") !important;
 }
-.flashListing > tbody {
-  padding-top: 200px;
-}
 .flashListing td {
   padding-left: 4px !important;
   padding-right: 4px !important;
