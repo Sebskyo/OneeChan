@@ -26,8 +26,6 @@ Originally developed by [seaweedchan](https://github.com/seaweedchan), this fork
 
 ccd0's 4chan X is the recommended 4chan X version and the one OneeChan is primarily developed for. If you use another 4chan X version, please make sure you select your fork version under `Compatibility` in OneeChan options. Enabling Quick Reply and Persistent QR in 4chan X is recommended for maximum compatibility. 
 
-I can't promise everything will work with every fork.
-
 
 #### Troubleshooting
 
@@ -49,9 +47,3 @@ I can't promise everything will work with every fork.
 #### Screenshots
 
 [![http://i.imgur.com/usLsE72s.png](http://i.imgur.com/usLsE72s.png)](http://i.imgur.com/usLsE72.png) [![http://i.imgur.com/ytX3qgys.png](http://i.imgur.com/ytX3qgys.png)](http://i.imgur.com/ytX3qgy.png) [![http://i.imgur.com/m5iVBo9s.png](http://i.imgur.com/m5iVBo9s.png)](http://i.imgur.com/m5iVBo9.png)
-
-
-#### See also:
-
-- [Windows 7 Ricing Reference](http://nanami-tan.info/)
-- [Ruri Gokou Homepage](https://github.com/gokoururi/homepage)
