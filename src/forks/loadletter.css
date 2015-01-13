@@ -68,12 +68,12 @@
 :root.expand-inputs #qr > form > div:nth-child(1) {
   display: flex;
 }
-:root.expand-inputs #qr > form > div:nth-child(1) .field {
+:root.expand-inputs #qr > form > div:nth-child(1) .field:not(#dump) {
   flex: 1;
   width: 0;
 }
-:root.expand-inputs #qr > form > div:nth-child(1) .field:hover,
-:root.expand-inputs #qr > form > div:nth-child(1) .field:focus {
+:root.expand-inputs #qr > form > div:nth-child(1) .field:not(#dump):hover,
+:root.expand-inputs #qr > form > div:nth-child(1) .field:not(#dump):focus {
   flex: 3;
 }
 :root.vertical-qr.left-sidebar #qr.autohide:not(:hover):not(.focus) {
@@ -112,6 +112,9 @@
   display: block !important;
 }
 /* Misc */
+:root:not(.show-ads) .center {
+  display: none !important;
+}
 .hide_reply_button:not([hidden]) {
   display: inherit !important;
 }
@@ -228,7 +231,7 @@ div.post div.file .fileThumb {
 }
 .favicon[src^='data'] {
   opacity: 0.3;
-  background-image: url(\"data:image/svg+xml," + $SS.theme.icons.startwo + "\") !important;
+  background-image: url(\"data:image/svg+xml," + $SS.theme.icons.star + "\") !important;
 }
 /* Menu */
 .menu_button {
