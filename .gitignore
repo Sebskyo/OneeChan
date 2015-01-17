@@ -4,3 +4,5 @@ node_modules/
 tmp/
 builds/OneeChan-Chrome.zip
 TODO.md
+*.pem
+Gruntfile.js

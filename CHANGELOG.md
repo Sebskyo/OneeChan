@@ -1,3 +1,15 @@
+### v5.5.15
+*2015-01-13*
+
+- Fix `Vertical Tabbed QR` showing up in the middle of the catalog when `Disable In Catalog View` was enabled
+- Fix mascot not hiding in 4chan X catalog (#45)
+
+**loadletter 4chan X:**
+
+- Fix ads not being hidden
+- Fix `Expanding Form Inputs` applying to the dump button
+- Fix Thread Watcher favicon not showing up
+
 ### v5.5.14
 *2015-01-12*
 
