@@ -985,6 +985,8 @@
         insertMascot: function() {
             if ($SS.conf["Hide Mascots in Catalog"] && $SS.location.catalog) {
                 return;
+            } else if ($SS.conf["Hide Mascots in Catalog"] && $(".catalog-mode").exists()) {
+                return;
             }
 
             var createMascot = $("<div id=mascot><img src=" + ($SS.mascot.img.get() !== "none " ? $SS.mascot.img.get() : "") + ">");
@@ -4100,7 +4102,7 @@
                 sub: obj.hostname.split(".")[0],
                 board: pathname[0],
                 nsfw: /^(b|d|e|f|gif|h|hr|r|s|t|u|wg|i|ic|r9k|hm|y|hc|pol|soc|lgbt)$/.test(pathname[0]),
-                reply: pathname[1] === "res",
+                reply: pathname[1] === "thread",
                 catalog: pathname[1] === "catalog",
                 archive: pathname[1] === "archive"
             };
