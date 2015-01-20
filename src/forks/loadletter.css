@@ -40,8 +40,27 @@
 :root.qr-controls #spoilerLabel {
   display: block !important;
 }
-:root.vertical-qr #qr.autohide:not(:hover):not(.has-focus) {
+:root.vertical-qr #qr.autohide:not(:hover) {
   width: 260px !important;
+}
+:root.vertical-qr #qr:not(.autohide) {
+  transform: translateX(0%) !important;
+}
+:root.vertical-qr:root.right-sidebar #qr .move {
+  right: 71% !important;
+}
+:root.vertical-qr:root.left-sidebar #qr .move {
+  bottom: -2px!important;
+}
+:root.vertical-qr:root.left-sidebar #qr .move {
+  left: 35% !important;
+}
+:root.vertical-qr #qr {
+  top: inherit !important;
+  bottom: 30px !important;
+}
+:root.vertical-qr #qr .move:not(span) {
+  min-width: 194px !important;
 }
 #qr .move:not(span) {
   min-width: 260px;
@@ -50,6 +69,9 @@
   line-height: 19px!important;
   text-transform: uppercase;
   font-size: 10px;
+}
+:root.vertical-qr #qr .move {
+  bottom: 84px !important;
 }
 #qr > form #spoilerLabel {
   bottom: 4px;
@@ -75,9 +97,6 @@
 :root.expand-inputs #qr > form > div:nth-child(1) .field:not(#dump):hover,
 :root.expand-inputs #qr > form > div:nth-child(1) .field:not(#dump):focus {
   flex: 3;
-}
-:root.vertical-qr.left-sidebar #qr.autohide:not(:hover):not(.focus) {
-  left: -262px !important;
 }
 #qr > form > div > .field {
   margin-left: 1px;
@@ -208,6 +227,18 @@ div.post div.file .fileThumb {
 #imageType {
   margin-right: 3px;
 }
+body.is_catalog .panel {
+  background-color: rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important;
+}
+body.is_catalog .button {
+  color: " + $SS.theme.linkColor.hex + " !important;
+}
+body.is_catalog .button:hover {
+  color: " + $SS.theme.linkHColor.hex + " !important;
+}
+.hide_thread_button {
+  margin-right: 1px;
+}
 /* Thread Watcher */
 :root.fixed-watcher #watcher {
   position: fixed !important;
@@ -246,6 +277,10 @@ div.post div.file .fileThumb {
 }
 .menu_button:hover {
   opacity: 1;
+  transition: opacity .3s ease-in .1s !important;
+}
+:root.reply-fit-width .reply .container {
+  padding-right: 10px !important;
 }
 :root.reply-fit-width .menu_button {
   float: right;
