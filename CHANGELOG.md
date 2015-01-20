@@ -1,3 +1,18 @@
+### v5.5.16
+*2015-01-20*
+
+- Fix jsMath for light or dark themes
+- Add a note to `Disable In Catalog View` due to not working in 4chan X catalog
+- Fix mascot not hiding in 4chan X catalog again (#45, thanks @ccd0)
+- Fix bottom ad always showing whenever any `Show 4chan Ads` option was enabled (#46)
+- Fix front page (www.4chan.org) background color and post previews
+
+**loadletter 4chan X:**
+
+- Vertical Tabbed QR
+- Catalog settings dialog
+- Catalog settings button
+
 ### v5.5.15
 *2015-01-13*
 
