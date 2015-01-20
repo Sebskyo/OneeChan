@@ -36,6 +36,15 @@ div.op.post div.file .fileThumb {
 .box-outer {
   border-color: " + $SS.theme.brderColor.hex + " !important;
 }
+#quote-preview {
+  color: " + $SS.theme.textColor.hex + " !important;
+}
+#quote-preview.post.reply.ws > .postInfo.desktop > .postNum.desktop a {
+  color: " + $SS.theme.linkColor.hex + " !important;
+}
+#quote-preview > blockquote > .quotelink {
+  color: " + $SS.theme.qlColor.hex + " !important;
+}
 /* Padding according to header position */
 .fixed.bottom-header.thread-view body {
   padding-bottom: 0em;
@@ -176,6 +185,10 @@ span.hide-announcement {
 #navlinks {
   top: 135px;
   right: 10px;
+}
+:root.isDark img[src*='//boards.4chan.org/js/jsMath/fonts/'] {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
 }
 /* Accommodate Oneechan icon in header */
 .centered-links:root #shortcuts {
