@@ -3177,7 +3177,7 @@
             init: function() {
                 /* Function arguments: ("Option Name", value, "class-name") */
                 $("html").addClass("oneechan");
-                $SS.theme.mainColor.isLight ? "" : $("html").addClass("isDark");
+                $SS.theme.textColor.isLight ? "" : $("html").addClass("isDark");
                 $("html").optionClass("Fixed Thread Watcher", true, "fixed-watcher");
                 $("html").optionClass("Underline QuoteLinks", true, "underline-quotes");
                 $("html").optionClass("Underline All Links", false, "underline-disabled");
