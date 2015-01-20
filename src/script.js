@@ -79,7 +79,7 @@
                 value: 3
             }], true
         ],
-        "Disable In Catalog View": [false, "Disables the Sidebar when viewing the catalog."],
+        "Disable In Catalog View": [false, "Disables the Sidebar when viewing the catalog. Native catalog only."],
         "SS-like Sidebar": [true, "Darkens the Sidebar and adds a border like 4chan Style Script."],
         "Minimal Sidebar": [false, "Shrinks the sidebar and disables the banner."],
         ":: Mascots": ["header", ""],
@@ -875,6 +875,20 @@
                     div.text("x");
                 };
 
+                if ($SS.location.home) {
+                    $("html").attr("style", "background: " + $SS.theme.bgColor.hex + " !important;");
+                }
+
+                // 4chan ads being added with JS
+                if (!$SS.conf["Show Top Ad"]) {
+                    $(".topad.center").remove();
+                    $(".aboveMidAd.center").remove();
+                } else if (!$SS.conf["Show Middle Ad"]) {
+                    $(".middlead.center").remove();
+                } else if (!$SS.conf["Show Bottom Ad"]) {
+                    $(".bottomad.center").remove();
+                }
+
                 // things that need to change after 4chan X loads.
                 setTimeout(function() {
                     if (!$SS.QRhandled && (div = $("#qr")).exists())
@@ -1077,10 +1091,11 @@
                     b = $("<span><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'></a> / </span>").bind("click", $SS.options.show); /* MayhemYDG */
                     c = $("<span id='OneeChanLink'> [<a title='OneeChan Settings' href='javascript:;'>OneeChan</a>]&nbsp;</span>").bind("click", $SS.options.show); /* loadletter */
                 $.asap(function() {
-                    return $(".fourchan-x #shortcuts, .fourchan_x").exists();
+                    return $(".fourchan-x #shortcuts, .fourchan_x, .is_catalog").exists();
                 }, function() {
                     $(".fourchan-x").exists() ? $(".shortcut.brackets-wrap:last-of-type").before(a) && $("#shortcuts.brackets-wrap").append(b) : $("#boardNavDesktop").append(c);
                 });
+
             },
             show: function() {
                 if ($("#overlay").exists())
@@ -3162,6 +3177,7 @@
             init: function() {
                 /* Function arguments: ("Option Name", value, "class-name") */
                 $("html").addClass("oneechan");
+                $SS.theme.mainColor.isLight ? "" : $("html").addClass("isDark");
                 $("html").optionClass("Fixed Thread Watcher", true, "fixed-watcher");
                 $("html").optionClass("Underline QuoteLinks", true, "underline-quotes");
                 $("html").optionClass("Underline All Links", false, "underline-disabled");
@@ -3959,7 +3975,7 @@
                 menuButton:   "<svg viewBox='0 0 30 30' preserveAspectRatio='true' height='16' width='16' xmlns='http://www.w3.org/2000/svg'>" +
                     "<path fill='rgb(" + this.blinkColor.rgb + ")' d='M10.129,22.186 16.316,15.999 10.129,9.812 13.665,6.276 23.389,15.999 13.665,25.725z'/></svg>",
                 downArrow: "<svg viewBox='7 4 29 27' preserveAspectRatio='true' height='16' width='16' xmlns='http://www.w3.org/2000/svg'>" +
-                    "<path fill='rgb(" + this.tripColor.rgb + ")' d='M8.037,11.166L14.5,22.359c0.825,1.43,2.175,1.43,3,0l6.463-11.194c0.826-1.429,0.15-2.598-1.5-2.598H9.537C7.886,8.568,7.211,9.737,8.037,11.166z'/></svg>",
+                    "<path fill='rgb(" + this.tripColor.rgb + ")' d='M8.037,11.166L14.5,22.359c0.825,1.43,2.175,1.43,3,0l6.463-11.194c0.826-1.429,0.15-2.598-1.5-2.598H9.537C7.886,8.568,7.211,9.737,8.037,11.166z'/></svg>"
             };
 
             if (theme.customCSS) {
@@ -4101,6 +4117,7 @@
             return {
                 sub: obj.hostname.split(".")[0],
                 board: pathname[0],
+                home: location.hostname === "www.4chan.org",
                 nsfw: /^(b|d|e|f|gif|h|hr|r|s|t|u|wg|i|ic|r9k|hm|y|hc|pol|soc|lgbt)$/.test(pathname[0]),
                 reply: pathname[1] === "thread",
                 catalog: pathname[1] === "catalog",
