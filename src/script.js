@@ -68,7 +68,7 @@
         "Highlight Current Board": [true, "Gives the current board link a bottom highlight border."],
         ":: Sidebar": ["header", ""],
         "Sidebar Position": [
-            1, "Change the position of the sidebar.", [{
+            1, "Change the position of the sidebar or disable it altogether.", [{
                 name: "Right",
                 value: 1
             }, {
