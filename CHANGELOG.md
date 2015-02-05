@@ -1,3 +1,9 @@
+### v5.5.17
+*2015-02-05*
+
+- Fix bottom margin in paged navigation mode
+- loadletter QR fixes
+
 ### v5.5.16
 *2015-01-20*
 
