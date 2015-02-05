@@ -47,7 +47,7 @@
   transform: translateX(0%) !important;
 }
 :root.vertical-qr:root.right-sidebar #qr .move {
-  right: 71% !important;
+  right: 71.5% !important;
 }
 :root.vertical-qr:root.left-sidebar #qr .move {
   left: 35.5% !important;
