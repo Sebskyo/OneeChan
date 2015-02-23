@@ -303,10 +303,6 @@ select:focus,
   border-color: " + $SS.theme.brderColor.hex + " !important;
   left: 0.5em !important;
 }
-/* Outlines */
-.qphl {
-  outline: 2px solid rgba(" + $SS.theme.linkColor.rgb + ",0.5) !important;
-}
 /* Shadows */
 #navlinks a {
   text-shadow:" + $SS.theme.mainColor.hex + " -1px -1px, 
