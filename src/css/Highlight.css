@@ -19,6 +19,10 @@
 .filter-highlight > div.sideArrows {
   color: rgba(" + $SS.theme.postHLColor.rgb + ",1.0) !important;
 }
+/* Outlines */
+.qphl {
+  outline: 2px solid rgba(" + $SS.theme.linkColor.rgb + ",0.5) !important;
+}
 /* Posts Quoting You */
 :root.highlight-you .quotesYou.opContainer,
 :root.highlight-you .quotesYou > .reply {
