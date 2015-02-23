@@ -8,13 +8,32 @@
 :root.hl-outline .post.reply {
   outline: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.postHLColor.rgb + ",1.0);
 }
+/* Filter Highlighting */
+.filter-highlight .catalog-thumb {
+  border: 2px solid rgba(" + $SS.theme.postHLColor.rgb + ",1.0) !important;
+}
+.filter-highlight.opContainer,
+.filter-highlight > .reply {
+  border-left: 2px solid rgba(" + $SS.theme.postHLColor.rgb + ",1.0) !important;
+}
+.filter-highlight > div.sideArrows {
+  color: rgba(" + $SS.theme.postHLColor.rgb + ",1.0) !important;
+}
 /* Posts Quoting You */
+:root.highlight-you .quotesYou.opContainer,
 :root.highlight-you .quotesYou > .reply {
   border-left: " + $SS.conf["Width Decoration"] + "px solid rgba(" + $SS.theme.quotesYouHLColor.rgb + ",1.0) !important;
 }
+:root.highlight-you .quotesYou > .sideArrows {
+  color: rgba(" + $SS.theme.quotesYouHLColor.rgb + ",1.0) !important;
+}
 /* Your Posts */
+:root.highlight-own .yourPost.opContainer,
 :root.highlight-own .yourPost > .reply {
   border-left: " + $SS.conf["Width Decoration"] + "px dashed rgba(" + $SS.theme.ownPostHLColor.rgb + ",1.0) !important;
+}
+:root.highlight-own .yourPost > .sideArrows {
+  color: rgba(" + $SS.theme.ownPostHLColor.rgb + ",1.0) !important;
 }
 /* Highlighted Reply BG */
 .reply:target {
@@ -26,8 +45,8 @@
 }
 /* Highlighted Threads */
 .catalog-thread.watched .catalog-thumb,
-.filter-highlight .catalog-thumb {
-  border: 2px solid rgba(" + $SS.theme.threadHLColor.rgb + ",.5) !important;
+.catalog-thread.watched .werkTyme-filename {
+  border: 2px solid rgba(" + $SS.theme.postHLColor.rgb + ",1.0) !important;
 }
 /* Thread Watcher */
 .replies-quoting-you > .watcher-link {
