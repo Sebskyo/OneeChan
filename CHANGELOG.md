@@ -1,3 +1,8 @@
+### v5.5.19
+*2015-02-23*
+
+- Use box-shadow for filter highlights instead of solid border as per 4chan X v1.10.2.2
+
 ### v5.5.18
 *2015-02-23*
 
