@@ -1,3 +1,9 @@
+### v5.5.18
+*2015-02-23*
+
+- Highlighting fixes (#49)
+- Drop support for `ihavenoface 4chan X`
+
 ### v5.5.17
 *2015-02-05*
 

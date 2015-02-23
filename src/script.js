@@ -250,9 +250,6 @@
                 name: "Default",
                 value: 1
             }, {
-                name: "ihavenoface",
-                value: 2
-            }, {
                 name: "loadletter",
                 value: 3
             }], true
