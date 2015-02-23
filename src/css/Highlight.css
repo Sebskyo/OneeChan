@@ -14,7 +14,7 @@
 }
 .filter-highlight.opContainer,
 .filter-highlight > .reply {
-  border-left: 2px solid rgba(" + $SS.theme.postHLColor.rgb + ",1.0) !important;
+  border-left: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.postHLColor.rgb + ",1.0) !important;
 }
 .filter-highlight > div.sideArrows {
   color: rgba(" + $SS.theme.postHLColor.rgb + ",1.0) !important;
