@@ -1,8 +1,4 @@
 /* Text Colors */
-/* Anything we need transparent */
-div[style='float: right;'] {
-  color: transparent !important;
-}
 /* General */
 html,
 body,

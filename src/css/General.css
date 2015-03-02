@@ -220,11 +220,6 @@ input[type=checkbox]:checked+.riceCheck::before {
   vertical-align: middle;
   padding: 7px 12px 6px;
 }
-/* Delete form */
-div[style='float: right;'] {
-  float: none !important;
-  margin-left: 10px;
-}
 /* HRs */
 hr {
   height: 2px;
