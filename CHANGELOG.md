@@ -1,3 +1,16 @@
+### v5.5.20
+*2015-03-02*
+
+**ccd0:**
+- Fixes for QR file field changes in 4chan X v1.10.3
+
+**nebukazar:**
+
+**loadletter 4chan X:**
+
+- Fix announcements font color
+- Hide bottom OneeChan options in the catalog
+
 ### v5.5.19
 *2015-02-23*
 
