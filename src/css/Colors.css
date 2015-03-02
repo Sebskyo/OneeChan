@@ -274,6 +274,7 @@ a.quotelink.forwardlink, a.backlink.forwardlink {
 input:focus,
 textarea:focus,
 #qr-filename-container:focus,
+#qr-filename-container.focus,
 select:focus,
 .captcha-root:focus {
   border: 1px solid " + $SS.theme.linkColor.hex + " !important;
