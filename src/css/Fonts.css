@@ -58,6 +58,7 @@ body,
 #qr input.field,
 #qr textarea.field,
 #qr span.field,
+#qr-file-button,
 #qr input[type=submit],
 #qr select[data-name="thread"],
 #menu .entry,
@@ -96,11 +97,13 @@ a.qr-link {
 :root.info-on-hover .postContainer:hover .postNum {
   font-size:" + $SS.conf["Font Size"] + "px !important;
 }
+#qr-file-button,
 #qr input[type=submit],
 #qr label,
 .captcha-counter {
   font-size: " + (($SS.conf["Font Size"] < 11) ? 8 : 10) + "px !important;
 }
+#qr-file-button,
 #qr input[type="submit"],
 #qr label,
 .captcha-counter {

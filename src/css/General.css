@@ -140,6 +140,7 @@ div.post {
 }
 /* Checkboxes */
 input[type=checkbox],
+input[type=button],
 input[type=submit],
 .riceCheck {
   cursor: pointer;

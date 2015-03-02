@@ -13,9 +13,22 @@
   position: relative;
   top: 3px;
 }
+#qr-filename-container .riceCheck,
+#qr-filename-container input[type=checkbox] {
+  margin: 0px 0px 1px!important;
+}
+#qr-file-button,
 #qr input[type='submit'] {
   height: 22px !important;
-  margin-top: 1px;
+  margin: 0 !important;
+}
+#qr-file-button,
+#qr-filename-container {
+  margin-right: 1px !important;
+}
+#qr-spoiler-label + input[type='submit'] {
+  /* ccd0 prior to v1.10.3 */
+  margin-top: 1px !important;
 }
 #qr select[data-name="thread"] {
   margin: 1px 0 1px 0;
