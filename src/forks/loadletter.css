@@ -134,6 +134,9 @@
   display: block !important;
 }
 /* Misc */
+#globalMessage {
+  color: " + $SS.theme.textColor.hex + " !important;
+}
 :root:not(.show-ads) .center {
   display: none !important;
 }
@@ -152,8 +155,9 @@ div.navLinks.desktop {
 }
 #navbotright,
 :root.hide-button form[name=post] > h1,
-#boardNavDesktopFoot > .toggleCatalog,
-:root.show-file-info .fileText {
+#boardNavDesktopFoot .toggleCatalog,
+:root.show-file-info .fileText,
+#boardNavDesktopFoot #OneeChanLink {
   display: none;
 }
 #navtopright {
