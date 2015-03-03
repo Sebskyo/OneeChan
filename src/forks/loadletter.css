@@ -34,12 +34,6 @@
 #qr:not(.has-captcha) textarea {
   min-height: 115px!important;
 }
-:root.qr-controls #qr > .move {
-  display: none;
-}
-:root.qr-controls #spoilerLabel {
-  display: block !important;
-}
 :root.vertical-qr #qr.autohide:not(:hover) {
   width: 260px !important;
 }
