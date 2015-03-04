@@ -82,6 +82,23 @@
         "Disable In Catalog View": [false, "Disables the Sidebar when viewing the catalog. Native catalog only."],
         "SS-like Sidebar": [true, "Darkens the Sidebar and adds a border like 4chan Style Script."],
         "Minimal Sidebar": [false, "Shrinks the sidebar and disables the banner."],
+        ":: Quick Reply": ["header", ""],
+        "Autohide Style": [
+            3, "Changes the style of the quick reply hiding. Enable Autohide QR in 4chan X.", [{
+                name: "Normal",
+                value: 1
+            }, {
+                name: "Vertical Tabbed",
+                value: 2
+            }, {
+                name: "Fade",
+                value: 3
+            }]
+        ],
+        "Transparent QR": [false, "Reduces opacity of the QR box."],
+        "Remove Background": [false, "Removes the QR background."],
+        "Remove Controls": [false, "Removes the QR controls and checkbox."],
+        "Expanding Form Inputs": [false, "Makes certain form elements expand on focus."],
         ":: Mascots": ["header", ""],
         "Hide Mascots in Catalog": [false, "Hides the mascot when viewing the catalog."],
         "Mascots Overlap Posts": [true, "Mascots will render above posts and threads."],
@@ -191,23 +208,6 @@
                 value: "solid"
             }]
         ],
-        ":: Quick Reply": ["header", ""],
-        "Autohide Style": [
-            3, "Changes the style of the quick reply hiding. Enable Autohide QR in 4chan X.", [{
-                name: "Normal",
-                value: 1
-            }, {
-                name: "Vertical Tabbed",
-                value: 2
-            }, {
-                name: "Fade",
-                value: 3
-            }]
-        ],
-        "Transparent QR": [false, "Reduces opacity of the QR box."],
-        "Remove Background": [false, "Removes the QR background."],
-        "Remove Controls": [false, "Removes the QR controls and checkbox."],
-        "Expanding Form Inputs": [false, "Makes certain form elements expand on focus."],
         ":: Fonts": ["header", ""],
         "Font Family": [
             "sans-serif", "Set the default font family.", [{
@@ -1085,12 +1085,11 @@
                 $(document).bind("keydown", $SS.options.keydown);
 
                 var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'>OneeChan</a></span>").bind("click", $SS.options.show); /* seaweedchan */
-                    b = $("<span><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'></a> / </span>").bind("click", $SS.options.show); /* MayhemYDG */
-                    c = $("<span id='OneeChanLink'> [<a title='OneeChan Settings' href='javascript:;'>OneeChan</a>]&nbsp;</span>").bind("click", $SS.options.show); /* loadletter */
+                    b = $("<span id='OneeChanLink'> [<a title='OneeChan Settings' href='javascript:;'>OneeChan</a>]&nbsp;</span>").bind("click", $SS.options.show); /* loadletter */
                 $.asap(function() {
                     return $(".fourchan-x #shortcuts, .fourchan_x, .is_catalog").exists();
                 }, function() {
-                    $(".fourchan-x").exists() ? $(".shortcut.brackets-wrap:last-of-type").before(a) && $("#shortcuts.brackets-wrap").append(b) : $("#boardNavDesktop").append(c);
+                    $(".fourchan-x").exists() ? $(".shortcut.brackets-wrap:last-of-type").before(a) : $("#boardNavDesktop").append(b);
                 });
 
             },
