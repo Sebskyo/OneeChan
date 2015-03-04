@@ -1,3 +1,11 @@
+### v5.5.22
+*2015-03-04*
+
+**loadletter 4chan X:**
+
+- Fix quote highlighting using outlines instead of box-shadow
+- More QR fixes
+
 ### v5.5.21
 *2015-03-04*
 
