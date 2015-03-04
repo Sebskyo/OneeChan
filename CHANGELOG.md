@@ -1,3 +1,20 @@
+### v5.5.21
+*2015-03-04*
+
+**ccd0:**
+
+- Fix hiding of spoiler checkbox when "Remove Controls" is enabled
+
+**nebukazar:**
+
+- Move QR settings up in the settings menu
+- Hiding QR controls in Vertical Tabbed QR will now always show the label
+
+**loadletter 4chan X:**
+
+- Fix Vertical Tabbed QR not touching SS-like Sidebar
+- Fix Vertical Tabbed QR controls when the Sidebar is on the left side
+
 ### v5.5.20
 *2015-03-02*
 
