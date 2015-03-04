@@ -34,28 +34,6 @@
 #qr:not(.has-captcha) textarea {
   min-height: 115px!important;
 }
-:root.vertical-qr #qr.autohide:not(:hover) {
-  width: 260px !important;
-}
-:root.vertical-qr #qr:not(.autohide) {
-  transform: translateX(0%) !important;
-}
-:root.vertical-qr:root.right-sidebar #qr .move {
-  right: 71.5% !important;
-}
-:root.vertical-qr:root.left-sidebar #qr .move {
-  left: 35.5% !important;
-}
-:root.mini-sidebar:root.left-sidebar #qr .move {
-  top: 170px !important;
-}
-:root.vertical-qr #qr {
-  top: inherit !important;
-  bottom: 30px !important;
-}
-:root.vertical-qr #qr .move:not(span) {
-  min-width: 192px !important;
-}
 #qr .move:not(span) {
   min-width: 260px;
   padding: 2px 2px !important;
@@ -63,12 +41,6 @@
   line-height: 19px!important;
   text-transform: uppercase;
   font-size: 10px;
-}
-:root.vertical-qr #qr .move {
-  bottom: 83px !important;
-}
-:root.vertical-qr #qr .move {
-  right: 71.5% !important;
 }
 #qr > form #spoilerLabel {
   bottom: 4px;
@@ -109,16 +81,39 @@
 .captchainput > .field {
   min-width: 99.2%;
 }
-:root.mini-sidebar:root.right-sidebar #qr .move {
-  right: 71.6% !important;
+/* Vertical QR */
+:root.vertical-qr #qr.autohide:not(:hover) {
+  width: 260px !important;
+}
+:root.vertical-qr #qr:not(.autohide) {
+  transform: translateX(0%) !important;
+}
+:root.vertical-qr:root.right-sidebar #qr .move {
+  right: 81% !important;
+}
+:root.vertical-qr:root.left-sidebar #qr .move {
+  left: 55% !important;
 }
 :root.mini-sidebar:root.left-sidebar #qr .move {
-  left: 35.6% !important;
+  top: 170px !important;
 }
+:root.vertical-qr #qr {
+  top: inherit !important;
+  bottom: 30px !important;
+}
+:root.vertical-qr #qr .move:not(span) {
+  min-width: 135px !important;
+}
+.vertical-qr:root #qr {
+  min-width: 299px !important;
+}
+/* Minimal Sidebar */
 :root.mini-sidebar:root.right-sidebar #qr .move {
+  right: 71.6% !important;
   top: 85px !important;
 }
 :root.mini-sidebar:root.left-sidebar #qr .move {
+  left: 35.6% !important;
   top: 213px;
 }
 :root.mini-sidebar #qr .move:not(span) {
