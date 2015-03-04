@@ -1,267 +1,267 @@
 (function() {
     var defaultConfig = {
-        ":: Main Rice": ["header", ""],
-        "Left Margin": [
-            5, "Change the size of the left margin.", [{
+            ":: Main Rice": ["header", ""],
+            "Left Margin": [
+                5, "Change the size of the left margin.", [{
+                    name: "Large",
+                    value: 65
+                }, {
+                    name: "Medium",
+                    value: 25
+                }, {
+                    name: "Small",
+                    value: 5
+                }, {
+                    name: "None",
+                    value: 0
+                }, {
+                    name: "Custom",
+                    value: 999
+                }], true
+            ],
+            "Custom Left Margin": [
+                0, "Left margin custom width (pixels).", "Left Margin", 999, true
+            ],
+            "Right Margin": [
+                5, "Change the size of the right margin.", [{
+                    name: "Large",
+                    value: 65
+                }, {
+                    name: "Medium",
+                    value: 25
+                }, {
+                    name: "Small",
+                    value: 5
+                }, {
+                    name: "None",
+                    value: 0
+                }, {
+                    name: "Custom",
+                    value: 999
+                }], true
+            ],
+            "Custom Right Margin": [
+                0, "Custom width of border or outline of highlighted posts (pixels).", "Right Margin", 999, true
+            ],
+            "Fixed Thread Watcher": [true, "The thread watcher will not scroll with the page."],
+            "Style Thread Stats": [false, "Makes the thread stats stand out more. Disable Updater and Stats in Header if using ccd0."],
+            "Rounded Corners": [false, "Styles replies, menus and the QR to have subtly rounded corners."],
+            "Underline All Links": [false, "Underlines all the links."],
+            "Show Banner": [true, "Toggle visibility of the banner.", null, true],
+            "Reduce Banner Opacity": [false, "Reduce the opacity of the banner for easier viewing.", "Show Banner", true, true],
+            "Show Board Name": [true, "Toggle visibility of the board name."],
+            "Show Reply to Thread Button": [false, "Toggle visibility of the Start a Thread / Reply to Thread button."],
+            "Show Checkboxes": [false, "Hides checkboxes and deleteform to be replaced by 4chan X menus. Refresh to apply."],
+            "Show Blotter": [false, "Toggle visibility of the 4chan news blotter."],
+            "Show 4chan Ads": [false, "Opts into 4chan\'s banner ads.", null, true],
+            "Show Top Ad": [true, "Show the top 4chan banner ad.", "Show 4chan Ads", true, true],
+            "Show Middle Ad": [true, "Show the middle 4chan banner ad.", "Show 4chan Ads", true, true],
+            "Show Bottom Ad": [true, "Show the bottom 4chan banner ad.", "Show 4chan Ads", true, true],
+            "Reduce Ad Opacity": [false, "Reduce the opacity of Ads until hover for easier viewing.", "Show 4chan Ads", true, true],
+            "Show Navigation Links": [true, "Toggle visibility of the navigation links at the top and bottom of the threads.", null, true],
+            "Show Top Links": [true, "Toggle visibility of the top navigation links.", "Show Navigation Links", true, true],
+            "Show Bottom Links": [true, "Toggle visibility of the bottom navigation links.", "Show Navigation Links", true, true],
+            "Show Previous/Next buttons": [false, "Shows the Previous / Next buttons in page navigation mode."],
+            ":: Header": ["header", ""],
+            "Show Header Background Gradient": [true, "Gives the header bar a gradient background."],
+            "Show Header Shadow": [true, "Gives the header a drop shadow."],
+            "Highlight Current Board": [true, "Gives the current board link a bottom highlight border."],
+            ":: Sidebar": ["header", ""],
+            "Sidebar Position": [
+                1, "Change the position of the sidebar or disable it altogether.", [{
+                    name: "Right",
+                    value: 1
+                }, {
+                    name: "Left",
+                    value: 2
+                }, {
+                    name: "Disabled",
+                    value: 3
+                }], true
+            ],
+            "Disable In Catalog View": [false, "Disables the Sidebar when viewing the catalog. Native catalog only."],
+            "SS-like Sidebar": [true, "Darkens the Sidebar and adds a border like 4chan Style Script."],
+            "Minimal Sidebar": [false, "Shrinks the sidebar and disables the banner."],
+            ":: Quick Reply": ["header", ""],
+            "Autohide Style": [
+                3, "Changes the style of the quick reply hiding. Enable Autohide QR in 4chan X.", [{
+                    name: "Normal",
+                    value: 1
+                }, {
+                    name: "Vertical Tabbed",
+                    value: 2
+                }, {
+                    name: "Fade",
+                    value: 3
+                }]
+            ],
+            "Transparent QR": [false, "Reduces opacity of the QR box."],
+            "Remove Background": [false, "Removes the QR background."],
+            "Remove Controls": [false, "Removes the QR controls and checkbox."],
+            "Expanding Form Inputs": [false, "Makes certain form elements expand on focus."],
+            ":: Mascots": ["header", ""],
+            "Hide Mascots in Catalog": [false, "Hides the mascot when viewing the catalog."],
+            "Mascots Overlap Posts": [true, "Mascots will render above posts and threads."],
+            "Reduce Mascot Opacity": [false, "Reduces the opacity of the mascots until hover. Warning: Overrides pointer events."],
+            "Grayscale Mascots": [false, "Desaturates mascots."],
+            ":: Replies": ["header", ""],
+            "Fit Width": [true, "Replies stretch to the width of the entire page."],
+            "Show Reply Header": [true, "Shows replies header background and line border."],
+            "Show Post Info On Hover": [false, "Shows post number and file info on hover only."],
+            "Show File Info": [true, "Hides the filename, dimensions and size info."],
+            "Underline QuoteLinks": [false, "Underlines quotelinks only."],
+            "Indent OP": [false, "Indents the OP instead of touching the screen."],
+            "Allow Wrapping Around OP": [false, "Allow for replies to wrap around the OP instead of being forced onto their own line."],
+            "Recolor Even Replies": [false, "Makes every other post a darker color. Not compatible with Quote Threading."],
+            "Reduce Thumbnail Opacity": [false, "Reduces opacity of the thumbnails."],
+            "Backlink Icons": [true, "Use icons for backlinks instead of text."],
+            "Backlinks on Bottom": [false, "Move backlinks to the bottom right of the replies."],
+            "Borders": [
+                2, "Changes which sides of replies have borders.", [{
+                    name: "Normal (4chan default)",
+                    value: 1
+                }, {
+                    name: "On all sides",
+                    value: 2
+                }, {
+                    name: "None",
+                    value: 3
+                }]
+            ],
+            "Margin Between Replies": ['', "Change the size of the spacing in between replies.", [{
+                name: "Very Large",
+                value: 15
+            }, {
                 name: "Large",
-                value: 65
+                value: 8
             }, {
-                name: "Medium",
-                value: 25
-            }, {
-                name: "Small",
-                value: 5
-            }, {
-                name: "None",
-                value: 0
-            }, {
-                name: "Custom",
-                value: 999
-            }], true
-        ],
-        "Custom Left Margin": [
-            0, "Left margin custom width (pixels).", "Left Margin", 999, true
-        ],
-        "Right Margin": [
-            5, "Change the size of the right margin.", [{
-                name: "Large",
-                value: 65
-            }, {
-                name: "Medium",
-                value: 25
-            }, {
-                name: "Small",
-                value: 5
-            }, {
-                name: "None",
-                value: 0
-            }, {
-                name: "Custom",
-                value: 999
-            }], true
-        ],
-        "Custom Right Margin": [
-            0, "Custom width of border or outline of highlighted posts (pixels).", "Right Margin", 999, true
-        ],
-        "Fixed Thread Watcher": [true, "The thread watcher will not scroll with the page."],
-        "Style Thread Stats": [false, "Makes the thread stats stand out more. Disable Updater and Stats in Header if using ccd0."],        
-        "Rounded Corners": [false, "Styles replies, menus and the QR to have subtly rounded corners."],
-        "Underline All Links": [false, "Underlines all the links."],
-        "Show Banner": [true, "Toggle visibility of the banner.", null, true],
-        "Reduce Banner Opacity": [false, "Reduce the opacity of the banner for easier viewing.", "Show Banner", true, true],
-        "Show Board Name": [true, "Toggle visibility of the board name."],
-        "Show Reply to Thread Button": [false, "Toggle visibility of the Start a Thread / Reply to Thread button."],
-        "Show Checkboxes": [false, "Hides checkboxes and deleteform to be replaced by 4chan X menus. Refresh to apply."],
-        "Show Blotter": [false, "Toggle visibility of the 4chan news blotter."],
-        "Show 4chan Ads": [false, "Opts into 4chan\'s banner ads.", null, true],
-        "Show Top Ad": [true, "Show the top 4chan banner ad.", "Show 4chan Ads", true, true],
-        "Show Middle Ad": [true, "Show the middle 4chan banner ad.", "Show 4chan Ads", true, true],
-        "Show Bottom Ad": [true, "Show the bottom 4chan banner ad.", "Show 4chan Ads", true, true],
-        "Reduce Ad Opacity": [false, "Reduce the opacity of Ads until hover for easier viewing.", "Show 4chan Ads", true, true],
-        "Show Navigation Links": [true, "Toggle visibility of the navigation links at the top and bottom of the threads.", null, true],
-        "Show Top Links": [true, "Toggle visibility of the top navigation links.", "Show Navigation Links", true, true],
-        "Show Bottom Links": [true, "Toggle visibility of the bottom navigation links.", "Show Navigation Links", true, true],
-        "Show Previous/Next buttons": [false, "Shows the Previous / Next buttons in page navigation mode."],
-        ":: Header": ["header", ""],
-        "Show Header Background Gradient": [true, "Gives the header bar a gradient background."],
-        "Show Header Shadow": [true, "Gives the header a drop shadow."],
-        "Highlight Current Board": [true, "Gives the current board link a bottom highlight border."],
-        ":: Sidebar": ["header", ""],
-        "Sidebar Position": [
-            1, "Change the position of the sidebar or disable it altogether.", [{
-                name: "Right",
-                value: 1
-            }, {
-                name: "Left",
-                value: 2
-            }, {
-                name: "Disabled",
-                value: 3
-            }], true
-        ],
-        "Disable In Catalog View": [false, "Disables the Sidebar when viewing the catalog. Native catalog only."],
-        "SS-like Sidebar": [true, "Darkens the Sidebar and adds a border like 4chan Style Script."],
-        "Minimal Sidebar": [false, "Shrinks the sidebar and disables the banner."],
-        ":: Quick Reply": ["header", ""],
-        "Autohide Style": [
-            3, "Changes the style of the quick reply hiding. Enable Autohide QR in 4chan X.", [{
-                name: "Normal",
-                value: 1
-            }, {
-                name: "Vertical Tabbed",
-                value: 2
-            }, {
-                name: "Fade",
-                value: 3
-            }]
-        ],
-        "Transparent QR": [false, "Reduces opacity of the QR box."],
-        "Remove Background": [false, "Removes the QR background."],
-        "Remove Controls": [false, "Removes the QR controls and checkbox."],
-        "Expanding Form Inputs": [false, "Makes certain form elements expand on focus."],
-        ":: Mascots": ["header", ""],
-        "Hide Mascots in Catalog": [false, "Hides the mascot when viewing the catalog."],
-        "Mascots Overlap Posts": [true, "Mascots will render above posts and threads."],
-        "Reduce Mascot Opacity": [false, "Reduces the opacity of the mascots until hover. Warning: Overrides pointer events."],
-        "Grayscale Mascots": [false, "Desaturates mascots."],
-        ":: Replies": ["header", ""],
-        "Fit Width": [true, "Replies stretch to the width of the entire page."],
-        "Show Reply Header": [true, "Shows replies header background and line border."],
-        "Show Post Info On Hover": [false, "Shows post number and file info on hover only."],
-        "Show File Info": [true, "Hides the filename, dimensions and size info."],
-        "Underline QuoteLinks": [false, "Underlines quotelinks only."],
-        "Indent OP": [false, "Indents the OP instead of touching the screen."],
-        "Allow Wrapping Around OP": [false, "Allow for replies to wrap around the OP instead of being forced onto their own line."],
-        "Recolor Even Replies": [false, "Makes every other post a darker color. Not compatible with Quote Threading."],
-        "Reduce Thumbnail Opacity": [false, "Reduces opacity of the thumbnails."],
-        "Backlink Icons": [true, "Use icons for backlinks instead of text."],
-        "Backlinks on Bottom": [false, "Move backlinks to the bottom right of the replies."],
-        "Borders": [
-            2, "Changes which sides of replies have borders.", [{
                 name: "Normal (4chan default)",
-                value: 1
+                value: ''
             }, {
-                name: "On all sides",
-                value: 2
+                name: "Minimal",
+                value: -2
             }, {
                 name: "None",
-                value: 3
-            }]
-        ],
-        "Margin Between Replies": ['', "Change the size of the spacing in between replies.", [{
-            name: "Very Large",
-            value: 15
-        }, {
-            name: "Large",
-            value: 8
-        }, {
-            name: "Normal (4chan default)",
-            value: ''
-        }, {
-            name: "Minimal",
-            value: -2
-        }, {
-            name: "None",
-            value: -4
-        }, {
-            name: "Overlapping Borders",
-            value: -5
-        }]],
-        "Post Message Margin": [
-            2, "Change the size of the margin around the post message.", [{
-                name: "Small",
-                value: 1
+                value: -4
             }, {
-                name: "Normal",
-                value: 2
-            }, {
-                name: "Large",
-                value: 3
-            }]
-        ],
-        ":: Highlighting": ["header", ""],
-        "Decoration Style": [
-            0, "Changes the highlight decoration of posts.", [{
-                name: "None",
-                value: 0
-            }, {
-                name: "Border",
-                value: 1
-            }, {
-                name: "Outline",
-                value: 2
-            }, {
-                name: "Separator",
-                value: 3
-            }]
-        ],
-        "Decoration Width": [
-            1, "Changes decoration width of highlighted posts.", [{
-                name: "Large",
-                value: 6
-            }, {
-                name: "Medium",
-                value: 3
-            }, {
-                name: "Small",
-                value: 1
-            }, {
-                name: "Custom",
-                value: 999
-            }], true
-        ],
-        "Custom Decoration Width": [
-            0, "Enter a custom width for the decoration (pixels).", "Decoration Width", 999, true
-        ],
-        "Highlight Style": [
-            "solid", "Changes style of post highlight.", [{
-                name: "Dashed",
-                value: "dashed"
-            }, {
-                name: "Dotted",
-                value: "dotted"
-            }, {
-                name: "Double",
-                value: "double"
-            }, {
-                name: "Solid",
-                value: "solid"
-            }]
-        ],
-        ":: Fonts": ["header", ""],
-        "Font Family": [
-            "sans-serif", "Set the default font family.", [{
-                name: "Default",
-                value: "sans-serif"
-            }, {
-                name: "Monospace",
-                value: "monospace"
-            }, {
-                name: "Ubuntu",
-                value: "Ubuntu"
-            }, {
-                name: "Consolas",
-                value: "Consolas"
-            }, {
-                name: "Droid Sans",
-                value: "Droid Sans"
-            }, {
-                name: "Segoe UI",
-                value: "Segoe UI"
-            }, {
-                name: "Calibri",
-                value: "Calibri"
-            }, {
-                name: "Arial",
-                value: "Arial"
-            }, {
-                name: "Lucida Grande",
-                value: "Lucida Grande"
-            }, {
-                name: "Helvetica",
-                value: "Helvetica"
-            }]
-        ],
-        "Font Size": [13, "Set the general size of text (Pixels). Min: 10px, Max: 18px"],
-        "Bitmap Font": [false, "Check this if you are using a bitmap font."],
-        ":: Compatibility": ["header", ""],
-        "Version Fix": [
-            1, "Applies CSS fixes for different forks. Default is for seaweed/ccd0 forks. Make sure you enable QR and Persistent QR for maximum compatibility.", [{
-                name: "Default",
-                value: 1
-            }, {
-                name: "loadletter",
-                value: 3
-            }], true
-        ],
-        "Themes": [],
-        "Hidden Themes": [],
-        "Selected Theme": 4,
-        "NSFW Theme": 4,
-        "Selected Mascots": [37,41],
-        "Mascots": [],
-        "Hidden Mascots": []
-    },
+                name: "Overlapping Borders",
+                value: -5
+            }]],
+            "Post Message Margin": [
+                2, "Change the size of the margin around the post message.", [{
+                    name: "Small",
+                    value: 1
+                }, {
+                    name: "Normal",
+                    value: 2
+                }, {
+                    name: "Large",
+                    value: 3
+                }]
+            ],
+            ":: Highlighting": ["header", ""],
+            "Decoration Style": [
+                0, "Changes the highlight decoration of posts.", [{
+                    name: "None",
+                    value: 0
+                }, {
+                    name: "Border",
+                    value: 1
+                }, {
+                    name: "Outline",
+                    value: 2
+                }, {
+                    name: "Separator",
+                    value: 3
+                }]
+            ],
+            "Decoration Width": [
+                1, "Changes decoration width of highlighted posts.", [{
+                    name: "Large",
+                    value: 6
+                }, {
+                    name: "Medium",
+                    value: 3
+                }, {
+                    name: "Small",
+                    value: 1
+                }, {
+                    name: "Custom",
+                    value: 999
+                }], true
+            ],
+            "Custom Decoration Width": [
+                0, "Enter a custom width for the decoration (pixels).", "Decoration Width", 999, true
+            ],
+            "Highlight Style": [
+                "solid", "Changes style of post highlight.", [{
+                    name: "Dashed",
+                    value: "dashed"
+                }, {
+                    name: "Dotted",
+                    value: "dotted"
+                }, {
+                    name: "Double",
+                    value: "double"
+                }, {
+                    name: "Solid",
+                    value: "solid"
+                }]
+            ],
+            ":: Fonts": ["header", ""],
+            "Font Family": [
+                "sans-serif", "Set the default font family.", [{
+                    name: "Default",
+                    value: "sans-serif"
+                }, {
+                    name: "Monospace",
+                    value: "monospace"
+                }, {
+                    name: "Ubuntu",
+                    value: "Ubuntu"
+                }, {
+                    name: "Consolas",
+                    value: "Consolas"
+                }, {
+                    name: "Droid Sans",
+                    value: "Droid Sans"
+                }, {
+                    name: "Segoe UI",
+                    value: "Segoe UI"
+                }, {
+                    name: "Calibri",
+                    value: "Calibri"
+                }, {
+                    name: "Arial",
+                    value: "Arial"
+                }, {
+                    name: "Lucida Grande",
+                    value: "Lucida Grande"
+                }, {
+                    name: "Helvetica",
+                    value: "Helvetica"
+                }]
+            ],
+            "Font Size": [13, "Set the general size of text (Pixels). Min: 10px, Max: 18px"],
+            "Bitmap Font": [false, "Check this if you are using a bitmap font."],
+            ":: Compatibility": ["header", ""],
+            "Version Fix": [
+                1, "Applies CSS fixes for different forks. Default is for seaweed/ccd0 forks. Make sure you enable QR and Persistent QR for maximum compatibility.", [{
+                    name: "Default",
+                    value: 1
+                }, {
+                    name: "loadletter",
+                    value: 3
+                }], true
+            ],
+            "Themes": [],
+            "Hidden Themes": [],
+            "Selected Theme": 4,
+            "NSFW Theme": 4,
+            "Selected Mascots": [37, 41],
+            "Mascots": [],
+            "Hidden Mascots": []
+        },
         MAX_FONT_SIZE = 18,
         MIN_FONT_SIZE = 10,
         NAME = "OneeChan",
@@ -270,8 +270,7 @@
         CHANGELOG = "https://github.com/nebukazar/OneeChan/blob/master/CHANGELOG.md",
         inputImages = "iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAP9JREFUOMvV0CFLQ2EYxfHfrtdiURgbmCxOmFPBJgZZ0CQD0Q+goFkwabWIyWIWFgwmy7Qp7DPI3GD7ACZlYLNcy31ljG0aDHrSy3N43nOef6ZULBiifczEQ8wV7OAtGmBO4wgfOI2whsXUnMAJ8rhCJ8IxDpHDHpZwixqM5XPZBBtYxioauEgjRLjBI2bRxTneQ6EYCS4xiTu89DbONJrtP88hwnV64hm28YRqyPsFDkmSGKUYFubnsqignM7rqDWa7dcAqoLdnsXwrgZQ5QG/l8MVIxX1ZPar/lUyUOsv+aMzv+0Qw3OrM4VNrKfzB9yXioVu6LDVx+EA4/+Gwycw/Uz36O07WwAAAABJRU5ErkJggg==",
         fontListSWF = "https://ahodesuka.github.com/FontList.swf",
-        themeInputs =
-            [{
+        themeInputs = [{
             dName: "Reply Background",
             name: "mainColor",
             property: "background-color"
@@ -407,425 +406,425 @@
         }
     };
     E = function(text) {
-        return (text + '').replace(/[&"'<>]/g, function(x) {
-            return {
-                '&': '&amp;',
-                "'": '&#039;',
-                '"': '&quot;',
-                '<': '&lt;',
-                '>': '&gt;'
-            }[x];
-        });
-    },
-    $lib.prototype = {
-        constructor: $lib,
-        elems: [],
-        length: function() {
-            return this.elems.length;
+            return (text + '').replace(/[&"'<>]/g, function(x) {
+                return {
+                    '&': '&amp;',
+                    "'": '&#039;',
+                    '"': '&quot;',
+                    '<': '&lt;',
+                    '>': '&gt;'
+                }[x];
+            });
         },
-    /* CONSTRUCTOR */
-        init: function(selector, root) {
-            if (selector == null || selector == undefined) return this;
+        $lib.prototype = {
+            constructor: $lib,
+            elems: [],
+            length: function() {
+                return this.elems.length;
+            },
+            /* CONSTRUCTOR */
+            init: function(selector, root) {
+                if (selector == null || selector == undefined) return this;
 
-            if (selector.constructor === $lib) return selector;
-            else if (typeof selector === "string") {
-                var root = root || document;
-                var tagCheck = /^<(\w+)([^>]*)>(.*)$/.exec(selector); // No closing tag for root node.
+                if (selector.constructor === $lib) return selector;
+                else if (typeof selector === "string") {
+                    var root = root || document;
+                    var tagCheck = /^<(\w+)([^>]*)>(.*)$/.exec(selector); // No closing tag for root node.
 
-                if (root.constructor === $lib)
-                    root = root.get();
+                    if (root.constructor === $lib)
+                        root = root.get();
 
-                if (tagCheck) {
-                    var tag = document.createElement(tagCheck[1]);
+                    if (tagCheck) {
+                        var tag = document.createElement(tagCheck[1]);
 
-                    if (tagCheck[2]) {
-                        var attribs, atRegEx = /(\w+)=((?:"(?:[^"]+)"|'(?:[^']+)'|(?:\w+)))/g;
-                        while ((attribs = atRegEx.exec(tagCheck[2])) != null) {
-                            var val = attribs[2];
-                            if ((val[0] == '"' || val[0] === "'") && val[0] == val[val.length - 1])
-                                val = val.substr(1, val.length - 2)
+                        if (tagCheck[2]) {
+                            var attribs, atRegEx = /(\w+)=((?:"(?:[^"]+)"|'(?:[^']+)'|(?:\w+)))/g;
+                            while ((attribs = atRegEx.exec(tagCheck[2])) != null) {
+                                var val = attribs[2];
+                                if ((val[0] == '"' || val[0] === "'") && val[0] == val[val.length - 1])
+                                    val = val.substr(1, val.length - 2)
 
-                            tag.setAttribute(attribs[1], val);
+                                tag.setAttribute(attribs[1], val);
+                            }
                         }
+
+                        tag.innerHTML = tagCheck[3];
+
+                        this.elems = [tag];
+                    } else if (/^#[\w-]+$/.test(selector) && root == document) {
+                        var el;
+
+                        if ((el = document.getElementById(selector.substr(1))) != null)
+                            this.elems = [el];
+                    } else {
+                        var results = root.querySelectorAll(selector);
+                        this.elems = Array.prototype.slice.call(results);
                     }
+                } else if (selector.nodeType)
+                    this.elems = [selector];
+                else if (Array.isArray(selector))
+                    this.elems = Array.prototype.slice.call(selector);
 
-                    tag.innerHTML = tagCheck[3];
-
-                    this.elems = [tag];
-                } else if (/^#[\w-]+$/.test(selector) && root == document) {
-                    var el;
-
-                    if ((el = document.getElementById(selector.substr(1))) != null)
-                        this.elems = [el];
-                } else {
-                    var results = root.querySelectorAll(selector);
-                    this.elems = Array.prototype.slice.call(results);
-                }
-            } else if (selector.nodeType)
-                this.elems = [selector];
-            else if (Array.isArray(selector))
-                this.elems = Array.prototype.slice.call(selector);
-
-            return this;
-        },
-
-        /* DOM NODE RETRIEVAL */
-        clone: function() {
-            var ret = [];
-
-            this.each(function() {
-                ret.push(this.cloneNode(true));
-            });
-
-            return new $lib(ret);
-        },
-        elements: function() {
-            if (!this.hasSingleEl())
                 return this;
+            },
 
-            this.elems = Array.prototype.slice.call(this.elems[0].elements);
+            /* DOM NODE RETRIEVAL */
+            clone: function() {
+                var ret = [];
 
-            return this;
-        },
-        get: function(index) {
-            if (index == undefined && this.elems.length === 1)
-                return this.elems[0];
-            else if (index == undefined && !this.hasSingleEl())
-                return this.elems;
-
-            return this.elems[index];
-        },
-
-        /* DOM MANIPULATION */
-        prepend: function(el) {
-            if (el.constructor === $lib)
-                el = el.get();
-
-            return this.each(function() {
-                this.insertBefore(el, this.firstChild);
-            });
-        },
-        append: function(el) {
-            if (el.constructor === $lib)
-                el = el.get();
-
-            return this.each(function() {
-                this.appendChild(el);
-            });
-        },
-        before: function(el) {
-            if (el.constructor === $lib)
-                el = el.get();
-
-            return this.each(function() {
-                this.parentNode.insertBefore(el, this);
-            });
-        },
-        after: function(el) {
-            if (el.constructor === $lib)
-                el = el.get();
-
-            return this.each(function() {
-                if (this.nextSibling != null)
-                    this.parentNode.insertBefore(el, this.nextSibling);
-                else if (this.parentNode != null)
-                    this.parentNode.appendChild(el);
-            });
-        },
-        replace: function(el) {
-            return this.each(function() {
-                $(this).before(el).remove();
-            });
-        },
-        html: function(html) {
-            if (html == undefined)
-                return this.elems[0].innerHTML;
-
-            return this.each(function() {
-                this.innerHTML = html;
-            });
-        },
-        text: function(text) {
-            if (this.length() === 0)
-                return;
-
-            if (text == undefined)
-                return this.elems[0].textContent;
-
-            return this.each(function() {
-                this.textContent = text;
-            });
-        },
-        appendText: function(text) {
-            return this.each(function() {
-                this.textContent += text;
-            });
-        },
-        attr: function(name, val) {
-            if (val == undefined)
-                if (!this.hasSingleEl())
-                    return this;
-                else
-                    return this.elems[0].getAttribute(name);
-                else
-            if (val === "")
-                return this.each(function() {
-                    this.removeAttribute(name);
+                this.each(function() {
+                    ret.push(this.cloneNode(true));
                 });
 
-            return this.each(function() {
-                this.setAttribute(name, val);
-            });
-        },
-        disabled: function(bDisabled) {
-            if (bDisabled == undefined)
-                return this.elems[0].disabled;
+                return new $lib(ret);
+            },
+            elements: function() {
+                if (!this.hasSingleEl())
+                    return this;
 
-            return this.each(function() {
-                this.disabled = bDisabled;
-            });
-        },
-        toggle: function(bHidden) {
-            return this.each(function() {
-                var $this = $(this);
+                this.elems = Array.prototype.slice.call(this.elems[0].elements);
 
-                if (bHidden == undefined)
-                    bHidden = !($this.attr("disabled") === "true");
+                return this;
+            },
+            get: function(index) {
+                if (index == undefined && this.elems.length === 1)
+                    return this.elems[0];
+                else if (index == undefined && !this.hasSingleEl())
+                    return this.elems;
 
-                $this.attr("hidden", bHidden || "");
-            });
-        },
-        hide: function() {
-            return this.toggle(true);
-        },
-        show: function() {
-            return this.toggle(false);
-        },
-        val: function(val) {
-            if (val == undefined) {
-                var el = this.elems[0];
+                return this.elems[index];
+            },
 
-                if (el == undefined)
+            /* DOM MANIPULATION */
+            prepend: function(el) {
+                if (el.constructor === $lib)
+                    el = el.get();
+
+                return this.each(function() {
+                    this.insertBefore(el, this.firstChild);
+                });
+            },
+            append: function(el) {
+                if (el.constructor === $lib)
+                    el = el.get();
+
+                return this.each(function() {
+                    this.appendChild(el);
+                });
+            },
+            before: function(el) {
+                if (el.constructor === $lib)
+                    el = el.get();
+
+                return this.each(function() {
+                    this.parentNode.insertBefore(el, this);
+                });
+            },
+            after: function(el) {
+                if (el.constructor === $lib)
+                    el = el.get();
+
+                return this.each(function() {
+                    if (this.nextSibling != null)
+                        this.parentNode.insertBefore(el, this.nextSibling);
+                    else if (this.parentNode != null)
+                        this.parentNode.appendChild(el);
+                });
+            },
+            replace: function(el) {
+                return this.each(function() {
+                    $(this).before(el).remove();
+                });
+            },
+            html: function(html) {
+                if (html == undefined)
+                    return this.elems[0].innerHTML;
+
+                return this.each(function() {
+                    this.innerHTML = html;
+                });
+            },
+            text: function(text) {
+                if (this.length() === 0)
+                    return;
+
+                if (text == undefined)
+                    return this.elems[0].textContent;
+
+                return this.each(function() {
+                    this.textContent = text;
+                });
+            },
+            appendText: function(text) {
+                return this.each(function() {
+                    this.textContent += text;
+                });
+            },
+            attr: function(name, val) {
+                if (val == undefined)
+                    if (!this.hasSingleEl())
+                        return this;
+                    else
+                        return this.elems[0].getAttribute(name);
+                else
+                if (val === "")
+                    return this.each(function() {
+                        this.removeAttribute(name);
+                    });
+
+                return this.each(function() {
+                    this.setAttribute(name, val);
+                });
+            },
+            disabled: function(bDisabled) {
+                if (bDisabled == undefined)
+                    return this.elems[0].disabled;
+
+                return this.each(function() {
+                    this.disabled = bDisabled;
+                });
+            },
+            toggle: function(bHidden) {
+                return this.each(function() {
+                    var $this = $(this);
+
+                    if (bHidden == undefined)
+                        bHidden = !($this.attr("disabled") === "true");
+
+                    $this.attr("hidden", bHidden || "");
+                });
+            },
+            hide: function() {
+                return this.toggle(true);
+            },
+            show: function() {
+                return this.toggle(false);
+            },
+            val: function(val) {
+                if (val == undefined) {
+                    var el = this.elems[0];
+
+                    if (el == undefined)
+                        return false;
+
+                    switch (el.type) {
+                        case "checkbox":
+                        case "radio":
+                            return el.checked == true;
+                        default:
+                            if (/^\d+$/.test(el.value))
+                                return parseInt(el.value);
+                            return el.value;
+                    }
+                }
+
+                return this.each(function() {
+                    switch (this.type) {
+                        case "checkbox":
+                        case "radio":
+                            this.checked = val;
+                            break;
+                        default:
+                            this.value = val;
+                            break;
+                    }
+                });
+            },
+            checked: function(state) {
+                return this.each(function() {
+                    this.checked = state;
+                });
+            },
+            addClass: function(classNames) {
+                return this.each(function() {
+                    classNames = classNames.split(" ");
+                    for (var j = 0, jMAX = classNames.length; j < jMAX; j++)
+                        if (!$(this).hasClass(classNames[j]))
+                            this.className += (this.className ? " " : "") + classNames[j];
+                });
+            },
+            hasClass: function(className) {
+                if (!this.hasSingleEl() || this.elems[0].className == undefined)
                     return false;
 
-                switch (el.type) {
-                    case "checkbox":
-                    case "radio":
-                        return el.checked == true;
-                    default:
-                        if (/^\d+$/.test(el.value))
-                            return parseInt(el.value);
-                        return el.value;
-                }
-            }
+                var regx = new RegExp("\\b" + className + "\\b");
 
-            return this.each(function() {
-                switch (this.type) {
-                    case "checkbox":
-                    case "radio":
-                        this.checked = val;
-                        break;
-                    default:
-                        this.value = val;
-                        break;
-                }
-            });
-        },
-        checked: function(state) {
-            return this.each(function() {
-                this.checked = state;
-            });
-        },
-        addClass: function(classNames) {
-            return this.each(function() {
-                classNames = classNames.split(" ");
-                for (var j = 0, jMAX = classNames.length; j < jMAX; j++)
-                    if (!$(this).hasClass(classNames[j]))
-                        this.className += (this.className ? " " : "") + classNames[j];
-            });
-        },
-        hasClass: function(className) {
-            if (!this.hasSingleEl() || this.elems[0].className == undefined)
-                return false;
+                return regx.test(this.elems[0].className);
+            },
+            removeClass: function(classNames) {
+                return this.each(function() {
+                    classNames = classNames.split(" ");
+                    for (var j = 0, jMAX = classNames.length; j < jMAX; j++)
+                        if ($(this).hasClass(classNames[j])) {
+                            var cclassNames = this.className.split(" ");
+                            this.className = "";
 
-            var regx = new RegExp("\\b" + className + "\\b");
-
-            return regx.test(this.elems[0].className);
-        },
-        removeClass: function(classNames) {
-            return this.each(function() {
-                classNames = classNames.split(" ");
-                for (var j = 0, jMAX = classNames.length; j < jMAX; j++)
-                    if ($(this).hasClass(classNames[j])) {
-                        var cclassNames = this.className.split(" ");
-                        this.className = "";
-
-                        for (var k = 0, kMAX = cclassNames.length; k < kMAX; k++)
-                            if (classNames[j] !== cclassNames[k])
-                                this.className += (this.className ? " " : "") + cclassNames[k];
-                    }
-            });
-        },
-        toggleClass: function(classNames) {
-            return this.each(function() {
-                classNames = classNames.split(" ");
-                for (var j = 0, jMAX = classNames.length; j < jMAX; j++)
-                    if (!$(this).hasClass(classNames[j]))
-                        $(this).addClass(classNames[j]);
+                            for (var k = 0, kMAX = cclassNames.length; k < kMAX; k++)
+                                if (classNames[j] !== cclassNames[k])
+                                    this.className += (this.className ? " " : "") + cclassNames[k];
+                        }
+                });
+            },
+            toggleClass: function(classNames) {
+                return this.each(function() {
+                    classNames = classNames.split(" ");
+                    for (var j = 0, jMAX = classNames.length; j < jMAX; j++)
+                        if (!$(this).hasClass(classNames[j]))
+                            $(this).addClass(classNames[j]);
+                        else
+                            $(this).removeClass(classNames[j]);
+                });
+            },
+            optionClass: function(optionName, optionValue, className) {
+                return this.each(function() {
+                    if ($SS.conf[optionName] === optionValue && !$(this).hasClass(className))
+                        $(this).addClass(className);
+                    else if ($SS.conf[optionName] !== optionValue && $(this).hasClass(className))
+                        $(this).removeClass(className);
                     else
-                        $(this).removeClass(classNames[j]);
-            });
-        },
-        optionClass: function(optionName, optionValue, className) {
-            return this.each(function() {
-                if ($SS.conf[optionName] === optionValue && !$(this).hasClass(className))
-                    $(this).addClass(className);
-                else if ($SS.conf[optionName] !== optionValue && $(this).hasClass(className))
-                    $(this).removeClass(className);
-                else
-                    return
-            });
-        },
-        remove: function() {
-            return this.each(function() {
-                this.parentNode.removeChild(this);
-            });
-        },
-        /* DOM TRAVERSING */
-        parent: function() {
-            if (!this.hasSingleEl()) return this;
+                        return
+                });
+            },
+            remove: function() {
+                return this.each(function() {
+                    this.parentNode.removeChild(this);
+                });
+            },
+            /* DOM TRAVERSING */
+            parent: function() {
+                if (!this.hasSingleEl()) return this;
 
-            return new $lib(this.elems[0].parentNode);
-        },
-        children: function(selector) {
-            if (!this.hasSingleEl())
+                return new $lib(this.elems[0].parentNode);
+            },
+            children: function(selector) {
+                if (!this.hasSingleEl())
+                    return this;
+                else if (selector == null)
+                    selector = "*";
+
+                return new $lib(selector, this.elems[0]);
+            },
+            nextSibling: function(selector) {
+                if (!this.hasSingleEl() ? true : this.elems[0].nextSibling == null)
+                    return new $lib(null);
+
+                if (selector != undefined) {
+                    var t, m = new $lib(selector, this.elems[0].parentNode),
+                        s = this.elems[0].parentNode.childNodes;
+
+                    for (var i = s.length - 1; i >= 0; --i) {
+                        if (s[i] === this.elems[0] && t == undefined) // end and no matching siblings
+                            return new $lib(null);
+                        else if (s[i] === this.elems[0] && t != undefined) // end and matched sibling
+                            return new $lib(t);
+                        else if (m.elems.indexOf(s[i]) !== -1) // this element matches the selector
+                            t = s[i];
+                    }
+                }
+
+                return new $lib(this.elems[0].nextSibling);
+            },
+            previousSibling: function(selector) {
+                if (!this.hasSingleEl() ? true : this.elems[0].previousSibling == null)
+                    return new $lib(null);
+
+                if (selector != undefined) {
+                    var t, m = new $lib(selector, this.elems[0].parentNode),
+                        s = this.elems[0].parentNode.childNodes;
+
+                    for (var i = 0, MAX = s.length; i < MAX; ++i) {
+                        if (s[i] === this.elems[0] && t == undefined)
+                            return new $lib(null);
+                        else if (s[i] === this.elems[0] && t != undefined)
+                            return new $lib(t);
+                        else if (m.elems.indexOf(s[i]) !== -1)
+                            t = s[i];
+                    }
+                }
+
+                return new $lib(this.elems[0].previousSibling);
+            },
+
+            /* EVENT METHODS */
+            bind: function(type, listener) {
+                return this.each(function() {
+                    this.addEventListener(type, listener, false);
+                });
+            },
+            unbind: function(type, listener) {
+                return this.each(function() {
+                    this.removeEventListener(type, listener, false);
+                });
+            },
+            fire: function(evnt) {
+                var ev = document.createEvent("HTMLEvents");
+
+                return this.each(function() {
+                    ev.initEvent(evnt, true, true);
+                    this.dispatchEvent(ev);
+                });
+            },
+            blur: function() {
+                return this.each(function() {
+                    this.blur();
+                });
+            },
+            click: function() {
+                return this.each(function() {
+                    this.click();
+                });
+            },
+            scrollIntoView: function(alignWithTop) {
+                return this.each(function() {
+                    this.scrollIntoView(alignWithTop);
+                });
+            },
+            /* HELPER METHODS */
+            delay: function(func, time) {
+                return this.each(function() {
+                    var $this = this;
+                    setTimeout(function() {
+                        func.call($this);
+                    }, time);
+                });
+            },
+            each: function(func, args) {
+                if (args != null && !Array.isArray(args))
+                    args = [args];
+
+                for (var i = 0, MAX = this.elems.length; i < MAX; ++i)
+                    func.apply(this.elems[i], args || [i]);
+
                 return this;
-            else if (selector == null)
-                selector = "*";
+            },
+            exists: function() {
+                return this.elems.length > 0;
+            },
+            hasSingleEl: function() {
+                return this.elems.length === 1;
+            },
+            riceCheck: function() {
+                return this.each(function() {
+                    var click = function(e) {
+                        e.preventDefault();
+                        this.previousSibling.click();
+                    };
+                    if (this.isRiced) return;
+                    else if (this.nextSibling != undefined && this.nextSibling.className === "riceCheck")
+                        return $(this.nextSibling).bind("click", click);
 
-            return new $lib(selector, this.elems[0]);
-        },
-        nextSibling: function(selector) {
-            if (!this.hasSingleEl() ? true : this.elems[0].nextSibling == null)
-                return new $lib(null);
+                    var div = $("<div class=riceCheck>").bind("click", click);
+                    $(this).hide().after(div);
 
-            if (selector != undefined) {
-                var t, m = new $lib(selector, this.elems[0].parentNode),
-                    s = this.elems[0].parentNode.childNodes;
-
-                for (var i = s.length - 1; i >= 0; --i) {
-                    if (s[i] === this.elems[0] && t == undefined) // end and no matching siblings
-                        return new $lib(null);
-                    else if (s[i] === this.elems[0] && t != undefined) // end and matched sibling
-                        return new $lib(t);
-                    else if (m.elems.indexOf(s[i]) !== -1) // this element matches the selector
-                        t = s[i];
-                }
+                    return this.isRiced = true;
+                });
+            },
+            jsColor: function() {
+                return this.each(function() {
+                    this.color = new $SS.jscolor.color(this);
+                });
             }
-
-            return new $lib(this.elems[0].nextSibling);
-        },
-        previousSibling: function(selector) {
-            if (!this.hasSingleEl() ? true : this.elems[0].previousSibling == null)
-                return new $lib(null);
-
-            if (selector != undefined) {
-                var t, m = new $lib(selector, this.elems[0].parentNode),
-                    s = this.elems[0].parentNode.childNodes;
-
-                for (var i = 0, MAX = s.length; i < MAX; ++i) {
-                    if (s[i] === this.elems[0] && t == undefined)
-                        return new $lib(null);
-                    else if (s[i] === this.elems[0] && t != undefined)
-                        return new $lib(t);
-                    else if (m.elems.indexOf(s[i]) !== -1)
-                        t = s[i];
-                }
-            }
-
-            return new $lib(this.elems[0].previousSibling);
-        },
-
-        /* EVENT METHODS */
-        bind: function(type, listener) {
-            return this.each(function() {
-                this.addEventListener(type, listener, false);
-            });
-        },
-        unbind: function(type, listener) {
-            return this.each(function() {
-                this.removeEventListener(type, listener, false);
-            });
-        },
-        fire: function(evnt) {
-            var ev = document.createEvent("HTMLEvents");
-
-            return this.each(function() {
-                ev.initEvent(evnt, true, true);
-                this.dispatchEvent(ev);
-            });
-        },
-        blur: function() {
-            return this.each(function() {
-                this.blur();
-            });
-        },
-        click: function() {
-            return this.each(function() {
-                this.click();
-            });
-        },
-        scrollIntoView: function(alignWithTop) {
-            return this.each(function() {
-                this.scrollIntoView(alignWithTop);
-            });
-        },
-        /* HELPER METHODS */
-        delay: function(func, time) {
-            return this.each(function() {
-                var $this = this;
-                setTimeout(function() {
-                    func.call($this);
-                }, time);
-            });
-        },
-        each: function(func, args) {
-            if (args != null && !Array.isArray(args))
-                args = [args];
-
-            for (var i = 0, MAX = this.elems.length; i < MAX; ++i)
-                func.apply(this.elems[i], args || [i]);
-
-            return this;
-        },
-        exists: function() {
-            return this.elems.length > 0;
-        },
-        hasSingleEl: function() {
-            return this.elems.length === 1;
-        },
-        riceCheck: function() {
-            return this.each(function() {
-                var click = function(e) {
-                    e.preventDefault();
-                    this.previousSibling.click();
-                };
-                if (this.isRiced) return;
-                else if (this.nextSibling != undefined && this.nextSibling.className === "riceCheck")
-                    return $(this.nextSibling).bind("click", click);
-
-                var div = $("<div class=riceCheck>").bind("click", click);
-                $(this).hide().after(div);
-
-                return this.isRiced = true;
-            });
-        },
-        jsColor: function() {
-            return this.each(function() {
-                this.color = new $SS.jscolor.color(this);
-            });
-        }
-    };
+        };
     /* END STYLE SCRIPT LIBRARY */
 
     /* STYLE SCRIPT CLASSES & METHODS */
@@ -912,7 +911,7 @@
                 $SS.location = $SS.getLocation();
 
                 if ((m_VERSION = $SS.Config.get("VERSION")) !== VERSION) {
-                // Signal that OneeChan has updated
+                    // Signal that OneeChan has updated
                     var detail = {
                         type: 'info',
                         content: NAME + ' has been updated to version ' + VERSION + '.',
@@ -928,8 +927,8 @@
                     setTimeout(function() {
                         document.dispatchEvent(event);
                     }, 25);
-                // Correct selected theme/mascot after updating
-                // and the number defaults has changed.                    
+                    // Correct selected theme/mascot after updating
+                    // and the number defaults has changed.                    
                     var ntMascots = $SS.Mascots.defaults.length, // new total
                         ntThemes = $SS.Themes.defaults.length,
                         otMascots = $SS.Config.get("Total Mascots"), // old total
@@ -1074,7 +1073,7 @@
                 return this.hasGM ?
                     GM_setValue(name, val) :
                     localStorage.removeItem(name, val),
-                localStorage.setItem(name, val);
+                    localStorage.setItem(name, val);
             }
         },
 
@@ -1085,7 +1084,7 @@
                 $(document).bind("keydown", $SS.options.keydown);
 
                 var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'>OneeChan</a></span>").bind("click", $SS.options.show); /* seaweedchan */
-                    b = $("<span id='OneeChanLink'> [<a title='OneeChan Settings' href='javascript:;'>OneeChan</a>]&nbsp;</span>").bind("click", $SS.options.show); /* loadletter */
+                b = $("<span id='OneeChanLink'> [<a title='OneeChan Settings' href='javascript:;'>OneeChan</a>]&nbsp;</span>").bind("click", $SS.options.show); /* loadletter */
                 $.asap(function() {
                     return $(".fourchan-x #shortcuts, .fourchan_x, .is_catalog").exists();
                 }, function() {
@@ -1102,16 +1101,16 @@
                             return e.stopPropagation();
                         }),
                         optionsHTML = "<ul id=options-tabs>" +
-                            "<li class='tab-item'><label class='tab-label selected' for=main-select>Main</label></li>" +
-                            "<li class='tab-item'><label class='tab-label' for=themes-select>Themes</label></li>" +
-                            "<li class='tab-item'><label class='tab-label' for=mascots-select>Mascots</label></li>" +
-                            "</ul><div id=options-container><input type=radio class=tab-select name=tab-select id=main-select hidden checked><div id='main-section' class='options-section'>" +
-                            "<p class='buttons-container'>" +
-                            "<a class='options-button' title='Export your settings as JSON.' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a><a class='options-button' title='Reset OneeChan settings.' name=resetSettings>Reset</a>" +
-                            "<span id=oneechan-version><span>OneeChan</span> v" + VERSION + "<span class=link-delim> | </span>" +
-                            "<a href='https://github.com/Nebukazar/OneeChan/wiki' id=changelog-link target='_blank' title='Learn about OneeChan.'>Wiki</a><span class=link-delim> | </span>" +
-                            "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank' title='Read the changelog.'>Changelog</a><span class=link-delim> | </span>" +
-                            "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md#reporting-bugs-and-suggestions' id=issues-link target='_blank' title='Report an issue.'>Issues</a></p>",
+                        "<li class='tab-item'><label class='tab-label selected' for=main-select>Main</label></li>" +
+                        "<li class='tab-item'><label class='tab-label' for=themes-select>Themes</label></li>" +
+                        "<li class='tab-item'><label class='tab-label' for=mascots-select>Mascots</label></li>" +
+                        "</ul><div id=options-container><input type=radio class=tab-select name=tab-select id=main-select hidden checked><div id='main-section' class='options-section'>" +
+                        "<p class='buttons-container'>" +
+                        "<a class='options-button' title='Export your settings as JSON.' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a><a class='options-button' title='Reset OneeChan settings.' name=resetSettings>Reset</a>" +
+                        "<span id=oneechan-version><span>OneeChan</span> v" + VERSION + "<span class=link-delim> | </span>" +
+                        "<a href='https://github.com/Nebukazar/OneeChan/wiki' id=changelog-link target='_blank' title='Learn about OneeChan.'>Wiki</a><span class=link-delim> | </span>" +
+                        "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank' title='Read the changelog.'>Changelog</a><span class=link-delim> | </span>" +
+                        "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md#reporting-bugs-and-suggestions' id=issues-link target='_blank' title='Report an issue.'>Issues</a></p>",
                         key, val, des;
 
                     for (key in defaultConfig) {
@@ -1155,7 +1154,7 @@
                             optionsHTML += "<label class=option title=\"" + des + "\"><span class='option-title'>" + key + (key === "Font Family" ? " (<a name=loadSysFonts title='Load fonts from system. Requires flash from external site to run.'>" + ($SS.fontList ? "loaded!" : "load") + "</a>)" : "") + "</span>" +
                                 "<select name='" + key + "'" + (defaultConfig[key][3] === true ? " has-suboption" : "") + ">";
 
-                             for (var i = 0, MAX = opts.length; i < MAX; ++i) {
+                            for (var i = 0, MAX = opts.length; i < MAX; ++i) {
                                 var name, value;
 
                                 if (typeof opts[i] === "object") {
@@ -1183,7 +1182,7 @@
                             optionsHTML += "</div><input type=radio class=tab-select name=tab-select id=mascots-select hidden><div id='mascot-section' class='options-section'>";
                         } else // checkbox
                             optionsHTML += "<label class=option title=\"" + des + "\"><span class='option-title'>" + key + "</span><input" + (val ? " checked" : "") +
-                                " name='" + key + "' " + (defaultConfig[key][3] === true ? " has-suboption" : "") + " type=checkbox></label>";
+                            " name='" + key + "' " + (defaultConfig[key][3] === true ? " has-suboption" : "") + " type=checkbox></label>";
                     }
 
                     optionsHTML += "</div></div><div class='options-close'><a class='options-button' name=save>Save</a><a class='options-button' name=cancel>Cancel</a></div>";
@@ -1197,8 +1196,7 @@
                         if (this.files[0].name.match(/\.json$/) == null) {
                             alert('Only JSON files are accepted!');
                             return;
-                        }
-                        else if (!confirm('Your current settings will be entirely overwritten, are you sure?')) {
+                        } else if (!confirm('Your current settings will be entirely overwritten, are you sure?')) {
                             return;
                         }
                         reader.onload = (function(tFile) {
@@ -1236,15 +1234,16 @@
                         if (confirmReset) {
                             if (typeof GM_deleteValue !== "undefined") {
                                 var keys = GM_listValues();
-                                for (var i=0, key=null; key=keys[i]; i++) {
-                                GM_deleteValue(key);
-                            }}
-                            else if ($SS.browser.webkit) {
-                            Object.keys(localStorage).forEach(function(key) {
-                            if (/^(?:OneeChan)/.test(key)) {
-                                    localStorage.removeItem(key);
+                                for (var i = 0, key = null; key = keys[i]; i++) {
+                                    GM_deleteValue(key);
                                 }
-                            })}
+                            } else if ($SS.browser.webkit) {
+                                Object.keys(localStorage).forEach(function(key) {
+                                    if (/^(?:OneeChan)/.test(key)) {
+                                        localStorage.removeItem(key);
+                                    }
+                                })
+                            }
                             alert('Your OneeChan settings have been reset. Reloading.');
                             return window.location.reload();
                         } else return;
@@ -1266,8 +1265,8 @@
                             });
                         else
                             $("[class*='" + this.name.replace(/\s/g, "_") + "']").each(function() {
-                                    $(this).hide();
-                                });
+                                $(this).hide();
+                            });
                     });
                     $("a[name=save]", tOptions).bind("click", function() {
                         $SS.options.saveAndClose = true;
@@ -1611,7 +1610,7 @@
 
                 for (var i = 0, MAX = themeInputs.length; i < MAX; ++i)
                     innerHTML += "<label><span class='option-title'>" + themeInputs[i].dName + ":</span>" +
-                        "<input type=text class=jsColor name=" + themeInputs[i].name + " value=" + (bEdit ? tEdit[themeInputs[i].name] : "") + "></label>";
+                    "<input type=text class=jsColor name=" + themeInputs[i].name + " value=" + (bEdit ? tEdit[themeInputs[i].name] : "") + "></label>";
 
                 innerHTML += "<label id=customCSS><span class='option-title'>Custom CSS:</span><textarea name=customCSS>" + (bEdit ? tEdit.customCSS || "" : "") + "</textarea>" +
                     "</label><div>" +
@@ -1657,14 +1656,14 @@
             },
             addTheme: function(tIndex, exp) {
                 var overlay = $("#overlay2"),
-                    tTheme  = {},
+                    tTheme = {},
                     makeRPA = function() {
                         var RPA = [];
 
-                        RPA.push($("select[name=bgR]",  overlay).val());
+                        RPA.push($("select[name=bgR]", overlay).val());
                         RPA.push($("select[name=bgPY]", overlay).val());
                         RPA.push($("select[name=bgPX]", overlay).val());
-                        RPA.push($("select[name=bgA]",  overlay).val());
+                        RPA.push($("select[name=bgA]", overlay).val());
 
                         return RPA.join(" ");
                     },
@@ -1681,7 +1680,7 @@
 
                     if (this.name === "bgImg") {
                         var b64 = $("input[name=customIMGB64]", overlay);
-                            val = b64.exists() ? decodeURIComponent(b64.val()) : this.value;
+                        val = b64.exists() ? decodeURIComponent(b64.val()) : this.value;
 
                         if (val !== "" && !$SS.validImageURL(val) && !$SS.validBase64(val)) {
                             error = true;
@@ -1730,7 +1729,7 @@
                 return overlay.remove();
             },
             deleteTheme: function(tIndex) {
-                if ($SS.conf["Themes"][tIndex].default && 
+                if ($SS.conf["Themes"][tIndex].default &&
                     $SS.conf["Hidden Themes"].push(tIndex) === 1)
                     $("#themes-section a[name=restoreThemes]").show();
 
@@ -1805,19 +1804,19 @@
                     preview = $("#mascotprev"),
                     bSetPos, cIMG, cOffset, cHOffset, cName, cWidth, cHeight, cFlip, tMascot, bDefault;
 
-                cIMG     = decodeURIComponent($("input[name=customIMGB64]", mascotAdd).val() || $("input[name=customIMG]", mascotAdd).val());
-                cOffset  = parseInt($("input[name=mOffset]", mascotAdd).val());
+                cIMG = decodeURIComponent($("input[name=customIMGB64]", mascotAdd).val() || $("input[name=customIMG]", mascotAdd).val());
+                cOffset = parseInt($("input[name=mOffset]", mascotAdd).val());
                 cHOffset = parseInt($("input[name=mHOffset]", mascotAdd).val());
-                cName    = $("input[name=mName]", mascotAdd).val();
-                cFlip    = $("input[name=mFlip]", mascotAdd).val();
-                cWidth   = $("input[name=mWidth]", mascotAdd).val();
-                cHeight  = $("input[name=mHeight]", mascotAdd).val();
-                cBoards  = $("input[name=mBoards]", mascotAdd).val();
+                cName = $("input[name=mName]", mascotAdd).val();
+                cFlip = $("input[name=mFlip]", mascotAdd).val();
+                cWidth = $("input[name=mWidth]", mascotAdd).val();
+                cHeight = $("input[name=mHeight]", mascotAdd).val();
+                cBoards = $("input[name=mBoards]", mascotAdd).val();
 
                 if (!$SS.validImageURL(cIMG) && !$SS.validBase64(cIMG))
                     return alert("Not a valid image URL/base64!");
 
-                cIMG     = $SS.cleanBase64(cIMG);
+                cIMG = $SS.cleanBase64(cIMG);
                 bDefault = $SS.conf["Mascots"][mIndex] != undefined && $SS.conf["Mascots"][mIndex].default;
 
                 if (typeof mIndex === "number" && !bDefault) {
@@ -1872,14 +1871,14 @@
                     preview = $("#mascotprev"),
                     bSetPos, cIMG, cOffset, cHOffset, cName, cWidth, cHeight, cFlip, tMascot, bDefault;
 
-                cIMG     = decodeURIComponent($("input[name=customIMGB64]", mascotAdd).val() || $("input[name=customIMG]", mascotAdd).val());
-                cOffset  = parseInt($("input[name=mOffset]", mascotAdd).val());
+                cIMG = decodeURIComponent($("input[name=customIMGB64]", mascotAdd).val() || $("input[name=customIMG]", mascotAdd).val());
+                cOffset = parseInt($("input[name=mOffset]", mascotAdd).val());
                 cHOffset = parseInt($("input[name=mHOffset]", mascotAdd).val());
-                cName    = $("input[name=mName]", mascotAdd).val();
-                cFlip    = $("input[name=mFlip]", mascotAdd).val();
-                cWidth   = $("input[name=mWidth]", mascotAdd).val();
-                cHeight  = $("input[name=mHeight]", mascotAdd).val();
-                cBoards  = $("input[name=mBoards]", mascotAdd).val();
+                cName = $("input[name=mName]", mascotAdd).val();
+                cFlip = $("input[name=mFlip]", mascotAdd).val();
+                cWidth = $("input[name=mWidth]", mascotAdd).val();
+                cHeight = $("input[name=mHeight]", mascotAdd).val();
+                cBoards = $("input[name=mBoards]", mascotAdd).val();
 
                 if (!$SS.validImageURL(cIMG) && !$SS.validBase64(cIMG))
                     return alert("Not a valid image URL/base64!");
@@ -2222,7 +2221,7 @@
                 name: "Photons + Odin",
                 authorName: "John",
                 authorTrip: "!Hu6tDS8lls",
-                "default": true, 
+                "default": true,
                 bgImg: "R0lGODlhAwADAIAAAB0dHRkZGSH5BADoAwAALAAAAAADAAMAAAIDDG5YADs=",
                 bgRPA: "repeat top left fixed",
                 replyOp: "1.0",
@@ -2768,7 +2767,7 @@
                 replybgHLColor: "d5dada",
                 replyslctColor: "5d6678"
             }, {
-                name:"Blue Tone",
+                name: "Blue Tone",
                 authorName: "Leagle",
                 authorTrip: "!YoGiiH6Oi.",
                 "default": true,
@@ -3358,8 +3357,7 @@
                             c = 1;
                         var l = (ts[1] + ps[1]) / 2;
 
-                        var pp =
-                            [
+                        var pp = [
                             tp[0],
                             tp[1] + ts[1]
                         ];
@@ -3575,7 +3573,7 @@
                                 holdPad = false;
                                 $(valueElement).fire("change");
                             }
-                    };
+                        };
                     p.padM.onmousedown = function(e) {
                         holdPad = true;
                         setPad(e);
@@ -3587,7 +3585,7 @@
                                 holdSld = false;
                                 $(valueElement).fire("change");
                             }
-                    };
+                        };
                     p.sldM.onmousedown = function(e) {
                         holdSld = true;
                         setSld(e);
@@ -3674,8 +3672,7 @@
                 }
 
                 function getPickerDims(o) {
-                    var dims =
-                        [
+                    var dims = [
                         2 * o.pickerInset + 2 * o.pickerFace + $SS.jscolor.images.pad[0] +
                         (o.slider ? 2 * o.pickerInset + 2 * $SS.jscolor.images.arrow[0] + $SS.jscolor.images.sld[0] : 0),
                         2 * o.pickerInset + 2 * o.pickerFace + $SS.jscolor.images.pad[1]
@@ -3699,9 +3696,9 @@
                     var rgb = HSV_RGB(THIS.hsv[0], THIS.hsv[1], 1);
                     for (var i = 0; i < seg.length; i += 1)
                         seg[i].style.backgroundColor = "rgb(" +
-                            (rgb[0] * (1 - i / seg.length) * 100) + "%," +
-                            (rgb[1] * (1 - i / seg.length) * 100) + "%," +
-                            (rgb[2] * (1 - i / seg.length) * 100) + "%)";
+                        (rgb[0] * (1 - i / seg.length) * 100) + "%," +
+                        (rgb[1] * (1 - i / seg.length) * 100) + "%," +
+                        (rgb[2] * (1 - i / seg.length) * 100) + "%)";
                 }
 
                 function redrawSld() {
@@ -3851,7 +3848,7 @@
         },
         Mascot: function(index) {
             // no mascot
-            if (index == -1) { 
+            if (index == -1) {
                 this.img = new $SS.Image(null);
                 this.hidden = true;
                 return;
@@ -3873,8 +3870,8 @@
 
             this.preview = function() {
                 var div = $("<div " + (this.hidden ? "hidden=true " : "") +
-                    "id=mascot" + this.index + " class=\'mascot-preview" + (this.enabled ? " selected" : "") +
-                    "\' style=\"background: url(\'" + this.img.get() + "\')\">")
+                        "id=mascot" + this.index + " class=\'mascot-preview" + (this.enabled ? " selected" : "") +
+                        "\' style=\"background: url(\'" + this.img.get() + "\')\">")
                     .html("<span class='mascot-buttons'><a class='mascot-link delete'>Delete</a><a class='mascot-link edit'>Edit</a><br><br><a class='mascot-link mascot-name'>" + this.name + "</a></span>");
 
                 $(div).bind("click", function() {
@@ -3968,7 +3965,7 @@
                     "<path fill='rgb(" + this.tripColor.rgb + ")' d='M16,3.5c-4.142,0-7.5,3.358-7.5,7.5c0,4.143,7.5,18.121,7.5,18.121S23.5,15.143,23.5,11C23.5,6.858,20.143,3.5,16,3.5z M16,14.584c-1.979,0-3.584-1.604-3.584-3.584S14.021,7.416,16,7.416S19.584,9.021,19.584,11S17.979,14.584,16,14.584z'/></svg>",
                 threadArchived: "<svg viewBox='0 0 30 30' preserveAspectRatio='true' height='16' width='16' xmlns='http://www.w3.org/2000/svg'>" +
                     "<path fill='rgb(" + this.tripColor.rgb + ")' d='M15.5,3.029l-10.8,6.235L4.7,21.735L15.5,27.971l10.8-6.235V9.265L15.5,3.029zM24.988,10.599L16,15.789v10.378c0,0.275-0.225,0.5-0.5,0.5s-0.5-0.225-0.5-0.5V15.786l-8.987-5.188c-0.239-0.138-0.321-0.444-0.183-0.683c0.138-0.238,0.444-0.321,0.683-0.183l8.988,5.189l8.988-5.189c0.238-0.138,0.545-0.055,0.684,0.184C25.309,10.155,25.227,10.461,24.988,10.599z'/></svg>",
-                menuButton:   "<svg viewBox='0 0 30 30' preserveAspectRatio='true' height='16' width='16' xmlns='http://www.w3.org/2000/svg'>" +
+                menuButton: "<svg viewBox='0 0 30 30' preserveAspectRatio='true' height='16' width='16' xmlns='http://www.w3.org/2000/svg'>" +
                     "<path fill='rgb(" + this.blinkColor.rgb + ")' d='M10.129,22.186 16.316,15.999 10.129,9.812 13.665,6.276 23.389,15.999 13.665,25.725z'/></svg>",
                 downArrow: "<svg viewBox='7 4 29 27' preserveAspectRatio='true' height='16' width='16' xmlns='http://www.w3.org/2000/svg'>" +
                     "<path fill='rgb(" + this.tripColor.rgb + ")' d='M8.037,11.166L14.5,22.359c0.825,1.43,2.175,1.43,3,0l6.463-11.194c0.826-1.429,0.15-2.598-1.5-2.598H9.537C7.886,8.568,7.211,9.737,8.037,11.166z'/></svg>"
