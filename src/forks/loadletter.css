@@ -1,6 +1,11 @@
 /* loadletter 4chan X v2*/
 /* Compatibility fixes for different 4chan X forks */
 /* Some functionality of OneeChan might not work with this fork */
+/* Outlines */
+.qphl {
+  box-shadow: 0 0 0 2px rgba(" + $SS.theme.linkColor.rgb + ",0.7) !important;
+  outline: none !important;
+}
 /* Quick Reply */
 #qr {
   max-width: 299px;
@@ -106,6 +111,9 @@
   top: inherit !important;
   bottom: 30px !important;
 }
+.vertical-qr:root #qr .move {
+  right: 82% !important;
+}
 :root.vertical-qr #qr .move:not(span) {
   min-width: 135px !important;
 }
@@ -114,15 +122,15 @@
 }
 /* Minimal Sidebar */
 :root.mini-sidebar:root.right-sidebar #qr .move {
-  right: 71.6% !important;
+  right: 81% !important;
   top: 85px !important;
 }
 :root.mini-sidebar:root.left-sidebar #qr .move {
-  left: 35.6% !important;
-  top: 213px;
+  left: 55% !important;
+  top: 85px;
 }
 :root.mini-sidebar #qr .move:not(span) {
-  min-width: 192px !important;
+  min-width: 135px !important;
 }
 :root.mini-sidebar #qr label .riceCheck {
   display: block !important;
