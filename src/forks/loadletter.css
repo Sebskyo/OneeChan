@@ -81,6 +81,11 @@
 .captchainput > .field {
   min-width: 99.2%;
 }
+:root.qr-controls #qr .move .riceCheck,
+:root.qr-controls #qr .move .autohide {
+  display: none !important;
+}
+
 /* Vertical QR */
 :root.vertical-qr #qr.autohide:not(:hover) {
   width: 260px !important;
