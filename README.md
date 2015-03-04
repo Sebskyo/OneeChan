@@ -1,6 +1,3 @@
-#### This project is looking for a new maintainer, feel free to contact me.
-
-
 OneeChan
 ====
 
@@ -20,14 +17,13 @@ Originally developed by [seaweedchan](https://github.com/seaweedchan), this fork
 
 
 #### Compatibility with 4chan X forks and others:
-(Updated 2014-12-27)
+(Updated 2015-03-03)
 
 - [ccd0](https://github.com/ccd0/4chan-x) /// `Compatible` (Recommended)
-- [ihavenoface](https://github.com/ihavenoface/4chan-x) /// `Compatible`
 - [loadletter](https://github.com/loadletter/4chan-x) /// `Compatible`
 - [inline](https://boards.4chan.org/) /// `No`
 
-ccd0's 4chan X is the recommended 4chan X version and the one OneeChan is primarily developed for. If you use another 4chan X version, please make sure you select your fork version under `Compatibility` in OneeChan options. Enabling Quick Reply and Persistent QR in 4chan X is recommended for maximum compatibility. 
+ccd0's 4chan X is the recommended 4chan X version and the one OneeChan is primarily developed for. If you use another 4chan X version, please make sure you select your fork version under `Compatibility` in OneeChan options. Enabling Quick Reply, Persistent QR and Auto Hide QR in 4chan X is recommended for maximum compatibility. 
 
 
 #### Troubleshooting
