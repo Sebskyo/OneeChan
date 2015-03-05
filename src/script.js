@@ -41,14 +41,14 @@
                 }], true
             ],
             "Custom Right Margin": [
-                0, "Custom width of border or outline of highlighted posts (pixels).", "Right Margin", 999, true
+                0, "Right margin custom width (pixels).", "Right Margin", 999, true
             ],
             "Fixed Thread Watcher": [true, "The thread watcher will not scroll with the page."],
-            "Style Thread Stats": [false, "Makes the thread stats stand out more. Disable Updater and Stats in Header if using ccd0."],
-            "Rounded Corners": [false, "Styles replies, menus and the QR to have subtly rounded corners."],
-            "Underline All Links": [false, "Underlines all the links."],
+            "Style Thread Stats": [false, "Makes thread stats stand out more. Disable 'Updater and Stats in Header' if using ccd0 4chan X."],
+            "Rounded Corners": [false, "Styles replies, menus and Quick Reply to have subtly rounded corners."],
+            "Underline All Links": [false, "Underlines all the links in the page."],
             "Show Banner": [true, "Toggle visibility of the banner.", null, true],
-            "Reduce Banner Opacity": [false, "Reduce the opacity of the banner for easier viewing.", "Show Banner", true, true],
+            "Reduce Banner Opacity": [false, "Reduce opacity of the banner for easier viewing.", "Show Banner", true, true],
             "Show Board Name": [true, "Toggle visibility of the board name."],
             "Show Reply to Thread Button": [false, "Toggle visibility of the Start a Thread / Reply to Thread button."],
             "Show Checkboxes": [false, "Hides checkboxes and deleteform to be replaced by 4chan X menus. Refresh to apply."],
@@ -57,15 +57,11 @@
             "Show Top Ad": [true, "Show the top 4chan banner ad.", "Show 4chan Ads", true, true],
             "Show Middle Ad": [true, "Show the middle 4chan banner ad.", "Show 4chan Ads", true, true],
             "Show Bottom Ad": [true, "Show the bottom 4chan banner ad.", "Show 4chan Ads", true, true],
-            "Reduce Ad Opacity": [false, "Reduce the opacity of Ads until hover for easier viewing.", "Show 4chan Ads", true, true],
+            "Reduce Ad Opacity": [false, "Reduce the opacity of ads until hover for easier viewing.", "Show 4chan Ads", true, true],
             "Show Navigation Links": [true, "Toggle visibility of the navigation links at the top and bottom of the threads.", null, true],
             "Show Top Links": [true, "Toggle visibility of the top navigation links.", "Show Navigation Links", true, true],
             "Show Bottom Links": [true, "Toggle visibility of the bottom navigation links.", "Show Navigation Links", true, true],
-            "Show Previous/Next buttons": [false, "Shows the Previous / Next buttons in page navigation mode."],
-            ":: Header": ["header", ""],
-            "Show Header Background Gradient": [true, "Gives the header bar a gradient background."],
-            "Show Header Shadow": [true, "Gives the header a drop shadow."],
-            "Highlight Current Board": [true, "Gives the current board link a bottom highlight border."],
+            "Show Previous/Next buttons": [false, "Shows previous / next buttons in paged navigation mode."],
             ":: Sidebar": ["header", ""],
             "Sidebar Position": [
                 1, "Change the position of the sidebar or disable it altogether.", [{
@@ -79,12 +75,16 @@
                     value: 3
                 }], true
             ],
-            "Disable In Catalog View": [false, "Disables the Sidebar when viewing the catalog. Native catalog only."],
+            "Disable In Catalog View": [false, "Disables the Sidebar when viewing the catalog. Native catalog only!"],
             "SS-like Sidebar": [true, "Darkens the Sidebar and adds a border like 4chan Style Script."],
             "Minimal Sidebar": [false, "Shrinks the sidebar and disables the banner."],
+            ":: 4chan X Header": ["header", ""],
+            "Show Header Background Gradient": [true, "Gives the header bar a gradient background."],
+            "Show Header Shadow": [true, "Gives the header a drop shadow."],
+            "Highlight Current Board": [true, "Gives the current board link a bottom highlight border."],
             ":: Quick Reply": ["header", ""],
             "Autohide Style": [
-                3, "Changes the style of the quick reply hiding. Enable Autohide QR in 4chan X.", [{
+                3, "Changes how the quick reply is hidden. Enable Autohide QR in 4chan X.", [{
                     name: "Normal",
                     value: 1
                 }, {
@@ -105,17 +105,17 @@
             "Reduce Mascot Opacity": [false, "Reduces the opacity of the mascots until hover. Warning: Overrides pointer events."],
             "Grayscale Mascots": [false, "Desaturates mascots."],
             ":: Replies": ["header", ""],
-            "Fit Width": [true, "Replies stretch to the width of the entire page."],
-            "Show Reply Header": [true, "Shows replies header background and line border."],
+            "Fit Width": [true, "Replies stretch to the width of the page."],
+            "Show Reply Header": [true, "Shows reply header background and line border."],
             "Show Post Info On Hover": [false, "Shows post number and file info on hover only."],
             "Show File Info": [true, "Hides the filename, dimensions and size info."],
             "Underline QuoteLinks": [false, "Underlines quotelinks only."],
             "Indent OP": [false, "Indents the OP instead of touching the screen."],
             "Allow Wrapping Around OP": [false, "Allow for replies to wrap around the OP instead of being forced onto their own line."],
-            "Recolor Even Replies": [false, "Makes every other post a darker color. Not compatible with Quote Threading."],
+            "Recolor Even Replies": [false, "Makes every other post a darker color. If Quote Threading is enabled darkens every root reply."],
             "Reduce Thumbnail Opacity": [false, "Reduces opacity of the thumbnails."],
             "Backlink Icons": [true, "Use icons for backlinks instead of text."],
-            "Backlinks on Bottom": [false, "Move backlinks to the bottom right of the replies."],
+            "Backlinks on Bottom": [false, "Move backlinks to the bottom right of replies."],
             "Borders": [
                 2, "Changes which sides of replies have borders.", [{
                     name: "Normal (4chan default)",
