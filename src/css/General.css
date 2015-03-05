@@ -205,14 +205,14 @@ input[type=checkbox]:checked+.riceCheck::before {
 }
 .globalMessage, h2, h3 {
   margin: auto;
-}
-:root.fixed-watcher #thread-watcher {
-  position: fixed !important;
-}
-#custom-board-list, 
+}#custom-board-list, 
 #full-board-list, 
 .shortcut {
   vertical-align: baseline !important;
+}
+/* Thread Watcher */
+:root.fixed-watcher #thread-watcher {
+  position: fixed !important;
 }
 /* QR link */
 .qr-link {
