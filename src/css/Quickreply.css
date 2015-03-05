@@ -30,6 +30,9 @@
   /* ccd0 prior to v1.10.3 */
   margin-top: 1px !important;
 }
+:root.gecko #qr > form > select {
+  margin: 0 !important;
+}
 #qr select[data-name="thread"] {
   margin: 1px 0 1px 0;
   max-width: 133px;
