@@ -1,3 +1,11 @@
+### v5.5.23
+*2015-03-06*
+
+- The QR label now fades away when using Vertical Tabbed QR
+- Slightly improved responsiveness of Vertical Tabbed QR
+- Some tooltip changes in the Main menu
+- Small QR fixes for 4chan X v1.10.3.7+
+
 ### v5.5.22
 *2015-03-04*
 
