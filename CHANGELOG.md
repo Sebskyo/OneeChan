@@ -1,3 +1,18 @@
+### v5.5.24
+*2015-03-18*
+
+- Fix `Remove Controls` not hiding the Quick Reply checkbox and label in fade mode
+
+**New Options:**
+
+**Catalog**
+- `Justified Text`, catalog text can now be centered or justified
+- `Show Background`, every thread in the catalog will receive a matching background depending on the color of the theme's reply background
+- `Unified Thumbnail Size`, makes all thumbnails in the catalog the same size (150x150)
+
+**Fonts**
+- `Backlink Font Size`, allows you to change backlink font size when backlink icons are not activated
+
 ### v5.5.23
 *2015-03-06*
 
