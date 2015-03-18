@@ -78,10 +78,6 @@
             "Disable In Catalog View": [false, "Disables the Sidebar when viewing the catalog. Native catalog only!"],
             "SS-like Sidebar": [true, "Darkens the Sidebar and adds a border like 4chan Style Script."],
             "Minimal Sidebar": [false, "Shrinks the sidebar and disables the banner."],
-            ":: 4chan X Header": ["header", ""],
-            "Show Header Background Gradient": [true, "Gives the header bar a gradient background."],
-            "Show Header Shadow": [true, "Gives the header a drop shadow."],
-            "Highlight Current Board": [true, "Gives the current board link a bottom highlight border."],
             ":: Quick Reply": ["header", ""],
             "Autohide Style": [
                 3, "Changes how the quick reply is hidden. Enable Autohide QR in 4chan X.", [{
@@ -159,6 +155,14 @@
                     value: 3
                 }]
             ],
+            ":: Catalog": ["header", ""],
+            "Justified Text": [true, "Justifies the teaser text of every thread to be more uniform."],
+            "Show Background": [false, "Threads receive a matching background."],
+            "Unified Thumbnail Size": [false, "Makes all thumbnails the same size regardless of aspect ratio."],
+            ":: 4chan X Header": ["header", ""],
+            "Show Header Background Gradient": [true, "Gives the header bar a gradient background."],
+            "Show Header Shadow": [true, "Gives the header a drop shadow."],
+            "Highlight Current Board": [true, "Gives the current board link a bottom highlight border."],
             ":: Highlighting": ["header", ""],
             "Decoration Style": [
                 0, "Changes the highlight decoration of posts.", [{
@@ -243,6 +247,7 @@
                 }]
             ],
             "Font Size": [13, "Set the general size of text (Pixels). Min: 10px, Max: 18px"],
+            "Backlink Font Size": [9, "Set the font size of backlinks."],
             "Bitmap Font": [false, "Check this if you are using a bitmap font."],
             ":: Compatibility": ["header", ""],
             "Version Fix": [
@@ -1176,6 +1181,9 @@
                         } else if (key === "Font Size") {
                             optionsHTML += "<label class='option visible' title=\"" + des + "\"><span class='option-title'>" + key + "</span>" +
                                 "<input type=text name='Font Size' value=" + $SS.conf["Font Size"] + "px></label>";
+                        } else if (key === "Backlink Font Size") {
+                            optionsHTML += "<label class='option visible' title=\"" + des + "\"><span class='option-title'>" + key + "</span>" +
+                                "<input type=text name='Backlink Font Size' value=" + $SS.conf["Backlink Font Size"] + "px></label>";
                         } else if (key === "Themes") {
                             optionsHTML += "</div><input type=radio class=tab-select name=tab-select class=tab-select  id=themes-select hidden><div id='themes-section' class='options-section'>";
                         } else if (key === "Mascots") {
@@ -1514,6 +1522,8 @@
                     } else if (name === "Custom Left Margin") {
                         val = parseInt(val);
                     } else if (name === "Custom Decoration Width") {
+                        val = parseInt(val);
+                    } else if (name === "Backlink Font Size") {
                         val = parseInt(val);
                     }
 
@@ -3224,6 +3234,9 @@
                 $("html").optionClass("Reduce Mascot Opacity", true, "mascot-opacity");
                 $("html").optionClass("Grayscale Mascots", true, "mascot-grayscale");
                 $("html").optionClass("Reduce Thumbnail Opacity", true, "thumb-opacity");
+                $("html").optionClass("Justified Text", true, "catalog-justify");
+                $("html").optionClass("Show Background", true, "catalog-background");
+                $("html").optionClass("Unified Thumbnail Size", true, "catalog-thumbsize");
             }
         },
 

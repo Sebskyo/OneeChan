@@ -89,7 +89,7 @@ a.qr-link {
   font-size:" + $SS.conf["Font Size"] + "px !important;
 }
 .backlink {
-  font-size: x-small;
+  font-size: " + $SS.conf["Backlink Font Size"] + "px !important;
 }
 :root.info-on-hover .postNum {
   font-size: 0 !important;
@@ -149,13 +149,4 @@ a.current {
 /* Font Style */
 .summary {
   font-style:" + ($SS.conf["Bitmap Font"] ? 'none' : 'italic') + ";
-}
-/* Catalog */
-.extended-small .teaser, 
-.extended-large .teaser,
-.subject {
-  text-align: justify;
-}
-.comment {
-  text-align: justify !important;
 }
