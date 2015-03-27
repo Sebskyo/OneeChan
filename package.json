@@ -1,6 +1,6 @@
 {
   "name": "OneeChan",
-  "version": "5.5.24",
+  "version": "5.5.25",
   "description": "Customizable rice and themes for 4chan X.",
   "meta": {
     "name": "OneeChan",
@@ -19,7 +19,7 @@
       "userjs": "OneeChan.user.js"
     },
     "min": {
-      "chrome": "31",
+      "chrome": "32",
       "firefox": "26",
       "greasemonkey": "1.15"
     }
