@@ -2,7 +2,7 @@
 *2015-06-21*
 
 - Fix backlink placement for 4chan X v1.11.0.7
-- Small QR CSS fix for Chrom*
+- Small CSS fix for the QR on Chrom*
 
 ### v5.5.25
 *2015-03-27*
