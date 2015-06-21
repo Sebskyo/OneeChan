@@ -410,18 +410,8 @@
             return setTimeout($.asap, 25, test, cb);
         }
     };
-    E = function(text) {
-            return (text + '').replace(/[&"'<>]/g, function(x) {
-                return {
-                    '&': '&amp;',
-                    "'": '&#039;',
-                    '"': '&quot;',
-                    '<': '&lt;',
-                    '>': '&gt;'
-                }[x];
-            });
-        },
-        $lib.prototype = {
+    
+    $lib.prototype = {
             constructor: $lib,
             elems: [],
             length: function() {
@@ -841,7 +831,10 @@
             var div;
             if (reload !== true) {
                 $SS.options.init();
-                $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler).bind("OpenSettings", $SS.NodeInsertionHandler).bind("ThreadUpdate", $SS.NodeInsertionHandler);
+
+                $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler)
+                           .bind("OpenSettings", $SS.NodeInsertionHandler)
+                           .bind("ThreadUpdate", $SS.NodeInsertionHandler);
 
                 var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
                 var observer = new MutationObserver(function(mutations) {
@@ -878,7 +871,7 @@
 
                 if ($SS.location.home) {
                     $("html").attr("style", "background: " + $SS.theme.bgColor.hex + " !important;");
-                }
+                };
 
                 // 4chan ads being added with JS
                 if (!$SS.conf["Show Top Ad"]) {
@@ -1084,12 +1077,13 @@
 
         /* OPTIONS */
         options: {
-            saveAndClose: false,
+            saveAndClose: true,
             init: function() {
                 $(document).bind("keydown", $SS.options.keydown);
 
                 var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'>OneeChan</a></span>").bind("click", $SS.options.show); /* seaweedchan */
-                b = $("<span id='OneeChanLink'> [<a title='OneeChan Settings' href='javascript:;'>OneeChan</a>]&nbsp;</span>").bind("click", $SS.options.show); /* loadletter */
+                    b = $("<span id='OneeChanLink'> [<a title='OneeChan Settings' href='javascript:;'>OneeChan</a>]&nbsp;</span>").bind("click", $SS.options.show); /* loadletter */
+
                 $.asap(function() {
                     return $(".fourchan-x #shortcuts, .fourchan_x, .is_catalog").exists();
                 }, function() {
@@ -3253,11 +3247,12 @@
             hasInit: false,
             init: function() {
                 if (!this.hasInit) {
-                    if ($SS.conf["Show Checkboxes"] && !$(".postInfo>.riceCheck").exists())
-                        $("input[type=checkbox]").riceCheck();
-                    return this.hasInit = true;
-                } else if ($SS.conf["Show Checkboxes"] && $(".postInfo>.riceCheck").exists()) {
-                    return this.hasInit = false;
+                    if ($SS.conf["Show Checkboxes"] && !$(".postInfo>.riceCheck").exists()) {
+                            $("input[type=checkbox]").riceCheck();
+                            return this.hasInit = true;
+                        } else if ($SS.conf["Show Checkboxes"] && $(".postInfo>.riceCheck").exists()) {
+                            return this.hasInit = false;
+                    }
                 }
             }
         },
