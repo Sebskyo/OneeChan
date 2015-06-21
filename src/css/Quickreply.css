@@ -73,7 +73,7 @@
 }
 .textarea {
   margin-top: 1px;
-  -webkit-margin-after: -2px;
+  -webkit-margin-after: 1px;
 }
 :root.gecko .textarea {
   margin-bottom: 1px;
