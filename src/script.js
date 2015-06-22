@@ -52,7 +52,7 @@
             "Show Board Name": [true, "Toggle visibility of the board name."],
             "Show Reply to Thread Button": [false, "Toggle visibility of the Start a Thread / Reply to Thread button."],
             "Show Checkboxes": [false, "Hides checkboxes and deleteform to be replaced by 4chan X menus. Refresh to apply."],
-            "Show Blotter": [false, "Toggle visibility of the 4chan news blotter."],
+            "Show Blotter": [true, "Toggle visibility of the 4chan news blotter."],
             "Show 4chan Ads": [false, "Opts into 4chan\'s banner ads.", null, true],
             "Show Top Ad": [true, "Show the top 4chan banner ad.", "Show 4chan Ads", true, true],
             "Show Middle Ad": [true, "Show the middle 4chan banner ad.", "Show 4chan Ads", true, true],
@@ -3214,7 +3214,7 @@
                 $("html").optionClass("Show Header Background Gradient", true, "header-gradient");
                 $("html").optionClass("Show Header Shadow", false, "header-shadow");
                 $("html").optionClass("Highlight Current Board", false, "header-highlight");
-                $("html").optionClass("Show Blotter", false, "hide-blotter");
+                $("html").optionClass("Show Blotter", true, "hide-blotter");
                 $("html").optionClass("Show 4chan Ads", true, "show-ads");
                 $("html").optionClass("Show Top Ad", false, "hide-top");
                 $("html").optionClass("Show Middle Ad", false, "hide-middle");
