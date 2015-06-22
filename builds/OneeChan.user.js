@@ -3235,7 +3235,7 @@
                 $("html").optionClass("Show Header Background Gradient", true, "header-gradient");
                 $("html").optionClass("Show Header Shadow", false, "header-shadow");
                 $("html").optionClass("Highlight Current Board", false, "header-highlight");
-                $("html").optionClass("Show Blotter", true, "hide-blotter");
+                $("html").optionClass("Show Blotter", false, "hide-blotter");
                 $("html").optionClass("Show 4chan Ads", true, "show-ads");
                 $("html").optionClass("Show Top Ad", false, "hide-top");
                 $("html").optionClass("Show Middle Ad", false, "hide-middle");
