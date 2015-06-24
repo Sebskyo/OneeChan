@@ -162,5 +162,10 @@ span.hide-announcement {
 }
 /* Accommodate Oneechan icon in header */
 .centered-links:root #shortcuts {
-  width: 310px !important;
+  width: 350px !important;
+}
+/* Blotter */
+#blotter {
+  margin: auto;
+  font-size: 11px;
 }
