@@ -1,3 +1,10 @@
+### v5.5.28
+*2015-06-25*
+
+- Give the blotter a smaller font size
+- Adjust backlinks placement again
+- Fix the header shortcuts going into a second line when 4chan X can't connect (Connection Failed) due to lack of space
+
 ### v5.5.27
 *2015-06-22*
 
