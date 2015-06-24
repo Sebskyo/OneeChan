@@ -111,7 +111,7 @@ div.post {
   padding-right: 5px;
 }
 .menu-button + .container:not(:empty) {
-  margin-left: 2px !important;
+  margin-left: 4px !important;
 }
 :root.reply-fit-width .post .menu-button {
   float: right;
