@@ -1,3 +1,9 @@
+### v5.5.29
+*2015-06-30*
+
+- Change keybind for opening OneeChan from <kbd>CTRL</kbd> + <kbd>O</kbd> to <kbd>CTRL</kbd> + <kbd>F1</kbd> to not interfere with diacritics
+- The options window no longer closes when switching themes
+
 ### v5.5.28
 *2015-06-25*
 
