@@ -1077,7 +1077,7 @@
 
         /* OPTIONS */
         options: {
-            saveAndClose: true,
+            saveAndClose: false,
             init: function() {
                 $(document).bind("keydown", $SS.options.keydown);
 
@@ -1453,7 +1453,7 @@
                 return $("#overlay").remove();
             },
             keydown: function(e) {
-                if (e.ctrlKey && e.keyCode === 79) {
+                if (e.ctrlKey && e.keyCode === 112) {
                     e.preventDefault();
                     e.stopPropagation();
                     $SS.options.show();
