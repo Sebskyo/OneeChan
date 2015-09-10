@@ -1,3 +1,8 @@
+### v5.5.30
+*2015-09-10*
+
+- Migrate mascot links from minus.com to imgur.com
+
 ### v5.5.29
 *2015-06-30*
 
