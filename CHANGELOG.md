@@ -1,3 +1,8 @@
+### v5.5.32
+*2015-09-16*
+
+- Mitigate issue #57 where checkboxes aren't ricing in the index
+
 ### v5.5.31
 *2015-09-10*
 
