@@ -156,6 +156,9 @@ input[type=checkbox],
   -moz-appearance: none;
   margin: 1px;
 }
+input[type=checkbox] {
+  display: none !important;
+}
 .riceCheck {
   margin: 0 2px -1px 0;
 }
