@@ -1,4 +1,10 @@
 /* Some original Yotsuba CSS */
+.party-hat {
+  left: 0;
+  margin-top: -80px;
+  position: absolute;
+  pointer-events: none;
+}
 div.post div.file .fileThumb {
   float: left;
   margin-left: 13px;
