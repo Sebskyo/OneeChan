@@ -1,3 +1,11 @@
+### v5.5.33
+*2015-10-29*
+
+**ccd0:**
+
+- Fix positioning of party hats (#63)
+- Support [sjis] tags on /jp/
+
 ### v5.5.32
 *2015-09-16*
 
