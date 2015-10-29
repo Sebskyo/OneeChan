@@ -5,6 +5,15 @@
   position: absolute;
   pointer-events: none;
 }
+.sjis {
+  font-size: 16px;
+  line-height: 17px;
+  white-space: pre;
+  font-family: 'IPAMonaPGothic', 'Mona', 'MS PGothic', monospace;
+  overflow: auto;
+  display: block;
+  clear: left;
+}
 div.post div.file .fileThumb {
   float: left;
   margin-left: 13px;
