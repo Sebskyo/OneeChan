@@ -95,6 +95,7 @@
             "Remove Background": [false, "Removes the QR background."],
             "Remove Controls": [false, "Removes the QR controls and checkbox."],
             "Expanding Form Inputs": [false, "Makes certain form elements expand on focus."],
+            "Force QR to Sidebar Size": [false, "QR will no longer extend past the sidebar size."],
             ":: Mascots": ["header", ""],
             "Hide Mascots in Catalog": [false, "Hides the mascot when viewing the catalog."],
             "Mascots Overlap Posts": [true, "Mascots will render above posts and threads."],
@@ -3204,6 +3205,7 @@
                 $("html").optionClass("Transparent QR", true, "qr-opacity");
                 $("html").optionClass("Remove Background", true, "qr-background");
                 $("html").optionClass("Remove Controls", true, "qr-controls");
+                $("html").optionClass("Force QR to Sidebar Size", true, "force-qr");
                 $("html").optionClass("SS-like Sidebar", true, "ss-sidebar");
                 $("html").optionClass("Indent OP", false, "force-indent");
                 $("html").optionClass("Allow Wrapping Around OP", false, "force-wrapping");

@@ -84,6 +84,9 @@
   min-height: 58px !important;
   margin-bottom: 1px;
 }
+:root.force-qr #qr {
+  max-width: 297px;
+}
 /* Vertical QR */
 :root.vertical-qr #qr > div > label > div {
   display: none;
