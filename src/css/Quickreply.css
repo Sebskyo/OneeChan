@@ -2,6 +2,8 @@
 #qr {
   box-shadow: none !important;
   border-radius: 0 !important;
+  min-width: 297px !important;
+  box-shadow: none !important;
 }
 #qr .close {
   padding: 2px 3px 2px 4px !important;
@@ -81,9 +83,6 @@
 .captcha-img {
   min-height: 58px !important;
   margin-bottom: 1px;
-}
-#qr > form > div.captcha-root > div.captcha-container > div > div > iframe {
-  width: 293px !important;
 }
 /* Vertical QR */
 :root.vertical-qr #qr > div > label > div {
