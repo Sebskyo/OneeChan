@@ -85,10 +85,6 @@
 #qr > form > div.captcha-root > div.captcha-container > div > div > iframe {
   width: 293px !important;
 }
-#qr > form > div.captcha-root > div.captcha-container > div > div {
-  width: 294px !important;
-  height: 77px !important;
-}
 /* Vertical QR */
 :root.vertical-qr #qr > div > label > div {
   display: none;
@@ -154,4 +150,20 @@
 :root.fade-qr #qr.autohide:not(.focus):not(:hover) {
   opacity: 0.2 !important;
   transition: opacity .2s ease-in-out 1s;
+}
+/* Oekaki */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+}
+::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
+/* webkit captcha scrollbar? */
+:root.blink #qr .captcha-container > div > div:first-of-type {
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+  padding-right: 0 !important;
 }

@@ -11,7 +11,8 @@ textarea,
 .post-last,
 .pln,
 select,
-.captcha-root {
+.captcha-root,
+.tegaki-label {
   color: " + $SS.theme.textColor.hex + " !important;
 }
 /* Names */
@@ -129,6 +130,7 @@ body {
 .dialog,
 .tab-label,
 #post-preview,
+#tegaki,
 .flashListing tr:nth-of-type(2n+1) {
   background: rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important;
 }
