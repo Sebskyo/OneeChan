@@ -3173,6 +3173,7 @@
                 /* Function arguments: ("Option Name", value, "class-name") */
                 $("html").addClass("oneechan");
                 $SS.theme.textColor.isLight ? $("html").addClass("isLight") : "";
+                $SS.theme.bgColor.isLight ? "" : $("html").addClass("dark-captcha");
                 $("html").optionClass("Fixed Thread Watcher", true, "fixed-watcher");
                 $("html").optionClass("Underline QuoteLinks", true, "underline-quotes");
                 $("html").optionClass("Underline All Links", false, "underline-disabled");
