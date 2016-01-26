@@ -11,9 +11,11 @@ Originally developed by [seaweedchan](https://github.com/seaweedchan), this fork
 
 #### Install instructions
 
-- Firefox: Requires the Greasemonkey addon. Click the Install link above.
+Installing [4chan X](#compatibility-with-4chan-x-forks-and-others) is **required** for Oneechan to work.
 
-- Chrome: Requires the Tampermonkey extension. Click the Install link above. Alternatively you can download a [.crx here](https://nebukazar.github.io/OneeChan/builds/OneeChan.crx) if you are using Chromium or are not using Windows. Drag&drop into the extensions page to install.
+- Firefox: Requires the [Greasemonkey](https://addons.mozilla.org/firefox/addon/greasemonkey/) addon. Click the Install link above.
+
+- Chrome: Requires the [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl) extension. Click the Install link above. Alternatively you can download a [.crx here](https://nebukazar.github.io/OneeChan/builds/OneeChan.crx) if you are using Chromium or are not using Windows. Drag&drop into the extensions page to install.
 
 
 #### Compatibility with 4chan X forks and others:
