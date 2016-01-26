@@ -9,6 +9,5 @@
 <%= grunt.file.read('src/css/Highlight.css') %>
 <%= grunt.file.read('src/css/Options.css') %>
 <%= grunt.file.read('src/css/Catalog.css') %>
-" + ($SS.location.home ? "<%= grunt.file.read('src/css/Frontpage.css') %>" : "") + "
 " + ($SS.conf["Version Fix"] == 3 ? "<%= grunt.file.read('src/forks/loadletter.css') %>" : "") + "
 " + $SS.theme.customCSS + "

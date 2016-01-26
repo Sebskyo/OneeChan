@@ -869,10 +869,6 @@
                     div.text("x");
                 };
 
-                if ($SS.location.home) {
-                    $("html").attr("style", "background: " + $SS.theme.bgColor.hex + " !important;");
-                };
-
                 // 4chan ads being added with JS
                 if (!$SS.conf["Show Top Ad"]) {
                     $(".topad.center").remove();
