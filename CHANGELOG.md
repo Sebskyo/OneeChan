@@ -1,3 +1,14 @@
+### v5.5.35
+*2016-01-26*
+
+- Add option `Force QR to Sidebar Size`. This option makes it so the QR can not expand past the sidebar width size (297px), however it can still be expanded vertically. (#73)
+
+- OneeChan will now add the dark-captcha class when the theme is dark
+
+**ccd0:**
+
+- Newest beta (v1.11.23.1) tests for dark-captcha in addition to tomorrow. (see #69)
+
 ### v5.5.34
 *2016-01-25*
 
