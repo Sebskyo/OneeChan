@@ -1,3 +1,16 @@
+### v5.5.34
+*2016-01-25*
+
+- Add /aco/, /s4s/ and /trash/ to NSFW boards (#71)
+
+- Fix recaptcha v2 reply box receiving a scrollbar on Chrom* (webkit)
+- Fix recaptcha v2 being cut off
+- Fix bottom board list being hidden when `Show Top Links` is unchecked
+
+- Remove number spinners from QR oekaki (#69)
+
+- OneeChan will no longer run on www.4chan.org or wwww.4chan.org/frames (#67 and #72)
+
 ### v5.5.33
 *2015-10-29*
 
