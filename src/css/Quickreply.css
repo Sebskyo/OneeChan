@@ -40,9 +40,9 @@
   max-width: 133px;
   min-width: 80px;
 }
-#qr > form > div.persona > input:nth-child(2),
-#qr > form > div.persona > input:nth-child(3),
-#qr > form > div.persona > input:nth-child(4) {
+#qr > form > div.persona > input:nth-child(4),
+#qr > form > div.persona > input:nth-child(5),
+#qr > form > div.persona > input:nth-child(6) {
   margin-left: 1px;
 }
 :root.expand-inputs .persona {
