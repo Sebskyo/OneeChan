@@ -35,6 +35,9 @@ div.post {
   content: '';
   display: block;
 }
+:root.op-background .postContainer.opContainer {
+  margin-top: 2px;
+}
 .thread>.replyContainer,
 .threadContainer>.replyContainer {
   margin-bottom:" + $SS.conf["Margin Between Replies"] + "px !important;
@@ -434,7 +437,7 @@ table.flashListing .highlightPost {
 }
 #search-box, 
 #index-search {
-  width: 6%;
+  width: 8%;
   transition: color .25s, border-color .25s, width .25s;
 }
 #search-box:focus, 

@@ -1,11 +1,14 @@
 /* Highlight all posts */
-:root.hl-border .post.reply {
+:root.hl-border .post.reply,
+:root.op-background.hl-border .postContainer.opContainer {
   border-left: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.postHLColor.rgb + ",1.0) !important;
 }
-:root.hl-border-down .post.reply {
+:root.hl-border-down .post.reply,
+:root.op-background.hl-border-down .postContainer.opContainer {
   border-bottom: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.postHLColor.rgb + ",1.0) !important;
 }
-:root.hl-outline .post.reply {
+:root.hl-outline .post.reply,
+:root.op-background.hl-outline .postContainer.opContainer {
   outline: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.postHLColor.rgb + ",1.0);
 }
 /* Filter Highlighting */

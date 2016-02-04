@@ -131,6 +131,7 @@ body {
 .tab-label,
 #post-preview,
 #tegaki,
+:root.op-background .postContainer.opContainer,
 .flashListing tr:nth-of-type(2n+1) {
   background: rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important;
 }
@@ -203,14 +204,17 @@ hr {
   border-bottom:1px solid rgb\(" + $SS.theme.mainColor.shiftRGB(4) + ");
 }
 /* Borders */
-.reply {
+.reply,
+:root.op-background .postContainer.opContainer {
   border-width: 0 1px 1px 0;
   border-style: solid;
 }
-:root.borders-all .reply {
+:root.borders-all .reply,
+:root.borders-all.op-background .postContainer.opContainer {
   border-width: 1px !important;
 }
-:root.borders-none .reply {
+:root.borders-none .reply,
+:root.borders-none.op-background .postContainer.opContainer {
   border: none;
 }
 #menu,
@@ -218,6 +222,7 @@ hr {
   border-radius: 0 !important;
 }
 :root.rounded-corners .reply,
+:root.rounded-corners.op-background .postContainer.opContainer,
 :root.rounded-corners .dialog:not(#header-bar),
 :root.rounded-corners .inline,
 :root.rounded-corners #thread-stats
@@ -234,6 +239,7 @@ hr {
   border-radius: 3px 3px 0 0 !important;
 }
 .reply,
+:root.op-background .postContainer.opContainer,
 .dialog,
 .entry,
 .inline,
