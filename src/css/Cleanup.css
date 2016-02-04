@@ -6,7 +6,6 @@ iframe[src='about:blank'],
 #absbot,
 .stylechanger,
 #styleSwitcher,
-:root:not(.show-ads) .center,
 :root.show-ads.hide-top .topad.center,
 :root.show-ads.hide-middle .middlead.center,
 :root.show-ads.hide-bottom .bottomad.center,
@@ -46,6 +45,9 @@ hr:not(#unread-line),
 .exif:not([style]),
 [hidden] {
   display: none;
+}
+:root:not(.show-ads) .center {
+  display: none !important;
 }
 /* Get rid of Chrome input outlines, and link outlines */
 input:focus,
