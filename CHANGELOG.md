@@ -1,3 +1,9 @@
+### v5.5.36
+*2016-02-04*
+
+- Add option `OP Background`
+- Small CSS fixes
+
 ### v5.5.35
 *2016-01-26*
 
