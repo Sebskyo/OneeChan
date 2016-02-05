@@ -12,7 +12,8 @@ textarea,
 .pln,
 select,
 .captcha-root,
-.tegaki-label {
+.tegaki-label,
+.dd-menu ul {
   color: " + $SS.theme.textColor.hex + " !important;
 }
 /* Names */
@@ -132,7 +133,8 @@ body {
 #post-preview,
 #tegaki,
 :root.op-background .postContainer.opContainer,
-.flashListing tr:nth-of-type(2n+1) {
+.flashListing tr:nth-of-type(2n+1),
+.dd-menu ul {
   background: rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important;
 }
 :root.recolor-even .thread>.replyContainer:nth-of-type(even):not(.hidden) .post {
@@ -158,7 +160,8 @@ body {
 }
 .options-button:hover,
 .import-input:hover + .options-button,
-.pages strong>a:hover {
+.pages strong>a:hover,
+.dd-menu li:hover {
   background:rgb\(" + $SS.theme.mainColor.shiftRGB(15) + ");
 }
 .focused.entry {
@@ -205,7 +208,8 @@ hr {
 }
 /* Borders */
 .reply,
-:root.op-background .postContainer.opContainer {
+:root.op-background .postContainer.opContainer,
+.dd-menu ul {
   border-width: 0 1px 1px 0;
   border-style: solid;
 }
@@ -230,7 +234,8 @@ hr {
 :root.rounded-corners #menu,
 :root.rounded-corners .thumb,
 :root.rounded-corners .fileThumb img:not(.full-image),
-:root.rounded-corners .catalog-thumb {
+:root.rounded-corners .catalog-thumb,
+:root.rounded-corners .dd-menu ul {
   border-radius: 3px !important;
 }
 :root.post-info.rounded-corners .reply>.postInfo,
@@ -251,6 +256,9 @@ fieldset,
 select {
   border-color: " + $SS.theme.brderColor.hex + " !important;
 }
+.dd-menu li {
+  border-bottom: " + $SS.theme.brderColor.hex + " !important;
+}
 input,
 textarea,
 .riceCheck,
@@ -261,7 +269,8 @@ textarea,
 :root.vertical-qr #qr .move,
 #qr select,
 select,
-.captcha-root {
+.captcha-root,
+.dd-menu ul {
   border: 1px solid " + $SS.theme.inputbColor.hex + " !important;
 }
 .options-button,
