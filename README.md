@@ -47,4 +47,4 @@ ccd0's 4chan X is the recommended 4chan X version and the one OneeChan is primar
 
 #### Screenshots
 
-[![http://i.imgur.com/usLsE72s.png](http://i.imgur.com/usLsE72s.png)](http://i.imgur.com/usLsE72.png) [![http://i.imgur.com/ytX3qgys.png](http://i.imgur.com/ytX3qgys.png)](http://i.imgur.com/ytX3qgy.png) [![http://i.imgur.com/m5iVBo9s.png](http://i.imgur.com/m5iVBo9s.png)](http://i.imgur.com/m5iVBo9.png)
+[![https://i.imgur.com/usLsE72s.png](https://i.imgur.com/usLsE72s.png)](https://i.imgur.com/usLsE72.png) [![https://i.imgur.com/ytX3qgys.png](https://i.imgur.com/ytX3qgys.png)](https://i.imgur.com/ytX3qgy.png) [![https://i.imgur.com/m5iVBo9s.png](https://i.imgur.com/m5iVBo9s.png)](https://i.imgur.com/m5iVBo9.png)
