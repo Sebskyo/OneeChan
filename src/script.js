@@ -4120,7 +4120,7 @@
                 sub: obj.hostname.split(".")[0],
                 board: pathname[0],
                 home: location.hostname === "www.4chan.org",
-                nsfw: /^(b|d|e|f|gif|h|hr|r|s|t|u|wg|i|ic|r9k|hm|y|hc|pol|soc|lgbt|aco|s4s|trash)$/.test(pathname[0]),
+                nsfw: /^(b|d|e|f|gif|h|hr|r|s|t|u|wg|i|ic|r9k|hm|y|hc|pol|soc|aco|s4s|trash)$/.test(pathname[0]),
                 reply: pathname[1] === "thread",
                 catalog: pathname[1] === "catalog",
                 archive: pathname[1] === "archive"
