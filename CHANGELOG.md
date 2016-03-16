@@ -1,3 +1,8 @@
+### v5.5.38
+*2016-03-16*
+
+- Remove /lgbt/ from NSFW board list (issue #78)
+
 ### v5.5.37
 *2016-02-05*
 
