@@ -1,3 +1,10 @@
+### v5.5.39
+*2016-05-19*
+
+**ccd0:**
+
+- Add CSS for formatting tags on /qst/
+
 ### v5.5.38
 *2016-03-16*
 
