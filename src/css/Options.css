@@ -53,7 +53,7 @@
   bottom: 0;
   height: 445px;
 }
-:root.webkit #add-theme {
+:root.ua-webkit #add-theme {
   height: 403px !important;
 }
 #add-mascot .option-title,
