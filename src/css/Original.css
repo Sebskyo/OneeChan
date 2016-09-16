@@ -79,6 +79,8 @@ div.op.post div.file .fileThumb {
 .fixed.top-header.autohide body {
   padding-top: 2em !important;
 }
+  padding-top: 2.4em !important;
+}
 div.post {
   margin: 4px 0;
   overflow: hidden;
