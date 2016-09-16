@@ -892,7 +892,6 @@
             }
 
             $SS.insertMascot();
-            $SS.pages.init();
             $SS.riceInputs.init();
 
         },
@@ -3235,15 +3234,6 @@
             }
         },
 
-        pages: {
-            hasInit: false,
-            init: function() {
-                if (this.hasInit) {
-                    $("#pagesDrop").remove();
-                    return this.hasInit = false;
-                }
-            }
-        },
         riceInputs: {
             hasInit: false,
             init: function() {
