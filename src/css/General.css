@@ -377,6 +377,7 @@ table.flashListing .highlightPost {
   margin-right:" + $SS.mascot.hoffset + "px;
   height:" + $SS.mascot.height + ";
   width:" + $SS.mascot.width + ";
+  max-width:" + $SS.mascot.maxwidth + ";
   transform: " + $SS.mascot.flip + ";
   pointer-events: none;
 }

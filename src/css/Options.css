@@ -30,7 +30,7 @@
   margin-left: auto;
 }
 #add-mascot {
-  height: 208px;
+  height: 225px;
   top: 0;
   bottom: 0;
   left: 0;
@@ -270,6 +270,7 @@ select[name='Font Family']>option {
 /* Add Mascot */
 #mascot-buttons-container {
   padding: 1px;
+  margin-top: 2px;
 }
 .add-mascot-label {
   display:block;
@@ -282,6 +283,7 @@ select[name='Font Family']>option {
 .mascot-input.offset,
 .mascot-input.hoffset,
 .mascot-input.height,
+.mascot-input.maxwidth,
 .mascot-input.width {
   width:80px;
 }
