@@ -46,7 +46,7 @@ div.op.post div.file .fileThumb {
   display: block;
 }
 /* Padding according to header position */
-.fixed.bottom-header.thread-view body {
+.fixed.bottom-header.is_thread body {
   padding-bottom: 0em;
   padding-top: 0.5em;
 }
@@ -68,7 +68,7 @@ div.op.post div.file .fileThumb {
   padding-bottom: 2.5em;
   padding-top: " + (($SS.conf["Font Size"] <= 11) ? 3.2 : 2.4) + "em;
 }
-.fixed.top-header.thread-view body {
+.fixed.top-header.is_thread body {
   padding-bottom: 0em; 
   padding-top: " + (($SS.conf["Font Size"] <= 11) ? 3.2 : 2.4) + "em;
 }
@@ -172,11 +172,11 @@ span.hide-announcement {
   float: right;
 }
 .fixed.bottom-header.index .bottomCtrl.desktop,
-.fixed.bottom-header.thread-view .bottomCtrl.desktop {
+.fixed.bottom-header.is_thread .bottomCtrl.desktop {
   float: right;
   margin-bottom: 35px;
 }
-.fixed.top-header.thread-view .bottomCtrl.desktop,
+.fixed.top-header.is_thread .bottomCtrl.desktop,
 .fixed.top-header.index .bottomCtrl.desktop {
   float: right;
   margin-bottom: 8px;
