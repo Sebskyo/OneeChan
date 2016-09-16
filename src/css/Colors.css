@@ -350,3 +350,12 @@ select:focus,
   filter: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 height=%220%22 color-interpolation-filters=%22sRGB%22><filter id=%22grayscale%22><feColorMatrix id=%22color%22 type=%22saturate%22 values=%220%22 /></filter></svg>#grayscale');
   -webkit-filter: grayscale(100%);
 }
+/* /f/ */
+#swf-embed-header.postblock {
+  border: 1px solid " + $SS.theme.brderColor.hex + " !important;
+  background-color: rgba(" + $SS.theme.headerBGColor.rgb + "," + $SS.theme.navOp + ") !important;
+  color: " + $SS.theme.linkColor.hex + " !important;
+}
+#swf-embed-close {
+  right: 1px !important;
+}
