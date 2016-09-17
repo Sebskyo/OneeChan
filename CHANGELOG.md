@@ -1,3 +1,11 @@
+### v5.5.41
+*2016-09-16*
+
+- Style embed window on /f/
+- Add option `Downscale only` to mascot dialog (Mascots -> Edit or Add) (#79)
+- Update class thread-view -> is_thread (#85)
+- Small CSS fixes
+
 ### v5.5.40
 *2016-07-08*
 

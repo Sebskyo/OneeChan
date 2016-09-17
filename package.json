@@ -1,6 +1,6 @@
 {
   "name": "OneeChan",
-  "version": "5.5.40",
+  "version": "5.5.41",
   "description": "Customizable rice and themes for 4chan X.",
   "meta": {
     "name": "OneeChan",
@@ -39,10 +39,10 @@
   },
   "author": "seaweedchan",
   "contributors": [
-    "Nebukazar<justsoulay@gmail.com>"
+    "Nebukazar<nebukazar.github.com>"
   ],
   "namespace": "seaweedchan.github.com",
-  "license": "GPLv3",
+  "license": "GPL-3.0",
   "readmeFilename": "README.md",
   "engines": {
     "node": ">=0.10"
