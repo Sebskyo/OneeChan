@@ -1,3 +1,10 @@
+### v5.5.42
+*2016-09-20*
+
+- Update remaining classes (#85)
+- Style Tegaki links and native catalog post previews
+- Small CSS fixes
+
 ### v5.5.41
 *2016-09-16*
 
