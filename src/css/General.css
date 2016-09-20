@@ -14,10 +14,6 @@ body {
   padding: 2px 13px 2px;
   display: block !important;
 }
-.useremail::before {
-  margin-bottom: -20px;
-  display: inline-block;
-}
 .summary {
   margin-left: 2px;
 }
