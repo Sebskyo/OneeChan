@@ -38,7 +38,7 @@ div.post {
 :root.op-background .postContainer.opContainer {
   margin-top: 2px;
 }
-.is_thread>.replyContainer,
+.thread>.replyContainer,
 .threadContainer>.replyContainer {
   margin-bottom:" + $SS.conf["Margin Between Replies"] + "px !important;
 }
@@ -78,8 +78,8 @@ div.post {
 .stub {
   padding: 2px;
 }
-:root.reply-hide .is_thread>.expanded-image>.reply,
-:root.reply-hide .is_thread>.hasInline>.reply {
+:root.reply-hide .thread>.expanded-image>.reply,
+:root.reply-hide .thread>.hasInline>.reply {
    margin-left: 12px !important;
 }
 /* Quote Threading */
@@ -87,7 +87,7 @@ div.post {
   margin-left: 0 !important;
   padding-left: 20px!important;
 }
-:root.reply-hide .is_thread>.threadContainer {
+:root.reply-hide .thread>.threadContainer {
    margin-left: 13px !important;
 }
 /* Style Post Info option */

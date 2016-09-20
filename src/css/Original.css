@@ -92,7 +92,7 @@ div.post {
 :root:not(.reply-fit-width) #delform .stub ~ div.reply:not([hidden]) {
   display: none !important;
 }
-div.is_thread {
+div.thread {
   margin: 0;
   clear: both;
   padding-bottom: 10px;
