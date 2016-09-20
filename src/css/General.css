@@ -425,7 +425,7 @@ table.flashListing .highlightPost {
   transition: opacity .3s ease-in 0s;
 }
 /* Navlinks */
-:root.index div.navLinks {
+:root.is_index div.navLinks {
   padding: 5px 0;
   margin-left: auto;
   margin-top: auto;

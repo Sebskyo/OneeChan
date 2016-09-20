@@ -39,7 +39,7 @@ select,
 a,
 .typ, 
 .atn,
-:root.catalog .button,
+:root.is_catalog .button,
 .options-button {
   color: " + $SS.theme.linkColor.hex + " !important;
 }
@@ -51,7 +51,7 @@ a.summary,
   color: #ffffff !important;
 }
 a:hover,
-:root.catalog .button:hover,
+:root.is_catalog .button:hover,
 .lit,
 #header-bar #notifications a:hover {
   color: " + $SS.theme.linkHColor.hex + " !important;
@@ -127,7 +127,7 @@ body {
   background: " + $SS.theme.bgImg.get() + $SS.theme.bgColor.hex + " !important;
 }
 .reply,
-:root.catalog .panel,
+:root.is_catalog .panel,
 .dialog,
 .tab-label,
 #post-preview,
