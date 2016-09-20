@@ -129,7 +129,7 @@ body {
   background: " + $SS.theme.bgImg.get() + $SS.theme.bgColor.hex + " !important;
 }
 .reply,
-.body.is_catalog .panel,
+body.is_catalog .panel,
 .dialog,
 .tab-label,
 #post-preview,
