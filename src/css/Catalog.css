@@ -4,7 +4,6 @@
   text-align: justify !important;
 }
 /* Background */
-:root.catalog-background #threads div.thread,
 :root.catalog-background .catalog-thread {
   background: rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ") !important;
 }
