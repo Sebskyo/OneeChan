@@ -1,3 +1,10 @@
+### v5.5.43
+*2016-09-21*
+
+- Fix for 4chan X catalog (#85)
+- `Fixed Thread Watcher` disabled by default
+- Small fixes
+
 ### v5.5.42
 *2016-09-20*
 
