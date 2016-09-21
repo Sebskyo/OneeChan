@@ -8,7 +8,14 @@
 }
 /* Quick Reply */
 #qr {
-  max-width: 299px;
+  max-width: 355px;
+}
+#recaptcha_widget {
+  overflow: hidden;
+}
+#recaptcha_table > tbody > tr:nth-child(1) > td:nth-child(3)
+#recaptcha_table > tbody > tr:nth-child(2) > td:nth-child(2) {
+  display: none !important;
 }
 #qr > form > div:first-child > .field:not(#dump) {
   width: 29.54% !important;
@@ -28,9 +35,6 @@
   text-transform: uppercase;
   font-size: 10px;
   line-height: 19px;
-}
-.captcha-input.field {
-  width: 300px;
 }
 .textarea {
   margin-bottom: 1px;
@@ -74,17 +78,6 @@
 }
 #qr > form > div > .field {
   margin-left: 1px;
-}
-.captchaimg {
-  margin-left: 2px;
-  width: 99.2%;
-}
-.captchaimg > img {
-  height: 50px;
-  width: 99.5%;
-}
-.captchainput > .field {
-  min-width: 99.2%;
 }
 :root.qr-controls #qr .move .riceCheck,
 :root.qr-controls #qr .move .autohide {
