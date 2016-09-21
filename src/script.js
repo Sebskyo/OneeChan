@@ -43,7 +43,7 @@
             "Custom Right Margin": [
                 0, "Right margin custom width (pixels).", "Right Margin", 999, true
             ],
-            "Fixed Thread Watcher": [true, "The thread watcher will not scroll with the page."],
+            "Fixed Thread Watcher": [false, "The thread watcher will not scroll with the page."],
             "Style Thread Stats": [false, "Makes thread stats stand out more. Disable 'Updater and Stats in Header' if using ccd0 4chan X."],
             "Rounded Corners": [false, "Styles replies, menus and Quick Reply to have subtly rounded corners."],
             "Underline All Links": [false, "Underlines all links in the page."],
