@@ -4,7 +4,7 @@
 <%= grunt.file.read('src/css/Colors.css') %>
 <%= grunt.file.read('src/css/Fonts.css') %>
 <%= grunt.file.read('src/css/Quickreply.css') %>
-" + ($SS.conf["Disable In Catalog View"] && $SS.location.catalog || $(":root.catalog-mode").exists() ? $SS.conf["Sidebar Position"] == 3 : ($SS.conf["Sidebar Position"] !== 3 ? "<%= grunt.file.read('src/css/Sidebar.css') %>" : "")) + "
+" + ($SS.conf["Disable In Catalog View"] && $SS.location.catalog ? $SS.conf["Sidebar Position"] == 3 : ($SS.conf["Sidebar Position"] !== 3 ? "<%= grunt.file.read('src/css/Sidebar.css') %>" : "")) + "
 <%= grunt.file.read('src/css/Icons.css') %>
 <%= grunt.file.read('src/css/Highlight.css') %>
 <%= grunt.file.read('src/css/Catalog.css') %>
