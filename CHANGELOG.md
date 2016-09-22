@@ -1,3 +1,9 @@
+### v5.5.44
+*2016-09-22*
+
+- Change symbol mascots from base 64 to hosted images
+- Fix bugs and typos introduced in the last version
+
 ### v5.5.43
 *2016-09-21*
 
