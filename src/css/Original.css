@@ -15,19 +15,19 @@
   clear: left;
 }
 .mu-s {
-	font-weight: bold;
+  font-weight: bold;
 }
 .mu-i {
-	font-style: italic;
+  font-style: italic;
 }
 .mu-r {
-	color: #c41e3a;
+  color: #c41e3a;
 }
 .mu-g {
-	color: #00a550;
+  color: #00a550;
 }
 .mu-b {
-	color: #1d8dc4;
+  color: #1d8dc4;
 }
 div.post div.file .fileThumb {
   float: left;
@@ -54,7 +54,7 @@ div.op.post div.file .fileThumb {
   padding-bottom: 4.5em;
   padding-top: 0.5em;
 }
-.fixed.bottom-header body,
+.fixed.bottom-header.is_catalog body,
 .fixed.bottom-header.catalog-mode body {
   padding-bottom: 3em;
   padding-top: 0.5em;
@@ -97,7 +97,7 @@ div.post {
 div.thread {
   margin: 0;
   clear: both;
-  padding: 5px 0 10px 0;
+  padding-bottom: 10px;
 }
 table.flashListing {
   border-spacing: 1px;
@@ -137,10 +137,6 @@ s:focus {
 #globalMessage,
 .boardBanner {
   text-align: center;
-}
-#bannerCnt img {
-  width: 300px;
-  height: 100px;
 }
 div.sideArrows {
   float: left;
@@ -203,6 +199,4 @@ span.hide-announcement {
 #blotter {
   margin: auto;
   font-size: 11px;
-  width: auto !important;
-  padding: 10px 0 10px 0;
 }
