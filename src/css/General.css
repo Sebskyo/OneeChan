@@ -115,7 +115,7 @@ div.post {
 .menu-button + .container:not(:empty) {
   margin-left: 4px !important;
 }
-:root.reply-fit-width .post .menu-button {
+:root:not(.catalog-mode).reply-fit-width .post .menu-button {
   float: right;
   margin-left: 0;
   position: relative;
@@ -201,7 +201,10 @@ input[type=checkbox]:checked+.riceCheck::before {
 :root:not(.fixed) .boardBanner {
   top: 0;
 }
-#full-board-list>a, 
+.center {
+  margin: 5px !important;
+}
+#full-board-list>a,
 .navSmall>a {
   margin-left: 2px;
 }
@@ -210,14 +213,10 @@ input[type=checkbox]:checked+.riceCheck::before {
 }
 .globalMessage, h2, h3 {
   margin: auto;
-}#custom-board-list, 
-#full-board-list, 
+}#custom-board-list,
+#full-board-list,
 .shortcut {
   vertical-align: baseline !important;
-}
-/* Thread Watcher */
-:root.fixed-watcher #thread-watcher {
-  position: fixed !important;
 }
 /* QR link */
 .qr-link {
@@ -293,7 +292,7 @@ hr {
 .next,
 .prev {
   border: none !important;
-  position: relative; 
+  position: relative;
 }
 .next a,
 .prev a {
@@ -336,14 +335,14 @@ table.flashListing .highlightPost {
   padding-right: 4px !important;
   text-align: center !important;
 }
-#delform[action='https://sys.4chan.org/f/up.php'], 
+#delform[action='https://sys.4chan.org/f/up.php'],
 #delform[action='https://sys.4chan.org/f/up.php'] .postblock {
   background: none !important;
   border: none !important;
   box-shadow: none !important;
 }
 /* Mascot */
-#mascot img, 
+#mascot img,
 #mascotprev img {
   position:fixed;
   right: 0;
@@ -411,12 +410,12 @@ body.is_index div.navLinks {
 #hoverUI {
   z-index: 12 !important;
 }
-#search-box, 
+#search-box,
 #index-search {
   width: 8%;
   transition: color .25s, border-color .25s, width .25s;
 }
-#search-box:focus, 
+#search-box:focus,
 #index-search:focus {
   width: 12%;
   transition: color .25s, border-color .25s, width .25s;
@@ -432,7 +431,7 @@ body.is_index div.navLinks {
 }
 /* Post Info on Hover */
 :root.info-on-hover .postContainer .fileText {
-  opacity: 0; 
+  opacity: 0;
   height: 0;
   transition: opacity .3s ease-out 0s;
   pointer-events: none;
