@@ -451,4 +451,5 @@ select {
 #delform {
   overflow-wrap: break-word;
   word-break: break-word;
+  margin-bottom: 15px; /* unrelated to issue #90 */
 }
