@@ -1,3 +1,13 @@
+### v5.5.46
+*2016-10-01*
+
+- Change script defaults
+- Remove option `Fixed Thread Watcher` as 4chan X integrates it now
+- Updates for new 4chan X catalog
+- Add option `Show Board Banners`
+- Changes to native catalog for backgrounds and margins
+- Some page 404 touch-ups
+
 ### v5.5.45
 *2016-09-24*
 
@@ -716,7 +726,7 @@ Offers a wide range of post highlighting rice.
 ### v5.2.3
 *2014-04-30*
 
-**WARNING:** 
+**WARNING:**
 If you were using certain mascots before this version the extension could break.
 See [Deleting the localStorage](https://github.com/Nebukazar/OneeChan/wiki/Deleting-the-localStorage) for a fix.
 
@@ -893,7 +903,7 @@ See [Deleting the localStorage](https://github.com/Nebukazar/OneeChan/wiki/Delet
 - Added Chrom* auto-updating
 - Remove Update menu link because useless (see above)
 - Minor CSS fix with bottom header hiding QR in "Vertical Tabbed" style
-- Fixed bottom pages navigation buttons overlapping numbers (no idea how to fix the button style yet) 
+- Fixed bottom pages navigation buttons overlapping numbers (no idea how to fix the button style yet)
 
 - Added 3 new mascots (Purple Heart, Rei Ayanami, Motoko Kusanagi)
 
