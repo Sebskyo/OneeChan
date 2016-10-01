@@ -43,12 +43,12 @@
             "Custom Right Margin": [
                 0, "Right margin custom width (pixels).", "Right Margin", 999, true
             ],
-            "Fixed Thread Watcher": [false, "The thread watcher will not scroll with the page."],
             "Style Thread Stats": [false, "Makes thread stats stand out more. Disable 'Updater and Stats in Header' if using ccd0 4chan X."],
             "Rounded Corners": [false, "Styles replies, menus and Quick Reply to have subtly rounded corners."],
             "Underline All Links": [false, "Underlines all links in the page."],
-            "Show Banner": [true, "Toggle visibility of the banner.", null, true],
+            "Show Banner": [true, "Toggle visibility of banner.", null, true],
             "Reduce Banner Opacity": [false, "Reduce opacity of the banner for easier viewing.", "Show Banner", true, true],
+            "Show Board Banners": [false, "Toggle visibility of board banners."],
             "Show Board Name": [true, "Toggle visibility of the board name."],
             "Show Reply to Thread Button": [false, "Toggle visibility of the Start a Thread / Reply to Thread button."],
             "Show Checkboxes": [false, "Hides checkboxes and deleteform to be replaced by 4chan X menus. Refresh to apply."],
@@ -94,7 +94,7 @@
             "Transparent QR": [false, "Reduces opacity of the QR box."],
             "Remove Background": [false, "Removes the QR background."],
             "Remove Controls": [false, "Removes the QR controls and checkbox."],
-            "Expanding Form Inputs": [false, "Makes certain form elements expand on focus."],
+            "Expanding Form Inputs": [true, "Makes certain form elements expand on focus."],
             "Force QR to Sidebar Size": [false, "QR will no longer extend past the sidebar size."],
             ":: Mascots": ["header", ""],
             "Hide Mascots in Catalog": [false, "Hides the mascot when viewing the catalog."],
@@ -159,7 +159,7 @@
             ],
             ":: Catalog": ["header", ""],
             "Justified Text": [true, "Justifies the teaser text of every thread to be more uniform."],
-            "Show Background": [false, "Threads receive a matching background."],
+            "Show Background": [true, "Threads receive a matching background."],
             "Unified Thumbnail Size": [false, "Makes all thumbnails the same size regardless of aspect ratio."],
             ":: 4chan X Header": ["header", ""],
             "Show Header Background Gradient": [true, "Gives the header bar a gradient background."],
@@ -263,9 +263,9 @@
             ],
             "Themes": [],
             "Hidden Themes": [],
-            "Selected Theme": 4,
-            "NSFW Theme": 4,
-            "Selected Mascots": [37, 41],
+            "Selected Theme": 13,
+            "NSFW Theme": 12,
+            "Selected Mascots": [54],
             "Mascots": [],
             "Hidden Mascots": []
         },
@@ -412,416 +412,416 @@
             return setTimeout($.asap, 25, test, cb);
         }
     };
-    
+
     $lib.prototype = {
-            constructor: $lib,
-            elems: [],
-            length: function() {
-                return this.elems.length;
-            },
-            /* CONSTRUCTOR */
-            init: function(selector, root) {
-                if (selector == null || selector == undefined) return this;
+        constructor: $lib,
+        elems: [],
+        length: function() {
+            return this.elems.length;
+        },
+        /* CONSTRUCTOR */
+        init: function(selector, root) {
+            if (selector == null || selector == undefined) return this;
 
-                if (selector.constructor === $lib) return selector;
-                else if (typeof selector === "string") {
-                    var root = root || document;
-                    var tagCheck = /^<(\w+)([^>]*)>(.*)$/.exec(selector); // No closing tag for root node.
+            if (selector.constructor === $lib) return selector;
+            else if (typeof selector === "string") {
+                var root = root || document;
+                var tagCheck = /^<(\w+)([^>]*)>(.*)$/.exec(selector); // No closing tag for root node.
 
-                    if (root.constructor === $lib)
-                        root = root.get();
+                if (root.constructor === $lib)
+                    root = root.get();
 
-                    if (tagCheck) {
-                        var tag = document.createElement(tagCheck[1]);
+                if (tagCheck) {
+                    var tag = document.createElement(tagCheck[1]);
 
-                        if (tagCheck[2]) {
-                            var attribs, atRegEx = /(\w+)=((?:"(?:[^"]+)"|'(?:[^']+)'|(?:\w+)))/g;
-                            while ((attribs = atRegEx.exec(tagCheck[2])) != null) {
-                                var val = attribs[2];
-                                if ((val[0] == '"' || val[0] === "'") && val[0] == val[val.length - 1])
-                                    val = val.substr(1, val.length - 2)
+                    if (tagCheck[2]) {
+                        var attribs, atRegEx = /(\w+)=((?:"(?:[^"]+)"|'(?:[^']+)'|(?:\w+)))/g;
+                        while ((attribs = atRegEx.exec(tagCheck[2])) != null) {
+                            var val = attribs[2];
+                            if ((val[0] == '"' || val[0] === "'") && val[0] == val[val.length - 1])
+                                val = val.substr(1, val.length - 2)
 
-                                tag.setAttribute(attribs[1], val);
-                            }
+                            tag.setAttribute(attribs[1], val);
                         }
-
-                        tag.innerHTML = tagCheck[3];
-
-                        this.elems = [tag];
-                    } else if (/^#[\w-]+$/.test(selector) && root == document) {
-                        var el;
-
-                        if ((el = document.getElementById(selector.substr(1))) != null)
-                            this.elems = [el];
-                    } else {
-                        var results = root.querySelectorAll(selector);
-                        this.elems = Array.prototype.slice.call(results);
                     }
-                } else if (selector.nodeType)
-                    this.elems = [selector];
-                else if (Array.isArray(selector))
-                    this.elems = Array.prototype.slice.call(selector);
 
+                    tag.innerHTML = tagCheck[3];
+
+                    this.elems = [tag];
+                } else if (/^#[\w-]+$/.test(selector) && root == document) {
+                    var el;
+
+                    if ((el = document.getElementById(selector.substr(1))) != null)
+                        this.elems = [el];
+                } else {
+                    var results = root.querySelectorAll(selector);
+                    this.elems = Array.prototype.slice.call(results);
+                }
+            } else if (selector.nodeType)
+                this.elems = [selector];
+            else if (Array.isArray(selector))
+                this.elems = Array.prototype.slice.call(selector);
+
+            return this;
+        },
+
+        /* DOM NODE RETRIEVAL */
+        clone: function() {
+            var ret = [];
+
+            this.each(function() {
+                ret.push(this.cloneNode(true));
+            });
+
+            return new $lib(ret);
+        },
+        elements: function() {
+            if (!this.hasSingleEl())
                 return this;
-            },
 
-            /* DOM NODE RETRIEVAL */
-            clone: function() {
-                var ret = [];
+            this.elems = Array.prototype.slice.call(this.elems[0].elements);
 
-                this.each(function() {
-                    ret.push(this.cloneNode(true));
-                });
+            return this;
+        },
+        get: function(index) {
+            if (index == undefined && this.elems.length === 1)
+                return this.elems[0];
+            else if (index == undefined && !this.hasSingleEl())
+                return this.elems;
 
-                return new $lib(ret);
-            },
-            elements: function() {
+            return this.elems[index];
+        },
+
+        /* DOM MANIPULATION */
+        prepend: function(el) {
+            if (el.constructor === $lib)
+                el = el.get();
+
+            return this.each(function() {
+                this.insertBefore(el, this.firstChild);
+            });
+        },
+        append: function(el) {
+            if (el.constructor === $lib)
+                el = el.get();
+
+            return this.each(function() {
+                this.appendChild(el);
+            });
+        },
+        before: function(el) {
+            if (el.constructor === $lib)
+                el = el.get();
+
+            return this.each(function() {
+                this.parentNode.insertBefore(el, this);
+            });
+        },
+        after: function(el) {
+            if (el.constructor === $lib)
+                el = el.get();
+
+            return this.each(function() {
+                if (this.nextSibling != null)
+                    this.parentNode.insertBefore(el, this.nextSibling);
+                else if (this.parentNode != null)
+                    this.parentNode.appendChild(el);
+            });
+        },
+        replace: function(el) {
+            return this.each(function() {
+                $(this).before(el).remove();
+            });
+        },
+        html: function(html) {
+            if (html == undefined)
+                return this.elems[0].innerHTML;
+
+            return this.each(function() {
+                this.innerHTML = html;
+            });
+        },
+        text: function(text) {
+            if (this.length() === 0)
+                return;
+
+            if (text == undefined)
+                return this.elems[0].textContent;
+
+            return this.each(function() {
+                this.textContent = text;
+            });
+        },
+        appendText: function(text) {
+            return this.each(function() {
+                this.textContent += text;
+            });
+        },
+        attr: function(name, val) {
+            if (val == undefined)
                 if (!this.hasSingleEl())
                     return this;
-
-                this.elems = Array.prototype.slice.call(this.elems[0].elements);
-
-                return this;
-            },
-            get: function(index) {
-                if (index == undefined && this.elems.length === 1)
-                    return this.elems[0];
-                else if (index == undefined && !this.hasSingleEl())
-                    return this.elems;
-
-                return this.elems[index];
-            },
-
-            /* DOM MANIPULATION */
-            prepend: function(el) {
-                if (el.constructor === $lib)
-                    el = el.get();
-
-                return this.each(function() {
-                    this.insertBefore(el, this.firstChild);
-                });
-            },
-            append: function(el) {
-                if (el.constructor === $lib)
-                    el = el.get();
-
-                return this.each(function() {
-                    this.appendChild(el);
-                });
-            },
-            before: function(el) {
-                if (el.constructor === $lib)
-                    el = el.get();
-
-                return this.each(function() {
-                    this.parentNode.insertBefore(el, this);
-                });
-            },
-            after: function(el) {
-                if (el.constructor === $lib)
-                    el = el.get();
-
-                return this.each(function() {
-                    if (this.nextSibling != null)
-                        this.parentNode.insertBefore(el, this.nextSibling);
-                    else if (this.parentNode != null)
-                        this.parentNode.appendChild(el);
-                });
-            },
-            replace: function(el) {
-                return this.each(function() {
-                    $(this).before(el).remove();
-                });
-            },
-            html: function(html) {
-                if (html == undefined)
-                    return this.elems[0].innerHTML;
-
-                return this.each(function() {
-                    this.innerHTML = html;
-                });
-            },
-            text: function(text) {
-                if (this.length() === 0)
-                    return;
-
-                if (text == undefined)
-                    return this.elems[0].textContent;
-
-                return this.each(function() {
-                    this.textContent = text;
-                });
-            },
-            appendText: function(text) {
-                return this.each(function() {
-                    this.textContent += text;
-                });
-            },
-            attr: function(name, val) {
-                if (val == undefined)
-                    if (!this.hasSingleEl())
-                        return this;
-                    else
-                        return this.elems[0].getAttribute(name);
                 else
-                if (val === "")
-                    return this.each(function() {
-                        this.removeAttribute(name);
-                    });
-
+                    return this.elems[0].getAttribute(name);
+            else
+            if (val === "")
                 return this.each(function() {
-                    this.setAttribute(name, val);
+                    this.removeAttribute(name);
                 });
-            },
-            disabled: function(bDisabled) {
-                if (bDisabled == undefined)
-                    return this.elems[0].disabled;
 
-                return this.each(function() {
-                    this.disabled = bDisabled;
-                });
-            },
-            toggle: function(bHidden) {
-                return this.each(function() {
-                    var $this = $(this);
+            return this.each(function() {
+                this.setAttribute(name, val);
+            });
+        },
+        disabled: function(bDisabled) {
+            if (bDisabled == undefined)
+                return this.elems[0].disabled;
 
-                    if (bHidden == undefined)
-                        bHidden = !($this.attr("disabled") === "true");
+            return this.each(function() {
+                this.disabled = bDisabled;
+            });
+        },
+        toggle: function(bHidden) {
+            return this.each(function() {
+                var $this = $(this);
 
-                    $this.attr("hidden", bHidden || "");
-                });
-            },
-            hide: function() {
-                return this.toggle(true);
-            },
-            show: function() {
-                return this.toggle(false);
-            },
-            val: function(val) {
-                if (val == undefined) {
-                    var el = this.elems[0];
+                if (bHidden == undefined)
+                    bHidden = !($this.attr("disabled") === "true");
 
-                    if (el == undefined)
-                        return false;
+                $this.attr("hidden", bHidden || "");
+            });
+        },
+        hide: function() {
+            return this.toggle(true);
+        },
+        show: function() {
+            return this.toggle(false);
+        },
+        val: function(val) {
+            if (val == undefined) {
+                var el = this.elems[0];
 
-                    switch (el.type) {
-                        case "checkbox":
-                        case "radio":
-                            return el.checked == true;
-                        default:
-                            if (/^\d+$/.test(el.value))
-                                return parseInt(el.value);
-                            return el.value;
-                    }
-                }
-
-                return this.each(function() {
-                    switch (this.type) {
-                        case "checkbox":
-                        case "radio":
-                            this.checked = val;
-                            break;
-                        default:
-                            this.value = val;
-                            break;
-                    }
-                });
-            },
-            checked: function(state) {
-                return this.each(function() {
-                    this.checked = state;
-                });
-            },
-            addClass: function(classNames) {
-                return this.each(function() {
-                    classNames = classNames.split(" ");
-                    for (var j = 0, jMAX = classNames.length; j < jMAX; j++)
-                        if (!$(this).hasClass(classNames[j]))
-                            this.className += (this.className ? " " : "") + classNames[j];
-                });
-            },
-            hasClass: function(className) {
-                if (!this.hasSingleEl() || this.elems[0].className == undefined)
+                if (el == undefined)
                     return false;
 
-                var regx = new RegExp("\\b" + className + "\\b");
-
-                return regx.test(this.elems[0].className);
-            },
-            removeClass: function(classNames) {
-                return this.each(function() {
-                    classNames = classNames.split(" ");
-                    for (var j = 0, jMAX = classNames.length; j < jMAX; j++)
-                        if ($(this).hasClass(classNames[j])) {
-                            var cclassNames = this.className.split(" ");
-                            this.className = "";
-
-                            for (var k = 0, kMAX = cclassNames.length; k < kMAX; k++)
-                                if (classNames[j] !== cclassNames[k])
-                                    this.className += (this.className ? " " : "") + cclassNames[k];
-                        }
-                });
-            },
-            toggleClass: function(classNames) {
-                return this.each(function() {
-                    classNames = classNames.split(" ");
-                    for (var j = 0, jMAX = classNames.length; j < jMAX; j++)
-                        if (!$(this).hasClass(classNames[j]))
-                            $(this).addClass(classNames[j]);
-                        else
-                            $(this).removeClass(classNames[j]);
-                });
-            },
-            optionClass: function(optionName, optionValue, className) {
-                return this.each(function() {
-                    if ($SS.conf[optionName] === optionValue && !$(this).hasClass(className))
-                        $(this).addClass(className);
-                    else if ($SS.conf[optionName] !== optionValue && $(this).hasClass(className))
-                        $(this).removeClass(className);
-                    else
-                        return
-                });
-            },
-            remove: function() {
-                return this.each(function() {
-                    this.parentNode.removeChild(this);
-                });
-            },
-            /* DOM TRAVERSING */
-            parent: function() {
-                if (!this.hasSingleEl()) return this;
-
-                return new $lib(this.elems[0].parentNode);
-            },
-            children: function(selector) {
-                if (!this.hasSingleEl())
-                    return this;
-                else if (selector == null)
-                    selector = "*";
-
-                return new $lib(selector, this.elems[0]);
-            },
-            nextSibling: function(selector) {
-                if (!this.hasSingleEl() ? true : this.elems[0].nextSibling == null)
-                    return new $lib(null);
-
-                if (selector != undefined) {
-                    var t, m = new $lib(selector, this.elems[0].parentNode),
-                        s = this.elems[0].parentNode.childNodes;
-
-                    for (var i = s.length - 1; i >= 0; --i) {
-                        if (s[i] === this.elems[0] && t == undefined) // end and no matching siblings
-                            return new $lib(null);
-                        else if (s[i] === this.elems[0] && t != undefined) // end and matched sibling
-                            return new $lib(t);
-                        else if (m.elems.indexOf(s[i]) !== -1) // this element matches the selector
-                            t = s[i];
-                    }
+                switch (el.type) {
+                    case "checkbox":
+                    case "radio":
+                        return el.checked == true;
+                    default:
+                        if (/^\d+$/.test(el.value))
+                            return parseInt(el.value);
+                        return el.value;
                 }
-
-                return new $lib(this.elems[0].nextSibling);
-            },
-            previousSibling: function(selector) {
-                if (!this.hasSingleEl() ? true : this.elems[0].previousSibling == null)
-                    return new $lib(null);
-
-                if (selector != undefined) {
-                    var t, m = new $lib(selector, this.elems[0].parentNode),
-                        s = this.elems[0].parentNode.childNodes;
-
-                    for (var i = 0, MAX = s.length; i < MAX; ++i) {
-                        if (s[i] === this.elems[0] && t == undefined)
-                            return new $lib(null);
-                        else if (s[i] === this.elems[0] && t != undefined)
-                            return new $lib(t);
-                        else if (m.elems.indexOf(s[i]) !== -1)
-                            t = s[i];
-                    }
-                }
-
-                return new $lib(this.elems[0].previousSibling);
-            },
-
-            /* EVENT METHODS */
-            bind: function(type, listener) {
-                return this.each(function() {
-                    this.addEventListener(type, listener, false);
-                });
-            },
-            unbind: function(type, listener) {
-                return this.each(function() {
-                    this.removeEventListener(type, listener, false);
-                });
-            },
-            fire: function(evnt) {
-                var ev = document.createEvent("HTMLEvents");
-
-                return this.each(function() {
-                    ev.initEvent(evnt, true, true);
-                    this.dispatchEvent(ev);
-                });
-            },
-            blur: function() {
-                return this.each(function() {
-                    this.blur();
-                });
-            },
-            click: function() {
-                return this.each(function() {
-                    this.click();
-                });
-            },
-            scrollIntoView: function(alignWithTop) {
-                return this.each(function() {
-                    this.scrollIntoView(alignWithTop);
-                });
-            },
-            /* HELPER METHODS */
-            delay: function(func, time) {
-                return this.each(function() {
-                    var $this = this;
-                    setTimeout(function() {
-                        func.call($this);
-                    }, time);
-                });
-            },
-            each: function(func, args) {
-                if (args != null && !Array.isArray(args))
-                    args = [args];
-
-                for (var i = 0, MAX = this.elems.length; i < MAX; ++i)
-                    func.apply(this.elems[i], args || [i]);
-
-                return this;
-            },
-            exists: function() {
-                return this.elems.length > 0;
-            },
-            hasSingleEl: function() {
-                return this.elems.length === 1;
-            },
-            riceCheck: function() {
-                return this.each(function() {
-                    var click = function(e) {
-                        e.preventDefault();
-                        this.previousSibling.click();
-                    };
-                    if (this.isRiced) return;
-                    else if (this.nextSibling != undefined && this.nextSibling.className === "riceCheck")
-                        return $(this.nextSibling).bind("click", click);
-
-                    var div = $("<div class=riceCheck>").bind("click", click);
-                    $(this).hide().after(div);
-
-                    return this.isRiced = true;
-                });
-            },
-            jsColor: function() {
-                return this.each(function() {
-                    this.color = new $SS.jscolor.color(this);
-                });
             }
-        };
+
+            return this.each(function() {
+                switch (this.type) {
+                    case "checkbox":
+                    case "radio":
+                        this.checked = val;
+                        break;
+                    default:
+                        this.value = val;
+                        break;
+                }
+            });
+        },
+        checked: function(state) {
+            return this.each(function() {
+                this.checked = state;
+            });
+        },
+        addClass: function(classNames) {
+            return this.each(function() {
+                classNames = classNames.split(" ");
+                for (var j = 0, jMAX = classNames.length; j < jMAX; j++)
+                    if (!$(this).hasClass(classNames[j]))
+                        this.className += (this.className ? " " : "") + classNames[j];
+            });
+        },
+        hasClass: function(className) {
+            if (!this.hasSingleEl() || this.elems[0].className == undefined)
+                return false;
+
+            var regx = new RegExp("\\b" + className + "\\b");
+
+            return regx.test(this.elems[0].className);
+        },
+        removeClass: function(classNames) {
+            return this.each(function() {
+                classNames = classNames.split(" ");
+                for (var j = 0, jMAX = classNames.length; j < jMAX; j++)
+                    if ($(this).hasClass(classNames[j])) {
+                        var cclassNames = this.className.split(" ");
+                        this.className = "";
+
+                        for (var k = 0, kMAX = cclassNames.length; k < kMAX; k++)
+                            if (classNames[j] !== cclassNames[k])
+                                this.className += (this.className ? " " : "") + cclassNames[k];
+                    }
+            });
+        },
+        toggleClass: function(classNames) {
+            return this.each(function() {
+                classNames = classNames.split(" ");
+                for (var j = 0, jMAX = classNames.length; j < jMAX; j++)
+                    if (!$(this).hasClass(classNames[j]))
+                        $(this).addClass(classNames[j]);
+                    else
+                        $(this).removeClass(classNames[j]);
+            });
+        },
+        optionClass: function(optionName, optionValue, className) {
+            return this.each(function() {
+                if ($SS.conf[optionName] === optionValue && !$(this).hasClass(className))
+                    $(this).addClass(className);
+                else if ($SS.conf[optionName] !== optionValue && $(this).hasClass(className))
+                    $(this).removeClass(className);
+                else
+                    return
+            });
+        },
+        remove: function() {
+            return this.each(function() {
+                this.parentNode.removeChild(this);
+            });
+        },
+        /* DOM TRAVERSING */
+        parent: function() {
+            if (!this.hasSingleEl()) return this;
+
+            return new $lib(this.elems[0].parentNode);
+        },
+        children: function(selector) {
+            if (!this.hasSingleEl())
+                return this;
+            else if (selector == null)
+                selector = "*";
+
+            return new $lib(selector, this.elems[0]);
+        },
+        nextSibling: function(selector) {
+            if (!this.hasSingleEl() ? true : this.elems[0].nextSibling == null)
+                return new $lib(null);
+
+            if (selector != undefined) {
+                var t, m = new $lib(selector, this.elems[0].parentNode),
+                    s = this.elems[0].parentNode.childNodes;
+
+                for (var i = s.length - 1; i >= 0; --i) {
+                    if (s[i] === this.elems[0] && t == undefined) // end and no matching siblings
+                        return new $lib(null);
+                    else if (s[i] === this.elems[0] && t != undefined) // end and matched sibling
+                        return new $lib(t);
+                    else if (m.elems.indexOf(s[i]) !== -1) // this element matches the selector
+                        t = s[i];
+                }
+            }
+
+            return new $lib(this.elems[0].nextSibling);
+        },
+        previousSibling: function(selector) {
+            if (!this.hasSingleEl() ? true : this.elems[0].previousSibling == null)
+                return new $lib(null);
+
+            if (selector != undefined) {
+                var t, m = new $lib(selector, this.elems[0].parentNode),
+                    s = this.elems[0].parentNode.childNodes;
+
+                for (var i = 0, MAX = s.length; i < MAX; ++i) {
+                    if (s[i] === this.elems[0] && t == undefined)
+                        return new $lib(null);
+                    else if (s[i] === this.elems[0] && t != undefined)
+                        return new $lib(t);
+                    else if (m.elems.indexOf(s[i]) !== -1)
+                        t = s[i];
+                }
+            }
+
+            return new $lib(this.elems[0].previousSibling);
+        },
+
+        /* EVENT METHODS */
+        bind: function(type, listener) {
+            return this.each(function() {
+                this.addEventListener(type, listener, false);
+            });
+        },
+        unbind: function(type, listener) {
+            return this.each(function() {
+                this.removeEventListener(type, listener, false);
+            });
+        },
+        fire: function(evnt) {
+            var ev = document.createEvent("HTMLEvents");
+
+            return this.each(function() {
+                ev.initEvent(evnt, true, true);
+                this.dispatchEvent(ev);
+            });
+        },
+        blur: function() {
+            return this.each(function() {
+                this.blur();
+            });
+        },
+        click: function() {
+            return this.each(function() {
+                this.click();
+            });
+        },
+        scrollIntoView: function(alignWithTop) {
+            return this.each(function() {
+                this.scrollIntoView(alignWithTop);
+            });
+        },
+        /* HELPER METHODS */
+        delay: function(func, time) {
+            return this.each(function() {
+                var $this = this;
+                setTimeout(function() {
+                    func.call($this);
+                }, time);
+            });
+        },
+        each: function(func, args) {
+            if (args != null && !Array.isArray(args))
+                args = [args];
+
+            for (var i = 0, MAX = this.elems.length; i < MAX; ++i)
+                func.apply(this.elems[i], args || [i]);
+
+            return this;
+        },
+        exists: function() {
+            return this.elems.length > 0;
+        },
+        hasSingleEl: function() {
+            return this.elems.length === 1;
+        },
+        riceCheck: function() {
+            return this.each(function() {
+                var click = function(e) {
+                    e.preventDefault();
+                    this.previousSibling.click();
+                };
+                if (this.isRiced) return;
+                else if (this.nextSibling != undefined && this.nextSibling.className === "riceCheck")
+                    return $(this.nextSibling).bind("click", click);
+
+                var div = $("<div class=riceCheck>").bind("click", click);
+                $(this).hide().after(div);
+
+                return this.isRiced = true;
+            });
+        },
+        jsColor: function() {
+            return this.each(function() {
+                this.color = new $SS.jscolor.color(this);
+            });
+        }
+    };
     /* END STYLE SCRIPT LIBRARY */
 
     /* STYLE SCRIPT CLASSES & METHODS */
@@ -835,8 +835,8 @@
                 $SS.options.init();
 
                 $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler)
-                           .bind("OpenSettings", $SS.NodeInsertionHandler)
-                           .bind("ThreadUpdate", $SS.NodeInsertionHandler);
+                    .bind("OpenSettings", $SS.NodeInsertionHandler)
+                    .bind("ThreadUpdate", $SS.NodeInsertionHandler);
 
                 var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
                 var observer = new MutationObserver(function(mutations) {
@@ -923,7 +923,7 @@
                         document.dispatchEvent(event);
                     }, 25);
                     // Correct selected theme/mascot after updating
-                    // and the number defaults has changed.                    
+                    // and the number defaults has changed.
                     var ntMascots = $SS.Mascots.defaults.length, // new total
                         ntThemes = $SS.Themes.defaults.length,
                         otMascots = $SS.Config.get("Total Mascots"), // old total
@@ -1079,7 +1079,7 @@
                 $(document).bind("keydown", $SS.options.keydown);
 
                 var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'>OneeChan</a></span>").bind("click", $SS.options.show); /* seaweedchan */
-                    b = $("<span id='OneeChanLink'> [<a title='OneeChan Settings' href='javascript:;'>OneeChan</a>]&nbsp;</span>").bind("click", $SS.options.show); /* loadletter */
+                b = $("<span id='OneeChanLink'> [<a title='OneeChan Settings' href='javascript:;'>OneeChan</a>]&nbsp;</span>").bind("click", $SS.options.show); /* loadletter */
 
                 $.asap(function() {
                     return $(".fourchan-x #shortcuts, .fourchan_x, .is_catalog").exists();
@@ -2580,7 +2580,7 @@
                 authorName: "ahodesuka",
                 authorTrip: "!.pC/AHOKAg",
                 "default": true,
-                bgImg: "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",
+                bgImg: "https://i.imgur.com/YUR3TW0.png",
                 bgRPA: "repeat top left fixed",
                 replyOp: "1.0",
                 navOp: "0.9",
@@ -3187,7 +3187,6 @@
                 $("html").addClass("oneechan");
                 $SS.theme.textColor.isLight ? $("html").addClass("isLight") : "";
                 $SS.theme.bgColor.isLight ? "" : $("html").addClass("dark-captcha");
-                $("html").optionClass("Fixed Thread Watcher", true, "fixed-watcher");
                 $("html").optionClass("Underline QuoteLinks", true, "underline-quotes");
                 $("html").optionClass("Underline All Links", false, "underline-disabled");
                 $("html").optionClass("Style Thread Stats", true, "style-stats");
@@ -3197,6 +3196,7 @@
                 $("html").optionClass("Fit Width", true, "reply-fit-width");
                 $("html").optionClass("Show Banner", false, "hide-banner");
                 $("html").optionClass("Reduce Banner Opacity", true, "banner-opacity");
+                $("html").optionClass("Show Board Banners", false, "hide-board-banners");
                 $("html").optionClass("Show Post Info On Hover", true, "info-on-hover");
                 $("html").optionClass("Show Reply to Thread Button", false, "hide-button");
                 $("html").optionClass("Show Reply Header", true, "post-info");
@@ -3251,10 +3251,10 @@
             init: function() {
                 if (!this.hasInit) {
                     if ($SS.conf["Show Checkboxes"] && !$(".postInfo>.riceCheck").exists()) {
-                            $("input[type=checkbox]").riceCheck();
-                            return this.hasInit = true;
-                        } else if ($SS.conf["Show Checkboxes"] && $(".postInfo>.riceCheck").exists()) {
-                            return this.hasInit = false;
+                        $("input[type=checkbox]").riceCheck();
+                        return this.hasInit = true;
+                    } else if ($SS.conf["Show Checkboxes"] && $(".postInfo>.riceCheck").exists()) {
+                        return this.hasInit = false;
                     }
                 }
             }
