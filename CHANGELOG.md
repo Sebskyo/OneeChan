@@ -1,3 +1,12 @@
+### v5.5.47
+*2016-10-02*
+
+YOU MIGHT NEED TO RESET ONEECHAN OPTIONS FOR THINGS TO WORK PROPERLY
+
+- CSS for 4chan Pass signature
+- Add options `Highlight (OP) quotes` and `Highlight (You) quotes`
+- Rename `Highlight` options
+
 ### v5.5.46
 *2016-10-01*
 
