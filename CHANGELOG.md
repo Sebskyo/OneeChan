@@ -1,3 +1,8 @@
+### v5.5.48
+*2016-10-02*
+
+- Fix posts quoting (You) not being highlighted (#92)
+
 ### v5.5.47
 *2016-10-02*
 
