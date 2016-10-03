@@ -1,3 +1,9 @@
+### v5.5.49
+*2016-10-03*
+
+- Add CSS for since4pass
+- Fix Update and Reply to Thread not being underlined when `Underline All Links` was enabled
+
 ### v5.5.48
 *2016-10-02*
 

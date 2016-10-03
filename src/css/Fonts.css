@@ -2,7 +2,7 @@
 
 /* Anything we need 0px */
 .deleteform,
-.pages, 
+.pages,
 .pagelist button,
 #full-board-list {
   font-size: 0 !important;
@@ -17,8 +17,8 @@
   font-size: 14px !important;
 }
 /* Options */
-.tab-label, 
-.options-button, 
+.tab-label,
+.options-button,
 .theme-preview,
 #oneechan-options input,
 #oneechan-options textarea,
@@ -50,7 +50,7 @@ body>#header-bar,
 }
 /* Everything else */
 body,
-.prev span::after, 
+.prev span::after,
 .prev form::after,
 .next span::after,
 .next form::after,
@@ -117,6 +117,9 @@ a.qr-link {
 /* Text decoration */
 :root.underline-disabled a {
   text-decoration: none !important;
+}
+.navLinks.navLinksBot.desktop a {
+  text-decoration: underline;
 }
 :root.underline-disabled .filtered {
   text-decoration: line-through !important;
