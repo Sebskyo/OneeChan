@@ -869,10 +869,6 @@
                         $(this).attr("style", "");
                     });
 
-                if ((div = $(".closeIcon")).exists()) {
-                    div.text("x");
-                };
-
                 // 4chan ads being added with JS
                 if (!$SS.conf["Show Top Ad"]) {
                     $(".topad.center").remove();
@@ -2093,7 +2089,7 @@
                 threadHLColor: "7a7f88",
                 replybgHLColor: "e6e6e6",
                 replyslctColor: "5f5f65",
-                customCSS: ".reply {box-shadow: -1px 1px 1px rgba(0,0,0,.08);}"
+                customCSS: ".reply, :root.op-background .postContainer.opContainer {box-shadow: -1px 1px 1px rgba(0,0,0,.08);}"
             }, {
                 name: "Minimalistic Mayhem",
                 authorName: "Mayhem",
