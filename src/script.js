@@ -46,7 +46,7 @@
             "Style Thread Stats": [false, "Makes thread stats stand out more. Disable 'Updater and Stats in Header' if using ccd0 4chan X."],
             "Rounded Corners": [false, "Styles replies, menus and Quick Reply to have subtly rounded corners."],
             "Underline All Links": [false, "Underlines all links in the page."],
-            "Show Banner": [true, "Toggle visibility of banner.", null, true],
+            "Show Banner": [false, "Toggle visibility of banner.", null, true],
             "Reduce Banner Opacity": [false, "Reduce opacity of the banner for easier viewing.", "Show Banner", true, true],
             "Show Board Banners": [false, "Toggle visibility of board banners."],
             "Show Board Name": [true, "Toggle visibility of the board name."],
@@ -76,8 +76,8 @@
                 }], true
             ],
             "Disable In Catalog View": [false, "Disables the sidebar when viewing the catalog. Native catalog only!"],
-            "SS-like Sidebar": [true, "Darkens the sidebar and adds a border like 4chan Style Script."],
-            "Minimal Sidebar": [false, "Shrinks the sidebar and disables the banner."],
+            "SS-like Sidebar": [false, "Darkens the sidebar and adds a border like 4chan Style Script."],
+            "Minimal Sidebar": [true, "Shrinks the sidebar and disables the banner."],
             ":: Quick Reply": ["header", ""],
             "Autohide Style": [
                 3, "Changes how the quick reply is hidden. Enable Autohide QR in 4chan X.", [{
@@ -97,9 +97,9 @@
             "Expanding Form Inputs": [true, "Makes certain form elements expand on focus."],
             "Force QR to Sidebar Size": [false, "QR will no longer extend past the sidebar size."],
             ":: Mascots": ["header", ""],
-            "Hide Mascots in Catalog": [false, "Hides the mascot when viewing the catalog."],
-            "Mascots Overlap Posts": [true, "Mascots will render above posts and threads."],
-            "Reduce Mascot Opacity": [false, "Reduces opacity of mascots until hover. Warning: Overrides pointer events."],
+            "Hide Mascots in Catalog": [true, "Hides the mascot when viewing the catalog."],
+            "Mascots Overlap Posts": [false, "Mascots will render above posts and threads."],
+            "Reduce Mascot Opacity": [true, "Reduces opacity of mascots until hover. Warning: Overrides pointer events."],
             "Grayscale Mascots": [false, "Desaturates mascots."],
             ":: Replies": ["header", ""],
             "Fit Width": [true, "Replies stretch to the width of the page."],
