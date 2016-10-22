@@ -2791,7 +2791,7 @@
                 headerBGColor: "1b1b1b",
                 headerColor: "dddddd",
                 boardColor: "dddddd",
-                bgColor: "1b1b1b",
+                bgColor: "131313",
                 textColor: "a0a0a0",
                 blinkColor: "3296c8",
                 headerLColor: "3296c8",
@@ -2810,7 +2810,7 @@
                 threadHLColor: "a0a0a0",
                 replybgHLColor: "141414",
                 replyslctColor: "ffffff",
-                customCSS: "body{\nbackground: rgba(19,19,19,1);\n}\n.boardBanner .boardTitle {\ntext-shadow: 0 0 3px #a0a0a0 !important;\nletter-spacing: 0px !important;\npadding-top: 30px !important;\n}\n#delform {\n padding: 0px 2px !important;\n background: rgba(19,19,19,1);\n}"
+                customCSS: ".boardBanner .boardTitle {\ntext-shadow: 0 0 3px #a0a0a0 !important;\nletter-spacing: 0px !important;\npadding-top: 30px !important;\n}"
             }, {
                 name: "Cold Snap",
                 authorName: "Kori",
