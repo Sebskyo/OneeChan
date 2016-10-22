@@ -46,7 +46,7 @@
             "Style Thread Stats": [false, "Makes thread stats stand out more. Disable 'Updater and Stats in Header' if using ccd0 4chan X."],
             "Rounded Corners": [false, "Styles replies, menus and Quick Reply to have subtly rounded corners."],
             "Underline All Links": [false, "Underlines all links in the page."],
-            "Show Banner": [true, "Toggle visibility of banner.", null, true],
+            "Show Banner": [false, "Toggle visibility of banner.", null, true],
             "Reduce Banner Opacity": [false, "Reduce opacity of the banner for easier viewing.", "Show Banner", true, true],
             "Show Board Banners": [false, "Toggle visibility of board banners."],
             "Show Board Name": [true, "Toggle visibility of the board name."],
@@ -76,8 +76,8 @@
                 }], true
             ],
             "Disable In Catalog View": [false, "Disables the sidebar when viewing the catalog. Native catalog only!"],
-            "SS-like Sidebar": [true, "Darkens the sidebar and adds a border like 4chan Style Script."],
-            "Minimal Sidebar": [false, "Shrinks the sidebar and disables the banner."],
+            "SS-like Sidebar": [false, "Darkens the sidebar and adds a border like 4chan Style Script."],
+            "Minimal Sidebar": [true, "Shrinks the sidebar and disables the banner."],
             ":: Quick Reply": ["header", ""],
             "Autohide Style": [
                 3, "Changes how the quick reply is hidden. Enable Autohide QR in 4chan X.", [{
@@ -97,9 +97,9 @@
             "Expanding Form Inputs": [true, "Makes certain form elements expand on focus."],
             "Force QR to Sidebar Size": [false, "QR will no longer extend past the sidebar size."],
             ":: Mascots": ["header", ""],
-            "Hide Mascots in Catalog": [false, "Hides the mascot when viewing the catalog."],
-            "Mascots Overlap Posts": [true, "Mascots will render above posts and threads."],
-            "Reduce Mascot Opacity": [false, "Reduces opacity of mascots until hover. Warning: Overrides pointer events."],
+            "Hide Mascots in Catalog": [true, "Hides the mascot when viewing the catalog."],
+            "Mascots Overlap Posts": [false, "Mascots will render above posts and threads."],
+            "Reduce Mascot Opacity": [true, "Reduces opacity of mascots until hover. Warning: Overrides pointer events."],
             "Grayscale Mascots": [false, "Desaturates mascots."],
             ":: Replies": ["header", ""],
             "Fit Width": [true, "Replies stretch to the width of the page."],
@@ -868,10 +868,6 @@
                     div.each(function() {
                         $(this).attr("style", "");
                     });
-
-                if ((div = $(".closeIcon")).exists()) {
-                    div.text("x");
-                };
 
                 // 4chan ads being added with JS
                 if (!$SS.conf["Show Top Ad"]) {
@@ -2093,7 +2089,7 @@
                 threadHLColor: "7a7f88",
                 replybgHLColor: "e6e6e6",
                 replyslctColor: "5f5f65",
-                customCSS: ".reply {box-shadow: -1px 1px 1px rgba(0,0,0,.08);}"
+                customCSS: ".reply, :root.op-background .postContainer.opContainer {box-shadow: -1px 1px 1px rgba(0,0,0,.08);}"
             }, {
                 name: "Minimalistic Mayhem",
                 authorName: "Mayhem",
@@ -2795,7 +2791,7 @@
                 headerBGColor: "1b1b1b",
                 headerColor: "dddddd",
                 boardColor: "dddddd",
-                bgColor: "1b1b1b",
+                bgColor: "131313",
                 textColor: "a0a0a0",
                 blinkColor: "3296c8",
                 headerLColor: "3296c8",
@@ -2814,7 +2810,7 @@
                 threadHLColor: "a0a0a0",
                 replybgHLColor: "141414",
                 replyslctColor: "ffffff",
-                customCSS: "body{\nbackground: rgba(19,19,19,1);\n}\n.boardBanner .boardTitle {\ntext-shadow: 0 0 3px #a0a0a0 !important;\nletter-spacing: 0px !important;\npadding-top: 30px !important;\n}\n#delform {\n padding: 0px 2px !important;\n background: rgba(19,19,19,1);\n}"
+                customCSS: ".boardBanner .boardTitle {\ntext-shadow: 0 0 3px #a0a0a0 !important;\nletter-spacing: 0px !important;\npadding-top: 30px !important;\n}"
             }, {
                 name: "Cold Snap",
                 authorName: "Kori",

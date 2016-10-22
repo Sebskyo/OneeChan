@@ -1,3 +1,13 @@
+### v5.5.50
+*2016-10-22*
+
+- Change OneeChan defaults
+- Small native catalog fixes
+- Show 4chan Pass link when enabled in 4chan X
+- Don't hide Banner when Minimal Sidebar is enabled
+- Add additional CSS rule to Stilig theme for OP background
+- Change Blue Tone theme background
+
 ### v5.5.49
 *2016-10-03*
 
