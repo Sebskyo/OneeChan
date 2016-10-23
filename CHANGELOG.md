@@ -1,3 +1,8 @@
+### v5.5.51
+*2016-10-23*
+
+- Fix board banner showing outside sidebar (#96)
+
 ### v5.5.50
 *2016-10-22*
 
