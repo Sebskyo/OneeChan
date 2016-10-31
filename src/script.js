@@ -1075,9 +1075,10 @@
             saveAndClose: false,
             init: function() {
                 $(document).bind("keydown", $SS.options.keydown);
-
-                var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'>OneeChan</a></span>").bind("click", $SS.options.show); /* seaweedchan */
-                b = $("<span id='OneeChanLink'> [<a title='OneeChan Settings' href='javascript:;'>OneeChan</a>]&nbsp;</span>").bind("click", $SS.options.show); /* loadletter */
+                /* seaweedchan */
+                var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'>OneeChan</a></span>").bind("click", $SS.options.show);
+                /* loadletter */
+                b = $("<span id='OneeChanLink'> [<a title='OneeChan Settings' href='javascript:;'>OneeChan</a>]&nbsp;</span>").bind("click", $SS.options.show);
 
                 $.asap(function() {
                     return $(".fourchan-x #shortcuts, .fourchan_x, .is_catalog").exists();
@@ -1102,9 +1103,9 @@
                         "<p class='buttons-container'>" +
                         "<a class='options-button' title='Export your settings as JSON.' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a><a class='options-button' title='Reset OneeChan settings.' name=resetSettings>Reset</a>" +
                         "<span id=oneechan-version><span>OneeChan</span> v" + VERSION + "<span class=link-delim> | </span>" +
-                        "<a href='https://github.com/Nebukazar/OneeChan/wiki' id=changelog-link target='_blank' title='Learn about OneeChan.'>Wiki</a><span class=link-delim> | </span>" +
-                        "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank' title='Read the changelog.'>Changelog</a><span class=link-delim> | </span>" +
-                        "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md#reporting-bugs-and-suggestions' id=issues-link target='_blank' title='Report an issue.'>Issues</a></p>",
+                        "<a href='https://github.com/nebukazar/OneeChan/wiki' id=changelog-link target='_blank' title='Learn about OneeChan.'>Wiki</a><span class=link-delim> | </span>" +
+                        "<a href='https://github.com/nebukazar/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank' title='Read the changelog.'>Changelog</a><span class=link-delim> | </span>" +
+                        "<a href='https://github.com/nebukazar/OneeChan/blob/master/CONTRIBUTING.md#reporting-bugs-and-suggestions' id=issues-link target='_blank' title='Report an issue.'>Issues</a></p>",
                         key, val, des;
 
                     for (key in defaultConfig) {
@@ -1193,7 +1194,7 @@
                         if (this.files[0].name.match(/\.json$/) == null) {
                             alert('Only JSON files are accepted!');
                             return;
-                        } else if (!confirm('Your current settings will be entirely overwritten, are you sure?')) {
+                        } else if (!confirm('Your current settings will be overwritten, are you sure?')) {
                             return;
                         }
                         reader.onload = (function(tFile) {
@@ -1222,7 +1223,7 @@
                     $("a[name=Export]", tOptions).bind("click", function() {
                         if ($("a[download]", tOptions).exists())
                             return;
-                        var exportalert = $("<a class='options-button'download='OneeChan v" + VERSION + " Settings.json' href='data:application/json," + encodeURIComponent(JSON.stringify($SS.exportOptions, null, 2)) + "'>Save me!").bind("click", $SS.options.close);
+                        var exportalert = $("<a class='options-button' download='OneeChan v" + VERSION + " Settings.json' href='data:application/json," + encodeURIComponent(JSON.stringify($SS.exportOptions, null, 2)) + "'>Save me!").bind("click", $SS.options.close);
                         return $(this).replace(exportalert);
                     });
                     // Reset settings
