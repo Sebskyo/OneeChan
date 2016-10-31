@@ -80,7 +80,7 @@
             "Minimal Sidebar": [true, "Shrinks the sidebar and disables the banner."],
             ":: Quick Reply": ["header", ""],
             "Autohide Style": [
-                3, "Changes how the quick reply is hidden. Enable Autohide QR in 4chan X.", [{
+                1, "Changes how the quick reply is hidden. Enable Autohide QR in 4chan X.", [{
                     name: "Normal",
                     value: 1
                 }, {
