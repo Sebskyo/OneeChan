@@ -1,3 +1,9 @@
+### v5.5.52
+*2016-10-31*
+
+- Fix body margins
+- Change default QR autohide style
+
 ### v5.5.51
 *2016-10-23*
 
