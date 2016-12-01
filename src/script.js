@@ -812,7 +812,14 @@
                 else if (this.nextSibling != undefined && this.nextSibling.className === "riceCheck")
                     return $(this.nextSibling).bind("click", click);
 
-                var div = $("<div class=riceCheck>").bind("click", click);
+                var titleAttr;
+
+                if (this.hasAttribute("title"))
+                    titleAttr = $(this).attr("title");
+                else
+                    titleAttr = "";
+
+                var div = $("<div class=riceCheck title='" + titleAttr + "'>").bind("click", click);
                 $(this).hide().after(div);
 
                 return this.isRiced = true;
@@ -1762,13 +1769,13 @@
                     "<input class='mascot-input height' type=text name=mHeight value='" + (bEdit && mEdit.height !== undefined ? mEdit.height : "auto") + "'></label>" +
                     "<label class='add-mascot-label' title='Set the width. Use 300px to fit to sidebar, or auto for the original size.'><span class='option-title'>Width:</span>" +
                     "<input class='mascot-input width' type=text name=mWidth value='" + (bEdit && mEdit.width !== undefined ? mEdit.width : "auto") + "'></label>" +
-                    "<label class='add-mascot-label' title='Downscale images greater than the sidebar (300px).'><span class='option-title'>Downscale only:</span>" +
+                    "<label class='add-mascot-label' title='Downscale images greater than the sidebar (300px).'><span class='option-title' title='Downscale images greater than the sidebar (300px).'>Downscale only:</span>" +
                     "<input type=checkbox name=mMWidth" + (bEdit && (mEdit.maxwidth && mEdit.maxwidth !== undefined) ? " checked" : "") + "></label>" +
                     "<label class='add-mascot-label' title='Set the vertical offset. A negative number will push the image down.'><span class='option-title'>Vertical Offset:</span>" +
                     "<input class='mascot-input offset' type=text name=mOffset value='" + (bEdit && mEdit.offset !== undefined ? mEdit.offset : 0) + "px'></label>" +
                     "<label class='add-mascot-label' title='Set the horizontal offset. A positive number will push the image away from the side.'><span class='option-title'>Horizontal Offset:</span>" +
                     "<input class='mascot-input hoffset' type=text name=mHOffset value='" + (bEdit && mEdit.hoffset !== undefined ? mEdit.hoffset : 0) + "px'></label>" +
-                    "<label class='add-mascot-label' title='Flip the mascot image horizontally.'><span class='option-title'>Flip Image:</span>" +
+                    "<label class='add-mascot-label' title='Flip the mascot image horizontally.'><span class='option-title' title='Flip the mascot image horizontally.'>Flip Image:</span>" +
                     "<input type=checkbox name=mFlip" + (bEdit && (mEdit.flip && mEdit.flip !== undefined) ? " checked" : "") + "></label>" +
                     "<label class='add-mascot-label' title='List of boards to display this mascot on, seperated by commas. Example: a,c,g,v,jp'><span class='option-title'>Boards:</span>" +
                     "<input class='mascot-input mascot-boards' type=text name=mBoards placeholder='Example: a,c,g,v,jp' value='" + (bEdit && mEdit.boards ? mEdit.boards : "") + "'></label>" +
