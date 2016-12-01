@@ -836,6 +836,8 @@
             if (reload !== true) {
                 $SS.options.init();
 
+                $("#index-rev").riceCheck();
+
                 $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler)
                     .bind("OpenSettings", $SS.NodeInsertionHandler)
                     .bind("ThreadUpdate", $SS.NodeInsertionHandler);
@@ -847,7 +849,7 @@
                     for (i = 0, MAX = mutations.length; i < MAX; ++i) {
                         nodes = mutations[i].addedNodes;
 
-                        for (j = 0, _MAX = nodes.length; i < _MAX; ++i)
+                        for (j = 0, _MAX = nodes.length; j < _MAX; ++j)
                             if (nodes[j].nodeType !== 3)
                                 $("input[type=checkbox]", nodes[j]).riceCheck();
                     }
