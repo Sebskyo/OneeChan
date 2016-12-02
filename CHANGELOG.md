@@ -1,3 +1,8 @@
+### v5.6.1
+*2016-12-02*
+
+- Fix for 4chan X catalog thread menus
+
 ## v5.6.0
 *2016-12-01*
 
