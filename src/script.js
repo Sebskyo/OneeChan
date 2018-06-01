@@ -4002,7 +4002,7 @@
 
                     this.customCSS = eval($SS.trimLineBreaks(new String('"' + theme.customCSS.replace(/\"/g, "\\\"").replace(/\'/g, "\\\'") + '"')));
                 } catch (e) {
-                    alert("Error evaluating " + this.name + "'s theme.customCSS!\n" + e.message);
+                    console.log("Error evaluating " + this.name + "'s theme.customCSS!\n" + e.message);
                     this.customCSS = theme.customCSS;
                 }
             } else
